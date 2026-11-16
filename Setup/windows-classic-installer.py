@@ -50,8 +50,8 @@ COMPONENTS = {
     "cursors": {
         "label": "Cursores do Windows XP",
         "files": {
-            "system": [("Cursors/windows-classic", "/usr/share/icons/windows-classic")],
-            "user": [("Cursors/windows-classic", "~/.local/share/icons/windows-classic")],
+            "system": [("Cursors/windows-classic-cursors", "/usr/share/icons/windows-classic-cursors")],
+            "user": [("Cursors/windows-classic-cursors", "~/.local/share/icons/windows-classic-cursors")],
         },
     },
     "theme": {
@@ -220,7 +220,7 @@ def settings_for(comp):
                 ("thunar", "/misc-highlighting-enabled", "bool", "false")]
     if comp == "cursors":
         size = "64" if window_scale() == 2 else "32"
-        return [("xsettings", "/Gtk/CursorThemeName", "string", NAME),
+        return [("xsettings", "/Gtk/CursorThemeName", "string", "windows-classic-cursors"),
                 ("xsettings", "/Gtk/CursorThemeSize", "int", size)]
     if comp == "fonts":
         return [("xsettings", "/Gtk/FontName", "string", "Noto Sans 8"),

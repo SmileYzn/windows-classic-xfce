@@ -17,7 +17,7 @@ command -v Xephyr >/dev/null || {
     echo "Xephyr não encontrado. Instale com: sudo pacman -S --needed xorg-server-xephyr"
     exit 1
 }
-[[ -e "$AQUI/Cursors/windows-classic/cursors/default" ]] || {
+[[ -e "$AQUI/Cursors/windows-classic-cursors/cursors/default" ]] || {
     echo "Gere os cursores antes: python3 Cursors/src/build.py /caminho/I386"
     exit 1
 }
@@ -34,7 +34,7 @@ trap 'kill "${XEPHYR:-}" 2>/dev/null || true; rm -rf "$PERFIL"' EXIT
 
 XML="$PERFIL/config/xfce4/xfconf/xfce-perchannel-xml"
 mkdir -p "$XML" "$PERFIL/icons" "$PERFIL/themes"
-ln -s "$AQUI/Cursors/windows-classic" "$PERFIL/icons/windows-classic"
+ln -s "$AQUI/Cursors/windows-classic-cursors" "$PERFIL/icons/windows-classic-cursors"
 ln -s "$AQUI/Theme/windows-classic" "$PERFIL/themes/windows-classic"
 ln -s "$AQUI/Theme/windows-classic-xhdpi" "$PERFIL/themes/windows-classic-xhdpi"
 
@@ -50,7 +50,7 @@ cat > "$XML/xsettings.xml" <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <channel name="xsettings" version="1.0">
   <property name="Gtk" type="empty">
-    <property name="CursorThemeName" type="string" value="windows-classic"/>
+    <property name="CursorThemeName" type="string" value="windows-classic-cursors"/>
     <property name="CursorThemeSize" type="int" value="$((32 * ESCALA))"/>
     <property name="FontName" type="string" value="Noto Sans 8"/>
   </property>
@@ -113,6 +113,6 @@ env -i HOME="$HOME" USER="$USER" PATH="$PATH" LANG="${LANG:-pt_BR.UTF-8}" \
     XDG_DATA_HOME="$PERFIL" \
     XDG_CACHE_HOME="$PERFIL/cache" \
     XCURSOR_PATH="$PERFIL/icons:$HOME/.local/share/icons:/usr/share/icons" \
-    XCURSOR_THEME="windows-classic" XCURSOR_SIZE=$((32 * ESCALA)) \
+    XCURSOR_THEME="windows-classic-cursors" XCURSOR_SIZE=$((32 * ESCALA)) \
     GTK_OVERLAY_SCROLLING=0 \
     dbus-run-session -- xfce4-session || true

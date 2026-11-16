@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Gera o tema de cursores "windows-classic" (X11) a partir da pasta I386 de um
+Gera o tema de cursores "windows-classic-cursors" (X11) a partir da pasta I386 de um
 CD original do Windows XP.
 
 Os cursores do esquema padrão do XP ("Windows Padrão") ficam dentro do
@@ -11,7 +11,7 @@ USER32.DLL e, os de arrastar e soltar, no OLE32.DLL. O script:
   2. lê os recursos de cursor das DLLs (wrestool + wincur.py);
   3. converte cada cursor em PNG nas escalas 1x, 2x e 3x (32, 64 e 96 px),
      sem suavização, mantendo o visual pixelado original;
-  4. compila com o xcursorgen em Cursors/windows-classic/cursors/;
+  4. compila com o xcursorgen em Cursors/windows-classic-cursors/cursors/;
   5. cria os links simbólicos com os nomes alternativos (X11, CSS, hashes).
 
 Os cursores gerados já vêm no projeto; o script só é preciso para gerá-los de novo.
@@ -37,7 +37,7 @@ import wincur  # noqa: E402
 
 RAIZ = os.path.dirname(AQUI)                      # pasta Cursors/
 BUILD = os.path.join(RAIZ, "build")               # PNGs intermediários
-TEMA = os.path.join(RAIZ, "windows-classic")      # tema final
+TEMA = os.path.join(RAIZ, "windows-classic-cursors")  # tema final
 CURSORES = os.path.join(TEMA, "cursors")
 
 ESCALAS = (1, 2, 3)

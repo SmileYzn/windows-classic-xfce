@@ -29,7 +29,7 @@ painel do perfil `Panel/windows-classic.tar.bz2`, fundo em cor sólida `#3B6EA5`
 
 | Pasta | Conteúdo | Situação |
 |-------|----------|----------|
-| `Cursors/windows-classic` | Tema de cursores X11 | ✅ pronto |
+| `Cursors/windows-classic-cursors` | Tema de cursores X11 | ✅ pronto |
 | `Theme/windows-classic/xfwm4` | Bordas das janelas (xfwm4) | ✅ pronto |
 | `Theme/windows-classic-xhdpi/xfwm4` | Bordas em 2x para HiDPI (gerado) | ✅ pronto |
 | `Theme/windows-classic/gtk-3.0` | Tema GTK 3 | ✅ pronto |
@@ -56,7 +56,7 @@ Windows.
 
 | Componente | O que faz | "Aplicar" no XFCE |
 |---|---|---|
-| Cursores do Windows XP | copia `Cursors/windows-classic` | tema de cursores, 32 px (64 px na escala 2x) |
+| Cursores do Windows XP | copia `Cursors/windows-classic-cursors` | tema de cursores, 32 px (64 px na escala 2x) |
 | Tema GTK 3, bordas e notificações | copia `windows-classic` e `windows-classic-xhdpi` | tema GTK, xfwm4 (normal ou HiDPI), notificações opacas, "Realce de arquivos" do Thunar desligado |
 | Cores do terminal | copia os esquemas de `Terminal/` | (desmarcado por padrão) cores do Prompt de comando no Xfce Terminal |
 | Fontes recomendadas | — | Noto Sans 8 e Noto Sans Bold 8 nos títulos |
@@ -80,7 +80,7 @@ python3 Setup/windows-classic-installer.py --uninstall all
 ## Cursores
 
 Os cursores são os **originais do esquema padrão do Windows XP**, já prontos
-em `Cursors/windows-classic/` (32, 64 e 96 px). Foram extraídos da pasta `I386`
+em `Cursors/windows-classic-cursors/` (32, 64 e 96 px). Foram extraídos da pasta `I386`
 de um CD do Windows XP:
 
 - `USER32.DLL`: seta, texto, ocupado, segundo plano, ajuda, mira, caneta,
@@ -100,7 +100,7 @@ sudo pacman -S --needed python cabextract icoutils xorg-xcursorgen
 python3 Cursors/src/build.py /caminho/para/I386
 ```
 
-O resultado vai para `Cursors/windows-classic/`, com uma prévia em
+O resultado vai para `Cursors/windows-classic-cursors/`, com uma prévia em
 `Cursors/build/preview.png`.
 
 Também é possível ativar manualmente em
