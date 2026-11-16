@@ -3,6 +3,28 @@
 Tema completo para XFCE que reproduz, o mais fielmente possível, o tema
 clássico do Windows XP.
 
+![Área de trabalho com o menu Iniciar aberto](Screenshots/02-menu-iniciar.png)
+
+## Capturas de tela
+
+| | |
+|---|---|
+| ![Área de trabalho](Screenshots/01-area-de-trabalho.png) | ![Menu Iniciar](Screenshots/02-menu-iniciar.png) |
+| Área de trabalho e barra de tarefas | Menu Iniciar (Whisker Menu) com Acessórios |
+| ![Gerenciador de arquivos e Mousepad](Screenshots/03-arquivos-e-mousepad.png) | ![Calculadora e diálogo de encerrar sessão](Screenshots/04-calculadora-e-logoff.png) |
+| Thunar e Mousepad | Galculator e o diálogo de encerrar sessão |
+| ![Widgets GTK3](Screenshots/05-widgets-gtk3.png) | ![Instalador](Screenshots/06-instalador.png) |
+| Widgets GTK3 (gtk3-widget-factory) | Assistente de instalação |
+| ![Terminal com fastfetch](Screenshots/07-terminal-fastfetch.png) | ![Gerenciador de configurações](Screenshots/08-gerenciador-de-configuracoes.png) |
+| Terminal com `fastfetch --logo windows` (cores do Prompt de comando) | Gerenciador de configurações |
+| ![Sobre o Xfce](Screenshots/09-sobre-o-xfce.png) | ![Notificação](Screenshots/10-notificacao.png) |
+| Sobre o ambiente de desktop Xfce | Notificação no estilo dos balões do XP |
+
+Nas capturas: tema GTK, bordas e cursores **Windows Classic**, fontes Noto Sans 8,
+painel do perfil `Panel/windows-classic.tar.bz2`, fundo em cor sólida `#3B6EA5`
+(o azul da área de trabalho do XP clássico) e o tema de ícones
+[Win2k](https://github.com/SmileYzn/win2k), que não faz parte deste projeto.
+
 ## Estrutura
 
 | Pasta | Conteúdo | Situação |
@@ -14,6 +36,7 @@ clássico do Windows XP.
 | `Terminal` | Esquemas de cores do xfce4-terminal | ✅ pronto |
 | `Setup` | Instalador (assistente e linha de comando) | ✅ pronto |
 | `Panel` | Perfil do painel do XFCE (xfce4-panel-profiles) | ✅ pronto |
+| `Screenshots` | Capturas de tela usadas neste README | — |
 
 ## Instalação
 
