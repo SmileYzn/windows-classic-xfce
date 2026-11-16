@@ -11,12 +11,15 @@ Comentários de scripts e READMEs também em pt-BR.
 As pastas do projeto e os passos:
 
 1. Cursors
-   - Nome da pasta: windows-classic
+   - Nome da pasta: windows-classic-cursors
    - Tema de cursores (Para X11)
 2. Theme:
    - Nome da pasta: windows-classic
    - xfwm4
    - gtk-3.0
+3. Icons:
+   - Nome da pasta: windows-classic-icons
+   - Tema de ícones (padrão freedesktop)
 
 # GitHub
 Repositório do projeto:
