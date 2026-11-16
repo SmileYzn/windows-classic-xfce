@@ -1,0 +1,65 @@
+# Nome: Windows Classic (xfwm4, HiDPI 2x)
+# ARQUIVO GERADO por Theme/src/gerar-xhdpi.py: edite windows-classic/xfwm4/themerc.
+# Tema de bordas no estilo clássico do Windows XP (esquema "Windows Clássico").
+# Baseado no tema Win2k (https://github.com/SmileYzn/win2k), que por sua vez
+# deriva do Chicago95 (Grassmunk). Licença: GPL-3.0+
+#
+# Ajustes para o XP clássico:
+#  - degradê da barra de título ocupando a largura toda (title-*-stretch.png);
+#  - barra com 23 px até a área da janela (4 de moldura + 18 + 1), como no XP;
+#  - sombra escura 3D #404040 (ButtonDkShadow do esquema clássico);
+#  - posição do texto ajustada para a fonte Noto Sans Bold 8.
+
+#activetitle
+active_color_1=#0A246A
+active_color_2=#0A246A
+
+#inactivetitle
+inactive_color_1=#808080
+inactive_color_2=#808080
+
+#titletext
+active_text_color=#ffffff
+
+#inactivetitletext
+inactive_text_color=#D4D0C8
+
+#buttonface
+active_mid_1=#D4D0C8
+inactive_mid_1=#D4D0C8
+
+#buttonLight
+active_hilight_1=#D4D0C8
+inactive_hilight_1=#D4D0C8
+
+#buttonhilight
+active_hilight_2=#ffffff
+inactive_hilight_2=#ffffff
+
+#activeborder
+active_border_color=#D4D0C8
+inactive_border_color=#D4D0C8
+
+#buttonShadow
+active_shadow_2=#808080
+inactive_shadow_2=#808080
+
+#buttonDKShadow
+active_shadow_1=#404040
+inactive_shadow_1=#404040
+
+#buttontext
+active_mid_2=#000000
+inactive_mid_2=#000000
+
+button_layout=O|HMC
+button_offset=4
+button_spacing=0
+full_width_title=true
+maximized_offset=4
+show_app_icon=true
+title_alignment=left
+title_horizontal_offset=4
+title_vertical_offset_active=4
+title_vertical_offset_inactive=4
+frame_border_top=8

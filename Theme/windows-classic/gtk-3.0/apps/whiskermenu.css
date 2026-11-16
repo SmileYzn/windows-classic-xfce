@@ -1,0 +1,116 @@
+/* Whisker Menu and Application Menu Panel Button style */
+
+/* Every selector below goes through `> box`: the Applications Menu popup is attached to the
+   button and inherits its CSS path, so a plain `#applicationmenu-button label` would also
+   reach the labels, images and boxes inside the menu items (bold menu text, button frames). */
+
+/* We will remove the border effect and margin effects on the button and apply it to the box inside. 
+This will allow people to be able to run their pointer to the far corner of the screen and activate 
+the whisker menu without having to correct their pointer location. */
+#whiskermenu-button,
+#applicationmenu-button {
+  border: none;
+  box-shadow: none;
+  margin: 0px;
+  background-color: @bg_color; }
+  #whiskermenu-button > box,
+  #applicationmenu-button > box {
+    padding: 2px;
+    margin: 1px;
+    border: 2px solid @border_color;
+    border-image: url("../buttons/dialog_button_normal.png");
+    border-image-slice: 2 2 2 2;
+    background-color: @bg_color; }
+    #whiskermenu-button:active > box,
+    #whiskermenu-button:checked > box,
+    #applicationmenu-button:active > box,
+    #applicationmenu-button:checked > box {
+      /* Sunken Start button (Windows XP classic): dark shadow and shadow on the top and left, white on
+         the bottom and right (start_pressed.png, so the corners match exactly). Same 2px
+         border as the raised button; the content moves 1px right and down. */
+      padding: 3px 1px 1px 3px;
+      margin: 1px;
+      border-image: url("../buttons/start_pressed.png");
+      border-image-slice: 2 2 2 2;
+      border-radius: 0px; }
+  #whiskermenu-button > box > image,
+  #applicationmenu-button > box > image {
+    padding: 0px;
+    margin-right: -1px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; }
+  #whiskermenu-button > box > label,
+  #applicationmenu-button > box > label {
+    padding: 1px;
+    border: none;
+    font-weight: bold; }
+
+/****************
+* Whisker Menu **
+****************/
+
+  #whiskermenu-window treeview {
+    padding-left: 2px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px; }
+  #whiskermenu-window button {
+    padding: 1px;
+    min-height: 16px;
+    min-width: 16px; }
+    #whiskermenu-window button:not(:hover):not(:checked) {
+      border-color: transparent;
+      box-shadow: none;
+      background-color: transparent; }
+  #whiskermenu-window frame border {
+    padding: 0px;
+    border: none;
+    border-image: none;
+    box-shadow: none; }
+  #whiskermenu-window scrolledwindow {
+    border: none;
+    box-shadow: none; }
+    #whiskermenu-window scrolledwindow.frame {
+      padding: 0px;
+      border: 2px solid @border_dark;
+      border-image: url("../assets/frame_inset.png");
+      border-image-slice: 2 2 2 2;
+      border-radius: 0px;
+      box-shadow: none; }
+  #whiskermenu-window scrolledwindow viewport button:hover {
+    outline-color: @border_bright; }
+  #whiskermenu-window > frame {
+    border: 2px solid @border_dark;
+    border-image: url("../assets/frame_outset.png");
+    border-image-slice: 2 2 2 2;}
+    #whiskermenu-window > frame > stack > box > box:first-child {
+      padding: 2px;
+      margin: 0;
+      color: @text_color;
+      /*background-image: linear-gradient(to right, @selected_bg_color, @transparent);*/ /* Note: You can setup a gradient here if you want! */ }
+    #whiskermenu-window frame scrolledwindow button {
+      border: 1px solid transparent;
+      background-color: @selected_bg_color;
+      box-shadow: none; }
+      #whiskermenu-window frame scrolledwindow button:checked {
+      background-color: @border_shade; }
+      #whiskermenu-window frame scrolledwindow button:hover,
+      #whiskermenu-window frame scrolledwindow button:active,
+      #whiskermenu-window frame scrolledwindow button:checked {
+        color: white; }
+    #whiskermenu-window frame > box > box > box button image {
+      padding: 0px; }
+  #whiskermenu-window entry {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    min-height: 16px; }
+  #whiskermenu-window scrollbar button {
+    margin: 0px;
+    padding: 0px;
+    min-width: 16px;
+    min-height: 16px;
+    border: none;
+    box-shadow: none; }
+  #whiskermenu-window frame, #whiskermenu-window GtkListBox, #whiskermenu-window scrolledwindow, #whiskermenu-window viewport {
+    background-color: transparent; }

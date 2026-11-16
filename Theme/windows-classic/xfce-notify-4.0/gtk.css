@@ -1,0 +1,27 @@
+/*
+ * Tema do xfce4-notifyd: cores e borda do balão de notificação do Windows XP
+ * clássico. Tamanhos, espaçamentos e posições (ícone, título, texto, botões)
+ * seguem o padrão do XFCE.
+ *
+ * Do balão do XP (capturas a 1280x1024): fundo #FFFFE1 (InfoWindow), texto
+ * preto, borda preta de 1 px com cantos arredondados (raio de ~6 px) e título
+ * em negrito.
+ *
+ * O xfce4-notifyd não tem botão "X" de fechar (a notificação fecha com um
+ * clique) e, sem compositor, ele força cantos retos.
+ */
+
+#XfceNotifyWindow {
+  background-color: #FFFFE1;
+  background-image: none;
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  box-shadow: none; }
+
+#XfceNotifyWindow #summary {
+  font-weight: bold;
+  color: #000000; }
+
+#XfceNotifyWindow #body {
+  color: #000000; }

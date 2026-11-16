@@ -1,0 +1,16 @@
+# MS-DOS: paleta de 16 cores do modo texto VGA (IBM PC), com o "marrom"
+# (#AA5500) no lugar do amarelo escuro. Texto cinza (#AAAAAA) sobre preto.
+# A paleta está na ordem ANSI (preto, vermelho, verde, amarelo, azul, magenta,
+# ciano, branco).
+[Scheme]
+Name=MS-DOS (VGA)
+ColorForeground=#AAAAAA
+ColorBackground=#000000
+ColorCursorUseDefault=FALSE
+ColorCursor=#AAAAAA
+ColorCursorForeground=#000000
+ColorBoldUseDefault=TRUE
+ColorSelectionUseDefault=FALSE
+ColorSelection=#000000
+ColorSelectionBackground=#AAAAAA
+ColorPalette=#000000;#AA0000;#00AA00;#AA5500;#0000AA;#AA00AA;#00AAAA;#AAAAAA;#555555;#FF5555;#55FF55;#FFFF55;#5555FF;#FF55FF;#55FFFF;#FFFFFF
