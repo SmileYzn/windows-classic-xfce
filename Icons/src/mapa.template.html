@@ -57,6 +57,8 @@
   .ic { image-rendering: pixelated; vertical-align: middle; }
   body.z2 .ic { width: calc(var(--s) * 2px); height: calc(var(--s) * 2px); }
   .st { white-space: nowrap; font-weight: bold; }
+  .st.planejado { color: var(--titulo1); }
+  .ic.plan { outline: 1px dashed var(--titulo1); outline-offset: 1px; }
   .st.completo { color: var(--ok); } .st.parcial { color: var(--parcial); } .st.ausente { color: var(--falta); }
   .her { color: var(--herdado); font-size: 11px; display: block; font-weight: normal; }
   .na-lista { color: var(--ok); font-size: 11px; }
@@ -65,6 +67,7 @@
   .galeria-arq h3 { font-size: 12px; margin: 0 0 4px; background: #e8e8e8; padding: 3px 6px; }
   .grade { display: flex; flex-wrap: wrap; gap: 2px; }
   .item { width: 72px; text-align: center; padding: 4px 2px; cursor: pointer; border: 1px solid transparent; }
+  .item.largo { width: 96px; }
   .item:hover { border-color: var(--sel); background: #eef3ff; }
   .item small { display: block; color: #555; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .item .ic { display: block; margin: 0 auto 2px; }
@@ -99,7 +102,8 @@
   <footer>
     <b>Completo</b>: tem 16, 32 e 48 px (os tamanhos nativos do XP). <b>Parcial</b>: existe, mas falta algum desses tamanhos
     (o GTK redimensiona outro). <b>Ausente</b>: o tema não tem; a coluna mostra de onde ele vem
-    (Adwaita, hicolor) ou "em branco". A lista começa com o Icons/windows-classic-icons.list do
+    (Adwaita, hicolor) ou "em branco". <b>Na lista</b>: já escolhido (prévia com contorno tracejado),
+    mas ainda não gravado no tema: exporte a lista e rode <code>python3 Icons/src/aplicar-lista.py</code>. A lista começa com o Icons/windows-classic-icons.list do
     projeto; o que for editado aqui fica salvo neste navegador até ser exportado.
   </footer>
 </div>
@@ -117,8 +121,8 @@
     </label>
     <label>Origem
       <span class="linha">
-        <input type="text" id="fOrigem" placeholder="i386:shell32.dll#4  ou  /caminho/do/arquivo.png">
-        <button type="button" class="btn" id="fEscolher">Escolher na I386…</button>
+        <input type="text" id="fOrigem" placeholder="xp:Control Panel  ·  i386:shell32.dll#4  ·  /caminho/do/arquivo.png">
+        <button type="button" class="btn" id="fEscolher">Escolher na galeria…</button>
       </span>
       <span class="dica" id="fDicaOrigem"></span>
     </label>
@@ -156,13 +160,42 @@ function salvarLista() { try { localStorage.setItem(CHAVE, JSON.stringify(lista)
 // ------------------------------------------------------------------ situação de cada nome
 function situacao(nome) {
   const t = D.tema[nome];
-  if (!t) return "ausente";
+  if (!t) return lista[nome] ? "planejado" : "ausente";
   return NUCLEO.every(s => t.s[s]) ? "completo" : "parcial";
 }
+const ROTULO = { completo: "completo", parcial: "parcial", ausente: "ausente", planejado: "na lista" };
 function ctxDe(nome, padrao) { return (D.tema[nome] && D.tema[nome].c) || padrao || "apps"; }
 const ctxPadrao = {}; D.padrao.forEach(([c, n]) => ctxPadrao[n] = c);
 const HICOLOR = D.hicolor || [];
 HICOLOR.forEach(([c, n]) => { if (!ctxPadrao[n]) ctxPadrao[n] = c; });
+
+// ------------------------------------------------------------------ galerias de origem
+// Cada galeria tem seções com itens {ref, rotulo, busca, tamanhos, src(tamanho)}.
+//   xp:   Icons/build/xp-icons/<N>x<N>/<nome>.png   -> origem "xp:<nome>"
+//   i386: Icons/build/i386/<arquivo>/<grupo>-<N>.png -> origem "i386:<arquivo>#<grupo>"
+const caminhoXp = (nome, t) => `build/xp-icons/${t}x${t}/${encodeURIComponent(nome)}.png`;
+const GALERIAS = {
+  xp: {
+    titulo: "Galeria XP",
+    secoes: (D.xp || []).length ? [{ titulo: "Icons/build/xp-icons", itens: D.xp.map(x => ({
+      ref: `xp:${x.nome}`, rotulo: x.nome, busca: x.nome, tamanhos: x.tamanhos, src: t => caminhoXp(x.nome, t) })) }] : [],
+    vazia: `A galeria está vazia: coloque os ícones em Icons/build/xp-icons/&lt;N&gt;x&lt;N&gt;/ e gere o mapa de novo
+      (<code>python3 Icons/src/mapa.py</code>).`,
+  },
+  i386: {
+    titulo: "Galeria I386",
+    secoes: D.i386.map(f => ({ titulo: f.arquivo, itens: f.grupos.map(g => ({
+      ref: `i386:${f.arquivo}#${g.grupo}`, rotulo: `#${g.grupo}`, busca: `${f.arquivo}#${g.grupo}`,
+      tamanhos: g.tamanhos, src: t => `build/i386/${f.arquivo}/${g.grupo}-${t}.png` })) })),
+    vazia: `A galeria está vazia. Extraia os ícones da I386 e gere o mapa de novo:<br>
+      <code>python3 Icons/src/extrair-i386.py /caminho/para/I386 &amp;&amp; python3 Icons/src/mapa.py</code>`,
+  },
+};
+const PORREF = {};
+Object.values(GALERIAS).forEach(g => g.secoes.forEach(s => s.itens.forEach(i => PORREF[i.ref] = i)));
+const totalGaleria = g => g.secoes.reduce((a, s) => a + s.itens.length, 0);
+// tamanho mostrado na galeria e na prévia: 32 px, ou o maior até 48
+const tamPrevia = tams => tams.includes(32) ? 32 : (tams.filter(s => s <= 48).pop() || tams[0]);
 
 // ------------------------------------------------------------------ resumo
 function resumo() {
@@ -171,7 +204,7 @@ function resumo() {
   const hic = HICOLOR.map(([, n]) => situacao(n));
   const conta = (arr, s) => arr.filter(x => x === s).length;
   const brancos = Object.entries(D.heranca).filter(([n, h]) => !h && !D.tema[n]).length;
-  const nI386 = D.i386.reduce((a, f) => a + f.grupos.length, 0);
+  const nI386 = totalGaleria(GALERIAS.i386), nXp = totalGaleria(GALERIAS.xp);
   const c = [
     [Object.keys(D.tema).length, "nomes no tema"],
     [`${conta(pad, "completo")} / ${conta(pad, "parcial")} / ${conta(pad, "ausente")}`,
@@ -179,8 +212,9 @@ function resumo() {
     [`${conta(apps, "ausente")} de ${apps.length}`, "ícones de apps instalados ausentes"],
     [`${conta(hic, "ausente")} de ${hic.length}`, "ícones do hicolor ausentes"],
     [brancos, "ausentes sem herança (ficam em branco)"],
+    [nXp || "—", nXp ? "ícones da galeria XP (xp-icons)" : "galeria XP vazia"],
     [nI386 || "—", nI386 ? `ícones da I386 (${D.i386.length} arquivos)` : "rode extrair-i386.py"],
-    [Object.keys(lista).length, "itens na minha lista"],
+    [Object.keys(lista).length, `itens na minha lista (${Object.keys(lista).filter(n => !D.tema[n]).length} ainda não aplicados)`],
   ];
   document.getElementById("resumo").innerHTML =
     c.map(([v, t]) => `<div class="cartao"><b>${esc(v)}</b><span>${esc(t)}</span></div>`).join("");
@@ -188,18 +222,33 @@ function resumo() {
 
 // ------------------------------------------------------------------ linhas de tabela
 function img(src, s) { return `<img class="ic" style="--s:${s}" src="${esc(src)}" width="${s}" height="${s}" loading="lazy" alt="">`; }
+// Prévia do que a lista vai gravar: {tamanho: imagem da galeria} dos tamanhos marcados
+// no item que existem na origem (só para origens xp: e i386:).
+function planejado(nome) {
+  const it = lista[nome], g = it && PORREF[it.origem];
+  if (!g) return {};
+  const out = {};
+  (it.tamanhos || []).forEach(s => { if (g.tamanhos.includes(s)) out[s] = g.src(s); });
+  return out;
+}
 function celulas(nome) {
   const t = D.tema[nome];
+  const plano = planejado(nome);
   return D.tamanhos.map(s => {
     const p = t && t.s[s];
-    return `<td class="tam">${p ? `<span title="${esc(p)}">${img(p, px(s))}</span>` : '<span class="vazio">·</span>'}</td>`;
+    if (p) return `<td class="tam"><span title="${esc(p)}">${img(p, px(s))}</span></td>`;
+    if (plano[s]) return `<td class="tam"><span title="na lista: ${esc(lista[nome].origem)} (falta aplicar)">` +
+                         `${img(plano[s], px(s)).replace('class="ic"', 'class="ic plan"')}</span></td>`;
+    return '<td class="tam"><span class="vazio">·</span></td>';
   }).join("");
 }
 function linha(nome, ctx, extra) {
   const st = situacao(nome);
   const t = D.tema[nome];
   let her = "";
-  if (st === "ausente") {
+  if (st === "planejado") {
+    her = `<span class="her">falta aplicar (aplicar-lista.py)</span>`;
+  } else if (st === "ausente") {
     const h = D.heranca[nome];
     her = `<span class="her">${h ? "vem do " + esc(h) : "fica em branco"}</span>`;
   } else if (st === "parcial") {
@@ -211,7 +260,7 @@ function linha(nome, ctx, extra) {
     ? `<button class="btn peq" data-editar="${esc(nome)}">Editar</button> <span class="na-lista">✓ ${esc(nl.origem || "na lista")}</span>`
     : `<button class="btn peq" data-editar="${esc(nome)}" data-ctx="${esc(ctx)}">Adicionar…</button>`;
   return `<tr><td class="nome"><code>${esc(nome)}</code> ${alvo}${extra ? `<div class="apps">${extra}</div>` : ""}</td>` +
-         `${celulas(nome)}<td><span class="st ${st}">${st}</span>${her}</td><td>${acao}</td></tr>`;
+         `${celulas(nome)}<td><span class="st ${st}">${ROTULO[st]}</span>${her}</td><td>${acao}</td></tr>`;
 }
 function cabecalho(prim) {
   return `<tr><th>${prim}</th>${D.tamanhos.map(s => `<th>${s}</th>`).join("")}<th>Situação</th><th>Lista</th></tr>`;
@@ -264,7 +313,8 @@ const ABAS = {
   tema: { titulo: "Todos do tema", render() {
     return tabela(porCtx(Object.keys(D.tema).filter(passa).sort().map(n => [D.tema[n].c, linha(n, D.tema[n].c, appsDe(n))])), "Nome");
   }},
-  i386: { titulo: "Galeria I386", render: galeria },
+  xp: { titulo: "Galeria XP", render: () => galeria("xp") },
+  i386: { titulo: "Galeria I386", render: () => galeria("i386") },
   lista: { titulo: "Minha lista", render: minhaLista },
 };
 let aba = ABAS[location.hash.slice(1)] ? location.hash.slice(1) : "faltando";
@@ -279,28 +329,31 @@ function render() {
   document.getElementById("conteudo").innerHTML = ABAS[aba].render();
 }
 
-// ------------------------------------------------------------------ galeria I386
+// ------------------------------------------------------------------ galerias
 let escolhendo = null;          // estado do formulário enquanto escolhe na galeria
-function galeria() {
-  if (!D.i386.length) {
+let ultimaGaleria = "xp";       // galeria aberta por "Escolher na galeria…"
+function galeria(fonte) {
+  ultimaGaleria = fonte;
+  const G = GALERIAS[fonte];
+  if (!G.secoes.length) {
     document.getElementById("contagem").textContent = "";
-    return `<div class="aviso">A galeria está vazia. Extraia os ícones da I386 e gere o mapa de novo:<br>
-      <code>python3 Icons/src/extrair-i386.py /caminho/para/I386 &amp;&amp; python3 Icons/src/mapa.py</code></div>`;
+    return `<div class="aviso">${G.vazia}</div>`;
   }
-  let html = escolhendo ? `<div class="aviso escolhendo">Clique no ícone para <b>${esc(escolhendo.nome || "o item")}</b>.
-    <button class="btn peq" data-cancelar-escolha>Cancelar</button></div>` : "";
+  let html = escolhendo ? `<div class="aviso escolhendo">Clique no ícone para <b>${esc(escolhendo.nome || "o item")}</b>
+    (as duas galerias servem). <button class="btn peq" data-cancelar-escolha>Cancelar</button></div>` : "";
+  // a linha de tamanhos só aparece quando o ícone não tem todos os tamanhos da galeria
+  const max = Math.max(...G.secoes.flatMap(s => s.itens.map(i => i.tamanhos.length)));
   let n = 0;
-  for (const f of D.i386) {
-    const itens = f.grupos.filter(g => passa(f.arquivo) || passa(`${f.arquivo}#${g.grupo}`));
+  for (const s of G.secoes) {
+    const itens = s.itens.filter(i => passa(s.titulo) || passa(i.busca));
     if (!itens.length) continue;
     n += itens.length;
-    html += `<div class="galeria-arq"><h3>${esc(f.arquivo)} (${itens.length})</h3><div class="grade">` +
-      itens.map(g => {
-        const t = g.tamanhos.includes(32) ? 32 : g.tamanhos.filter(s => s <= 48).pop() || g.tamanhos[0];
-        const ref = `i386:${f.arquivo}#${g.grupo}`;
-        return `<div class="item" data-ref="${esc(ref)}" data-tams="${g.tamanhos.join(",")}" title="${esc(ref)}\ntamanhos: ${g.tamanhos.join(", ")}">` +
-               `${img(`build/i386/${f.arquivo}/${g.grupo}-${t}.png`, Math.min(t, 48))}<small>#${esc(g.grupo)}</small>` +
-               `<small>${g.tamanhos.join("·")}</small></div>`;
+    html += `<div class="galeria-arq"><h3>${esc(s.titulo)} (${itens.length})</h3><div class="grade">` +
+      itens.map(i => {
+        const t = tamPrevia(i.tamanhos);
+        return `<div class="item${fonte === "xp" ? " largo" : ""}" data-ref="${esc(i.ref)}" data-tams="${i.tamanhos.join(",")}" ` +
+               `title="${esc(i.ref)}\ntamanhos: ${i.tamanhos.join(", ")}">${img(i.src(t), Math.min(t, 48))}` +
+               `<small>${esc(i.rotulo)}</small>${i.tamanhos.length < max ? `<small>${i.tamanhos.join("·")}</small>` : ""}</div>`;
       }).join("") + `</div></div>`;
   }
   document.getElementById("contagem").textContent = `${n} ícones`;
@@ -323,20 +376,17 @@ function minhaLista() {
     const prev = previa(it.origem);
     return `<tr><td class="nome"><code>${esc(it.ctx)}/${esc(n)}</code></td><td>${prev}</td><td><code>${esc(it.origem || "—")}</code></td>
       <td>${esc((it.tamanhos || []).join(", "))}</td><td>${esc(it.obs || "")}</td>
-      <td><span class="st ${situacao(n)}">${situacao(n)}</span></td>
+      <td><span class="st ${situacao(n)}">${ROTULO[situacao(n)]}</span></td>
       <td><button class="btn peq" data-editar="${esc(n)}">Editar</button></td></tr>`;
   }).join("");
   return barra + `<div class="rolagem"><table><tr><th>Contexto/nome</th><th>Prévia</th><th>Origem</th><th>Tamanhos</th>
     <th>Observação</th><th>No tema</th><th></th></tr>${linhas}</table></div>`;
 }
 function previa(origem) {
-  const m = /^i386:([^#]+)#(.+)$/.exec(origem || "");
-  if (!m) return "";
-  const f = D.i386.find(a => a.arquivo === m[1]);
-  const g = f && f.grupos.find(x => x.grupo === m[2]);
-  if (!g) return "";
-  const t = g.tamanhos.includes(32) ? 32 : g.tamanhos[g.tamanhos.length - 1];
-  return img(`build/i386/${m[1]}/${m[2]}-${t}.png`, Math.min(t, 48));
+  const i = PORREF[origem];
+  if (!i) return "";
+  const t = tamPrevia(i.tamanhos);
+  return img(i.src(t), Math.min(t, 48));
 }
 
 // ------------------------------------------------------------------ exportar / importar
@@ -346,7 +396,7 @@ function exportar() {
     `# ${D.nomeTema}: ícones adicionados manualmente`,
     `# Exportado pelo Icons/mapa.html em ${hoje}`,
     `# Formato (separado por TAB): contexto/nome  origem  tamanhos  observação`,
-    `# Origem: i386:<arquivo>#<grupo> (galeria da I386) ou o caminho de um arquivo seu`,
+    `# Origem: xp:<nome> (galeria XP), i386:<arquivo>#<grupo> (galeria da I386) ou o caminho de um arquivo seu`,
   ];
   Object.keys(lista).sort().forEach(n => {
     const it = lista[n];
@@ -386,7 +436,7 @@ function abrirDialogo(nome, ctx, estado) {
   document.getElementById("fCtx").value = it.ctx || "apps";
   document.getElementById("fOrigem").value = it.origem || "";
   document.getElementById("fObs").value = it.obs || "";
-  document.getElementById("fTams").innerHTML = [16, 22, 24, 32, 48, "scalable"].map(s =>
+  document.getElementById("fTams").innerHTML = [16, 22, 24, 32, 48].map(s =>
     `<label><input type="checkbox" value="${s}" ${(it.tamanhos || []).map(String).includes(String(s)) ? "checked" : ""}> ${s}</label>`).join("");
   document.getElementById("fRemover").hidden = !lista[nome];
   dicaOrigem();
@@ -405,12 +455,10 @@ function estadoForm() {
 }
 function dicaOrigem() {
   const o = document.getElementById("fOrigem").value.trim();
-  const m = /^i386:([^#]+)#(.+)$/.exec(o);
   let d = "";
-  if (m) {
-    const f = D.i386.find(a => a.arquivo === m[1]);
-    const g = f && f.grupos.find(x => x.grupo === m[2]);
-    d = g ? `Tamanhos na I386: ${g.tamanhos.join(", ")}` : "Ícone não encontrado na galeria.";
+  if (/^(xp|i386):/.test(o)) {
+    const i = PORREF[o];
+    d = i ? `Tamanhos disponíveis: ${i.tamanhos.join(", ")}` : "Ícone não encontrado na galeria.";
   }
   document.getElementById("fDicaOrigem").textContent = d;
 }
@@ -421,7 +469,7 @@ document.getElementById("fRemover").onclick = () => {
 };
 document.getElementById("fEscolher").onclick = () => {
   escolhendo = estadoForm(); escolhendo.original = dlg.dataset.original;
-  dlg.close(); aba = "i386"; document.getElementById("busca").value = ""; render(); window.scrollTo(0, 0);
+  dlg.close(); aba = ultimaGaleria; document.getElementById("busca").value = ""; render(); window.scrollTo(0, 0);
 };
 document.getElementById("form").addEventListener("submit", ev => {
   const e = estadoForm();

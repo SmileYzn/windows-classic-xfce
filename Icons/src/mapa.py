@@ -11,10 +11,12 @@ O mapa mostra:
     (ex.: org.xfce.panel.showdesktop);
   - todos os ícones do tema, inclusive os nomes extras (gtk-*, gnome-*, etc.);
   - de onde vem cada ícone que falta (Adwaita, hicolor ou nenhum = fica em branco);
+  - a galeria XP: os ícones de Icons/build/xp-icons/<N>x<N>/<nome>.png, em todos os
+    tamanhos das subpastas (16, 22, 24, 32, 48, 64, 128, 1024...);
   - a galeria de ícones extraídos da I386 (Icons/src/extrair-i386.py), se existir.
 
 Na página dá para montar uma lista dos ícones que serão adicionados à mão
-(origem: um ícone da I386 ou um arquivo seu) e exportá-la como .list.
+(origem: xp:<nome>, i386:<arquivo>#<grupo> ou um arquivo seu) e exportá-la como .list.
 
 Uso:
     python3 Icons/src/mapa.py              # gera Icons/mapa.html
@@ -26,6 +28,7 @@ import glob
 import json
 import os
 import shutil
+import struct
 import tempfile
 import datetime
 
@@ -38,8 +41,9 @@ ICONS = os.path.dirname(AQUI)                          # pasta Icons/
 TEMA = "windows-classic-icons"
 RAIZ_TEMA = os.path.join(ICONS, TEMA)
 I386 = os.path.join(ICONS, "build", "i386")
+XP_ICONS = os.path.join(ICONS, "build", "xp-icons")
 SAIDA = os.path.join(ICONS, "mapa.html")
-TAMANHOS = [16, 22, 24, 32, 48, "scalable"]
+TAMANHOS = [16, 22, 24, 32, 48]
 
 # Icon Naming Specification 0.8.90 (nomes por contexto)
 ESPEC = {
@@ -232,6 +236,37 @@ def _procurar(th, busca, nomes, out):
     return out
 
 
+def ler_xp_icons():
+    """[{nome, tamanhos}] da galeria XP: cada subpasta NxN de Icons/build/xp-icons
+    é um tamanho; o nome do ícone é o nome do arquivo sem .png (pode ter espaços)."""
+    if not os.path.isdir(XP_ICONS):
+        return []
+    tams = {}
+    fora = set()        # nomes com algum PNG que não é NxN (ex.: "Icon Pack", a imagem de divulgação)
+    for d in os.listdir(XP_ICONS):
+        w, _, h = d.partition("x")
+        if not (w.isdigit() and w == h and os.path.isdir(os.path.join(XP_ICONS, d))):
+            continue
+        for f in os.listdir(os.path.join(XP_ICONS, d)):
+            nome, ext = os.path.splitext(f)
+            if ext.lower() != ".png" or nome.startswith("."):
+                continue
+            if dimensoes_png(os.path.join(XP_ICONS, d, f)) != (int(w), int(w)):
+                fora.add(nome)
+            tams.setdefault(nome, set()).add(int(w))
+    return [{"nome": n, "tamanhos": sorted(s)}
+            for n, s in sorted(tams.items(), key=lambda kv: kv[0].lower()) if n not in fora]
+
+
+def dimensoes_png(caminho):
+    """(largura, altura) lidas do cabeçalho IHDR, sem abrir a imagem inteira."""
+    with open(caminho, "rb") as f:
+        cab = f.read(24)
+    if cab[:8] != b"\x89PNG\r\n\x1a\n":
+        return None
+    return struct.unpack(">II", cab[16:24])
+
+
 LISTA = os.path.join(ICONS, TEMA + ".list")
 
 
@@ -269,9 +304,10 @@ def main():
     if os.path.exists(indice):
         with open(indice, encoding="utf-8") as f:
             i386 = json.load(f)
+    xp = ler_xp_icons()
     dados = {
         "tema": tema, "padrao": padrao, "apps": apps, "hicolor": hicolor, "heranca": heranca(sorted(faltam)),
-        "i386": i386, "tamanhos": TAMANHOS, "nomeTema": TEMA, "listaProjeto": ler_lista(),
+        "i386": i386, "xp": xp, "tamanhos": TAMANHOS, "nomeTema": TEMA, "listaProjeto": ler_lista(),
         "gerado": datetime.datetime.now().strftime("%d/%m/%Y %H:%M"),
     }
     with open(os.path.join(AQUI, "mapa.template.html"), encoding="utf-8") as f:
@@ -280,8 +316,8 @@ def main():
     with open(SAIDA, "w", encoding="utf-8") as f:
         f.write(html)
     n_i386 = sum(len(a["grupos"]) for a in i386)
-    print("OK: %s (%d ícones no tema, %d nomes padrão, %d ícones de apps, %d do hicolor, %d da I386)"
-          % (SAIDA, len(tema), len(padrao), len(apps), len(hicolor), n_i386))
+    print("OK: %s (%d ícones no tema, %d nomes padrão, %d ícones de apps, %d do hicolor, %d da galeria XP, %d da I386)"
+          % (SAIDA, len(tema), len(padrao), len(apps), len(hicolor), len(xp), n_i386))
     if not i386:
         print("Dica: rode Icons/src/extrair-i386.py /caminho/para/I386 para ver a galeria da I386.")
 

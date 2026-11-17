@@ -8,11 +8,12 @@ Formato da lista (separado por TAB; linhas com # são comentários):
 
     contexto/nome    origem    tamanhos    observação
 
-  origem:   i386:<arquivo>#<grupo>  - ícone da galeria da I386 (Icons/build/i386)
+  origem:   xp:<nome>                - ícone da galeria XP (Icons/build/xp-icons/<N>x<N>/<nome>.png)
+            i386:<arquivo>#<grupo>  - ícone da galeria da I386 (Icons/build/i386)
             /caminho/arquivo.png     - um PNG seu, redimensionado para cada tamanho
-            /caminho/arquivo.svg     - um SVG seu, gravado em scalable/<contexto>
-  tamanhos: 16,22,24,32,48 (os que existirem na origem; nos ícones da I386 não há
-            redimensionamento: um tamanho que não existe no XP é pulado)
+            (SVG só funciona se o tema voltar a ter as pastas scalable/<contexto>)
+  tamanhos: 16,22,24,32,48 (os que existirem na origem; nos ícones das galerias XP e
+            I386 não há redimensionamento: um tamanho que não existe lá é pulado)
 
 O tema é refeito do zero a cada execução: os PNG e SVG das pastas do tema são
 apagados e gravados de novo conforme a lista (o index.theme e os .gitkeep ficam).
@@ -41,6 +42,7 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 ICONS = os.path.dirname(AQUI)
 TEMA = os.path.join(ICONS, "windows-classic-icons")
 I386 = os.path.join(ICONS, "build", "i386")
+XP_ICONS = os.path.join(ICONS, "build", "xp-icons")
 LISTA = os.path.join(ICONS, "windows-classic-icons.list")
 LIMITE = 10                     # nomes que podem sair do tema sem --forcar
 
@@ -108,6 +110,8 @@ def main():
     if any(o.startswith("i386:") for _, _, _, o, _ in itens) and not os.path.isdir(I386):
         sys.exit("A galeria da I386 não existe. Rode antes:\n"
                  "    python3 Icons/src/extrair-i386.py /caminho/para/I386")
+    if any(o.startswith("xp:") for _, _, _, o, _ in itens) and not os.path.isdir(XP_ICONS):
+        sys.exit("A galeria XP não existe: falta a pasta %s" % XP_ICONS)
     apagados = limpar(pastas)
 
     gravados = links = 0
@@ -130,6 +134,11 @@ def main():
                 if not os.path.isfile(fonte):
                     avisos.append("linha %d: %s não tem %s px" % (n, origem, tam))
                     continue
+            elif origem.startswith("xp:"):
+                fonte = os.path.join(XP_ICONS, "%sx%s" % (tam, tam), origem[3:] + ".png")
+                if tam == "scalable" or not os.path.isfile(fonte):
+                    avisos.append("linha %d: %s não tem %s px" % (n, origem, tam))
+                    continue
             else:
                 fonte = os.path.expanduser(origem)
                 if not os.path.isfile(fonte):
@@ -142,7 +151,7 @@ def main():
                 os.symlink(feitos[chave], destino)
                 links += 1
                 continue
-            if ext == ".svg" or origem.startswith("i386:"):
+            if ext == ".svg" or origem.startswith(("i386:", "xp:")):
                 shutil.copyfile(fonte, destino)
             else:
                 subprocess.run(["magick", fonte, "-background", "none", "-resize", "%dx%d" % (tam, tam),
