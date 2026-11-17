@@ -20,9 +20,11 @@ apagados e gravados de novo conforme a lista (o index.theme e os .gitkeep ficam)
 Quando a mesma imagem serve a vários nomes na mesma pasta, os nomes seguintes
 viram links simbólicos para o primeiro.
 
-Para evitar apagar o tema por engano (por exemplo, com uma lista exportada pela metade),
-o script recusa uma lista que removeria mais de LIMITE nomes que o tema tem hoje; nesse
-caso, confira a lista ou rode com --forcar.
+Para evitar apagar o tema por engano, o script não altera nada (a não ser com --forcar) se:
+  - a lista removeria mais de LIMITE nomes que o tema tem hoje (por exemplo, uma lista
+    exportada pela metade);
+  - algum nome da lista ficaria sem nenhuma imagem, porque a origem não existe (por exemplo,
+    uma DLL que não está na galeria da I386).
 
 Uso:
     python3 Icons/src/extrair-i386.py /caminho/para/I386     # uma vez (galeria)
@@ -75,6 +77,31 @@ def ler_lista(caminho):
     return itens
 
 
+def achar_fonte(origem, tam):
+    """(caminho da imagem de origem para o tamanho, ou None; motivo quando não há)."""
+    if origem.startswith("i386:"):
+        arq, grupo = origem[5:].split("#", 1)
+        fonte = os.path.join(I386, arq, "%s-%s.png" % (grupo, tam))
+        return (fonte, "") if os.path.isfile(fonte) else (None, "%s não tem %s px" % (origem, tam))
+    if origem.startswith("xp:"):
+        fonte = os.path.join(XP_ICONS, "%sx%s" % (tam, tam), origem[3:] + ".png")
+        if tam != "scalable" and os.path.isfile(fonte):
+            return fonte, ""
+        return None, "%s não tem %s px" % (origem, tam)
+    fonte = os.path.expanduser(origem)
+    return (fonte, "") if os.path.isfile(fonte) else (None, "arquivo não encontrado: %s" % origem)
+
+
+def sem_imagem(itens, pastas):
+    """Itens da lista que não teriam nenhuma imagem gravada (nenhuma origem encontrada)."""
+    out = []
+    for n, ctx, nome, origem, tams in itens:
+        tams = ["scalable"] if origem.endswith(".svg") else tams
+        if not any(pastas.get((ctx, t)) and achar_fonte(origem, t)[0] for t in tams):
+            out.append((n, nome, origem))
+    return out
+
+
 def limpar(pastas):
     apagados = 0
     for d in set(pastas.values()):
@@ -112,6 +139,15 @@ def main():
                  "    python3 Icons/src/extrair-i386.py /caminho/para/I386")
     if any(o.startswith("xp:") for _, _, _, o, _ in itens) and not os.path.isdir(XP_ICONS):
         sys.exit("A galeria XP não existe: falta a pasta %s" % XP_ICONS)
+    # Nomes que ficariam sem imagem (ex.: a galeria não tem a DLL de origem). Como o tema é
+    # refeito do zero, eles sumiriam do tema; por isso nada é alterado sem --forcar.
+    vazios = sem_imagem(itens, pastas)
+    if vazios and not forcar:
+        sys.exit("%d nomes da lista ficariam sem nenhuma imagem (a origem não existe):\n%s\n"
+                 "Nada foi alterado. Confira as origens (rode de novo o extrair-i386.py, se a galeria\n"
+                 "da I386 estiver desatualizada) ou rode com --forcar para aplicar mesmo assim."
+                 % (len(vazios), "\n".join("    linha %d: %s  (%s)" % v for v in vazios[:20])
+                    + ("\n    ..." if len(vazios) > 20 else "")))
     apagados = limpar(pastas)
 
     gravados = links = 0
@@ -128,22 +164,10 @@ def main():
             if not pasta:
                 avisos.append("linha %d: o tema não tem a pasta %s/%s" % (n, tam, ctx))
                 continue
-            if origem.startswith("i386:"):
-                arq, grupo = origem[5:].split("#", 1)
-                fonte = os.path.join(I386, arq, "%s-%s.png" % (grupo, tam))
-                if not os.path.isfile(fonte):
-                    avisos.append("linha %d: %s não tem %s px" % (n, origem, tam))
-                    continue
-            elif origem.startswith("xp:"):
-                fonte = os.path.join(XP_ICONS, "%sx%s" % (tam, tam), origem[3:] + ".png")
-                if tam == "scalable" or not os.path.isfile(fonte):
-                    avisos.append("linha %d: %s não tem %s px" % (n, origem, tam))
-                    continue
-            else:
-                fonte = os.path.expanduser(origem)
-                if not os.path.isfile(fonte):
-                    avisos.append("linha %d: arquivo não encontrado: %s" % (n, origem))
-                    continue
+            fonte, motivo = achar_fonte(origem, tam)
+            if not fonte:
+                avisos.append("linha %d: %s" % (n, motivo))
+                continue
             ext = ".svg" if fonte.endswith(".svg") else ".png"
             destino = os.path.join(TEMA, pasta, nome + ext)
             chave = (pasta, os.path.realpath(fonte), tam)

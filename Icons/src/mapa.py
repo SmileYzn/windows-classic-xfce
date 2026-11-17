@@ -9,6 +9,10 @@ O mapa mostra:
   - os ícones pedidos pelos aplicativos instalados (linha Icon= dos arquivos .desktop);
   - os ícones que os aplicativos e os plugins do painel instalam no hicolor
     (ex.: org.xfce.panel.showdesktop);
+  - os nomes coloridos do tema elementary (/usr/share/icons/elementary), que o XFCE e
+    vários aplicativos pedem;
+  - para cada nome que falta, uma miniatura de referência apontando para o arquivo
+    original em /usr/share/icons (nada é copiado: é só para ver o que o nome representa);
   - todos os ícones do tema, inclusive os nomes extras (gtk-*, gnome-*, etc.);
   - de onde vem cada ícone que falta (Adwaita, hicolor ou nenhum = fica em branco);
   - a galeria XP: os ícones de Icons/build/xp-icons/<N>x<N>/<nome>.png, em todos os
@@ -30,6 +34,7 @@ import os
 import shutil
 import struct
 import tempfile
+import urllib.parse
 import datetime
 
 import gi
@@ -139,7 +144,8 @@ CTX_HICOLOR = {"media": "actions", "navigation": "actions", "stock": "actions"}
 
 
 def nomes_hicolor():
-    """{nome: contexto} dos ícones coloridos (sem -symbolic) instalados no hicolor."""
+    """{nome: contexto} dos ícones coloridos (sem -symbolic) instalados no hicolor.
+    Guarda também em REFS um arquivo de cada nome, para a miniatura de referência."""
     cp = configparser.ConfigParser(interpolation=None, strict=False)
     cp.optionxform = str
     if not cp.read(os.path.join(HICOLOR, "index.theme"), encoding="utf-8"):
@@ -154,6 +160,47 @@ def nomes_hicolor():
             nome, ext = os.path.splitext(f)
             if ext in (".png", ".svg") and not nome.endswith("-symbolic") and not nome.startswith("."):
                 out.setdefault(nome, CTX_HICOLOR.get(ctx, ctx))
+                guardar_ref(nome, os.path.join(pasta, f), d.split("/")[0])
+    return out
+
+
+ELEMENTARY = "/usr/share/icons/elementary"
+# pastas do elementary (contexto/tamanho) -> contexto do tema
+CTX_ELEMENTARY = {"mimes": "mimetypes"}
+
+# {nome: (prioridade, arquivo)} da miniatura de referência; prefere 48 px, depois 32, SVG...
+REFS = {}
+
+
+def guardar_ref(nome, caminho, tamanho):
+    """Guarda o arquivo de referência de um nome, preferindo o tamanho mais próximo de 48."""
+    if caminho.endswith(".xpm"):
+        return
+    num = "".join(c for c in tamanho.split("x")[0] if c.isdigit())
+    prio = abs(int(num) - 48) if num else 40          # "scalable" e afins: no meio
+    if nome not in REFS or prio < REFS[nome][0]:
+        REFS[nome] = (prio, caminho)
+
+
+def nomes_elementary():
+    """{nome: contexto} dos ícones coloridos do elementary (sem -symbolic e sem as
+    variantes @2x/@3x). O elementary organiza as pastas como <contexto>/<tamanho>."""
+    out = {}
+    if not os.path.isdir(ELEMENTARY):
+        return out
+    for ctx in sorted(os.listdir(ELEMENTARY)):
+        base = os.path.join(ELEMENTARY, ctx)
+        if "@" in ctx or not os.path.isdir(base) or ctx.startswith("cursor"):
+            continue
+        for tam in sorted(os.listdir(base)):
+            pasta = os.path.join(base, tam)
+            if tam == "symbolic" or not os.path.isdir(pasta):
+                continue
+            for f in os.listdir(pasta):
+                nome, ext = os.path.splitext(f)
+                if ext in (".png", ".svg") and not nome.endswith("-symbolic") and not nome.startswith("."):
+                    out.setdefault(nome, CTX_ELEMENTARY.get(ctx, ctx))
+                    guardar_ref(nome, os.path.join(pasta, f), tam)
     return out
 
 
@@ -232,7 +279,12 @@ def _procurar(th, busca, nomes, out):
         if not info or not info.get_filename():
             out[n] = None
             continue
-        out[n] = os.path.relpath(info.get_filename(), busca).split(os.sep)[0]
+        rel = os.path.relpath(info.get_filename(), busca)
+        out[n] = rel.split(os.sep)[0]
+        if out[n] != TEMA:
+            # a miniatura de referência é o arquivo que o GTK mostra hoje para esse nome
+            # (fora da pasta temporária); hicolor/elementary ficam para quem não tem herança
+            REFS[n] = (-1, os.path.realpath(info.get_filename()))
     return out
 
 
@@ -297,8 +349,11 @@ def main():
     padrao += [[c, n] for c, n in nomes_adwaita_legacy(tema) if n not in na_espec]
     ja = {n for _, n in padrao}
     hicolor = [[c, n] for n, c in sorted(nomes_hicolor().items()) if n not in ja and n not in apps]
+    ja |= {n for _, n in hicolor}
+    elementary = [[c, n] for n, c in sorted(nomes_elementary().items())
+                  if n not in ja and n not in apps and n not in tema]
     faltam = ({n for _, n in padrao if n not in tema} | {n for n in apps if n not in tema}
-              | {n for _, n in hicolor if n not in tema})
+              | {n for _, n in hicolor if n not in tema} | {n for _, n in elementary})
     i386 = []
     indice = os.path.join(I386, "indice.json")
     if os.path.exists(indice):
@@ -306,18 +361,22 @@ def main():
             i386 = json.load(f)
     xp = ler_xp_icons()
     dados = {
-        "tema": tema, "padrao": padrao, "apps": apps, "hicolor": hicolor, "heranca": heranca(sorted(faltam)),
+        "tema": tema, "padrao": padrao, "apps": apps, "hicolor": hicolor, "elementary": elementary,
+        "heranca": heranca(sorted(faltam)),
         "i386": i386, "xp": xp, "tamanhos": TAMANHOS, "nomeTema": TEMA, "listaProjeto": ler_lista(),
         "gerado": datetime.datetime.now().strftime("%d/%m/%Y %H:%M"),
     }
+    # miniaturas de referência só para os nomes que faltam no tema
+    dados["refs"] = {n: "file://" + urllib.parse.quote(REFS[n][1]) for n in sorted(faltam) if n in REFS}
     with open(os.path.join(AQUI, "mapa.template.html"), encoding="utf-8") as f:
         html = f.read()
     html = html.replace("/*__DADOS__*/null", json.dumps(dados, ensure_ascii=False, separators=(",", ":")))
     with open(SAIDA, "w", encoding="utf-8") as f:
         f.write(html)
     n_i386 = sum(len(a["grupos"]) for a in i386)
-    print("OK: %s (%d ícones no tema, %d nomes padrão, %d ícones de apps, %d do hicolor, %d da galeria XP, %d da I386)"
-          % (SAIDA, len(tema), len(padrao), len(apps), len(hicolor), len(xp), n_i386))
+    print("OK: %s (%d ícones no tema, %d nomes padrão, %d ícones de apps, %d do hicolor, %d do elementary, "
+          "%d da galeria XP, %d da I386)"
+          % (SAIDA, len(tema), len(padrao), len(apps), len(hicolor), len(elementary), len(xp), n_i386))
     if not i386:
         print("Dica: rode Icons/src/extrair-i386.py /caminho/para/I386 para ver a galeria da I386.")
 

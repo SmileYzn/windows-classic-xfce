@@ -60,6 +60,7 @@
   .st.planejado { color: var(--titulo1); }
   .ic.plan { outline: 1px dashed var(--titulo1); outline-offset: 1px; }
   .st.completo { color: var(--ok); } .st.parcial { color: var(--parcial); } .st.ausente { color: var(--falta); }
+  .ref { vertical-align: middle; margin-right: 4px; opacity: .9; }
   .her { color: var(--herdado); font-size: 11px; display: block; font-weight: normal; }
   .na-lista { color: var(--ok); font-size: 11px; }
   .contagem { color: #333; }
@@ -143,19 +144,51 @@
 const D = /*__DADOS__*/null;
 const NUCLEO = [16, 32, 48];      // tamanhos nativos dos ícones do XP
 const px = s => s === "scalable" ? 48 : Math.min(s, 48);   // tamanho de exibição
-const CHAVE = "windows-classic-icons:lista";
+const CHAVE = "windows-classic-icons:lista";      // {versao: 2, edicoes: {nome: item | null}}
 const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 
 // ------------------------------------------------------------------ lista manual
-let lista = {};
-try { lista = JSON.parse(localStorage.getItem(CHAVE) || "{}") || {}; } catch (e) { lista = {}; }
-function salvarLista() { try { localStorage.setItem(CHAVE, JSON.stringify(lista)); } catch (e) {} }
 // A lista do projeto (Icons/windows-classic-icons.list, embutida pelo mapa.py) é a base da
-// página; o que foi editado neste navegador fica por cima. Assim "Exportar .list" sempre sai
-// com a lista inteira, e não só com o que foi mexido aqui.
-(D.listaProjeto || []).forEach(it => {
-  if (!(it.nome in lista)) lista[it.nome] = { ctx: it.ctx, origem: it.origem, tamanhos: it.tamanhos, obs: it.obs };
-});
+// página. O navegador guarda só as EDIÇÕES feitas aqui (item alterado/novo, ou null para
+// removido), comparadas com a lista do projeto. Assim, quando a lista do projeto muda (por
+// exemplo, depois de aplicar uma lista nova), o que não foi mexido neste navegador segue a
+// lista nova, em vez de uma cópia antiga voltar por cima dela. "Exportar .list" sai sempre
+// com a lista inteira (projeto + edições).
+const PROJETO = {};
+(D.listaProjeto || []).forEach(it => PROJETO[it.nome] = { ctx: it.ctx, origem: it.origem, tamanhos: it.tamanhos, obs: it.obs });
+const normal = it => JSON.stringify([it.ctx, it.origem || "", (it.tamanhos || []).map(String), it.obs || ""]);
+let edicoes = {};
+let listaAntiga = false;       // havia uma lista inteira salva pela versão anterior do mapa
+try {
+  const s = JSON.parse(localStorage.getItem(CHAVE) || "null");
+  if (s && s.versao === 2) edicoes = s.edicoes || {};
+  else if (s) {
+    // formato antigo (a lista inteira): não dá para separar o que foi editado aqui do que só
+    // era uma cópia velha da lista do projeto. Fica guardado à parte e não é usado.
+    listaAntiga = true;
+    localStorage.setItem(CHAVE + ":antiga", JSON.stringify(s));
+    localStorage.removeItem(CHAVE);
+  }
+} catch (e) { edicoes = {}; }
+let lista = {};
+function montarLista() {
+  lista = {};
+  for (const [n, it] of Object.entries(PROJETO)) lista[n] = { ...it };
+  for (const [n, it] of Object.entries(edicoes)) { if (it === null) delete lista[n]; else lista[n] = it; }
+}
+function salvarLista() {
+  edicoes = {};
+  for (const n of new Set([...Object.keys(PROJETO), ...Object.keys(lista)])) {
+    if (!(n in lista)) edicoes[n] = null;
+    else if (!PROJETO[n] || normal(lista[n]) !== normal(PROJETO[n])) edicoes[n] = lista[n];
+  }
+  try {
+    if (Object.keys(edicoes).length) localStorage.setItem(CHAVE, JSON.stringify({ versao: 2, edicoes }));
+    else localStorage.removeItem(CHAVE);
+  } catch (e) {}
+}
+montarLista();
+salvarLista();                 // descarta edições que a lista do projeto já incorporou
 
 // ------------------------------------------------------------------ situação de cada nome
 function situacao(nome) {
@@ -168,6 +201,9 @@ function ctxDe(nome, padrao) { return (D.tema[nome] && D.tema[nome].c) || padrao
 const ctxPadrao = {}; D.padrao.forEach(([c, n]) => ctxPadrao[n] = c);
 const HICOLOR = D.hicolor || [];
 HICOLOR.forEach(([c, n]) => { if (!ctxPadrao[n]) ctxPadrao[n] = c; });
+const ELEMENTARY = D.elementary || [];
+ELEMENTARY.forEach(([c, n]) => { if (!ctxPadrao[n]) ctxPadrao[n] = c; });
+const REFS = D.refs || {};     // miniatura de referência (arquivo original em /usr/share/icons)
 
 // ------------------------------------------------------------------ galerias de origem
 // Cada galeria tem seções com itens {ref, rotulo, busca, tamanhos, src(tamanho)}.
@@ -202,6 +238,7 @@ function resumo() {
   const pad = D.padrao.map(([, n]) => situacao(n));
   const apps = Object.keys(D.apps).map(situacao);
   const hic = HICOLOR.map(([, n]) => situacao(n));
+  const ele = ELEMENTARY.map(([, n]) => situacao(n));
   const conta = (arr, s) => arr.filter(x => x === s).length;
   const brancos = Object.entries(D.heranca).filter(([n, h]) => !h && !D.tema[n]).length;
   const nI386 = totalGaleria(GALERIAS.i386), nXp = totalGaleria(GALERIAS.xp);
@@ -211,6 +248,7 @@ function resumo() {
      `padrão freedesktop (${pad.length}): completos / parciais / ausentes`],
     [`${conta(apps, "ausente")} de ${apps.length}`, "ícones de apps instalados ausentes"],
     [`${conta(hic, "ausente")} de ${hic.length}`, "ícones do hicolor ausentes"],
+    [`${conta(ele, "ausente")} de ${ele.length}`, "nomes do elementary ausentes"],
     [brancos, "ausentes sem herança (ficam em branco)"],
     [nXp || "—", nXp ? "ícones da galeria XP (xp-icons)" : "galeria XP vazia"],
     [nI386 || "—", nI386 ? `ícones da I386 (${D.i386.length} arquivos)` : "rode extrair-i386.py"],
@@ -246,11 +284,13 @@ function linha(nome, ctx, extra) {
   const st = situacao(nome);
   const t = D.tema[nome];
   let her = "";
+  const ref = REFS[nome] && st !== "completo" && st !== "parcial"
+    ? `<img class="ref" src="${esc(REFS[nome])}" width="24" height="24" loading="lazy" alt="" title="referência: ${esc(decodeURIComponent(REFS[nome]).replace("file://", ""))}">` : "";
   if (st === "planejado") {
-    her = `<span class="her">falta aplicar (aplicar-lista.py)</span>`;
+    her = `<span class="her">${ref}falta aplicar (aplicar-lista.py)</span>`;
   } else if (st === "ausente") {
     const h = D.heranca[nome];
-    her = `<span class="her">${h ? "vem do " + esc(h) : "fica em branco"}</span>`;
+    her = `<span class="her">${ref}${h ? "vem do " + esc(h) : "fica em branco"}</span>`;
   } else if (st === "parcial") {
     her = `<span class="her">falta ${NUCLEO.filter(s => !t.s[s]).join(", ")}</span>`;
   }
@@ -297,6 +337,8 @@ const ABAS = {
     g.push(["Aplicativos instalados", apps]);
     const hic = HICOLOR.filter(([, n]) => ok(n)).map(([c, n]) => [c, linha(n, c, "")]);
     porCtx(hic).forEach(([c, l]) => g.push(["hicolor — " + c, l]));
+    const ele = ELEMENTARY.filter(([, n]) => ok(n)).map(([c, n]) => [c, linha(n, c, "")]);
+    porCtx(ele).forEach(([c, l]) => g.push(["elementary — " + c, l]));
     return tabela(g, "Nome");
   }},
   padrao: { titulo: "Padrão freedesktop", render() {
@@ -309,6 +351,10 @@ const ABAS = {
   hicolor: { titulo: "hicolor", render() {
     return tabela(porCtx(HICOLOR.filter(([, n]) => passa(n)).map(([c, n]) => [c, linha(n, c, "")])),
                   "Ícone instalado no hicolor");
+  }},
+  elementary: { titulo: "elementary", render() {
+    return tabela(porCtx(ELEMENTARY.filter(([, n]) => passa(n)).map(([c, n]) => [c, linha(n, c, "")])),
+                  "Nome do tema elementary");
   }},
   tema: { titulo: "Todos do tema", render() {
     return tabela(porCtx(Object.keys(D.tema).filter(passa).sort().map(n => [D.tema[n].c, linha(n, D.tema[n].c, appsDe(n))])), "Nome");
@@ -369,7 +415,7 @@ function minhaLista() {
     <button class="btn" data-exportar ${Object.keys(lista).length ? "" : "disabled"}>Exportar .list</button>
     <button class="btn" data-importar>Importar .list…</button>
     <button class="btn" data-limpar ${Object.keys(lista).length ? "" : "disabled"}>Limpar lista…</button>
-    <span id="confirmaLimpar"></span></div>`;
+    <span id="confirmaLimpar"></span></div>` + avisoEdicoes();
   if (!nomes.length) return barra + `<div class="aviso">A lista está vazia. Use “Adicionar…” nas outras abas ou “Novo item…”.</div>`;
   const linhas = nomes.map(n => {
     const it = lista[n];
@@ -381,6 +427,17 @@ function minhaLista() {
   }).join("");
   return barra + `<div class="rolagem"><table><tr><th>Contexto/nome</th><th>Prévia</th><th>Origem</th><th>Tamanhos</th>
     <th>Observação</th><th>No tema</th><th></th></tr>${linhas}</table></div>`;
+}
+function avisoEdicoes() {
+  const n = Object.keys(edicoes).length;
+  let html = "";
+  if (listaAntiga) html += `<div class="aviso">A lista que uma versão anterior do mapa guardava neste navegador
+    foi deixada de lado: a base agora é sempre o Icons/windows-classic-icons.list do projeto.</div>`;
+  if (n) html += `<div class="aviso"><b>${n}</b> ${n === 1 ? "alteração feita" : "alterações feitas"} neste navegador
+    em relação ao Icons/windows-classic-icons.list (${esc(Object.keys(edicoes).sort().slice(0, 6).join(", "))}${n > 6 ? "…" : ""}).
+    Exporte a lista para guardá-las no projeto.
+    <button class="btn peq" data-descartar>Descartar alterações deste navegador…</button> <span id="confirmaDescartar"></span></div>`;
+  return html;
 }
 function previa(origem) {
   const i = PORREF[origem];
@@ -482,7 +539,7 @@ document.getElementById("form").addEventListener("submit", ev => {
 
 // ------------------------------------------------------------------ eventos
 document.addEventListener("click", ev => {
-  const t = ev.target.closest("[data-aba],[data-editar],[data-ref],[data-cancelar-escolha],[data-novo],[data-exportar],[data-importar],[data-limpar],[data-limpar-sim]");
+  const t = ev.target.closest("[data-aba],[data-editar],[data-ref],[data-cancelar-escolha],[data-novo],[data-exportar],[data-importar],[data-limpar],[data-limpar-sim],[data-descartar],[data-descartar-sim]");
   if (!t) return;
   if (t.dataset.aba) { aba = t.dataset.aba; render(); }
   else if (t.dataset.editar !== undefined) abrirDialogo(t.dataset.editar, t.dataset.ctx);
@@ -512,6 +569,11 @@ document.addEventListener("click", ev => {
       `Apagar os ${Object.keys(lista).length} itens? <button class="btn peq" data-limpar-sim>Sim, apagar</button>`;
   }
   else if (t.dataset.limparSim !== undefined) { lista = {}; salvarLista(); render(); }
+  else if (t.dataset.descartar !== undefined) {
+    document.getElementById("confirmaDescartar").innerHTML =
+      `Voltar à lista do projeto? <button class="btn peq" data-descartar-sim>Sim, descartar</button>`;
+  }
+  else if (t.dataset.descartarSim !== undefined) { edicoes = {}; montarLista(); salvarLista(); render(); }
 });
 document.getElementById("arqImportar").addEventListener("change", async ev => {
   const f = ev.target.files[0]; if (!f) return;
