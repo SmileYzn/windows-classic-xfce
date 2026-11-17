@@ -26,6 +26,7 @@ places/user-trash	i386:shell32.dll#32	16,32,48
 status/user-trash-full	i386:shell32.dll#33	16,32,48	
 apps/utilities-terminal	i386:cmd.exe#idi_appicon	16,32,48	
 apps/xterm-color_48x48	i386:cmd.exe#idi_appicon	16,32,48	
+apps/org.xfce.workspaces	i386:shell32.dll#19	16,32,48	
 # --- Mapeados automaticamente (observação "auto"): revise à vontade ---
 actions/address-book-new	i386:wab32res.dll#101	16,32,48	auto
 actions/application-exit	i386:shell32.dll#28	16,24,32,48	auto
@@ -150,7 +151,7 @@ mimetypes/x-office-calendar	i386:timedate.cpl#200	16,32,48	auto
 mimetypes/x-office-document	i386:wordpad.exe#154	16,32	auto
 mimetypes/x-office-presentation	i386:shell32.dll#249	16,32	auto
 places/network-workgroup	i386:shell32.dll#18	16,24,32,48	auto
-places/start-here	i386:shell32.dll#47	16,32,48	auto
+places/start-here	i386:explorer.exe-imagens#iniciar	16,24	bandeira do botão Iniciar do XP
 places/user-bookmarks	i386:shell32.dll#44	16,24,32,48	auto
 places/user-desktop	i386:shell32.dll#35	16,32,48	auto
 places/user-home	i386:mydocs.dll#100	16,24,32,48	auto
@@ -247,7 +248,7 @@ mimetypes/x-office-drawing-template	i386:mspaint.exe#3	16,32,48	auto (AdwaitaLeg
 mimetypes/x-office-presentation-template	i386:shell32.dll#249	16,32	auto (AdwaitaLegacy)
 places/folder-bookmarks	i386:shell32.dll#44	16,24,32,48	auto (AdwaitaLegacy)
 places/folder-download	i386:shell32.dll#146	16,32,48	auto (AdwaitaLegacy)
-places/folder-publicshare	i386:shell32.dll#193	16,32,48	auto (AdwaitaLegacy)
+places/folder-publicshare	i386:shell32.dll#267	16,32,48	
 places/folder-saved-search	i386:shell32.dll#46	16,32,48	auto (AdwaitaLegacy)
 places/folder-templates	i386:shell32.dll#147	16,32,48	auto (AdwaitaLegacy)
 places/folder-videos	i386:shell32.dll#238	16,24,32,48	auto (AdwaitaLegacy)

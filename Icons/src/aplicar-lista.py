@@ -19,9 +19,13 @@ apagados e gravados de novo conforme a lista (o index.theme e os .gitkeep ficam)
 Quando a mesma imagem serve a vários nomes na mesma pasta, os nomes seguintes
 viram links simbólicos para o primeiro.
 
+Para evitar apagar o tema por engano (por exemplo, com uma lista exportada pela metade),
+o script recusa uma lista que removeria mais de LIMITE nomes que o tema tem hoje; nesse
+caso, confira a lista ou rode com --forcar.
+
 Uso:
     python3 Icons/src/extrair-i386.py /caminho/para/I386     # uma vez (galeria)
-    python3 Icons/src/aplicar-lista.py [lista]
+    python3 Icons/src/aplicar-lista.py [lista] [--forcar]
     python3 Icons/src/mapa.py                                 # para conferir
 
 Dependência para PNG próprios (redimensionar): sudo pacman -S --needed imagemagick
@@ -38,6 +42,7 @@ ICONS = os.path.dirname(AQUI)
 TEMA = os.path.join(ICONS, "windows-classic-icons")
 I386 = os.path.join(ICONS, "build", "i386")
 LISTA = os.path.join(ICONS, "windows-classic-icons.list")
+LIMITE = 10                     # nomes que podem sair do tema sem --forcar
 
 
 def pastas_do_tema():
@@ -79,10 +84,27 @@ def limpar(pastas):
     return apagados
 
 
+def nomes_no_tema(pastas):
+    nomes = set()
+    for d in set(pastas.values()):
+        for f in os.listdir(os.path.join(TEMA, d)):
+            if f.endswith((".png", ".svg")):
+                nomes.add(os.path.splitext(f)[0])
+    return nomes
+
+
 def main():
-    lista = sys.argv[1] if len(sys.argv) > 1 else LISTA
+    args = [a for a in sys.argv[1:] if a != "--forcar"]
+    forcar = "--forcar" in sys.argv[1:]
+    lista = args[0] if args else LISTA
     pastas = pastas_do_tema()
     itens = ler_lista(lista)
+    saem = nomes_no_tema(pastas) - {nome for _, _, nome, _, _ in itens}
+    if len(saem) > LIMITE and not forcar:
+        sys.exit("A lista %s removeria %d nomes que o tema tem hoje (ex.: %s).\n"
+                 "Nada foi alterado. Confira a lista (uma exportação do mapa.html feita antes\n"
+                 "de abrir a lista do projeto sai incompleta) ou rode de novo com --forcar."
+                 % (lista, len(saem), ", ".join(sorted(saem)[:5])))
     if any(o.startswith("i386:") for _, _, _, o, _ in itens) and not os.path.isdir(I386):
         sys.exit("A galeria da I386 não existe. Rode antes:\n"
                  "    python3 Icons/src/extrair-i386.py /caminho/para/I386")

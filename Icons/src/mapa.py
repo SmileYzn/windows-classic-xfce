@@ -7,6 +7,8 @@ O mapa mostra:
   - os nomes da Icon Naming Specification do freedesktop.org e os do tema AdwaitaLegacy
     (ícones coloridos que o GTK e o XFCE ainda pedem), e quais tamanhos o tema tem;
   - os ícones pedidos pelos aplicativos instalados (linha Icon= dos arquivos .desktop);
+  - os ícones que os aplicativos e os plugins do painel instalam no hicolor
+    (ex.: org.xfce.panel.showdesktop);
   - todos os ícones do tema, inclusive os nomes extras (gtk-*, gnome-*, etc.);
   - de onde vem cada ícone que falta (Adwaita, hicolor ou nenhum = fica em branco);
   - a galeria de ícones extraídos da I386 (Icons/src/extrair-i386.py), se existir.
@@ -127,6 +129,30 @@ def nomes_adwaita_legacy(tema):
     return [[c, n] for n, c in sorted(out.items())]
 
 
+HICOLOR = "/usr/share/icons/hicolor"
+# pastas do hicolor fora da especificação -> contexto do tema
+CTX_HICOLOR = {"media": "actions", "navigation": "actions", "stock": "actions"}
+
+
+def nomes_hicolor():
+    """{nome: contexto} dos ícones coloridos (sem -symbolic) instalados no hicolor."""
+    cp = configparser.ConfigParser(interpolation=None, strict=False)
+    cp.optionxform = str
+    if not cp.read(os.path.join(HICOLOR, "index.theme"), encoding="utf-8"):
+        return {}
+    out = {}
+    for d in cp["Icon Theme"]["Directories"].split(","):
+        pasta = os.path.join(HICOLOR, d)
+        if not os.path.isdir(pasta):
+            continue
+        ctx = d.split("/")[-1]
+        for f in os.listdir(pasta):
+            nome, ext = os.path.splitext(f)
+            if ext in (".png", ".svg") and not nome.endswith("-symbolic") and not nome.startswith("."):
+                out.setdefault(nome, CTX_HICOLOR.get(ctx, ctx))
+    return out
+
+
 def ler_tema():
     """{nome: {"c": contexto, "s": {tamanho: caminho}, "a": alvo do link}}"""
     cp = configparser.ConfigParser(interpolation=None, strict=False)
@@ -206,21 +232,46 @@ def _procurar(th, busca, nomes, out):
     return out
 
 
+LISTA = os.path.join(ICONS, TEMA + ".list")
+
+
+def ler_lista():
+    """Itens do Icons/windows-classic-icons.list, para a página começar com a lista inteira."""
+    itens = []
+    if not os.path.exists(LISTA):
+        return itens
+    with open(LISTA, encoding="utf-8") as f:
+        for linha in f:
+            linha = linha.rstrip("\n")
+            if not linha.strip() or linha.startswith("#"):
+                continue
+            partes = (linha.split("\t") + ["", "", ""])[:4]
+            if "/" not in partes[0]:
+                continue
+            ctx, nome = partes[0].rsplit("/", 1)
+            tams = [t if t == "scalable" else int(t) for t in partes[2].split(",") if t.strip()]
+            itens.append({"nome": nome, "ctx": ctx, "origem": partes[1], "tamanhos": tams, "obs": partes[3]})
+    return itens
+
+
 def main():
     tema = ler_tema()
     apps = ler_apps()
     padrao = [[c, n] for c, nomes in ESPEC.items() for n in nomes.split()]
     na_espec = {n for _, n in padrao}
     padrao += [[c, n] for c, n in nomes_adwaita_legacy(tema) if n not in na_espec]
-    faltam = {n for _, n in padrao if n not in tema} | {n for n in apps if n not in tema}
+    ja = {n for _, n in padrao}
+    hicolor = [[c, n] for n, c in sorted(nomes_hicolor().items()) if n not in ja and n not in apps]
+    faltam = ({n for _, n in padrao if n not in tema} | {n for n in apps if n not in tema}
+              | {n for _, n in hicolor if n not in tema})
     i386 = []
     indice = os.path.join(I386, "indice.json")
     if os.path.exists(indice):
         with open(indice, encoding="utf-8") as f:
             i386 = json.load(f)
     dados = {
-        "tema": tema, "padrao": padrao, "apps": apps, "heranca": heranca(sorted(faltam)),
-        "i386": i386, "tamanhos": TAMANHOS, "nomeTema": TEMA,
+        "tema": tema, "padrao": padrao, "apps": apps, "hicolor": hicolor, "heranca": heranca(sorted(faltam)),
+        "i386": i386, "tamanhos": TAMANHOS, "nomeTema": TEMA, "listaProjeto": ler_lista(),
         "gerado": datetime.datetime.now().strftime("%d/%m/%Y %H:%M"),
     }
     with open(os.path.join(AQUI, "mapa.template.html"), encoding="utf-8") as f:
@@ -229,8 +280,8 @@ def main():
     with open(SAIDA, "w", encoding="utf-8") as f:
         f.write(html)
     n_i386 = sum(len(a["grupos"]) for a in i386)
-    print("OK: %s (%d ícones no tema, %d nomes padrão, %d ícones de apps, %d da I386)"
-          % (SAIDA, len(tema), len(padrao), len(apps), n_i386))
+    print("OK: %s (%d ícones no tema, %d nomes padrão, %d ícones de apps, %d do hicolor, %d da I386)"
+          % (SAIDA, len(tema), len(padrao), len(apps), len(hicolor), n_i386))
     if not i386:
         print("Dica: rode Icons/src/extrair-i386.py /caminho/para/I386 para ver a galeria da I386.")
 

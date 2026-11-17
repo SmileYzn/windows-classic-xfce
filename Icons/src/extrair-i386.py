@@ -87,6 +87,14 @@ TIRAS = [
     ("mspaint.exe", "paint", {16: 860}),                 # barra do Paint (15)
 ]
 
+# Imagens avulsas (RT_BITMAP) que entram na galeria como "<arquivo>-imagens":
+# (arquivo, grupo, {tamanho: recurso}). A imagem é recortada sem as bordas transparentes
+# e centralizada num quadrado do tamanho indicado.
+IMAGENS = [
+    # bandeira do botão Iniciar: 16 px do visual clássico (176) e 25x20 do Luna (143)
+    ("explorer.exe", "iniciar", {16: 176, 24: 143}),
+]
+
 RT_BITMAP, RT_ICON, RT_GROUP_ICON = 2, 3, 14
 
 
@@ -372,6 +380,41 @@ def extrair_tiras(caminho, arquivo, destino):
     return [{"grupo": g, "tamanhos": sorted(t)} for g, t in grupos.items()]
 
 
+def extrair_imagens(caminho, arquivo, destino):
+    """Grava as imagens avulsas da lista IMAGENS. Devolve [{grupo, tamanhos}]."""
+    with open(caminho, "rb") as f:
+        bitmaps = recursos(f.read()).get(RT_BITMAP, {})
+    grupos = []
+    for arq, grupo, recursos_ in IMAGENS:
+        if arq != arquivo:
+            continue
+        feitos = []
+        for tam, ident in sorted(recursos_.items()):
+            if ident not in bitmaps:
+                continue
+            w, h, rgba = bitmap_para_rgba(bitmaps[ident])
+            vis = [(x, y) for y in range(h) for x in range(w) if rgba[(y * w + x) * 4 + 3]]
+            if not vis:
+                continue
+            x0, x1 = min(x for x, _ in vis), max(x for x, _ in vis)
+            y0, y1 = min(y for _, y in vis), max(y for _, y in vis)
+            cw, ch = x1 - x0 + 1, y1 - y0 + 1
+            if cw > tam or ch > tam:
+                continue
+            ox, oy = (tam - cw) // 2, (tam - ch) // 2
+            quad = bytearray(tam * tam * 4)
+            for y in range(ch):
+                for x in range(cw):
+                    o = ((y0 + y) * w + x0 + x) * 4
+                    d = ((oy + y) * tam + ox + x) * 4
+                    quad[d:d + 4] = rgba[o:o + 4]
+            gravar_png(os.path.join(destino, "%s-%d.png" % (grupo, tam)), tam, tam, bytes(quad))
+            feitos.append(tam)
+        if feitos:
+            grupos.append({"grupo": grupo, "tamanhos": feitos})
+    return grupos
+
+
 def main():
     if len(sys.argv) != 2 or not os.path.isdir(sys.argv[1]):
         sys.exit("Uso: %s /caminho/para/I386" % sys.argv[0])
@@ -395,6 +438,17 @@ def main():
                 continue
             indice.append({"arquivo": nome, "grupos": grupos})
             print("  %-14s %4d ícones" % (nome, len(grupos)))
+        # Imagens avulsas (bandeira do botão Iniciar)
+        for nome in sorted({a for a, _, _ in IMAGENS}):
+            exe = obter(i386, nome, tmp)
+            if not exe:
+                continue
+            destino = os.path.join(SAIDA, nome + "-imagens")
+            os.makedirs(destino)
+            grupos = extrair_imagens(exe, nome, destino)
+            if grupos:
+                indice.append({"arquivo": nome + "-imagens", "grupos": grupos})
+                print("  %-14s %4d imagens" % (nome + "-imagens", len(grupos)))
         # Botões das barras de ferramentas (tiras de imagens)
         for nome in sorted({a for a, _, _ in TIRAS}):
             exe = obter(i386, nome, tmp)

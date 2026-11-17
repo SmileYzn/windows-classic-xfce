@@ -99,7 +99,8 @@
   <footer>
     <b>Completo</b>: tem 16, 32 e 48 px (os tamanhos nativos do XP). <b>Parcial</b>: existe, mas falta algum desses tamanhos
     (o GTK redimensiona outro). <b>Ausente</b>: o tema não tem; a coluna mostra de onde ele vem
-    (Adwaita, hicolor) ou "em branco". A lista fica salva neste navegador até ser exportada.
+    (Adwaita, hicolor) ou "em branco". A lista começa com o Icons/windows-classic-icons.list do
+    projeto; o que for editado aqui fica salvo neste navegador até ser exportado.
   </footer>
 </div>
 
@@ -145,6 +146,12 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">"
 let lista = {};
 try { lista = JSON.parse(localStorage.getItem(CHAVE) || "{}") || {}; } catch (e) { lista = {}; }
 function salvarLista() { try { localStorage.setItem(CHAVE, JSON.stringify(lista)); } catch (e) {} }
+// A lista do projeto (Icons/windows-classic-icons.list, embutida pelo mapa.py) é a base da
+// página; o que foi editado neste navegador fica por cima. Assim "Exportar .list" sempre sai
+// com a lista inteira, e não só com o que foi mexido aqui.
+(D.listaProjeto || []).forEach(it => {
+  if (!(it.nome in lista)) lista[it.nome] = { ctx: it.ctx, origem: it.origem, tamanhos: it.tamanhos, obs: it.obs };
+});
 
 // ------------------------------------------------------------------ situação de cada nome
 function situacao(nome) {
@@ -154,11 +161,14 @@ function situacao(nome) {
 }
 function ctxDe(nome, padrao) { return (D.tema[nome] && D.tema[nome].c) || padrao || "apps"; }
 const ctxPadrao = {}; D.padrao.forEach(([c, n]) => ctxPadrao[n] = c);
+const HICOLOR = D.hicolor || [];
+HICOLOR.forEach(([c, n]) => { if (!ctxPadrao[n]) ctxPadrao[n] = c; });
 
 // ------------------------------------------------------------------ resumo
 function resumo() {
   const pad = D.padrao.map(([, n]) => situacao(n));
   const apps = Object.keys(D.apps).map(situacao);
+  const hic = HICOLOR.map(([, n]) => situacao(n));
   const conta = (arr, s) => arr.filter(x => x === s).length;
   const brancos = Object.entries(D.heranca).filter(([n, h]) => !h && !D.tema[n]).length;
   const nI386 = D.i386.reduce((a, f) => a + f.grupos.length, 0);
@@ -167,6 +177,7 @@ function resumo() {
     [`${conta(pad, "completo")} / ${conta(pad, "parcial")} / ${conta(pad, "ausente")}`,
      `padrão freedesktop (${pad.length}): completos / parciais / ausentes`],
     [`${conta(apps, "ausente")} de ${apps.length}`, "ícones de apps instalados ausentes"],
+    [`${conta(hic, "ausente")} de ${hic.length}`, "ícones do hicolor ausentes"],
     [brancos, "ausentes sem herança (ficam em branco)"],
     [nI386 || "—", nI386 ? `ícones da I386 (${D.i386.length} arquivos)` : "rode extrair-i386.py"],
     [Object.keys(lista).length, "itens na minha lista"],
@@ -235,6 +246,8 @@ const ABAS = {
       .map(n => linha(n, "apps", appsDe(n)));
     const g = porCtx(pad).map(([c, l]) => ["Padrão freedesktop — " + c, l]);
     g.push(["Aplicativos instalados", apps]);
+    const hic = HICOLOR.filter(([, n]) => ok(n)).map(([c, n]) => [c, linha(n, c, "")]);
+    porCtx(hic).forEach(([c, l]) => g.push(["hicolor — " + c, l]));
     return tabela(g, "Nome");
   }},
   padrao: { titulo: "Padrão freedesktop", render() {
@@ -243,6 +256,10 @@ const ABAS = {
   apps: { titulo: "Aplicativos instalados", render() {
     const l = Object.keys(D.apps).filter(passa).sort().map(n => linha(n, ctxDe(n, ctxPadrao[n]), appsDe(n)));
     return tabela([["", l]], "Ícone (aplicativos)");
+  }},
+  hicolor: { titulo: "hicolor", render() {
+    return tabela(porCtx(HICOLOR.filter(([, n]) => passa(n)).map(([c, n]) => [c, linha(n, c, "")])),
+                  "Ícone instalado no hicolor");
   }},
   tema: { titulo: "Todos do tema", render() {
     return tabela(porCtx(Object.keys(D.tema).filter(passa).sort().map(n => [D.tema[n].c, linha(n, D.tema[n].c, appsDe(n))])), "Nome");
