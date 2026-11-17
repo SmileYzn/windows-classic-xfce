@@ -4,7 +4,8 @@
 Gera o Icons/mapa.html: um mapa do tema de ícones windows-classic-icons.
 
 O mapa mostra:
-  - os nomes da Icon Naming Specification do freedesktop.org e quais tamanhos o tema tem;
+  - os nomes da Icon Naming Specification do freedesktop.org e os do tema AdwaitaLegacy
+    (ícones coloridos que o GTK e o XFCE ainda pedem), e quais tamanhos o tema tem;
   - os ícones pedidos pelos aplicativos instalados (linha Icon= dos arquivos .desktop);
   - todos os ícones do tema, inclusive os nomes extras (gtk-*, gnome-*, etc.);
   - de onde vem cada ícone que falta (Adwaita, hicolor ou nenhum = fica em branco);
@@ -99,6 +100,33 @@ ESPEC = {
 }
 
 
+ADWAITA_LEGACY = "/usr/share/icons/AdwaitaLegacy"
+
+
+def nomes_adwaita_legacy(tema):
+    """[[contexto, nome]] dos ícones coloridos (sem -symbolic) do AdwaitaLegacy. Os que lá
+    estão na pasta "legacy" usam o contexto do nome no tema, quando ele já existe."""
+    cp = configparser.ConfigParser(interpolation=None, strict=False)
+    cp.optionxform = str
+    if not cp.read(os.path.join(ADWAITA_LEGACY, "index.theme"), encoding="utf-8"):
+        return []
+    out = {}
+    for d in cp["Icon Theme"]["Directories"].split(","):
+        pasta = os.path.join(ADWAITA_LEGACY, d)
+        if not os.path.isdir(pasta):
+            continue
+        ctx = d.split("/")[-1]
+        for f in os.listdir(pasta):
+            nome, ext = os.path.splitext(f)
+            if ext not in (".png", ".svg") or nome.endswith("-symbolic") or nome.startswith("."):
+                continue
+            if ctx == "legacy" and nome in tema:
+                out.setdefault(nome, tema[nome]["c"])
+            else:
+                out.setdefault(nome, ctx)
+    return [[c, n] for n, c in sorted(out.items())]
+
+
 def ler_tema():
     """{nome: {"c": contexto, "s": {tamanho: caminho}, "a": alvo do link}}"""
     cp = configparser.ConfigParser(interpolation=None, strict=False)
@@ -182,6 +210,8 @@ def main():
     tema = ler_tema()
     apps = ler_apps()
     padrao = [[c, n] for c, nomes in ESPEC.items() for n in nomes.split()]
+    na_espec = {n for _, n in padrao}
+    padrao += [[c, n] for c, n in nomes_adwaita_legacy(tema) if n not in na_espec]
     faltam = {n for _, n in padrao if n not in tema} | {n for n in apps if n not in tema}
     i386 = []
     indice = os.path.join(I386, "indice.json")

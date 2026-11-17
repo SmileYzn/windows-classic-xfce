@@ -75,6 +75,16 @@ TIRAS = [
     ("shell32.dll", "explorer", {24: 214, 16: 216}),     # barra do Explorer (47 botões)
     ("shell32.dll", "ie", {24: 204, 16: 206}),           # barra do Internet Explorer (16)
     ("shell32.dll", "editar", {24: 227, 16: 225}),       # recortar, copiar, colar... (6)
+    ("comctl32.dll", "padrao", {16: 120, 24: 121}),      # barra padrão do Windows (15)
+    ("comctl32.dll", "exibir", {16: 124, 24: 125}),      # modos de exibição e ordenação (12)
+    ("comctl32.dll", "navegar", {16: 130, 24: 131}),     # voltar, avançar, favoritos (5)
+    ("wordpad.exe", "padrao", {16: 140, 24: 143}),       # barra do WordPad (17)
+    ("wordpad.exe", "formatar", {16: 139, 24: 141}),     # negrito, itálico, alinhamento (8)
+    ("msoeres.dll", "correio", {16: 41, 24: 27}),        # barra do Outlook Express (61)
+    ("wab32res.dll", "contatos", {16: 4108, 32: 4109}),  # Catálogo de endereços (13)
+    ("shimgvw.dll", "imagens", {16: 104}),               # Visualizador de imagens (27)
+    ("wmploc.dll", "midia", {16: 331}),                  # controles do Media Player (26)
+    ("mspaint.exe", "paint", {16: 860}),                 # barra do Paint (15)
 ]
 
 RT_BITMAP, RT_ICON, RT_GROUP_ICON = 2, 3, 14
@@ -219,9 +229,42 @@ def dib_para_rgba(d):
     return w, h, bytes(rgba)
 
 
+def descomprimir_rle(dados, w, h, bpp):
+    """Descompacta BI_RLE8 (bpp 8) ou BI_RLE4 (bpp 4). Devolve as linhas (de baixo
+    para cima, como no DIB) como listas de índices da paleta."""
+    linhas = [[0] * w for _ in range(h)]
+    x = y = i = 0
+    while i + 1 < len(dados) and y < h:
+        n, v = dados[i], dados[i + 1]
+        i += 2
+        if n:                                   # sequência repetida
+            for k in range(n):
+                if x < w:
+                    linhas[y][x] = v if bpp == 8 else (v >> 4 if k % 2 == 0 else v & 15)
+                x += 1
+        elif v == 0:                            # fim da linha
+            x, y = 0, y + 1
+        elif v == 1:                            # fim do bitmap
+            break
+        elif v == 2:                            # deslocamento
+            x += dados[i]
+            y += dados[i + 1]
+            i += 2
+        else:                                   # modo absoluto: v valores
+            nbytes = v if bpp == 8 else (v + 1) // 2
+            bloco = dados[i:i + nbytes]
+            for k in range(v):
+                if x < w:
+                    linhas[y][x] = bloco[k] if bpp == 8 else (bloco[k // 2] >> 4 if k % 2 == 0 else bloco[k // 2] & 15)
+                x += 1
+            i += nbytes + (nbytes % 2)          # alinhado em 2 bytes
+    return linhas
+
+
 def bitmap_para_rgba(d):
-    """Converte o DIB de um RT_BITMAP (8, 24 ou 32 bits, sem máscara) em RGBA.
-    Em 32 bits usa o canal alfa; nos outros, o magenta (255, 0, 255) é transparente."""
+    """Converte o DIB de um RT_BITMAP (4, 8, 24 ou 32 bits, sem máscara) em RGBA.
+    Em 32 bits usa o canal alfa; nos outros, a cor do canto superior esquerdo da tira
+    (magenta, verde ou cinza, conforme o programa) é a transparente."""
     tam, w, h, _pl, bpp, comp = struct.unpack_from("<IiiHHI", d, 0)
     de_cima = h < 0
     h = abs(h)
@@ -230,18 +273,25 @@ def bitmap_para_rgba(d):
     pal = [(d[pos + i * 4 + 2], d[pos + i * 4 + 1], d[pos + i * 4]) for i in range(ncores)]
     pos += ncores * 4
     passo = ((w * bpp + 31) // 32) * 4
+    rle = descomprimir_rle(d[pos:], w, h, bpp) if comp in (1, 2) else None
     rgba = bytearray(w * h * 4)
+    chave = None
     for y in range(h):
         ly = y if de_cima else h - 1 - y
         linha = d[pos + ly * passo:pos + (ly + 1) * passo]
-        indices = bits(linha, bpp, w) if bpp <= 8 else None
+        if rle is not None:
+            indices = rle[ly]
+        else:
+            indices = bits(linha, bpp, w) if bpp <= 8 else None
         for x in range(w):
             if bpp <= 8:
                 r, g, b = pal[indices[x]] if indices[x] < len(pal) else (0, 0, 0)
-                a = 0 if (r, g, b) == (255, 0, 255) else 255
             elif bpp == 24:
                 b, g, r = linha[x * 3:x * 3 + 3]
-                a = 0 if (r, g, b) == (255, 0, 255) else 255
+            if bpp <= 24:
+                if chave is None:
+                    chave = (r, g, b)            # canto superior esquerdo
+                a = 0 if (r, g, b) == chave else 255
             elif bpp == 32:
                 b, g, r, a = linha[x * 4:x * 4 + 4]
             else:
