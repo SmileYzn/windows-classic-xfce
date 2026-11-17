@@ -203,6 +203,18 @@ wnck-pager {
     -gtk-icon-style: regular;
     -gtk-icon-transform: scale(1); }
 
+/* XFCE Power Manager e outros diálogos do XFCE: o valor dos sliders ("Nunca", "80%")
+   é um GtkLabel separado, logo abaixo do slider de classe .xfce4-scale-label, marcado
+   como insensível só para parecer "apagado" no Adwaita. No tema clássico o :disabled
+   vira o cinza de texto desabilitado do Windows, então o rótulo parecia inativo.
+   Aqui ele volta a ser texto normal enquanto o slider estiver ativo. */
+scale.xfce4-scale-label + label:disabled {
+  color: @fg_color;
+  text-shadow: none; }
+scale.xfce4-scale-label:disabled + label:disabled {
+  color: @disabled_font;
+  text-shadow: 1px 1px 0 @disabled_font_shadow; }
+
 /* XFCE Notification plugin */
 #xfce4-notification-plugin,
 #xfce4-notification-plugin:active {
