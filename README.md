@@ -33,6 +33,7 @@ painel do perfil `Panel/windows-classic.tar.bz2`, fundo em cor sólida `#3B6EA5`
 | `Theme/windows-classic/xfwm4` | Bordas das janelas (xfwm4) | ✅ pronto |
 | `Theme/windows-classic-xhdpi/xfwm4` | Bordas em 2x para HiDPI (gerado) | ✅ pronto |
 | `Theme/windows-classic/gtk-3.0` | Tema GTK 3 | ✅ pronto |
+| `Icons/windows-classic-icons` | Tema de ícones (freedesktop) | 🚧 em andamento |
 | `Terminal` | Esquemas de cores do xfce4-terminal | ✅ pronto |
 | `Setup` | Instalador (assistente e linha de comando) | ✅ pronto |
 | `Panel` | Perfil do painel do XFCE (xfce4-panel-profiles) | ✅ pronto |
@@ -285,6 +286,29 @@ O `testar.sh` já a usa. Para a sua sessão, por exemplo:
 ```bash
 echo 'export GTK_OVERLAY_SCROLLING=0' >> ~/.xprofile
 ```
+
+## Ícones (windows-classic-icons)
+
+Tema de ícones no padrão freedesktop, com os ícones originais do Windows XP
+(16, 24, 32 e 48 px), herdando do Adwaita e do hicolor o que ainda não tem.
+Cobre 162 dos 264 nomes padrão da Icon Naming Specification e 51 dos 57 ícones
+pedidos pelos aplicativos instalados (contados pelo `Icons/src/mapa.py`).
+
+O tema é montado a partir de uma lista, `Icons/windows-classic-icons.list`
+(separada por TAB: `contexto/nome`, origem, tamanhos e observação; a origem é
+`i386:<arquivo>#<grupo>` ou o caminho de um arquivo seu):
+
+```bash
+python3 Icons/src/extrair-i386.py /caminho/para/I386   # galeria em Icons/build/i386
+python3 Icons/src/mapa.py                               # Icons/mapa.html: o que falta e a galeria
+python3 Icons/src/aplicar-lista.py                      # refaz o tema a partir da lista
+```
+
+A galeria tem os ícones de 127 arquivos do XP (DLLs, executáveis, painéis de
+controle e arquivos dentro do `SP3.CAB`, do `DRIVER.CAB` e do `MMSSETUP.CAB`) e
+os botões das barras de ferramentas do Explorer e do Internet Explorer
+(`shell32.dll-barras`). As linhas com a observação `auto` foram mapeadas
+automaticamente e podem ser revisadas no `mapa.html`.
 
 ## Fontes
 

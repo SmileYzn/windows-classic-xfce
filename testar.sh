@@ -35,6 +35,7 @@ trap 'kill "${XEPHYR:-}" 2>/dev/null || true; rm -rf "$PERFIL"' EXIT
 XML="$PERFIL/config/xfce4/xfconf/xfce-perchannel-xml"
 mkdir -p "$XML" "$PERFIL/icons" "$PERFIL/themes"
 ln -s "$AQUI/Cursors/windows-classic-cursors" "$PERFIL/icons/windows-classic-cursors"
+ln -s "$AQUI/Icons/windows-classic-icons" "$PERFIL/icons/windows-classic-icons"
 ln -s "$AQUI/Theme/windows-classic" "$PERFIL/themes/windows-classic"
 ln -s "$AQUI/Theme/windows-classic-xhdpi" "$PERFIL/themes/windows-classic-xhdpi"
 
@@ -56,6 +57,7 @@ cat > "$XML/xsettings.xml" <<EOF
   </property>
   <property name="Net" type="empty">
     <property name="ThemeName" type="string" value="windows-classic"/>
+    <property name="IconThemeName" type="string" value="windows-classic-icons"/>
   </property>
   <property name="Gdk" type="empty">
     <property name="WindowScalingFactor" type="int" value="$ESCALA"/>

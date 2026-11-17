@@ -7,10 +7,17 @@ usada pelo Icons/mapa.html na hora de escolher ícones para os nomes que faltam.
 Para cada arquivo da lista ARQUIVOS o script:
 
   1. descompacta o arquivo (FOO.DL_ -> foo.dll) com o cabextract ou o 7z;
-     os que não estão soltos na I386 são procurados dentro do SP3.CAB;
+     os que não estão soltos na I386 são procurados dentro dos pacotes CABS
+     (SP3.CAB, DRIVER.CAB e MMSSETUP.CAB);
   2. lê os recursos RT_GROUP_ICON / RT_ICON direto do executável (Python puro);
   3. grava cada tamanho disponível como PNG, escolhendo a versão com mais cores:
      Icons/build/i386/<arquivo>/<grupo>-<tamanho>.png
+
+Os botões das barras de ferramentas do Explorer e do Internet Explorer não são
+ícones: são tiras de imagens (RT_BITMAP) na shell32.dll. As tiras da lista TIRAS
+são cortadas em quadros e entram na galeria como "<arquivo>-barras", um ícone
+por botão, com os tamanhos de 16 e 24 px juntos:
+     Icons/build/i386/shell32.dll-barras/<barra>-<nº>-<tamanho>.png
 
 No fim grava Icons/build/i386/indice.json, lido pelo Icons/src/mapa.py.
 Os ícones extraídos não vão para o repositório (Icons/build/ está no .gitignore).
@@ -51,9 +58,26 @@ wordpad.exe sndvol32.exe sndrec32.exe dxdiag.exe mobsync.exe msconfig.exe magnif
 osk.exe narrator.exe utilman.exe mstsc.exe msimn.exe wmplayer.exe moviemk.exe progman.exe
 sol.exe winmine.exe freecell.exe mshearts.exe spider.exe dialer.exe eudcedit.exe
 hypertrm.exe iexplore.exe mmc.exe msinfo32.exe helpctr.exe ntbackup.exe systray.exe
+user32.dll comdlg32.dll xpsp2res.dll compstui.dll syncui.dll cscdll.dll srchui.dll
+localsec.dll mmcbase.dll hnetcfg.dll upnpui.dll shimgvw.dll newdev.dll syssetup.dll
+objsel.dll webcheck.dll wininet.dll msieftp.dll quartz.dll msctf.dll hticons.dll fxsui.dll
+wmm2res.dll msdxm.ocx conf.exe mplay32.exe accwiz.exe wiaacmgr.exe
+camext20.dll camext30.dll plotui.dll irmon.dll msmsgs.exe
 """.split()
 
-RT_ICON, RT_GROUP_ICON = 3, 14
+# Pacotes onde procurar os arquivos que não estão soltos na I386
+CABS = ["sp3.cab", "driver.cab", "mmssetup.cab"]
+
+# Tiras de botões (RT_BITMAP): (arquivo, nome da barra, {tamanho: recurso}).
+# As tiras de 16 e 24 px de cada barra têm os mesmos botões na mesma ordem; as tiras
+# seguintes (215, 217, 205...) são o estado "aceso" e ficam de fora.
+TIRAS = [
+    ("shell32.dll", "explorer", {24: 214, 16: 216}),     # barra do Explorer (47 botões)
+    ("shell32.dll", "ie", {24: 204, 16: 206}),           # barra do Internet Explorer (16)
+    ("shell32.dll", "editar", {24: 227, 16: 225}),       # recortar, copiar, colar... (6)
+]
+
+RT_BITMAP, RT_ICON, RT_GROUP_ICON = 2, 3, 14
 
 
 # ---------------------------------------------------------------- descompactação
@@ -86,9 +110,12 @@ def obter(i386, nome, tmp):
         return descompactar(p, tmp)
     if p:
         return p
-    sp3 = achar(i386, "sp3.cab")
-    if sp3:
-        return descompactar(sp3, tmp, nome)
+    for cab in CABS:
+        c = achar(i386, cab)
+        if c:
+            p = descompactar(c, tmp, nome)
+            if p:
+                return p
     return None
 
 
@@ -133,7 +160,7 @@ def recursos(dados):
 
     out = {}
     for tipo, a1 in entradas(base):
-        if tipo not in (RT_ICON, RT_GROUP_ICON) or not a1 & 0x80000000:
+        if tipo not in (RT_BITMAP, RT_ICON, RT_GROUP_ICON) or not a1 & 0x80000000:
             continue
         for nome, a2 in entradas(base + (a1 & 0x7FFFFFFF)):
             if not a2 & 0x80000000:
@@ -192,6 +219,38 @@ def dib_para_rgba(d):
     return w, h, bytes(rgba)
 
 
+def bitmap_para_rgba(d):
+    """Converte o DIB de um RT_BITMAP (8, 24 ou 32 bits, sem máscara) em RGBA.
+    Em 32 bits usa o canal alfa; nos outros, o magenta (255, 0, 255) é transparente."""
+    tam, w, h, _pl, bpp, comp = struct.unpack_from("<IiiHHI", d, 0)
+    de_cima = h < 0
+    h = abs(h)
+    ncores = struct.unpack_from("<I", d, 32)[0] or (1 << bpp if bpp <= 8 else 0)
+    pos = tam + (12 if comp == 3 and tam == 40 else 0)      # máscaras do BI_BITFIELDS
+    pal = [(d[pos + i * 4 + 2], d[pos + i * 4 + 1], d[pos + i * 4]) for i in range(ncores)]
+    pos += ncores * 4
+    passo = ((w * bpp + 31) // 32) * 4
+    rgba = bytearray(w * h * 4)
+    for y in range(h):
+        ly = y if de_cima else h - 1 - y
+        linha = d[pos + ly * passo:pos + (ly + 1) * passo]
+        indices = bits(linha, bpp, w) if bpp <= 8 else None
+        for x in range(w):
+            if bpp <= 8:
+                r, g, b = pal[indices[x]] if indices[x] < len(pal) else (0, 0, 0)
+                a = 0 if (r, g, b) == (255, 0, 255) else 255
+            elif bpp == 24:
+                b, g, r = linha[x * 3:x * 3 + 3]
+                a = 0 if (r, g, b) == (255, 0, 255) else 255
+            elif bpp == 32:
+                b, g, r, a = linha[x * 4:x * 4 + 4]
+            else:
+                raise ValueError("profundidade não suportada: %d" % bpp)
+            i = (y * w + x) * 4
+            rgba[i:i + 4] = bytes((r, g, b, a))
+    return w, h, bytes(rgba)
+
+
 def gravar_png(caminho, w, h, rgba):
     def bloco(tipo, dados):
         return (struct.pack(">I", len(dados)) + tipo + dados
@@ -239,6 +298,30 @@ def extrair(caminho, destino):
     return grupos
 
 
+def extrair_tiras(caminho, arquivo, destino):
+    """Corta as tiras de botões de um executável em quadros. Devolve [{grupo, tamanhos}]."""
+    with open(caminho, "rb") as f:
+        bitmaps = recursos(f.read()).get(RT_BITMAP, {})
+    grupos = {}
+    for arq, barra, tiras in TIRAS:
+        if arq != arquivo:
+            continue
+        for tam, ident in sorted(tiras.items()):
+            if ident not in bitmaps:
+                continue
+            w, h, rgba = bitmap_para_rgba(bitmaps[ident])
+            if h != tam or w % tam:
+                continue
+            for n in range(w // tam):
+                quadro = b"".join(rgba[(y * w + n * tam) * 4:(y * w + (n + 1) * tam) * 4] for y in range(tam))
+                if not any(quadro[i] for i in range(3, len(quadro), 4)):
+                    continue                     # quadro vazio
+                grupo = "%s-%02d" % (barra, n + 1)
+                gravar_png(os.path.join(destino, "%s-%d.png" % (grupo, tam)), tam, tam, quadro)
+                grupos.setdefault(grupo, []).append(tam)
+    return [{"grupo": g, "tamanhos": sorted(t)} for g, t in grupos.items()]
+
+
 def main():
     if len(sys.argv) != 2 or not os.path.isdir(sys.argv[1]):
         sys.exit("Uso: %s /caminho/para/I386" % sys.argv[0])
@@ -262,6 +345,17 @@ def main():
                 continue
             indice.append({"arquivo": nome, "grupos": grupos})
             print("  %-14s %4d ícones" % (nome, len(grupos)))
+        # Botões das barras de ferramentas (tiras de imagens)
+        for nome in sorted({a for a, _, _ in TIRAS}):
+            exe = obter(i386, nome, tmp)
+            if not exe:
+                continue
+            destino = os.path.join(SAIDA, nome + "-barras")
+            os.makedirs(destino)
+            grupos = extrair_tiras(exe, nome, destino)
+            if grupos:
+                indice.append({"arquivo": nome + "-barras", "grupos": grupos})
+                print("  %-14s %4d botões" % (nome + "-barras", len(grupos)))
     with open(os.path.join(SAIDA, "indice.json"), "w", encoding="utf-8") as f:
         json.dump(indice, f, ensure_ascii=False)
     total = sum(len(a["grupos"]) for a in indice)
