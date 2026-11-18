@@ -303,9 +303,13 @@ def ler_xp_icons():
             nome, ext = os.path.splitext(f)
             if ext.lower() != ".png" or nome.startswith("."):
                 continue
-            if dimensoes_png(os.path.join(XP_ICONS, d, f)) != (int(w), int(w)):
-                fora.add(nome)
-            tams.setdefault(nome, set()).add(int(w))
+            dim = dimensoes_png(os.path.join(XP_ICONS, d, f))
+            if not dim or dim[0] != dim[1]:
+                fora.add(nome)              # não é ícone (imagem não quadrada)
+                continue
+            tams.setdefault(nome, set())
+            if dim[0] == int(w):            # quadrado de outro tamanho (ex.: 1500 px na pasta
+                tams[nome].add(int(w))      # 1024x1024) só não conta para esta pasta
     return [{"nome": n, "tamanhos": sorted(s)}
             for n, s in sorted(tams.items(), key=lambda kv: kv[0].lower()) if n not in fora]
 
