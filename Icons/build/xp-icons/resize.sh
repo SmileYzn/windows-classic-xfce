@@ -11,6 +11,6 @@ while IFS= read -r line || [ -n "$line" ]; do
   rm -rf "$size"; mkdir -p "$size"
   echo "Gerando $size..."
   find "$SRC" -maxdepth 1 -type f -iname '*.png' -print0 |
-    xargs -0 -P"$(nproc)" -I{} bash -c 'magick "$1" -filter Lanczos -resize "$2" -background none -gravity center -extent "$2" "$2/$(basename "$1")"' _ {} "$size"
+    xargs -0 -P"$(nproc)" -I{} bash -c 'magick -quiet "$1" -strip -filter Lanczos -resize "$2" -background none -gravity center -extent "$2" "$2/$(basename "$1")"' _ {} "$size"
 done < sizes.txt
 echo "Pronto."
