@@ -54,7 +54,7 @@ apps/blueman	xp:Bluetooth Devices	16,22,24,32,48	auto; antes: i386:xpsp2res.dll#
 apps/blueman-device	xp:Bluetooth Devices	16,22,24,32,48	auto
 devices/bluetooth	xp:Bluetooth Devices	16,22,24,32,48	auto (AdwaitaLegacy)
 status/bluetooth-active	xp:Bluetooth Devices	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:xpsp2res.dll#300
-actions/bookmark-new	i386:shell32.dll-barras#explorer-04	16,24	auto (AdwaitaLegacy)
+actions/bookmark-new	xp:Whistler - Favorites	16,22,24,32,48	auto (AdwaitaLegacy)
 actions/call-start	xp:Play	16,22,24,32,48	auto; antes: i386:dialer.exe#102
 actions/call-stop	xp:Stop	16,22,24,32,48	
 devices/camera-photo	xp:Digital Camera	16,22,24,32,48	auto; antes: i386:shell32.dll#309
@@ -73,7 +73,7 @@ actions/document-open	xp:Open	16,22,24,32,48	auto; antes: i386:shell32.dll-barra
 actions/document-open-recent	xp:Recent Documents	16,22,24,32,48	auto; antes: i386:shell32.dll#21
 actions/document-print	xp:Printer	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#explorer-20
 actions/document-print-preview	i386:shell32.dll-barras#explorer-15	16,24	auto
-actions/document-properties	i386:shell32.dll-barras#explorer-16	16,24	auto
+actions/document-properties	xp:explorer properties	16,22,24,32,48	auto
 actions/document-save	xp:Save	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#explorer-14
 actions/document-save-as	xp:Save	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#explorer-14
 actions/document-send	xp:Email	16,22,24,32,48	auto; antes: i386:shell32.dll#265
@@ -170,7 +170,6 @@ actions/mail-send	xp:Email	16,22,24,32,48	auto; antes: i386:shell32.dll#265
 actions/mail-send-receive	i386:msoeres.dll-barras#correio-37	16,24	auto (AdwaitaLegacy)
 status/mail-signed	xp:OE Encrypt	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:msoeres.dll-barras#correio-56
 status/mail-unread	i386:msimn.exe#4	16,32	auto (AdwaitaLegacy)
-actions/media-eject	i386:shell32.dll#331	16,32,48	auto
 devices/media-flash	xp:PCMCIA Card	16,22,24,32,48	auto; antes: i386:shell32.dll#306
 devices/media-floppy	i386:shell32.dll#7	16,32,48	auto
 devices/media-optical	i386:shell32.dll#302	16,32,48	auto
@@ -266,7 +265,7 @@ devices/printer	xp:Printer	16,22,24,32,48	auto; antes: i386:shell32.dll#17
 status/printer-error	xp:Printer Missing	16,22,24,32,48	auto
 devices/printer-network	xp:Network printer	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#140
 status/printer-printing	xp:Web services printer	16,22,24,32,48	auto; antes: i386:shell32.dll#1009
-actions/process-stop	xp:IE Stop	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#ie-03
+actions/process-stop	xp:Stop	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#ie-03
 devices/scanner	xp:Fax	16,22,24,32,48	auto; antes: i386:shell32.dll#315
 status/security-high	xp:Security - Ok	16,22,24,32,48	auto; antes: i386:xpsp2res.dll#6108
 status/security-low	xp:Security Error	16,22,24,32,48	auto; antes: i386:xpsp2res.dll#6106
