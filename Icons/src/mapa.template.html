@@ -74,6 +74,8 @@
   .item .ic { display: block; margin: 0 auto 2px; }
   .aviso { background: #ffffe1; border: 1px solid #000; padding: 6px 8px; margin-bottom: 8px; }
   .escolhendo { position: sticky; top: 0; z-index: 2; }
+  td.pasta code { color: var(--herdado); }
+  .atual { display: inline-flex; align-items: center; gap: 6px; vertical-align: middle; margin: 0 8px; }
   dialog { border: 2px solid; border-color: var(--luz) var(--escuro) var(--escuro) var(--luz); padding: 3px;
            background: var(--face); width: min(560px, calc(100vw - 32px)); }
   dialog::backdrop { background: rgba(0,0,0,.35); }
@@ -93,6 +95,7 @@
   <div class="abas" role="tablist" id="abas"></div>
   <div class="painel">
     <div class="ferramentas">
+      <select id="pasta" title="Filtrar pela pasta (contexto)"><option value="">Todas Pastas</option></select>
       <input type="search" id="busca" placeholder="Filtrar por nome…">
       <label id="lblParciais"><input type="checkbox" id="parciais"> incluir parciais</label>
       <label><input type="checkbox" id="zoom"> ampliar 2x</label>
@@ -203,6 +206,17 @@ const HICOLOR = D.hicolor || [];
 HICOLOR.forEach(([c, n]) => { if (!ctxPadrao[n]) ctxPadrao[n] = c; });
 const ELEMENTARY = D.elementary || [];
 ELEMENTARY.forEach(([c, n]) => { if (!ctxPadrao[n]) ctxPadrao[n] = c; });
+// Filtro por pasta (contexto): o select é montado com todas as pastas que existem no mapa.
+const pastaSel = () => document.getElementById("pasta").value;
+(function () {
+  const ctxs = new Set(["apps"]);
+  D.padrao.forEach(([c]) => ctxs.add(c));
+  HICOLOR.forEach(([c]) => ctxs.add(c));
+  ELEMENTARY.forEach(([c]) => ctxs.add(c));
+  Object.values(D.tema).forEach(t => ctxs.add(t.c));
+  document.getElementById("pasta").insertAdjacentHTML("beforeend",
+    [...ctxs].filter(Boolean).sort().map(c => `<option>${esc(c)}</option>`).join(""));
+})();
 const REFS = D.refs || {};     // miniatura de referência (arquivo original em /usr/share/icons)
 
 // ------------------------------------------------------------------ galerias de origem
@@ -299,17 +313,17 @@ function linha(nome, ctx, extra) {
   const acao = nl
     ? `<button class="btn peq" data-editar="${esc(nome)}">Editar</button> <span class="na-lista">✓ ${esc(nl.origem || "na lista")}</span>`
     : `<button class="btn peq" data-editar="${esc(nome)}" data-ctx="${esc(ctx)}">Adicionar…</button>`;
-  return `<tr><td class="nome"><code>${esc(nome)}</code> ${alvo}${extra ? `<div class="apps">${extra}</div>` : ""}</td>` +
+  return `<tr><td class="pasta"><code>${esc(ctx)}</code></td><td class="nome"><code>${esc(nome)}</code> ${alvo}${extra ? `<div class="apps">${extra}</div>` : ""}</td>` +
          `${celulas(nome)}<td><span class="st ${st}">${ROTULO[st]}</span>${her}</td><td>${acao}</td></tr>`;
 }
 function cabecalho(prim) {
-  return `<tr><th>${prim}</th>${D.tamanhos.map(s => `<th>${s}</th>`).join("")}<th>Situação</th><th>Lista</th></tr>`;
+  return `<tr><th>Pasta</th><th>${prim}</th>${D.tamanhos.map(s => `<th>${s}</th>`).join("")}<th>Situação</th><th>Lista</th></tr>`;
 }
 function tabela(grupos, prim) {
   let html = "", n = 0;
   for (const [titulo, itens] of grupos) {
     if (!itens.length) continue;
-    if (titulo) html += `<tr class="grupo"><td colspan="${D.tamanhos.length + 3}">${esc(titulo)} (${itens.length})</td></tr>`;
+    if (titulo) html += `<tr class="grupo"><td colspan="${D.tamanhos.length + 4}">${esc(titulo)} (${itens.length})</td></tr>`;
     html += itens.join(""); n += itens.length;
   }
   document.getElementById("contagem").textContent = `${n} ícones`;
@@ -321,23 +335,26 @@ const filtro = () => document.getElementById("busca").value.trim().toLowerCase()
 const passa = n => !filtro() || n.toLowerCase().includes(filtro());
 const porCtx = pares => {
   const g = {};
-  pares.forEach(([c, html]) => (g[c] = g[c] || []).push(html));
+  pares.forEach(([c, html]) => { if (!pastaSel() || pastaSel() === c) (g[c] = g[c] || []).push(html); });
   return Object.keys(g).sort().map(c => [c, g[c]]);
 };
 const appsDe = n => D.apps[n] ? esc(D.apps[n].slice(0, 4).join(", ") + (D.apps[n].length > 4 ? "…" : "")) : "";
 
+// Contextos que ficam sem ícone por enquanto: não aparecem na aba "Faltando" (o tema continua
+// herdando do Adwaita/hicolor). Para voltar a listar um contexto, tire-o desta lista.
+const SEM_ICONE = new Set(["apps", "categories", "emblems", "emotes", "mimetypes", "mimes", "places", "status"]);
 const ABAS = {
   faltando: { titulo: "Faltando", parciais: true, render() {
     const inc = document.getElementById("parciais").checked;
     const ok = n => passa(n) && (situacao(n) === "ausente" || (inc && situacao(n) === "parcial"));
-    const pad = D.padrao.filter(([, n]) => ok(n)).map(([c, n]) => [c, linha(n, c, appsDe(n))]);
-    const apps = Object.keys(D.apps).filter(n => !ctxPadrao[n] && ok(n)).sort()
+    const pad = D.padrao.filter(([c, n]) => !SEM_ICONE.has(c) && ok(n)).map(([c, n]) => [c, linha(n, c, appsDe(n))]);
+    const apps = SEM_ICONE.has("apps") || (pastaSel() && pastaSel() !== "apps") ? [] : Object.keys(D.apps).filter(n => !ctxPadrao[n] && ok(n)).sort()
       .map(n => linha(n, "apps", appsDe(n)));
     const g = porCtx(pad).map(([c, l]) => ["Padrão freedesktop — " + c, l]);
     g.push(["Aplicativos instalados", apps]);
-    const hic = HICOLOR.filter(([, n]) => ok(n)).map(([c, n]) => [c, linha(n, c, "")]);
+    const hic = HICOLOR.filter(([c, n]) => !SEM_ICONE.has(c) && ok(n)).map(([c, n]) => [c, linha(n, c, "")]);
     porCtx(hic).forEach(([c, l]) => g.push(["hicolor — " + c, l]));
-    const ele = ELEMENTARY.filter(([, n]) => ok(n)).map(([c, n]) => [c, linha(n, c, "")]);
+    const ele = ELEMENTARY.filter(([c, n]) => !SEM_ICONE.has(c) && ok(n)).map(([c, n]) => [c, linha(n, c, "")]);
     porCtx(ele).forEach(([c, l]) => g.push(["elementary — " + c, l]));
     return tabela(g, "Nome");
   }},
@@ -345,7 +362,7 @@ const ABAS = {
     return tabela(porCtx(D.padrao.filter(([, n]) => passa(n)).map(([c, n]) => [c, linha(n, c, appsDe(n))])), "Nome");
   }},
   apps: { titulo: "Aplicativos instalados", render() {
-    const l = Object.keys(D.apps).filter(passa).sort().map(n => linha(n, ctxDe(n, ctxPadrao[n]), appsDe(n)));
+    const l = Object.keys(D.apps).filter(n => passa(n) && (!pastaSel() || pastaSel() === ctxDe(n, ctxPadrao[n]))).sort().map(n => linha(n, ctxDe(n, ctxPadrao[n]), appsDe(n)));
     return tabela([["", l]], "Ícone (aplicativos)");
   }},
   hicolor: { titulo: "hicolor", render() {
@@ -378,6 +395,22 @@ function render() {
 // ------------------------------------------------------------------ galerias
 let escolhendo = null;          // estado do formulário enquanto escolhe na galeria
 let ultimaGaleria = "xp";       // galeria aberta por "Escolher na galeria…"
+// Como o ícone está hoje (aplicado no tema, ou na lista aguardando aplicar, ou só a referência),
+// para mostrar no aviso de "Clique no ícone para ...".
+function atualDe(nome) {
+  if (!nome) return "";
+  const t = D.tema[nome], plano = planejado(nome);
+  let imgs = D.tamanhos.map(s => {
+    const p = t && t.s[s];
+    if (p) return `<span title="${esc(p)}">${img(p, px(s))}</span>`;
+    if (plano[s]) return `<span title="na lista: ${esc(lista[nome].origem)} (falta aplicar)">${img(plano[s], px(s))}</span>`;
+    return "";
+  }).join("");
+  let rot = t ? "no tema" : "na lista (falta aplicar)";
+  if (!imgs && REFS[nome]) { imgs = img(REFS[nome], 24); rot = "referência"; }
+  if (!imgs) { const h = D.heranca[nome]; return `Atual: <i>${h ? "vem do " + esc(h) : "sem ícone"}</i> `; }
+  return `Atual (${rot}): <span class="atual">${imgs}</span> `;
+}
 function galeria(fonte) {
   ultimaGaleria = fonte;
   const G = GALERIAS[fonte];
@@ -386,7 +419,7 @@ function galeria(fonte) {
     return `<div class="aviso">${G.vazia}</div>`;
   }
   let html = escolhendo ? `<div class="aviso escolhendo">Clique no ícone para <b>${esc(escolhendo.nome || "o item")}</b>
-    (as duas galerias servem). <button class="btn peq" data-cancelar-escolha>Cancelar</button></div>` : "";
+    (as duas galerias servem). ${atualDe(escolhendo.nome)}<button class="btn peq" data-cancelar-escolha>Cancelar</button></div>` : "";
   // a linha de tamanhos só aparece quando o ícone não tem todos os tamanhos da galeria
   const max = Math.max(...G.secoes.flatMap(s => s.itens.map(i => i.tamanhos.length)));
   let n = 0;
@@ -408,7 +441,7 @@ function galeria(fonte) {
 
 // ------------------------------------------------------------------ minha lista
 function minhaLista() {
-  const nomes = Object.keys(lista).filter(passa).sort();
+  const nomes = Object.keys(lista).filter(n => passa(n) && (!pastaSel() || pastaSel() === lista[n].ctx)).sort();
   document.getElementById("contagem").textContent = `${nomes.length} itens`;
   const barra = `<div class="ferramentas">
     <button class="btn" data-novo>Novo item…</button>
@@ -420,12 +453,12 @@ function minhaLista() {
   const linhas = nomes.map(n => {
     const it = lista[n];
     const prev = previa(it.origem);
-    return `<tr><td class="nome"><code>${esc(it.ctx)}/${esc(n)}</code></td><td>${prev}</td><td><code>${esc(it.origem || "—")}</code></td>
+    return `<tr><td><code>${esc(it.ctx)}</code></td><td class="nome"><code>${esc(n)}</code></td><td>${prev}</td><td><code>${esc(it.origem || "—")}</code></td>
       <td>${esc((it.tamanhos || []).join(", "))}</td><td>${esc(it.obs || "")}</td>
       <td><span class="st ${situacao(n)}">${ROTULO[situacao(n)]}</span></td>
       <td><button class="btn peq" data-editar="${esc(n)}">Editar</button></td></tr>`;
   }).join("");
-  return barra + `<div class="rolagem"><table><tr><th>Contexto/nome</th><th>Prévia</th><th>Origem</th><th>Tamanhos</th>
+  return barra + `<div class="rolagem"><table><tr><th>Pasta</th><th>Nome</th><th>Prévia</th><th>Origem</th><th>Tamanhos</th>
     <th>Observação</th><th>No tema</th><th></th></tr>${linhas}</table></div>`;
 }
 function avisoEdicoes() {
@@ -580,6 +613,7 @@ document.getElementById("arqImportar").addEventListener("change", async ev => {
   importar(await f.text()); ev.target.value = "";
 });
 let tempo;
+document.getElementById("pasta").addEventListener("change", render);
 document.getElementById("busca").addEventListener("input", () => { clearTimeout(tempo); tempo = setTimeout(render, 200); });
 document.getElementById("parciais").addEventListener("change", render);
 document.getElementById("zoom").addEventListener("change", e => document.body.classList.toggle("z2", e.target.checked));
