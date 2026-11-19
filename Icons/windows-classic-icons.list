@@ -9,6 +9,7 @@ apps/accessories-character-map-rtl	xp:Charmap	16,22,24,32,48
 apps/accessories-dictionary	xp:Help and Support	16,22,24,32,48	auto
 apps/accessories-text-editor	xp:Notepad	16,22,24,32,48	auto
 actions/address-book-new	xp:Address Book	16,22,24,32,48	auto; antes: i386:wab32res.dll#101
+apps/alacarte	xp:IE Edit	16,22,24,32,48	
 apps/applets-screenshooter	xp:Digital Camera	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#248
 mimetypes/application-certificate	i386:certmgr.dll#218	16,32	auto (AdwaitaLegacy)
 actions/application-exit	xp:Power	16,22,24,32,48	auto
@@ -25,7 +26,7 @@ categories/applications-internet	xp:Network and Internet	16,22,24,32,48	auto; an
 categories/applications-multimedia	xp:Whistler - Windows Media Player 7	16,22,24,32,48	auto; antes: i386:shell32.dll#227
 categories/applications-office	xp:Wordpad	16,22,24,32,48	auto; antes: i386:wordpad.exe#128
 categories/applications-other	xp:Start Menu Programs	16,22,24,32,48	auto; antes: i386:shell32.dll#37
-categories/applications-science	xp:WMP Performance	16,22,24,32,48	
+categories/applications-science	xp:Wizard	16,22,24,32,48	
 categories/applications-system	xp:Additional Settings	16,22,24,32,48	auto; antes: i386:shell32.dll#274
 categories/applications-utilities	xp:Services	16,22,24,32,48	auto
 status/appointment-missed	xp:Date and Time	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:timedate.cpl#200
@@ -167,7 +168,7 @@ status/mail-replied	xp:OE Reply	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386
 actions/mail-reply-all	xp:OE Reply All	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:msoeres.dll-barras#correio-34
 actions/mail-reply-sender	xp:OE Reply	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:msoeres.dll-barras#correio-33
 actions/mail-send	xp:Email	16,22,24,32,48	auto; antes: i386:shell32.dll#265
-actions/mail-send-receive	i386:msoeres.dll-barras#correio-37	16,24	auto (AdwaitaLegacy)
+actions/mail-send-receive	xp:OE Send and Receive	16,22,24,32,48	auto (AdwaitaLegacy)
 status/mail-signed	xp:OE Encrypt	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:msoeres.dll-barras#correio-56
 status/mail-unread	i386:msimn.exe#4	16,32	auto (AdwaitaLegacy)
 devices/media-flash	xp:PCMCIA Card	16,22,24,32,48	auto; antes: i386:shell32.dll#306
@@ -177,8 +178,10 @@ actions/media-playback-start	xp:Play	16,22,24,32,48	auto
 actions/media-playback-stop	xp:Stop	16,22,24,32,48	auto (AdwaitaLegacy)
 actions/media-record	xp:Record	16,22,24,32,48	auto (AdwaitaLegacy)
 devices/media-removable	xp:Removable Media	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#8
-actions/media-skip-backward	i386:shimgvw.dll-barras#imagens-01	16	auto (AdwaitaLegacy)
-actions/media-skip-forward	i386:shimgvw.dll-barras#imagens-02	16	auto (AdwaitaLegacy)
+actions/media-skip-backward	xp:Whistler - Back	16,22,24,32,48	auto (AdwaitaLegacy)
+actions/media-skip-forward	xp:Whistler - Forward	16,22,24,32,48	auto (AdwaitaLegacy)
+devices/media-tape	xp:Tape Drive	16,22,24,32,48	
+apps/menulibre	xp:IE Edit	16,22,24,32,48	
 devices/modem	xp:Phone and Modem Options	16,22,24,32,48	auto; antes: i386:telephon.cpl#100
 apps/mugshot	xp:Whistler - User Accounts	16,22,24,32,48	antes: i386:shell32.dll#279
 devices/multimedia-player	xp:MP3 player	16,22,24,32,48	auto; antes: i386:shell32.dll#299
@@ -207,7 +210,7 @@ apps/org.xfce.catfish	xp:Search	16,22,24,32,48	auto; antes: i386:shell32.dll#23
 apps/org.xfce.filemanager	xp:Explorer	16,22,24,32,48	antes: i386:explorer.exe#101
 apps/org.xfce.mailreader	xp:Outlook Express	16,22,24,32,48	auto; antes: i386:msimn.exe#2
 apps/org.xfce.mousepad	xp:Notepad	16,22,24,32,48	antes: i386:notepad.exe#2
-apps/org.xfce.notes	xp:IE Discuss	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#ie-16
+apps/org.xfce.notes	xp:StickyNotes	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#ie-16
 apps/org.xfce.notification	xp:Information	16,22,24,32,48	auto; antes: i386:xpsp2res.dll#144
 apps/org.xfce.orage	xp:Date and Time	16,22,24,32,48	auto; antes: i386:timedate.cpl#200
 apps/org.xfce.panel	xp:Taskbar and Start Menu	16,22,24,32,48	auto; antes: i386:explorer.exe#107
@@ -228,6 +231,7 @@ apps/org.xfce.settings.manager	xp:Control Panel	16,22,24,32,48	auto; antes: i386
 apps/org.xfce.settings.mouse	xp:Mouse	16,22,24,32,48	auto; antes: i386:main.cpl#100
 apps/org.xfce.taskmanager	xp:Task Manager	16,22,24,32,48	auto
 apps/org.xfce.terminal	xp:Command Prompt	16,22,24,32,48	antes: i386:cmd.exe#idi_appicon
+apps/org.xfce.terminal-settings	xp:BAT	16,22,24,32,48	
 apps/org.xfce.terminalemulator	xp:Command Prompt	16,22,24,32,48	antes: i386:cmd.exe#idi_appicon
 apps/org.xfce.thunar	xp:Explorer	16,22,24,32,48	auto; antes: i386:explorer.exe#101
 apps/org.xfce.volman	xp:Local Disk	16,22,24,32,48	auto; antes: i386:shell32.dll#8
@@ -293,14 +297,14 @@ mimetypes/text-x-generic	i386:shell32.dll#152	16,32,48	auto
 mimetypes/text-x-generic-rtl	xp:Generic Text Document	16,22,24,32,48	
 mimetypes/text-x-generic-template	i386:shell32.dll#152	16,32,48	auto (AdwaitaLegacy)
 mimetypes/text-x-script	xp:BAT	16,22,24,32,48	auto; antes: i386:shell32.dll#153
-status/user-available	xp:Windows Messenger	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:msmsgs.exe#1
+status/user-available	xp:Active Contact	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:msmsgs.exe#1
 places/user-bookmarks	xp:Favorites	16,22,24,32,48	auto; antes: i386:shell32.dll#44
-status/user-busy	i386:msmsgs.exe#264	32	auto (AdwaitaLegacy)
+status/user-busy	xp:Pending Contact	16,22,24,32,48	auto (AdwaitaLegacy)
 places/user-desktop	xp:Desktop	16,22,24,32,48	auto; antes: i386:shell32.dll#35
 places/user-home	xp:My Documents	16,22,24,32,48	auto; antes: i386:mydocs.dll#100
 apps/user-info	i386:msmsgs.exe#200	32	auto (AdwaitaLegacy)
-status/user-invisible	i386:msmsgs.exe#220	16	auto (AdwaitaLegacy)
-status/user-offline	i386:msmsgs.exe#219	16	auto (AdwaitaLegacy)
+status/user-invisible	xp:Business Contact	16,22,24,32,48	auto (AdwaitaLegacy)
+status/user-offline	xp:Contact Offline	16,22,24,32,48	auto (AdwaitaLegacy)
 places/user-trash	xp:Recycle Bin (empty)	16,22,24,32,48	
 status/user-trash-full	xp:Recycle Bin (full)	16,22,24,32,48	
 apps/utilities-system-monitor	i386:taskmgr.exe#107	16,32	auto
@@ -308,16 +312,16 @@ apps/utilities-terminal	xp:Command Prompt	16,22,24,32,48	antes: i386:cmd.exe#idi
 devices/video-display	xp:Display Adaptor	16,22,24,32,48	auto
 mimetypes/video-x-generic	xp:Generic Video	16,22,24,32,48	auto; antes: i386:shell32.dll#224
 actions/view-fullscreen	xp:Full Screen	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#ie-15
-actions/view-refresh	i386:shell32.dll-barras#ie-04	16,24	auto
+actions/view-refresh	xp:IE Refresh	16,22,24,32,48	auto
 actions/view-sort-ascending	xp:Sort Alphabetically	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#explorer-25
 apps/vlc	xp:Windows Media Player 9	16,22,24,32,48	auto; antes: i386:wmploc.dll#102
 apps/web-browser	xp:Internet Explorer 6	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:iexplore.exe#32528
 mimetypes/x-office-address-book	xp:Address Book	16,22,24,32,48	auto; antes: i386:wab32res.dll#101
 mimetypes/x-office-addressbook	xp:Address Book	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:wab32res.dll#101
 mimetypes/x-office-calendar	xp:Date and Time	16,22,24,32,48	auto; antes: i386:timedate.cpl#200
-mimetypes/x-office-document	i386:wordpad.exe#154	16,32	auto
-mimetypes/x-office-document-template	i386:wordpad.exe#154	16,32	auto (AdwaitaLegacy)
-mimetypes/x-office-drawing	i386:mspaint.exe#3	16,32,48	auto (AdwaitaLegacy)
+mimetypes/x-office-document	xp:Wordpad	16,22,24,32,48	auto
+mimetypes/x-office-document-template	xp:Wordpad	16,22,24,32,48	auto (AdwaitaLegacy)
+mimetypes/x-office-drawing	xp:Paint	16,22,24,32,48	auto (AdwaitaLegacy)
 mimetypes/x-office-drawing-template	i386:mspaint.exe#3	16,32,48	auto (AdwaitaLegacy)
 mimetypes/x-office-presentation	xp:Slideshow	16,22,24,32,48	auto; antes: i386:shell32.dll#249
 mimetypes/x-office-presentation-template	xp:Slideshow	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#249
