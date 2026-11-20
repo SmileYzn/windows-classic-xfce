@@ -12,7 +12,7 @@ Formato da lista (separado por TAB; linhas com # são comentários):
             i386:<arquivo>#<grupo>  - ícone da galeria da I386 (Icons/build/i386)
             /caminho/arquivo.png     - um PNG seu, redimensionado para cada tamanho
             (SVG só funciona se o tema voltar a ter as pastas scalable/<contexto>)
-  tamanhos: 16,22,24,32,48 (os que existirem na origem; nos ícones das galerias XP e
+  tamanhos: 16,22,24,32,36,48,64,96,128 (os que existirem na origem; nos ícones das galerias XP e
             I386 não há redimensionamento: um tamanho que não existe lá é pulado)
 
 O tema é refeito do zero a cada execução: os PNG e SVG das pastas do tema são
@@ -30,6 +30,8 @@ Uso:
     python3 Icons/src/extrair-i386.py /caminho/para/I386     # uma vez (galeria)
     python3 Icons/src/aplicar-lista.py [lista] [--forcar]
     python3 Icons/src/mapa.py                                 # para conferir
+
+Os tamanhos e pastas do tema vêm do index.theme (gerado por Icons/src/gerar-index.py).
 
 Dependência para PNG próprios (redimensionar): sudo pacman -S --needed imagemagick
 """

@@ -48,7 +48,7 @@ RAIZ_TEMA = os.path.join(ICONS, TEMA)
 I386 = os.path.join(ICONS, "build", "i386")
 XP_ICONS = os.path.join(ICONS, "build", "xp-icons")
 SAIDA = os.path.join(ICONS, "mapa.html")
-TAMANHOS = [16, 22, 24, 32, 48]
+TAMANHOS = [16, 22, 24, 32, 36, 48, 64, 96, 128]   # mesmos de gerar-index.py
 
 # Icon Naming Specification 0.8.90 (nomes por contexto)
 ESPEC = {

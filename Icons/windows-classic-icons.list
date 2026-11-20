@@ -2,320 +2,320 @@
 # Exportado pelo Icons/mapa.html em 2026-11-19
 # Formato (separado por TAB): contexto/nome  origem  tamanhos  observação
 # Origem: xp:<nome> (galeria XP), i386:<arquivo>#<grupo> (galeria da I386) ou o caminho de um arquivo seu
-devices/ac-adapter	xp:Power Options	16,22,24,32,48	auto (AdwaitaLegacy)
-apps/accessories-calculator	xp:Calculator	16,22,24,32,48	
-apps/accessories-character-map	xp:Charmap	16,22,24,32,48	auto
-apps/accessories-character-map-rtl	xp:Charmap	16,22,24,32,48	
-apps/accessories-dictionary	xp:Help and Support	16,22,24,32,48	auto
-apps/accessories-text-editor	xp:Notepad	16,22,24,32,48	auto
-apps/applets-screenshooter	xp:Digital Camera	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#248
-mimetypes/application-certificate	xp:Certificate	16,22,24,32,48	auto (AdwaitaLegacy)
-actions/application-exit	xp:Power	16,22,24,32,48	auto
-mimetypes/application-x-addon	xp:DLL	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#154
-mimetypes/application-x-executable	xp:Application Window	16,22,24,32,48	auto; antes: i386:shell32.dll#3
-mimetypes/application-x-firmware	xp:Chip	16,22,24,32,48	
-mimetypes/application-x-generic	xp:Generic Document	16,22,24,32,48	auto (AdwaitaLegacy)
-mimetypes/application-x-sharedlib	xp:DLL	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#154
-categories/applications-accessories	xp:Administrative Tools	16,22,24,32,48	auto; antes: i386:shell32.dll#20
-categories/applications-development	xp:Tweak UI	16,22,24,32,48	auto; antes: i386:shell32.dll#154
-categories/applications-engineering	xp:Whistler - IE History	16,22,24,32,48	
-categories/applications-games	xp:Internet Backgammon	16,22,24,32,48	auto; antes: i386:spider.exe#103
-categories/applications-graphics	xp:Paint	16,22,24,32,48	auto; antes: i386:mspaint.exe#2
-categories/applications-internet	xp:Internet Shortcut	16,22,24,32,48	auto; antes: i386:shell32.dll#273
-categories/applications-multimedia	xp:Whistler - Windows Media Player 7	16,22,24,32,48	auto; antes: i386:shell32.dll#227
-categories/applications-office	xp:Wordpad	16,22,24,32,48	auto; antes: i386:wordpad.exe#128
-categories/applications-other	xp:Start Menu Programs	16,22,24,32,48	auto; antes: i386:shell32.dll#37
-categories/applications-science	xp:WMP Performance	16,22,24,32,48	
-categories/applications-system	xp:System Properties	16,22,24,32,48	auto; antes: i386:shell32.dll#274
-categories/applications-utilities	xp:Get Support	16,22,24,32,48	auto
-devices/audio-card	xp:Volume	16,22,24,32,48	auto; antes: i386:mmsys.cpl#3004
-devices/audio-speakers	xp:Volume	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:mmsys.cpl#3004
-mimetypes/audio-x-generic	xp:Generic Audio	16,22,24,32,48	auto; antes: i386:shell32.dll#225
-status/avatar-default	xp:User Accounts	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:nusrmgr.cpl#200
-apps/blueman	xp:Bluetooth Devices	16,22,24,32,48	auto; antes: i386:xpsp2res.dll#200
-apps/blueman-device	xp:Bluetooth Devices	16,22,24,32,48	auto
-devices/bluetooth	xp:Bluetooth Devices	16,22,24,32,48	auto (AdwaitaLegacy)
-status/bluetooth-active	xp:Bluetooth Devices	16,22,24,32,48	
-devices/camera-photo	xp:Digital Camera	16,22,24,32,48	auto; antes: i386:shell32.dll#309
-devices/camera-video	xp:Camcorder	16,22,24,32,48	auto; antes: i386:shell32.dll#317
-devices/camera-web	xp:Scanner and Camera Wizard	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#316
-status/changes-prevent	xp:Padlock	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#48
-devices/computer	xp:My Computer	16,22,24,32,48	auto
-status/dialog-error	xp:Critical	16,22,24,32,48	
-status/dialog-information	xp:Information	16,22,24,32,48	
-status/dialog-password	xp:Activation	16,22,24,32,48	
-status/dialog-question	xp:Question	16,22,24,32,48	
-status/dialog-warning	xp:Alert	16,22,24,32,48	auto; antes: i386:user32.dll#101
-actions/document-new	xp:Generic Document	16,22,24,32,48	
-actions/document-open	xp:Open	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#explorer-13
-actions/document-open-recent	xp:Recent Documents	16,22,24,32,48	auto; antes: i386:shell32.dll#21
-actions/document-print	xp:Printer	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#explorer-20
-actions/document-print-preview	xp:Search Results	16,22,24,32,48	auto
-actions/document-properties	xp:explorer properties	16,22,24,32,48	auto
-actions/document-save	xp:Save	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#explorer-14
-actions/document-save-as	xp:Save	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#explorer-14
-actions/document-send	xp:Email	16,22,24,32,48	auto; antes: i386:shell32.dll#265
-devices/drive-harddisk	xp:Local Disk	16,22,24,32,48	auto; antes: i386:shell32.dll#9
-devices/drive-optical	xp:Optical Drive	16,22,24,32,48	auto; antes: i386:shell32.dll#12
-devices/drive-removable-media	xp:Removable Media	16,22,24,32,48	auto; antes: i386:shell32.dll#8
-devices/drive-removable-media-usb	xp:ZIP Drive	16,22,24,32,48	
-actions/edit-copy	xp:Copy	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#explorer-07
-actions/edit-cut	xp:Cut	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#explorer-06
-actions/edit-delete	xp:Explorer Delete	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#explorer-11
-actions/edit-find	xp:Search	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#explorer-18
-actions/edit-find-replace	xp:Document Search	16,24	auto
-actions/edit-paste	xp:Paste	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#explorer-08
-actions/edit-redo	xp:Redo	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#explorer-10
-actions/edit-undo	xp:Undo	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#explorer-09
-emblems/emblem-default	xp:Success	16,22,24,32,48	auto (AdwaitaLegacy)
-emblems/emblem-desktop	xp:Desktop	16,22,24,32,48	auto (AdwaitaLegacy)
-emblems/emblem-documents	xp:My Documents	16,22,24,32,48	auto (AdwaitaLegacy)
-emblems/emblem-downloads	xp:Open	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#146
-emblems/emblem-favorite	xp:Favorites	16,22,24,32,48	auto
-apps/emblem-generic	xp:Generic Document	16,22,24,32,48	
-emblems/emblem-important	xp:Alert	16,22,24,32,48	auto; antes: i386:user32.dll#101
-emblems/emblem-mail	xp:Email	16,22,24,32,48	auto; antes: i386:shell32.dll#265
-apps/emblem-new	xp:Add	16,22,24,32,48	
-emblems/emblem-package	xp:Packager	16,22,24,32,48	auto (AdwaitaLegacy)
-emblems/emblem-photos	xp:Windows Picture and Fax Viewer	16,22,24,32,48	auto; antes: i386:shell32.dll#226
-emblems/emblem-readonly	xp:Padlock	16,22,24,32,48	auto; antes: i386:shell32.dll#48
-emblems/emblem-shared	xp:Sharing Hand	16,22,24,32,48	auto; antes: i386:shell32.dll#29
-emblems/emblem-symbolic-link	xp:Shortcut overlay	16,22,24,32,48	auto; antes: i386:shell32.dll#30
-emblems/emblem-synchronized	xp:Offline Web Pages	16,22,24,32,48	auto
-emblems/emblem-synchronizing	xp:Whistler - IE Refresh	16,22,24,32,48	auto (AdwaitaLegacy)
-emblems/emblem-system	xp:Services	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#154
-emblems/emblem-unreadable	xp:Prohibited	16,22,24,32,48	auto; antes: i386:shell32.dll#200
-emblems/emblem-urgent	xp:Information	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:user32.dll#101
-emblems/emblem-web	xp:Internet Shortcut	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#14
-apps/engrampa	xp:Packager	16,22,24,32,48	auto
-places/folder	xp:Folder Closed	16,22,24,32,48	
-places/folder-bookmarks	xp:Whistler - IE Favorites	16,22,24,32,48	auto (AdwaitaLegacy)
-places/folder-documents	xp:My Documents	16,22,24,32,48	auto
-places/folder-download	xp:Move to folder	16,22,24,32,48	
-status/folder-drag-accept	xp:Folder Options	16,22,24,32,48	
-places/folder-music	xp:My Music	16,22,24,32,48	auto; antes: i386:shell32.dll#237
-actions/folder-new	xp:New Folder	16,22,24,32,48	antes: i386:shell32.dll#319
-status/folder-open	xp:Folder Opened	16,22,24,32,48	antes: i386:shell32.dll#5
-places/folder-pictures	xp:My Pictures	16,22,24,32,48	auto; antes: i386:mydocs.dll#101
-places/folder-publicshare	xp:Shared Folder	16,22,24,32,48	antes: i386:shell32.dll#267
-places/folder-remote	xp:Network Folder	16,22,24,32,48	antes: i386:shell32.dll#172
-places/folder-saved-search	xp:Explorer	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#46
-places/folder-templates	xp:Fax Archive	16,22,24,32,48	auto (AdwaitaLegacy)
-places/folder-videos	xp:My Videos	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#238
-status/folder-visiting	xp:Folder Options	16,22,24,32,48	antes: i386:shell32.dll#210
-mimetypes/font-x-generic	xp:TrueType2	16,22,24,32,48	auto; antes: i386:fontext.dll#2
-apps/galculator	xp:Calculator	16,22,24,32,48	
-actions/go-bottom	xp:Bottom	16,22,24,32,48	auto (AdwaitaLegacy)
-actions/go-down	xp:Bottom	16,22,24,32,48	auto (AdwaitaLegacy)
-actions/go-first	xp:Whistler - Back	16,22,24,32,48	auto (AdwaitaLegacy)
-actions/go-home	xp:IE Home	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#ie-05
-actions/go-jump	xp:Go	16,22,24,32,48	auto; antes: i386:shell32.dll#290
-actions/go-last	xp:Whistler - Forward	16,22,24,32,48	auto (AdwaitaLegacy)
-actions/go-next	xp:Forward	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#explorer-02
-actions/go-previous	xp:Back	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#explorer-01
-actions/go-top	xp:Top	16,22,24,32,48	auto (AdwaitaLegacy)
-actions/go-up	xp:Top	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#explorer-29
-status/gtk-dialog-authentication	xp:Authorization Manager	16,22,24,32,48	
-actions/help-about	xp:Help and Support	16,22,24,32,48	auto; antes: i386:user32.dll#104
-apps/help-browser	xp:Help and Support	16,22,24,32,48	auto; antes: i386:helpctr.exe#200
-actions/help-contents	xp:Help and Support	16,22,24,32,48	auto; antes: i386:helpctr.exe#200
-actions/help-faq	xp:Help and Support	16,22,24,32,48	auto; antes: i386:shell32.dll#24
-apps/htop	xp:Task Manager	16,22,24,32,48	auto
-mimetypes/image-x-generic	xp:Bitmap	16,22,24,32,48	auto; antes: i386:shell32.dll#226
-mimetypes/inode-directory	xp:Folder Closed	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#4
-mimetypes/inode-symlink	xp:Folder Options	16,22,24,32,48	
-devices/input-gaming	xp:Game Controller	16,22,24,32,48	auto; antes: i386:joy.cpl#102
-devices/input-keyboard	xp:On-Screen Keyboard	16,22,24,32,48	auto
-devices/input-mouse	xp:Mouse	16,22,24,32,48	auto; antes: i386:main.cpl#100
-devices/input-tablet	xp:Tablet and Pen settings	16,22,24,32,48	
-apps/input-touchpad	xp:Tablet and Pen settings	16,22,24,32,48	
-apps/internet-chat	xp:MSN Messenger	16,22,24,32,48	
-apps/lightdm-gtk-greeter-settings	xp:Additional Settings	16,22,24,32,48	antes: i386:shell32.dll#274
-status/mail-attachment	xp:OE Attatch	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:msoeres.dll-barras#correio-50
-actions/mail-forward	xp:OE Send	16,22,24,32,48	
-actions/mail-mark-important	xp:OE News Post	16,22,24,32,48	
-actions/mail-mark-junk	xp:Discard Fax	16,22,24,32,48	
-actions/mail-mark-notjunk	xp:Fax Received Succesfully	16,22,24,32,48	
-actions/mail-mark-read	xp:OE Mark as read	16,22,24,32,48	
-actions/mail-mark-unread	xp:OE Mark as unread	16,22,24,32,48	
-actions/mail-message-new	xp:OE Create Mail	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#ie-14
-status/mail-read	xp:OE Mark as unread	16,22,24,32,48	auto (AdwaitaLegacy)
-status/mail-replied	xp:Fax Sent Succesfully	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:msoeres.dll-barras#correio-33
-actions/mail-reply-all	xp:OE Reply All	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:msoeres.dll-barras#correio-34
-actions/mail-reply-sender	xp:OE Reply	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:msoeres.dll-barras#correio-33
-actions/mail-send	xp:OE Send	16,22,24,32,48	auto; antes: i386:shell32.dll#265
-actions/mail-send-receive	xp:OE Send and Receive	16,22,24,32,48	auto (AdwaitaLegacy)
-status/mail-signed	xp:OE Encrypt	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:msoeres.dll-barras#correio-56
-status/mail-signed-verified	xp:OE Sign	16,22,24,32,48	
-status/mail-unread	xp:OE Mark as read	16,22,24,32,48	auto (AdwaitaLegacy)
-devices/media-cdr	xp:CD-R	16,22,24,32,48	
-devices/media-cdrw	xp:CD-RW	16,22,24,32,48	
-devices/media-dvd	xp:DVD	16,22,24,32,48	
-devices/media-dvdrw	xp:DVD-RW	16,22,24,32,48	
-devices/media-flash	xp:CompactFlash card	16,22,24,32,48	auto; antes: i386:shell32.dll#306
-devices/media-flash-cf	xp:SmartMedia Card	16,22,24,32,48	
-devices/media-flash-ms	xp:Memory Stick	16,22,24,32,48	
-devices/media-floppy	xp:Floppy Disk	16,22,24,32,48	auto
-devices/media-memory-sd	xp:SD Card	16,22,24,32,48	
-devices/media-memory-sm	xp:Whistler - SD Card	16,22,24,32,48	
-devices/media-optical	xp:CD-R	16,22,24,32,48	auto
-devices/media-removable	xp:Removable Media	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#8
-devices/media-tape	xp:Tape Drive	16,22,24,32,48	
-apps/menulibre	xp:Tweak UI	16,22,24,32,48	
-mimetypes/model	xp:Journal Template	16,22,24,32,48	
-devices/modem	xp:Phone and Modem Options	16,22,24,32,48	auto; antes: i386:telephon.cpl#100
-apps/mugshot	xp:Whistler - User Accounts	16,22,24,32,48	antes: i386:shell32.dll#279
-devices/multimedia-player	xp:MP3 player	16,22,24,32,48	auto; antes: i386:shell32.dll#299
-apps/multimedia-volume-control	xp:Volume Level	16,22,24,32,48	auto; antes: i386:sndvol32.exe#300
-places/network-server	xp:Network Drive	16,22,24,32,48	
-devices/network-wired	xp:Network Connection	16,22,24,32,48	auto
-devices/network-wireless	xp:Wireless Network Connection	16,22,24,32,48	auto; antes: i386:xpsp2res.dll#1002
-places/network-workgroup	xp:My Network Places	16,22,24,32,48	auto; antes: i386:shell32.dll#18
-mimetypes/office-contact	xp:Contact Offline	16,22,24,32,48	
-apps/org.freedesktop.Passim	xp:Network Drive	16,22,24,32,48	
-apps/org.freedesktop.fwupd	xp:Add New Hardware	16,22,24,32,48	
-apps/org.gnome.font-viewer	xp:Font	16,22,24,32,48	
-apps/org.gnome.gthumb	xp:Windows Picture and Fax Viewer	16,22,24,32,48	
-apps/org.gnome.seahorse.Application	xp:Local Security Policy	16,22,24,32,48	auto
-apps/org.pulseaudio.pavucontrol	xp:Audio Devices	16,22,24,32,48	
-apps/org.xfce.Dictionary	xp:Address Book	16,22,24,32,48	auto
-apps/org.xfce.PanelProfiles	xp:OE Preview Pane	16,22,24,32,48	antes: i386:explorer.exe#107
-apps/org.xfce.ScreenSaver	xp:Display Properties	16,22,24,32,48	auto; antes: i386:desk.cpl#100
-apps/org.xfce.about	xp:System Information	16,22,24,32,48	auto; antes: i386:msinfo32.exe#128
-apps/org.xfce.appfinder	xp:Run	16,22,24,32,48	auto; antes: i386:shell32.dll#25
-apps/org.xfce.catfish	xp:Search	16,22,24,32,48	auto; antes: i386:shell32.dll#23
-apps/org.xfce.filemanager	xp:Explorer	16,22,24,32,48	antes: i386:explorer.exe#101
-apps/org.xfce.mailreader	xp:Outlook Express	16,22,24,32,48	auto; antes: i386:msimn.exe#2
-apps/org.xfce.mousepad	xp:Notepad	16,22,24,32,48	antes: i386:notepad.exe#2
-apps/org.xfce.notes	xp:StickyNotes	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#ie-16
-apps/org.xfce.notification	xp:Information	16,22,24,32,48	auto; antes: i386:xpsp2res.dll#144
-apps/org.xfce.orage	xp:Date and Time	16,22,24,32,48	auto; antes: i386:timedate.cpl#200
-apps/org.xfce.panel	xp:Taskbar and Start Menu	16,22,24,32,48	auto; antes: i386:explorer.exe#107
-apps/org.xfce.panel.actions	xp:Power	16,22,24,32,48	
-apps/org.xfce.panel.applicationsmenu	xp:Windows XP	16,22,24,32,48	
-apps/org.xfce.panel.clock	xp:Date and Time	16,22,24,32,48	
-apps/org.xfce.panel.cpugraph	xp:Chip	16,22,24,32,48	
-apps/org.xfce.panel.directorymenu	xp:Folder Closed	16,22,24,32,48	
-apps/org.xfce.panel.pager	xp:Remote Desktop Server	16,22,24,32,48	
-apps/org.xfce.panel.showdesktop	xp:Desktop	16,22,24,32,48	
-apps/org.xfce.panel.systemload	xp:Task Manager	16,22,24,32,48	
-apps/org.xfce.panel.tasklist	xp:Checklist	16,22,24,32,48	
-apps/org.xfce.panel.whiskermenu	xp:Windows XP	16,22,24,32,48	
-apps/org.xfce.panel.windowmenu	xp:Start Menu Programs	16,22,24,32,48	
-apps/org.xfce.panel.xkb	xp:Keyboard	16,22,24,32,48	
-apps/org.xfce.parole	xp:Windows Media Player 9	16,22,24,32,48	auto; antes: i386:wmploc.dll#102
-apps/org.xfce.powermanager	xp:Power Options	16,22,24,32,48	auto
-apps/org.xfce.ristretto	xp:Windows Picture and Fax Viewer	16,22,24,32,48	auto; antes: i386:shell32.dll#178
-apps/org.xfce.screenshooter	xp:Digital Camera	16,22,24,32,48	auto; antes: i386:shell32.dll#248
-apps/org.xfce.session	xp:Add or Remove Windows Components	16,22,24,32,48	
-apps/org.xfce.settings.accessibility	xp:Accessibility	16,22,24,32,48	antes: i386:shell32.dll#268
-apps/org.xfce.settings.appearance	xp:Display Properties	16,22,24,32,48	antes: i386:shell32.dll#270
-apps/org.xfce.settings.color	xp:Appearance	16,22,24,32,48	antes: i386:shell32.dll#250
-apps/org.xfce.settings.default-applications	xp:Default Programs	16,22,24,32,48	auto
-apps/org.xfce.settings.display	xp:Display Adaptor	16,22,24,32,48	auto; antes: i386:desk.cpl#40
-apps/org.xfce.settings.editor	xp:Registry Editor	16,22,24,32,48	auto; antes: i386:regedit.exe#100
-apps/org.xfce.settings.keyboard	xp:Keyboard	16,22,24,32,48	auto
-apps/org.xfce.settings.manager	xp:Control Panel	16,22,24,32,48	auto; antes: i386:shell32.dll#137
-apps/org.xfce.settings.mouse	xp:Mouse	16,22,24,32,48	auto; antes: i386:main.cpl#100
-apps/org.xfce.taskmanager	xp:Task Manager	16,22,24,32,48	auto
-apps/org.xfce.terminal	xp:Command Prompt	16,22,24,32,48	antes: i386:cmd.exe#idi_appicon
-apps/org.xfce.terminalemulator	xp:Command Prompt	16,22,24,32,48	antes: i386:cmd.exe#idi_appicon
-apps/org.xfce.thunar	xp:Explorer	16,22,24,32,48	auto; antes: i386:explorer.exe#101
-apps/org.xfce.volman	xp:Local Disk	16,22,24,32,48	auto; antes: i386:shell32.dll#8
-apps/org.xfce.webbrowser	xp:Internet Explorer 6	16,22,24,32,48	auto; antes: i386:iexplore.exe#32528
-apps/org.xfce.workspaces	xp:Workgroup	16,22,24,32,48	antes: i386:shell32.dll#19
-apps/org.xfce.xfdesktop	xp:Desktop	16,22,24,32,48	antes: i386:shell32.dll#35
-apps/org.xfce.xfwm4	xp:Application Window	16,22,24,32,48	auto; antes: i386:user32.dll#105
-apps/org.xfce.xfwm4-tweaks	xp:Folders open in new window	16,22,24,32,48	auto; antes: i386:user32.dll#105
-mimetypes/package-x-generic	xp:Packager	16,22,24,32,48	auto
-devices/pda	xp:Mobile Device	16,22,24,32,48	auto; antes: i386:shell32.dll#314
-devices/phone	xp:Phone	16,22,24,32,48	auto; antes: i386:shell32.dll#310
-categories/preferences-desktop	xp:Additional Settings	16,22,24,32,48	auto; antes: i386:shell32.dll#270
-apps/preferences-desktop-accessibility	xp:Accessibility	16,22,24,32,48	auto; antes: i386:access.cpl#110
-apps/preferences-desktop-display	xp:Display Adaptor	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:desk.cpl#40
-apps/preferences-desktop-font	xp:Font Similarity View	16,22,24,32,48	auto
-apps/preferences-desktop-keyboard	xp:Keyboard	16,22,24,32,48	auto
-apps/preferences-desktop-keyboard-shortcuts	xp:On-Screen Keyboard	16,22,24,32,48	auto (AdwaitaLegacy)
-apps/preferences-desktop-locale	xp:Regional Settings	16,22,24,32,48	auto; antes: i386:intl.cpl#200
-apps/preferences-desktop-multimedia	xp:Volume	16,22,24,32,48	auto; antes: i386:mmsys.cpl#3004
-categories/preferences-desktop-peripherals	xp:Printers and Hardware	16,22,24,32,48	auto; antes: i386:shell32.dll#272
-categories/preferences-desktop-personal	xp:User Accounts	16,22,24,32,48	auto; antes: i386:shell32.dll#279
-apps/preferences-desktop-remote-desktop	xp:Remote Desktop	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:mstsc.exe#101
-apps/preferences-desktop-screensaver	xp:Display Properties	16,22,24,32,48	auto; antes: i386:desk.cpl#100
-apps/preferences-desktop-theme	xp:Theme	16,22,24,32,48	auto; antes: i386:themeui.dll#701
-apps/preferences-desktop-wallpaper	xp:Display Properties	16,22,24,32,48	auto; antes: i386:shell32.dll#250
-categories/preferences-other	xp:Control Panel	16,22,24,32,48	auto; antes: i386:shell32.dll#22
-categories/preferences-system	xp:Additional Settings	16,22,24,32,48	auto; antes: i386:shell32.dll#274
-categories/preferences-system-network	xp:Network and Internet	16,22,24,32,48	auto; antes: i386:shell32.dll#273
-apps/preferences-system-notifications	xp:Information	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:xpsp2res.dll#144
-apps/preferences-system-privacy	xp:Security Center	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:xpsp2res.dll#6105
-apps/preferences-system-search	xp:Search	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#23
-apps/preferences-system-sharing	xp:Add Network Place	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#258
-apps/preferences-system-windows	xp:Application Window	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:user32.dll#105
-devices/printer	xp:Printer	16,22,24,32,48	auto; antes: i386:shell32.dll#17
-status/printer-error	xp:Printer Missing	16,22,24,32,48	auto
-devices/printer-network	xp:Network printer	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#140
-status/printer-printing	xp:Web services printer	16,22,24,32,48	auto; antes: i386:shell32.dll#1009
-actions/process-stop	xp:Stop	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#ie-03
-devices/scanner	xp:Scanner	16,22,24,32,48	auto; antes: i386:shell32.dll#315
-status/security-high	xp:Security - Ok	16,22,24,32,48	auto; antes: i386:xpsp2res.dll#6108
-status/security-low	xp:Security Error	16,22,24,32,48	auto; antes: i386:xpsp2res.dll#6106
-status/security-medium	xp:Security Options	16,22,24,32,48	auto; antes: i386:xpsp2res.dll#6107
-status/software-update-available	xp:Windows Update	16,22,24,32,48	auto; antes: i386:wuaucpl.cpl#1
-status/software-update-urgent	xp:Security Alert	16,22,24,32,48	auto; antes: i386:wuaucpl.cpl#4
-status/starred	xp:Favorites	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#44
-places/start-here	xp:Windows XP	16,22,24,32,48	bandeira do botão Iniciar do XP
-apps/stock_xfburn	xp:Copy to disc	16,22,24,32,48	auto; antes: i386:shell32.dll#266
-apps/system-file-manager	xp:Explorer	16,22,24,32,48	antes: i386:explorer.exe#101
-categories/system-help	xp:Help and Support	16,22,24,32,48	auto; antes: i386:helpctr.exe#200
-actions/system-lock-screen	xp:Padlock	16,22,24,32,48	auto; antes: i386:shell32.dll#48
-actions/system-log-out	xp:Logout	16,22,24,32,48	auto; antes: i386:shell32.dll#45
-actions/system-reboot	xp:Restart	16,22,24,32,48	auto
-actions/system-run	xp:Run	16,22,24,32,48	auto; antes: i386:shell32.dll#25
-actions/system-search	xp:Search	16,22,24,32,48	auto; antes: i386:shell32.dll#23
-actions/system-shutdown	xp:Power	16,22,24,32,48	auto; antes: i386:shell32.dll#28
-apps/system-software-install	xp:Programs	16,22,24,32,48	auto; antes: i386:appwiz.cpl#1500
-apps/system-software-update	xp:Windows Update	16,22,24,32,48	auto; antes: i386:wuaucpl.cpl#1
-apps/system-users	xp:User Accounts	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#279
-mimetypes/text-html	xp:HTML	16,22,24,32,48	auto
-mimetypes/text-x-generic	xp:Generic Text Document	16,22,24,32,48	auto
-mimetypes/text-x-generic-rtl	xp:Generic Text Document	16,22,24,32,48	
-mimetypes/text-x-generic-template	xp:Generic Text Document	16,22,24,32,48	auto (AdwaitaLegacy)
-mimetypes/text-x-preview	xp:Document Search	16,22,24,32,48	
-mimetypes/text-x-script	xp:BAT	16,22,24,32,48	auto; antes: i386:shell32.dll#153
-places/user-bookmarks	xp:Favorites	16,22,24,32,48	auto; antes: i386:shell32.dll#44
-status/user-busy	xp:Pending Contact	16,22,24,32,48	auto (AdwaitaLegacy)
-places/user-desktop	xp:Desktop	16,22,24,32,48	auto; antes: i386:shell32.dll#35
-places/user-home	xp:My Documents	16,22,24,32,48	auto; antes: i386:mydocs.dll#100
-places/user-trash	xp:Recycle Bin (empty)	16,22,24,32,48	
-status/user-trash-full	xp:Recycle Bin (full)	16,22,24,32,48	
-apps/utilities-system-monitor	xp:Task Manager	16,22,24,32,48	auto
-apps/utilities-terminal	xp:Command Prompt	16,22,24,32,48	antes: i386:cmd.exe#idi_appicon
-devices/video-display	xp:Display Adaptor	16,22,24,32,48	auto
-mimetypes/video-x-generic	xp:Generic Video	16,22,24,32,48	auto; antes: i386:shell32.dll#224
-actions/view-fullscreen	xp:Full Screen	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#ie-15
-apps/vlc	xp:Windows Media Player 9	16,22,24,32,48	auto; antes: i386:wmploc.dll#102
-apps/web-browser	xp:Internet Explorer 6	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:iexplore.exe#32528
-mimetypes/x-office-address-book	xp:Address Book	16,22,24,32,48	auto; antes: i386:wab32res.dll#101
-mimetypes/x-office-addressbook	xp:Address Book	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:wab32res.dll#101
-mimetypes/x-office-calendar	xp:Date and Time	16,22,24,32,48	auto; antes: i386:timedate.cpl#200
-mimetypes/x-office-document	xp:Word	16,22,24,32,48	auto
-mimetypes/x-office-document-template	xp:Generic Text Document	16,22,24,32,48	auto (AdwaitaLegacy)
-mimetypes/x-office-drawing	xp:Bitmap	16,22,24,32,48	auto (AdwaitaLegacy)
-mimetypes/x-office-drawing-template	xp:Bitmap	16,22,24,32,48	auto (AdwaitaLegacy)
-mimetypes/x-office-presentation	xp:PowerPoint	16,22,24,32,48	auto; antes: i386:shell32.dll#249
-mimetypes/x-office-presentation-template	xp:Slideshow	16,22,24,32,48	auto (AdwaitaLegacy); antes: i386:shell32.dll#249
-mimetypes/x-office-spreadsheet	xp:Excel	16,22,24,32,48	
-mimetypes/x-office-spreadsheet-template	xp:WRI	16,22,24,32,48	
-mimetypes/x-package-repository	xp:Indexing Service	16,22,24,32,48	
-apps/xarchiver	xp:Packager	16,22,24,32,48	
-apps/xfce-sensors	xp:Chip	16,22,24,32,48	auto
-apps/xfce4-clipman-plugin	xp:Paste	16,22,24,32,48	auto; antes: i386:shell32.dll-barras#editar-03
-actions/xfsm-hibernate	xp:Standby	16,22,24,32,48	
-actions/xfsm-lock	xp:Switch User	16,22,24,32,48	
-apps/xfsm-logout	xp:Logout	16,22,24,32,48	auto
-actions/xfsm-reboot	xp:Restart	16,22,24,32,48	
-actions/xfsm-shutdown	xp:Power	16,22,24,32,48	
-actions/xfsm-suspend	xp:Standby	16,22,24,32,48	
-actions/xfsm-switch-user	xp:Switch User	16,22,24,32,48	
-apps/xterm-color_48x48	xp:Command Prompt	16,22,24,32,48	
+devices/ac-adapter	xp:Power Options	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+apps/accessories-calculator	xp:Calculator	16,22,24,32,36,48,64,96,128	
+apps/accessories-character-map	xp:Charmap	16,22,24,32,36,48,64,96,128	auto
+apps/accessories-character-map-rtl	xp:Charmap	16,22,24,32,36,48,64,96,128	
+apps/accessories-dictionary	xp:Help and Support	16,22,24,32,36,48,64,96,128	auto
+apps/accessories-text-editor	xp:Notepad	16,22,24,32,36,48,64,96,128	auto
+apps/applets-screenshooter	xp:Digital Camera	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:shell32.dll#248
+mimetypes/application-certificate	xp:Certificate	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+actions/application-exit	xp:Power	16,22,24,32,36,48,64,96,128	auto
+mimetypes/application-x-addon	xp:DLL	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:shell32.dll#154
+mimetypes/application-x-executable	xp:Application Window	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#3
+mimetypes/application-x-firmware	xp:Chip	16,22,24,32,36,48,64,96,128	
+mimetypes/application-x-generic	xp:Generic Document	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+mimetypes/application-x-sharedlib	xp:DLL	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:shell32.dll#154
+categories/applications-accessories	xp:Administrative Tools	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#20
+categories/applications-development	xp:Tweak UI	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#154
+categories/applications-engineering	xp:Whistler - IE History	16,22,24,32,36,48,64,96,128	
+categories/applications-games	xp:Internet Backgammon	16,22,24,32,36,48,64,96,128	auto; antes: i386:spider.exe#103
+categories/applications-graphics	xp:Paint	16,22,24,32,36,48,64,96,128	auto; antes: i386:mspaint.exe#2
+categories/applications-internet	xp:Internet Shortcut	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#273
+categories/applications-multimedia	xp:Whistler - Windows Media Player 7	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#227
+categories/applications-office	xp:Wordpad	16,22,24,32,36,48,64,96,128	auto; antes: i386:wordpad.exe#128
+categories/applications-other	xp:Start Menu Programs	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#37
+categories/applications-science	xp:WMP Performance	16,22,24,32,36,48,64,96,128	
+categories/applications-system	xp:System Properties	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#274
+categories/applications-utilities	xp:Get Support	16,22,24,32,36,48,64,96,128	auto
+devices/audio-card	xp:Volume	16,22,24,32,36,48,64,96,128	auto; antes: i386:mmsys.cpl#3004
+devices/audio-speakers	xp:Volume	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:mmsys.cpl#3004
+mimetypes/audio-x-generic	xp:Generic Audio	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#225
+status/avatar-default	xp:User Accounts	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:nusrmgr.cpl#200
+apps/blueman	xp:Bluetooth Devices	16,22,24,32,36,48,64,96,128	auto; antes: i386:xpsp2res.dll#200
+apps/blueman-device	xp:Bluetooth Devices	16,22,24,32,36,48,64,96,128	auto
+devices/bluetooth	xp:Bluetooth Devices	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+status/bluetooth-active	xp:Bluetooth Devices	16,22,24,32,36,48,64,96,128	
+devices/camera-photo	xp:Digital Camera	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#309
+devices/camera-video	xp:Camcorder	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#317
+devices/camera-web	xp:Scanner and Camera Wizard	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:shell32.dll#316
+status/changes-prevent	xp:Padlock	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:shell32.dll#48
+devices/computer	xp:My Computer	16,22,24,32,36,48,64,96,128	auto
+status/dialog-error	xp:Critical	16,22,24,32,36,48,64,96,128	
+status/dialog-information	xp:Information	16,22,24,32,36,48,64,96,128	
+status/dialog-password	xp:Activation	16,22,24,32,36,48,64,96,128	
+status/dialog-question	xp:Question	16,22,24,32,36,48,64,96,128	
+status/dialog-warning	xp:Alert	16,22,24,32,36,48,64,96,128	auto; antes: i386:user32.dll#101
+actions/document-new	xp:Generic Document	16,22,24,32,36,48,64,96,128	
+actions/document-open	xp:Open	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#explorer-13
+actions/document-open-recent	xp:Recent Documents	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#21
+actions/document-print	xp:Printer	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#explorer-20
+actions/document-print-preview	xp:Search Results	16,22,24,32,36,48,64,96,128	auto
+actions/document-properties	xp:explorer properties	16,22,24,32,36,48,64,96,128	auto
+actions/document-save	xp:Save	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#explorer-14
+actions/document-save-as	xp:Save	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#explorer-14
+actions/document-send	xp:Email	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#265
+devices/drive-harddisk	xp:Local Disk	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#9
+devices/drive-optical	xp:Optical Drive	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#12
+devices/drive-removable-media	xp:Removable Media	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#8
+devices/drive-removable-media-usb	xp:ZIP Drive	16,22,24,32,36,48,64,96,128	
+actions/edit-copy	xp:Copy	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#explorer-07
+actions/edit-cut	xp:Cut	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#explorer-06
+actions/edit-delete	xp:Explorer Delete	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#explorer-11
+actions/edit-find	xp:Search	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#explorer-18
+actions/edit-find-replace	xp:Document Search	16,22,24,32,36,48,64,96,128	auto
+actions/edit-paste	xp:Paste	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#explorer-08
+actions/edit-redo	xp:Redo	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#explorer-10
+actions/edit-undo	xp:Undo	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#explorer-09
+emblems/emblem-default	xp:Success	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+emblems/emblem-desktop	xp:Desktop	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+emblems/emblem-documents	xp:My Documents	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+emblems/emblem-downloads	xp:Open	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:shell32.dll#146
+emblems/emblem-favorite	xp:Favorites	16,22,24,32,36,48,64,96,128	auto
+apps/emblem-generic	xp:Generic Document	16,22,24,32,36,48,64,96,128	
+emblems/emblem-important	xp:Alert	16,22,24,32,36,48,64,96,128	auto; antes: i386:user32.dll#101
+emblems/emblem-mail	xp:Email	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#265
+apps/emblem-new	xp:Add	16,22,24,32,36,48,64,96,128	
+emblems/emblem-package	xp:Packager	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+emblems/emblem-photos	xp:Windows Picture and Fax Viewer	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#226
+emblems/emblem-readonly	xp:Padlock	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#48
+emblems/emblem-shared	xp:Sharing Hand	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#29
+emblems/emblem-symbolic-link	xp:Shortcut overlay	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#30
+emblems/emblem-synchronized	xp:Offline Web Pages	16,22,24,32,36,48,64,96,128	auto
+emblems/emblem-synchronizing	xp:Whistler - IE Refresh	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+emblems/emblem-system	xp:Services	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:shell32.dll#154
+emblems/emblem-unreadable	xp:Prohibited	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#200
+emblems/emblem-urgent	xp:Information	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:user32.dll#101
+emblems/emblem-web	xp:Internet Shortcut	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:shell32.dll#14
+apps/engrampa	xp:Packager	16,22,24,32,36,48,64,96,128	auto
+places/folder	xp:Folder Closed	16,22,24,32,36,48,64,96,128	
+places/folder-bookmarks	xp:Whistler - IE Favorites	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+places/folder-documents	xp:My Documents	16,22,24,32,36,48,64,96,128	auto
+places/folder-download	xp:Move to folder	16,22,24,32,36,48,64,96,128	
+status/folder-drag-accept	xp:Folder Options	16,22,24,32,36,48,64,96,128	
+places/folder-music	xp:My Music	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#237
+actions/folder-new	xp:New Folder	16,22,24,32,36,48,64,96,128	antes: i386:shell32.dll#319
+status/folder-open	xp:Folder Opened	16,22,24,32,36,48,64,96,128	antes: i386:shell32.dll#5
+places/folder-pictures	xp:My Pictures	16,22,24,32,36,48,64,96,128	auto; antes: i386:mydocs.dll#101
+places/folder-publicshare	xp:Shared Folder	16,22,24,32,36,48,64,96,128	antes: i386:shell32.dll#267
+places/folder-remote	xp:Network Folder	16,22,24,32,36,48,64,96,128	antes: i386:shell32.dll#172
+places/folder-saved-search	xp:Explorer	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:shell32.dll#46
+places/folder-templates	xp:Fax Archive	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+places/folder-videos	xp:My Videos	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:shell32.dll#238
+status/folder-visiting	xp:Folder Options	16,22,24,32,36,48,64,96,128	antes: i386:shell32.dll#210
+mimetypes/font-x-generic	xp:TrueType2	16,22,24,32,36,48,64,96,128	auto; antes: i386:fontext.dll#2
+apps/galculator	xp:Calculator	16,22,24,32,36,48,64,96,128	
+actions/go-bottom	xp:Bottom	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+actions/go-down	xp:Bottom	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+actions/go-first	xp:Whistler - Back	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+actions/go-home	xp:IE Home	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#ie-05
+actions/go-jump	xp:Go	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#290
+actions/go-last	xp:Whistler - Forward	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+actions/go-next	xp:Forward	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#explorer-02
+actions/go-previous	xp:Back	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#explorer-01
+actions/go-top	xp:Top	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+actions/go-up	xp:Top	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#explorer-29
+status/gtk-dialog-authentication	xp:Authorization Manager	16,22,24,32,36,48,64,96,128	
+actions/help-about	xp:Help and Support	16,22,24,32,36,48,64,96,128	auto; antes: i386:user32.dll#104
+apps/help-browser	xp:Help and Support	16,22,24,32,36,48,64,96,128	auto; antes: i386:helpctr.exe#200
+actions/help-contents	xp:Help and Support	16,22,24,32,36,48,64,96,128	auto; antes: i386:helpctr.exe#200
+actions/help-faq	xp:Help and Support	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#24
+apps/htop	xp:Task Manager	16,22,24,32,36,48,64,96,128	auto
+mimetypes/image-x-generic	xp:Bitmap	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#226
+mimetypes/inode-directory	xp:Folder Closed	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:shell32.dll#4
+mimetypes/inode-symlink	xp:Folder Options	16,22,24,32,36,48,64,96,128	
+devices/input-gaming	xp:Game Controller	16,22,24,32,36,48,64,96,128	auto; antes: i386:joy.cpl#102
+devices/input-keyboard	xp:On-Screen Keyboard	16,22,24,32,36,48,64,96,128	auto
+devices/input-mouse	xp:Mouse	16,22,24,32,36,48,64,96,128	auto; antes: i386:main.cpl#100
+devices/input-tablet	xp:Tablet and Pen settings	16,22,24,32,36,48,64,96,128	
+apps/input-touchpad	xp:Tablet and Pen settings	16,22,24,32,36,48,64,96,128	
+apps/internet-chat	xp:MSN Messenger	16,22,24,32,36,48,64,96,128	
+apps/lightdm-gtk-greeter-settings	xp:Additional Settings	16,22,24,32,36,48,64,96,128	antes: i386:shell32.dll#274
+status/mail-attachment	xp:OE Attatch	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:msoeres.dll-barras#correio-50
+actions/mail-forward	xp:OE Send	16,22,24,32,36,48,64,96,128	
+actions/mail-mark-important	xp:OE News Post	16,22,24,32,36,48,64,96,128	
+actions/mail-mark-junk	xp:Discard Fax	16,22,24,32,36,48,64,96,128	
+actions/mail-mark-notjunk	xp:Fax Received Succesfully	16,22,24,32,36,48,64,96,128	
+actions/mail-mark-read	xp:OE Mark as read	16,22,24,32,36,48,64,96,128	
+actions/mail-mark-unread	xp:OE Mark as unread	16,22,24,32,36,48,64,96,128	
+actions/mail-message-new	xp:OE Create Mail	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#ie-14
+status/mail-read	xp:OE Mark as unread	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+status/mail-replied	xp:Fax Sent Succesfully	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:msoeres.dll-barras#correio-33
+actions/mail-reply-all	xp:OE Reply All	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:msoeres.dll-barras#correio-34
+actions/mail-reply-sender	xp:OE Reply	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:msoeres.dll-barras#correio-33
+actions/mail-send	xp:OE Send	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#265
+actions/mail-send-receive	xp:OE Send and Receive	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+status/mail-signed	xp:OE Encrypt	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:msoeres.dll-barras#correio-56
+status/mail-signed-verified	xp:OE Sign	16,22,24,32,36,48,64,96,128	
+status/mail-unread	xp:OE Mark as read	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+devices/media-cdr	xp:CD-R	16,22,24,32,36,48,64,96,128	
+devices/media-cdrw	xp:CD-RW	16,22,24,32,36,48,64,96,128	
+devices/media-dvd	xp:DVD	16,22,24,32,36,48,64,96,128	
+devices/media-dvdrw	xp:DVD-RW	16,22,24,32,36,48,64,96,128	
+devices/media-flash	xp:CompactFlash card	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#306
+devices/media-flash-cf	xp:SmartMedia Card	16,22,24,32,36,48,64,96,128	
+devices/media-flash-ms	xp:Memory Stick	16,22,24,32,36,48,64,96,128	
+devices/media-floppy	xp:Floppy Disk	16,22,24,32,36,48,64,96,128	auto
+devices/media-memory-sd	xp:SD Card	16,22,24,32,36,48,64,96,128	
+devices/media-memory-sm	xp:Whistler - SD Card	16,22,24,32,36,48,64,96,128	
+devices/media-optical	xp:CD-R	16,22,24,32,36,48,64,96,128	auto
+devices/media-removable	xp:Removable Media	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:shell32.dll#8
+devices/media-tape	xp:Tape Drive	16,22,24,32,36,48,64,96,128	
+apps/menulibre	xp:Tweak UI	16,22,24,32,36,48,64,96,128	
+mimetypes/model	xp:Journal Template	16,22,24,32,36,48,64,96,128	
+devices/modem	xp:Phone and Modem Options	16,22,24,32,36,48,64,96,128	auto; antes: i386:telephon.cpl#100
+apps/mugshot	xp:Whistler - User Accounts	16,22,24,32,36,48,64,96,128	antes: i386:shell32.dll#279
+devices/multimedia-player	xp:MP3 player	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#299
+apps/multimedia-volume-control	xp:Volume Level	16,22,24,32,36,48,64,96,128	auto; antes: i386:sndvol32.exe#300
+places/network-server	xp:Network Drive	16,22,24,32,36,48,64,96,128	
+devices/network-wired	xp:Network Connection	16,22,24,32,36,48,64,96,128	auto
+devices/network-wireless	xp:Wireless Network Connection	16,22,24,32,36,48,64,96,128	auto; antes: i386:xpsp2res.dll#1002
+places/network-workgroup	xp:My Network Places	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#18
+mimetypes/office-contact	xp:Contact Offline	16,22,24,32,36,48,64,96,128	
+apps/org.freedesktop.Passim	xp:Network Drive	16,22,24,32,36,48,64,96,128	
+apps/org.freedesktop.fwupd	xp:Add New Hardware	16,22,24,32,36,48,64,96,128	
+apps/org.gnome.font-viewer	xp:Font	16,22,24,32,36,48,64,96,128	
+apps/org.gnome.gthumb	xp:Windows Picture and Fax Viewer	16,22,24,32,36,48,64,96,128	
+apps/org.gnome.seahorse.Application	xp:Local Security Policy	16,22,24,32,36,48,64,96,128	auto
+apps/org.pulseaudio.pavucontrol	xp:Audio Devices	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.Dictionary	xp:Address Book	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.PanelProfiles	xp:OE Preview Pane	16,22,24,32,36,48,64,96,128	antes: i386:explorer.exe#107
+apps/org.xfce.ScreenSaver	xp:Display Properties	16,22,24,32,36,48,64,96,128	auto; antes: i386:desk.cpl#100
+apps/org.xfce.about	xp:System Information	16,22,24,32,36,48,64,96,128	auto; antes: i386:msinfo32.exe#128
+apps/org.xfce.appfinder	xp:Run	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#25
+apps/org.xfce.catfish	xp:Search	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#23
+apps/org.xfce.filemanager	xp:Explorer	16,22,24,32,36,48,64,96,128	antes: i386:explorer.exe#101
+apps/org.xfce.mailreader	xp:Outlook Express	16,22,24,32,36,48,64,96,128	auto; antes: i386:msimn.exe#2
+apps/org.xfce.mousepad	xp:Notepad	16,22,24,32,36,48,64,96,128	antes: i386:notepad.exe#2
+apps/org.xfce.notes	xp:StickyNotes	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#ie-16
+apps/org.xfce.notification	xp:Information	16,22,24,32,36,48,64,96,128	auto; antes: i386:xpsp2res.dll#144
+apps/org.xfce.orage	xp:Date and Time	16,22,24,32,36,48,64,96,128	auto; antes: i386:timedate.cpl#200
+apps/org.xfce.panel	xp:Taskbar and Start Menu	16,22,24,32,36,48,64,96,128	auto; antes: i386:explorer.exe#107
+apps/org.xfce.panel.actions	xp:Power	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.applicationsmenu	xp:Windows XP	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.clock	xp:Date and Time	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.cpugraph	xp:Chip	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.directorymenu	xp:Folder Closed	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.pager	xp:Remote Desktop Server	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.showdesktop	xp:Desktop	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.systemload	xp:Task Manager	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.tasklist	xp:Checklist	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.whiskermenu	xp:Windows XP	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.windowmenu	xp:Start Menu Programs	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.xkb	xp:Keyboard	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.parole	xp:Windows Media Player 9	16,22,24,32,36,48,64,96,128	auto; antes: i386:wmploc.dll#102
+apps/org.xfce.powermanager	xp:Power Options	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.ristretto	xp:Windows Picture and Fax Viewer	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#178
+apps/org.xfce.screenshooter	xp:Digital Camera	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#248
+apps/org.xfce.session	xp:Add or Remove Windows Components	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.settings.accessibility	xp:Accessibility	16,22,24,32,36,48,64,96,128	antes: i386:shell32.dll#268
+apps/org.xfce.settings.appearance	xp:Display Properties	16,22,24,32,36,48,64,96,128	antes: i386:shell32.dll#270
+apps/org.xfce.settings.color	xp:Appearance	16,22,24,32,36,48,64,96,128	antes: i386:shell32.dll#250
+apps/org.xfce.settings.default-applications	xp:Default Programs	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.settings.display	xp:Display Adaptor	16,22,24,32,36,48,64,96,128	auto; antes: i386:desk.cpl#40
+apps/org.xfce.settings.editor	xp:Registry Editor	16,22,24,32,36,48,64,96,128	auto; antes: i386:regedit.exe#100
+apps/org.xfce.settings.keyboard	xp:Keyboard	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.settings.manager	xp:Control Panel	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#137
+apps/org.xfce.settings.mouse	xp:Mouse	16,22,24,32,36,48,64,96,128	auto; antes: i386:main.cpl#100
+apps/org.xfce.taskmanager	xp:Task Manager	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.terminal	xp:Command Prompt	16,22,24,32,36,48,64,96,128	antes: i386:cmd.exe#idi_appicon
+apps/org.xfce.terminalemulator	xp:Command Prompt	16,22,24,32,36,48,64,96,128	antes: i386:cmd.exe#idi_appicon
+apps/org.xfce.thunar	xp:Explorer	16,22,24,32,36,48,64,96,128	auto; antes: i386:explorer.exe#101
+apps/org.xfce.volman	xp:Local Disk	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#8
+apps/org.xfce.webbrowser	xp:Internet Explorer 6	16,22,24,32,36,48,64,96,128	auto; antes: i386:iexplore.exe#32528
+apps/org.xfce.workspaces	xp:Workgroup	16,22,24,32,36,48,64,96,128	antes: i386:shell32.dll#19
+apps/org.xfce.xfdesktop	xp:Desktop	16,22,24,32,36,48,64,96,128	antes: i386:shell32.dll#35
+apps/org.xfce.xfwm4	xp:Application Window	16,22,24,32,36,48,64,96,128	auto; antes: i386:user32.dll#105
+apps/org.xfce.xfwm4-tweaks	xp:Folders open in new window	16,22,24,32,36,48,64,96,128	auto; antes: i386:user32.dll#105
+mimetypes/package-x-generic	xp:Packager	16,22,24,32,36,48,64,96,128	auto
+devices/pda	xp:Mobile Device	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#314
+devices/phone	xp:Phone	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#310
+categories/preferences-desktop	xp:Additional Settings	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#270
+apps/preferences-desktop-accessibility	xp:Accessibility	16,22,24,32,36,48,64,96,128	auto; antes: i386:access.cpl#110
+apps/preferences-desktop-display	xp:Display Adaptor	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:desk.cpl#40
+apps/preferences-desktop-font	xp:Font Similarity View	16,22,24,32,36,48,64,96,128	auto
+apps/preferences-desktop-keyboard	xp:Keyboard	16,22,24,32,36,48,64,96,128	auto
+apps/preferences-desktop-keyboard-shortcuts	xp:On-Screen Keyboard	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+apps/preferences-desktop-locale	xp:Regional Settings	16,22,24,32,36,48,64,96,128	auto; antes: i386:intl.cpl#200
+apps/preferences-desktop-multimedia	xp:Volume	16,22,24,32,36,48,64,96,128	auto; antes: i386:mmsys.cpl#3004
+categories/preferences-desktop-peripherals	xp:Printers and Hardware	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#272
+categories/preferences-desktop-personal	xp:User Accounts	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#279
+apps/preferences-desktop-remote-desktop	xp:Remote Desktop	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:mstsc.exe#101
+apps/preferences-desktop-screensaver	xp:Display Properties	16,22,24,32,36,48,64,96,128	auto; antes: i386:desk.cpl#100
+apps/preferences-desktop-theme	xp:Theme	16,22,24,32,36,48,64,96,128	auto; antes: i386:themeui.dll#701
+apps/preferences-desktop-wallpaper	xp:Display Properties	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#250
+categories/preferences-other	xp:Control Panel	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#22
+categories/preferences-system	xp:Additional Settings	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#274
+categories/preferences-system-network	xp:Network and Internet	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#273
+apps/preferences-system-notifications	xp:Information	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:xpsp2res.dll#144
+apps/preferences-system-privacy	xp:Security Center	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:xpsp2res.dll#6105
+apps/preferences-system-search	xp:Search	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:shell32.dll#23
+apps/preferences-system-sharing	xp:Add Network Place	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:shell32.dll#258
+apps/preferences-system-windows	xp:Application Window	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:user32.dll#105
+devices/printer	xp:Printer	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#17
+status/printer-error	xp:Printer Missing	16,22,24,32,36,48,64,96,128	auto
+devices/printer-network	xp:Network printer	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:shell32.dll#140
+status/printer-printing	xp:Web services printer	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#1009
+actions/process-stop	xp:Stop	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#ie-03
+devices/scanner	xp:Scanner	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#315
+status/security-high	xp:Security - Ok	16,22,24,32,36,48,64,96,128	auto; antes: i386:xpsp2res.dll#6108
+status/security-low	xp:Security Error	16,22,24,32,36,48,64,96,128	auto; antes: i386:xpsp2res.dll#6106
+status/security-medium	xp:Security Options	16,22,24,32,36,48,64,96,128	auto; antes: i386:xpsp2res.dll#6107
+status/software-update-available	xp:Windows Update	16,22,24,32,36,48,64,96,128	auto; antes: i386:wuaucpl.cpl#1
+status/software-update-urgent	xp:Security Alert	16,22,24,32,36,48,64,96,128	auto; antes: i386:wuaucpl.cpl#4
+status/starred	xp:Favorites	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:shell32.dll#44
+places/start-here	xp:Windows XP	16,22,24,32,36,48,64,96,128	bandeira do botão Iniciar do XP
+apps/stock_xfburn	xp:Copy to disc	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#266
+apps/system-file-manager	xp:Explorer	16,22,24,32,36,48,64,96,128	antes: i386:explorer.exe#101
+categories/system-help	xp:Help and Support	16,22,24,32,36,48,64,96,128	auto; antes: i386:helpctr.exe#200
+actions/system-lock-screen	xp:Padlock	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#48
+actions/system-log-out	xp:Logout	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#45
+actions/system-reboot	xp:Restart	16,22,24,32,36,48,64,96,128	auto
+actions/system-run	xp:Run	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#25
+actions/system-search	xp:Search	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#23
+actions/system-shutdown	xp:Power	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#28
+apps/system-software-install	xp:Programs	16,22,24,32,36,48,64,96,128	auto; antes: i386:appwiz.cpl#1500
+apps/system-software-update	xp:Windows Update	16,22,24,32,36,48,64,96,128	auto; antes: i386:wuaucpl.cpl#1
+apps/system-users	xp:User Accounts	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:shell32.dll#279
+mimetypes/text-html	xp:HTML	16,22,24,32,36,48,64,96,128	auto
+mimetypes/text-x-generic	xp:Generic Text Document	16,22,24,32,36,48,64,96,128	auto
+mimetypes/text-x-generic-rtl	xp:Generic Text Document	16,22,24,32,36,48,64,96,128	
+mimetypes/text-x-generic-template	xp:Generic Text Document	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+mimetypes/text-x-preview	xp:Document Search	16,22,24,32,36,48,64,96,128	
+mimetypes/text-x-script	xp:BAT	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#153
+places/user-bookmarks	xp:Favorites	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#44
+status/user-busy	xp:Pending Contact	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+places/user-desktop	xp:Desktop	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#35
+places/user-home	xp:My Documents	16,22,24,32,36,48,64,96,128	auto; antes: i386:mydocs.dll#100
+places/user-trash	xp:Recycle Bin (empty)	16,22,24,32,36,48,64,96,128	
+status/user-trash-full	xp:Recycle Bin (full)	16,22,24,32,36,48,64,96,128	
+apps/utilities-system-monitor	xp:Task Manager	16,22,24,32,36,48,64,96,128	auto
+apps/utilities-terminal	xp:Command Prompt	16,22,24,32,36,48,64,96,128	antes: i386:cmd.exe#idi_appicon
+devices/video-display	xp:Display Adaptor	16,22,24,32,36,48,64,96,128	auto
+mimetypes/video-x-generic	xp:Generic Video	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#224
+actions/view-fullscreen	xp:Full Screen	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#ie-15
+apps/vlc	xp:Windows Media Player 9	16,22,24,32,36,48,64,96,128	auto; antes: i386:wmploc.dll#102
+apps/web-browser	xp:Internet Explorer 6	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:iexplore.exe#32528
+mimetypes/x-office-address-book	xp:Address Book	16,22,24,32,36,48,64,96,128	auto; antes: i386:wab32res.dll#101
+mimetypes/x-office-addressbook	xp:Address Book	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:wab32res.dll#101
+mimetypes/x-office-calendar	xp:Date and Time	16,22,24,32,36,48,64,96,128	auto; antes: i386:timedate.cpl#200
+mimetypes/x-office-document	xp:Word	16,22,24,32,36,48,64,96,128	auto
+mimetypes/x-office-document-template	xp:Generic Text Document	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+mimetypes/x-office-drawing	xp:Bitmap	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+mimetypes/x-office-drawing-template	xp:Bitmap	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+mimetypes/x-office-presentation	xp:PowerPoint	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll#249
+mimetypes/x-office-presentation-template	xp:Slideshow	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy); antes: i386:shell32.dll#249
+mimetypes/x-office-spreadsheet	xp:Excel	16,22,24,32,36,48,64,96,128	
+mimetypes/x-office-spreadsheet-template	xp:WRI	16,22,24,32,36,48,64,96,128	
+mimetypes/x-package-repository	xp:Indexing Service	16,22,24,32,36,48,64,96,128	
+apps/xarchiver	xp:Packager	16,22,24,32,36,48,64,96,128	
+apps/xfce-sensors	xp:Chip	16,22,24,32,36,48,64,96,128	auto
+apps/xfce4-clipman-plugin	xp:Paste	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#editar-03
+actions/xfsm-hibernate	xp:Standby	16,22,24,32,36,48,64,96,128	
+actions/xfsm-lock	xp:Switch User	16,22,24,32,36,48,64,96,128	
+apps/xfsm-logout	xp:Logout	16,22,24,32,36,48,64,96,128	auto
+actions/xfsm-reboot	xp:Restart	16,22,24,32,36,48,64,96,128	
+actions/xfsm-shutdown	xp:Power	16,22,24,32,36,48,64,96,128	
+actions/xfsm-suspend	xp:Standby	16,22,24,32,36,48,64,96,128	
+actions/xfsm-switch-user	xp:Switch User	16,22,24,32,36,48,64,96,128	
+apps/xterm-color_48x48	xp:Command Prompt	16,22,24,32,36,48,64,96,128	
