@@ -526,7 +526,7 @@ function abrirDialogo(nome, ctx, estado) {
   document.getElementById("fCtx").value = it.ctx || "apps";
   document.getElementById("fOrigem").value = it.origem || "";
   document.getElementById("fObs").value = it.obs || "";
-  document.getElementById("fTams").innerHTML = [16, 22, 24, 32, 48].map(s =>
+  document.getElementById("fTams").innerHTML = D.tamanhos.map(s =>
     `<label><input type="checkbox" value="${s}" ${(it.tamanhos || []).map(String).includes(String(s)) ? "checked" : ""}> ${s}</label>`).join("");
   document.getElementById("fRemover").hidden = !lista[nome];
   dicaOrigem();
@@ -582,13 +582,13 @@ document.addEventListener("click", ev => {
       e.origem = t.dataset.ref;
       const disp = t.dataset.tams.split(",").map(Number);
       e.tamanhos = e.tamanhos.filter(s => disp.includes(s));
-      if (!e.tamanhos.length) e.tamanhos = disp.filter(s => [16, 22, 24, 32, 48].includes(s));
+      if (!e.tamanhos.length) e.tamanhos = disp.filter(s => D.tamanhos.includes(s));
       aba = lista[e.original] || !e.original ? "lista" : "faltando";
       render(); abrirDialogo(e.original || null, e.ctx, e);
       dlg.dataset.original = e.original || "";
     } else {
       abrirDialogo(null, "apps", { nome: "", ctx: "apps", origem: t.dataset.ref, obs: "", novo: true,
-        tamanhos: t.dataset.tams.split(",").map(Number).filter(s => [16, 22, 24, 32, 48].includes(s)) });
+        tamanhos: t.dataset.tams.split(",").map(Number).filter(s => D.tamanhos.includes(s)) });
     }
   }
   else if (t.dataset.cancelarEscolha !== undefined) {
