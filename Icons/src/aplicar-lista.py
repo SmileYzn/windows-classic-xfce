@@ -17,8 +17,8 @@ Formato da lista (separado por TAB; linhas com # são comentários):
 
 O tema é refeito do zero a cada execução: os PNG e SVG das pastas do tema são
 apagados e gravados de novo conforme a lista (o index.theme e os .gitkeep ficam).
-Quando a mesma imagem serve a vários nomes na mesma pasta, os nomes seguintes
-viram links simbólicos para o primeiro.
+Quando a mesma imagem serve a vários nomes na mesma pasta, os nomes seguintes recebem uma
+cópia do arquivo (o tema não usa links simbólicos).
 
 Para evitar apagar o tema por engano, o script não altera nada (a não ser com --forcar) se:
   - a lista removeria mais de LIMITE nomes que o tema tem hoje (por exemplo, uma lista
@@ -176,7 +176,8 @@ def main():
                     + ("\n    ..." if len(vazios) > 20 else "")))
     apagados = limpar(pastas)
 
-    gravados = links = 0
+    gravados = copias = 0
+    iguais = []                     # (arquivo já gravado, destino): cópias feitas no fim
     avisos = []
     feitos = {}                     # (pasta, origem real) -> nome do arquivo já gravado
     reduzir = []                    # redimensionamentos pendentes (rodam em paralelo no fim)
@@ -199,8 +200,8 @@ def main():
             destino = os.path.join(TEMA, pasta, nome + ext)
             chave = (pasta, os.path.realpath(fonte), tam)
             if chave in feitos and feitos[chave] != nome + ext:
-                os.symlink(feitos[chave], destino)
-                links += 1
+                iguais.append((os.path.join(TEMA, pasta, feitos[chave]), destino))
+                copias += 1
                 continue
             pct = REDUCAO.get(ctx)
             if pct and pct < 100 and ext == ".png":
@@ -217,11 +218,13 @@ def main():
     if reduzir:
         with ThreadPoolExecutor(max_workers=os.cpu_count() or 2) as ex:
             list(ex.map(lambda j: gravar_reduzido(*j), reduzir))
+    for fonte, destino in iguais:
+        shutil.copyfile(fonte, destino)
 
     for a in avisos:
         print("aviso:", a)
-    print("OK: %d nomes na lista; %d imagens gravadas e %d links em %s (%d arquivos antigos apagados)"
-          % (len(itens), gravados, links, TEMA, apagados))
+    print("OK: %d nomes na lista; %d imagens gravadas e %d cópias de imagens iguais em %s (%d arquivos antigos apagados)"
+          % (len(itens), gravados, copias, TEMA, apagados))
 
 
 if __name__ == "__main__":

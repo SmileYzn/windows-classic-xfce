@@ -167,9 +167,32 @@ actions/go-previous	xp:Back	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell3
 actions/go-top	xp:Top	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
 actions/go-up	xp:Top	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#explorer-29
 apps/gparted	xp:Disk Management	16,22,24,32,36,48,64,96,128	
+actions/gtk-apply	xp:Checklist	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-cancel	xp:Whistler - IE Stop	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-caps-lock-warning	xp:Alert	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-color-picker	xp:Paint	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-connect	xp:Network Connection	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-convert	xp:WME Convert a File	16,22,24,32,36,48,64,96,128	gtk embutido
 status/gtk-dialog-authentication	xp:Authorization Manager	16,22,24,32,36,48,64,96,128	
+actions/gtk-disconnect	xp:Disable Network Connection	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-dnd	xp:Copy	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-dnd-multiple	xp:Copy To	16,22,24,32,36,48,64,96,128	gtk embutido
 actions/gtk-edit	xp:IE Edit	16,22,24,32,36,48,64,96,128	
+actions/gtk-index	xp:Help and Support - Index	16,22,24,32,36,48,64,96,128	gtk embutido
 places/gtk-network	xp:Network Folder	16,22,24,32,36,48,64,96,128	
+actions/gtk-no	xp:Stop	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-ok	xp:Checklist	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-orientation-landscape	xp:Printer	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-orientation-portrait	xp:Printer	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-orientation-reverse-landscape	xp:Printer	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-orientation-reverse-portrait	xp:Printer	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-page-setup	xp:Printer	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-preferences	xp:Additional Settings	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-select-color	xp:Color Profile	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-select-font	xp:Font	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-undelete	xp:Restore	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-undelete-rtl	xp:Restore	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-yes	xp:Checklist	16,22,24,32,36,48,64,96,128	gtk embutido
 actions/help-about	xp:Information	16,22,24,32,36,48,64,96,128	auto; antes: i386:user32.dll#104
 apps/help-browser	xp:Help and Support	16,22,24,32,36,48,64,96,128	auto; antes: i386:helpctr.exe#200
 actions/help-contents	xp:Help and Support	16,22,24,32,36,48,64,96,128	auto; antes: i386:helpctr.exe#200
@@ -418,26 +441,3 @@ actions/xfsm-shutdown	xp:Power	16,22,24,32,36,48,64,96,128
 actions/xfsm-suspend	xp:Standby	16,22,24,32,36,48,64,96,128	
 actions/xfsm-switch-user	xp:Switch User	16,22,24,32,36,48,64,96,128	
 apps/xterm-color_48x48	xp:Command Prompt	16,22,24,32,36,48,64,96,128	
-actions/gtk-apply	xp:Checklist	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-cancel	xp:Stop	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-caps-lock-warning	xp:Alert	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-color-picker	xp:Paint	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-connect	xp:Network Connection	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-convert	xp:WME Convert a File	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-disconnect	xp:Disable Network Connection	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-dnd	xp:Copy	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-dnd-multiple	xp:Copy To	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-index	xp:Help and Support - Index	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-no	xp:Stop	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-ok	xp:Checklist	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-orientation-landscape	xp:Printer	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-orientation-portrait	xp:Printer	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-orientation-reverse-landscape	xp:Printer	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-orientation-reverse-portrait	xp:Printer	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-page-setup	xp:Printer	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-preferences	xp:Additional Settings	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-select-color	xp:Color Profile	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-select-font	xp:Font	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-undelete	xp:Restore	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-undelete-rtl	xp:Restore	16,22,24,32,36,48,64,96,128	gtk embutido
-actions/gtk-yes	xp:Checklist	16,22,24,32,36,48,64,96,128	gtk embutido
