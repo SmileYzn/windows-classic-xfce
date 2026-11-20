@@ -519,7 +519,7 @@ const dlg = document.getElementById("dlg");
 function abrirDialogo(nome, ctx, estado) {
   const it = estado || lista[nome] || {
     nome, ctx: ctxDe(nome, ctx || ctxPadrao[nome]), origem: "", obs: "",
-    tamanhos: D.tema[nome] ? NUCLEO.filter(s => !D.tema[nome].s[s]) : NUCLEO.slice(),
+    tamanhos: D.tamanhos.slice(),
   };
   document.getElementById("fNome").value = it.nome || nome || "";
   document.getElementById("fNome").readOnly = !!nome && !estado?.novo;
@@ -594,7 +594,7 @@ document.addEventListener("click", ev => {
   else if (t.dataset.cancelarEscolha !== undefined) {
     const e = escolhendo; escolhendo = null; render(); abrirDialogo(e.original || null, e.ctx, e);
   }
-  else if (t.dataset.novo !== undefined) abrirDialogo(null, "apps", { nome: "", ctx: "apps", origem: "", obs: "", tamanhos: NUCLEO.slice(), novo: true });
+  else if (t.dataset.novo !== undefined) abrirDialogo(null, "apps", { nome: "", ctx: "apps", origem: "", obs: "", tamanhos: D.tamanhos.slice(), novo: true });
   else if (t.dataset.exportar !== undefined) exportar();
   else if (t.dataset.importar !== undefined) document.getElementById("arqImportar").click();
   else if (t.dataset.limpar !== undefined) {
