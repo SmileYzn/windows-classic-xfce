@@ -41,6 +41,7 @@ import os
 import shutil
 import subprocess
 import sys
+from concurrent.futures import ThreadPoolExecutor
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 ICONS = os.path.dirname(AQUI)
@@ -49,6 +50,15 @@ I386 = os.path.join(ICONS, "build", "i386")
 XP_ICONS = os.path.join(ICONS, "build", "xp-icons")
 LISTA = os.path.join(ICONS, "windows-classic-icons.list")
 LIMITE = 10                     # nomes que podem sair do tema sem --forcar
+
+# Margem transparente nos ícones de alguns contextos. No XP os ícones de barra de ferramentas
+# preenchem a imagem toda; nos temas modernos (Papirus, elementary) o desenho ocupa só uma parte
+# do quadrado, e por isso parecem menores nas barras. Valor = % do quadrado que o desenho ocupa
+# (100 = sem margem). Para testar outros valores sem editar o script:
+#     REDUCAO_ICONES="actions=70,status=80" python3 Icons/src/aplicar-lista.py
+REDUCAO = {"actions": 75}
+if os.environ.get("REDUCAO_ICONES") is not None:
+    REDUCAO = {k: int(v) for k, v in (x.split("=") for x in os.environ["REDUCAO_ICONES"].split(",") if x)}
 
 
 def pastas_do_tema():
@@ -104,6 +114,20 @@ def sem_imagem(itens, pastas):
     return out
 
 
+def gravar_reduzido(fonte, origem, destino, tam, pct):
+    """Grava o PNG ocupando pct% do quadrado tam x tam, centralizado e com fundo transparente.
+    Para ícones da galeria XP reduz a partir do PNG de 128 px (mais nítido que reduzir o de tam px
+    e bem mais rápido que ler o de 1024 px)."""
+    interno = max(1, round(tam * pct / 100))
+    if origem.startswith("xp:"):
+        grande = os.path.join(XP_ICONS, "128x128", origem[3:] + ".png")
+        if os.path.isfile(grande):
+            fonte = grande
+    subprocess.run(["magick", "-quiet", fonte, "-filter", "Lanczos", "-resize", "%dx%d" % (interno, interno),
+                    "-background", "none", "-gravity", "center", "-extent", "%dx%d" % (tam, tam),
+                    "-strip", "PNG32:" + destino], check=True)
+
+
 def limpar(pastas):
     apagados = 0
     for d in set(pastas.values()):
@@ -155,6 +179,7 @@ def main():
     gravados = links = 0
     avisos = []
     feitos = {}                     # (pasta, origem real) -> nome do arquivo já gravado
+    reduzir = []                    # redimensionamentos pendentes (rodam em paralelo no fim)
     for n, ctx, nome, origem, tams in itens:
         if not any(c == ctx for c, _ in pastas):
             avisos.append("linha %d: contexto desconhecido '%s'" % (n, ctx))
@@ -177,7 +202,10 @@ def main():
                 os.symlink(feitos[chave], destino)
                 links += 1
                 continue
-            if ext == ".svg" or origem.startswith(("i386:", "xp:")):
+            pct = REDUCAO.get(ctx)
+            if pct and pct < 100 and ext == ".png":
+                reduzir.append((fonte, origem, destino, tam, pct))
+            elif ext == ".svg" or origem.startswith(("i386:", "xp:")):
                 shutil.copyfile(fonte, destino)
             else:
                 subprocess.run(["magick", fonte, "-background", "none", "-resize", "%dx%d" % (tam, tam),
@@ -185,6 +213,10 @@ def main():
                                 "PNG32:" + destino], check=True)
             feitos[chave] = nome + ext
             gravados += 1
+
+    if reduzir:
+        with ThreadPoolExecutor(max_workers=os.cpu_count() or 2) as ex:
+            list(ex.map(lambda j: gravar_reduzido(*j), reduzir))
 
     for a in avisos:
         print("aviso:", a)
