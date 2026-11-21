@@ -405,35 +405,77 @@ DESCRIPTIONS = {
              "painel atual (sem backup).",
 }
 
-# Logotipo do assistente: a bandeira de 38x38 do Windows XP (shell32.dll, bitmap 242,
-# primeiro quadro), em PNG embutido para o instalador ser um arquivo só.
+# Logotipo do assistente: a bandeira do Windows XP (Icons/build/xp-icons/48x48/XP Logo.png),
+# em PNG embutido para o instalador ser um arquivo só.
 LOGO_PNG = (
-    "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"
+    "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"
+    "Z/A/G9oumhx19OAAAAAElFTkSuQmCC"
 )
 
 # Faixa branca do topo, como nos assistentes do Windows XP
@@ -442,6 +484,12 @@ WIZARD_CSS = b"""
   background-color: #ffffff; }
 .wc-setup-banner label {
   color: #000000; }
+/* Caixas de grupo: so a borda interna (a que tem o titulo), sem a borda de fora */
+frame.border-groove {
+  border: none;
+  border-image: none;
+  box-shadow: none;
+  padding: 0; }
 """
 
 
@@ -472,6 +520,12 @@ def gui_main():
 
     def text(content):
         return Gtk.Label(label=content, xalign=0, wrap=True, max_width_chars=60)
+
+    def group(label):
+        """Caixa com título no estilo das caixas de grupo do XP (borda sulcada, groove)."""
+        frame = Gtk.Frame(label=label)
+        frame.get_style_context().add_class("border-groove")
+        return frame
 
     def page(title, subtitle=None, big=False):
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=8)
@@ -566,7 +620,7 @@ def gui_main():
 
         def build_type(self):
             box = page("Tipo de instalação", "Escolha o que fazer e para quem.")
-            frame = Gtk.Frame(label="Operação")
+            frame = group("Operação")
             inner = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=4, border_width=8)
             self.op_install = Gtk.RadioButton.new_with_mnemonic(None, "_Instalar ou atualizar componentes")
             self.op_remove = Gtk.RadioButton.new_with_mnemonic_from_widget(self.op_install,
@@ -576,7 +630,7 @@ def gui_main():
             frame.add(inner)
             box.pack_start(frame, False, False, 4)
 
-            frame = Gtk.Frame(label="Instalar para")
+            frame = group("Instalar para")
             inner = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=4, border_width=8)
             self.mode_user = Gtk.RadioButton.new_with_mnemonic(None, "_Somente para mim")
             self.mode_system = Gtk.RadioButton.new_with_mnemonic_from_widget(
@@ -616,7 +670,7 @@ def gui_main():
             scroll.add(view)
             self.comp_box.pack_start(scroll, True, True, 0)
 
-            frame = Gtk.Frame(label="Descrição")
+            frame = group("Descrição")
             self.desc = text("")
             self.desc.set_margin_start(8)
             self.desc.set_margin_end(8)

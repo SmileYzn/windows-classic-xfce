@@ -114,11 +114,44 @@ button.color {
       button.color colorswatch:only-child:disabled colorswatch:only-child, button.color colorswatch:only-child:backdrop colorswatch:only-child, button.color colorswatch:only-child:active colorswatch:only-child, button.color colorswatch:only-child:checked colorswatch:only-child {
         box-shadow: none; }
 
-/* Toolbar buttons */
-.inline-toolbar button,
+/* Toolbar buttons: vazados (planos) como nas barras do Explorer do XP. So "saltam" com o
+   mouse em cima (relevo de 1px) e afundam ao clicar. As barras .inline-toolbar (por exemplo a
+   do botao "Adicionar" da janela Aparencia) ficam de fora: ali o botao e um botao normal. */
 .primary-toolbar button,
-toolbutton button,
-toolbutton .toggle,
+toolbar:not(.inline-toolbar) button,
+.toolbar button,
+toolbar:not(.inline-toolbar) toolbutton button,
+toolbar:not(.inline-toolbar) toolbutton .toggle {
+  margin: 0px;
+  border-radius: 0px;
+  border: 1px solid transparent;
+  border-image: none;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none; }
+  .primary-toolbar button:hover,
+  toolbar:not(.inline-toolbar) button:hover,
+  .toolbar button:hover,
+  toolbar:not(.inline-toolbar) toolbutton button:hover,
+  toolbar:not(.inline-toolbar) toolbutton .toggle:hover {
+    border-top-color: @border_bright;
+    border-left-color: @border_bright;
+    border-bottom-color: @border_shade;
+    border-right-color: @border_shade; }
+  .primary-toolbar button:active,
+  toolbar:not(.inline-toolbar) button:active,
+  .toolbar button:active,
+  toolbar:not(.inline-toolbar) toolbutton button:active,
+  .primary-toolbar button:checked,
+  toolbar:not(.inline-toolbar) button:checked,
+  .toolbar button:checked,
+  toolbar:not(.inline-toolbar) toolbutton button:checked {
+    border-top-color: @border_shade;
+    border-left-color: @border_shade;
+    border-bottom-color: @border_bright;
+    border-right-color: @border_bright; }
+
+/* Botoes da barra de endereco (path bar): continuam em relevo */
 .path-bar button {
   margin: 0px;
   border-radius: 0px;
@@ -127,13 +160,7 @@ toolbutton .toggle,
   border-bottom: 1px solid @border_dark;
   border-right: 1px solid @border_dark;
   box-shadow: inset -1px -1px @border_shade; }
-  .inline-toolbar button:active,
-  .primary-toolbar button:active,
-  toolbutton button:active,
-  .path-bar button:active
-  .inline-toolbar button:checked,
-  .primary-toolbar button:checked,
-  toolbutton button:checked,
+  .path-bar button:active,
   .path-bar button:checked {
     border-left: 1px solid @border_dark;
     border-top: 1px solid @border_dark;

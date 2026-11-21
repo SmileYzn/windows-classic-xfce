@@ -165,7 +165,7 @@ actions/go-last	xp:Whistler - Forward	16,22,24,32,36,48,64,96,128	auto (AdwaitaL
 actions/go-next	xp:Forward	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#explorer-02
 actions/go-previous	xp:Back	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#explorer-01
 actions/go-top	xp:Top	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
-actions/go-up	xp:Top	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#explorer-29
+actions/go-up	xp:Up	16,22,24,32,36,48,64,96,128	auto; antes: i386:shell32.dll-barras#explorer-29
 apps/gparted	xp:Disk Management	16,22,24,32,36,48,64,96,128	
 actions/gtk-apply	xp:Checklist	16,22,24,32,36,48,64,96,128	gtk embutido
 actions/gtk-cancel	xp:Whistler - IE Stop	16,22,24,32,36,48,64,96,128	gtk embutido

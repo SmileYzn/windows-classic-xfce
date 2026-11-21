@@ -39,9 +39,48 @@ menu {
   menu menuitem {
     padding: 3px 2px;
     background-color: transparent; }
+    /* Itens marcados nos menus, como no XP: sem caixa. O check vira um "V" e o radio uma bolinha;
+       quando nao esta marcado fica so o espaco. Com o item selecionado o simbolo fica branco.
+       Os seletores levam os estados (:not(:checked), :disabled...) para ganhar das regras
+       genericas de check e radio do gtk-checks_radio.css. */
     menu menuitem check,
     menu menuitem radio {
-      padding-right: 4px; }
+      min-width: 13px;
+      min-height: 13px;
+      padding: 0px;
+      margin-right: 4px;
+      background-color: transparent;
+      background-image: none;
+      border-color: transparent;
+      box-shadow: none;
+      -gtk-icon-shadow: none; }
+    menu menuitem check:not(:checked):not(:indeterminate),
+    menu menuitem radio:not(:checked):not(:indeterminate),
+    menu menuitem check:disabled:not(:checked):not(:indeterminate),
+    menu menuitem radio:disabled:not(:checked):not(:indeterminate) {
+      -gtk-icon-source: none; }
+    menu menuitem check:checked,
+    menu menuitem check:indeterminate,
+    menu menuitem check:disabled:checked,
+    menu menuitem check:disabled:indeterminate {
+      -gtk-icon-source: url("assets/menu-check.png"); }
+    menu menuitem radio:checked,
+    menu menuitem radio:indeterminate,
+    menu menuitem radio:disabled:checked,
+    menu menuitem radio:disabled:indeterminate {
+      -gtk-icon-source: url("assets/menu-radio.png"); }
+    menu menuitem check:disabled:checked,
+    menu menuitem radio:disabled:checked,
+    menu menuitem check:disabled:indeterminate,
+    menu menuitem radio:disabled:indeterminate {
+      -gtk-icon-effect: dim; }
+    /* ">" evita que o item pai selecionado afete os itens do submenu, que ficam dentro dele no GTK3 */
+    menu menuitem:hover > check:checked,
+    menu menuitem:hover > check:indeterminate {
+      -gtk-icon-source: url("assets/menu-check-hover.png"); }
+    menu menuitem:hover > radio:checked,
+    menu menuitem:hover > radio:indeterminate {
+      -gtk-icon-source: url("assets/menu-radio-hover.png"); }
     menuitem:active,
     menuitem:hover {
       background-color: @theme_selected_bg_color;

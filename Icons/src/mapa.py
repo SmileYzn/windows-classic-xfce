@@ -288,6 +288,64 @@ def _procurar(th, busca, nomes, out):
     return out
 
 
+ADWAITA_SIMB = "/usr/share/icons/Adwaita/symbolic"
+# O tema só tem as pastas de contexto padrão; as pastas "ui", "legacy" e "emotes" do Adwaita
+# simbólico entram no contexto mais próximo (o GTK procura o nome em qualquer pasta do tema).
+CTX_SIMB = {"ui": "actions", "legacy": "apps", "emotes": "status"}
+
+
+def nomes_simbolicos():
+    """[[contexto, nome]] dos ícones simbólicos (-symbolic) do Adwaita. São os pretos que
+    aparecem na área de notificação, nas barras de ferramentas e nos menus."""
+    out = {}
+    if not os.path.isdir(ADWAITA_SIMB):
+        return []
+    for ctx in sorted(os.listdir(ADWAITA_SIMB)):
+        pasta = os.path.join(ADWAITA_SIMB, ctx)
+        if not os.path.isdir(pasta):
+            continue
+        for f in sorted(os.listdir(pasta)):
+            nome, ext = os.path.splitext(f)
+            if ext != ".svg" or not nome.endswith("-symbolic"):
+                continue
+            c = CTX_SIMB.get(ctx, ctx)
+            if ctx == "legacy" and nome.startswith("emblem-"):
+                c = "emblems"
+            out.setdefault(nome, c)
+    return [[c, n] for n, c in sorted(out.items())]
+
+
+def uso_simbolicos(nomes):
+    """{nome: [programas]} dos simbólicos que aparecem (como texto) nos programas e bibliotecas
+    do XFCE e do GTK instalados: é o que eles pedem ao tema de ícones."""
+    alvos = set()
+    for pad in ("/usr/bin/thunar", "/usr/bin/mousepad", "/usr/bin/ristretto", "/usr/bin/xfce4-*",
+                "/usr/bin/xfdesktop", "/usr/bin/xfwm4", "/usr/bin/xfsettingsd", "/usr/bin/engrampa",
+                "/usr/bin/catfish", "/usr/bin/parole", "/usr/lib/xfce4/**/*.so", "/usr/lib/libxfce*",
+                "/usr/lib/thunarx-3/*.so", "/usr/lib/libthunar*", "/usr/lib/libgtk-3.so.0",
+                "/usr/lib/libwnck*"):
+        for f in glob.glob(pad, recursive=True):
+            if os.path.isfile(f):
+                alvos.add(os.path.realpath(f))
+    uso = {}
+    for f in sorted(alvos):
+        try:
+            with open(f, "rb") as fh:
+                dados = fh.read()
+        except OSError:
+            continue
+        prog = os.path.basename(f)
+        prog = prog[:-3] if prog.endswith(".so") else prog
+        prog = prog[3:] if prog.startswith("lib") else prog
+        prog = prog.split(".so")[0]
+        for n in nomes:
+            if n.encode() in dados:
+                uso.setdefault(n, [])
+                if prog not in uso[n]:
+                    uso[n].append(prog)
+    return uso
+
+
 def ler_xp_icons():
     """[{nome, tamanhos}] da galeria XP: cada subpasta NxN de Icons/build/xp-icons
     é um tamanho; o nome do ícone é o nome do arquivo sem .png (pode ter espaços)."""
@@ -356,7 +414,9 @@ def main():
     ja |= {n for _, n in hicolor}
     elementary = [[c, n] for n, c in sorted(nomes_elementary().items())
                   if n not in ja and n not in apps and n not in tema]
-    faltam = ({n for _, n in padrao if n not in tema} | {n for n in apps if n not in tema}
+    simbolicos = nomes_simbolicos()
+    uso_simb = uso_simbolicos([n for _, n in simbolicos])
+    faltam = ({n for _, n in simbolicos if n not in tema} | {n for _, n in padrao if n not in tema} | {n for n in apps if n not in tema}
               | {n for _, n in hicolor if n not in tema} | {n for _, n in elementary})
     i386 = []
     indice = os.path.join(I386, "indice.json")
@@ -366,6 +426,7 @@ def main():
     xp = ler_xp_icons()
     dados = {
         "tema": tema, "padrao": padrao, "apps": apps, "hicolor": hicolor, "elementary": elementary,
+        "simbolicos": simbolicos, "usoSimb": uso_simb,
         "heranca": heranca(sorted(faltam)),
         "i386": i386, "xp": xp, "tamanhos": TAMANHOS, "nomeTema": TEMA, "listaProjeto": ler_lista(),
         "gerado": datetime.datetime.now().strftime("%d/%m/%Y %H:%M"),
@@ -379,8 +440,9 @@ def main():
         f.write(html)
     n_i386 = sum(len(a["grupos"]) for a in i386)
     print("OK: %s (%d ícones no tema, %d nomes padrão, %d ícones de apps, %d do hicolor, %d do elementary, "
-          "%d da galeria XP, %d da I386)"
-          % (SAIDA, len(tema), len(padrao), len(apps), len(hicolor), len(elementary), len(xp), n_i386))
+          "%d simbólicos (%d usados), %d da galeria XP, %d da I386)"
+          % (SAIDA, len(tema), len(padrao), len(apps), len(hicolor), len(elementary), len(simbolicos),
+             len(uso_simb), len(xp), n_i386))
     if not i386:
         print("Dica: rode Icons/src/extrair-i386.py /caminho/para/I386 para ver a galeria da I386.")
 

@@ -97,6 +97,7 @@
     <div class="ferramentas">
       <select id="pasta" title="Filtrar pela pasta (contexto)"><option value="">Todas Pastas</option></select>
       <input type="search" id="busca" placeholder="Filtrar por nome…">
+      <label id="lblUsados"><input type="checkbox" id="usados" checked> só os usados pelos programas</label>
       <label id="lblParciais"><input type="checkbox" id="parciais"> incluir parciais</label>
       <label><input type="checkbox" id="zoom"> ampliar 2x</label>
       <span class="contagem" id="contagem"></span>
@@ -369,6 +370,15 @@ const ABAS = {
     return tabela(porCtx(HICOLOR.filter(([, n]) => passa(n)).map(([c, n]) => [c, linha(n, c, "")])),
                   "Ícone instalado no hicolor");
   }},
+  simbolicos: { titulo: "Simbólicos", usados: true, render() {
+    // Ícones -symbolic do Adwaita (pretos): bandeja, barras de ferramentas e menus. Quem não tem
+    // imagem no tema herda o preto do Adwaita.
+    const so = document.getElementById("usados").checked;
+    const uso = n => D.usoSimb[n] ? esc(D.usoSimb[n].slice(0, 4).join(", ") + (D.usoSimb[n].length > 4 ? "…" : "")) : "";
+    const lista = (D.simbolicos || []).filter(([, n]) => passa(n) && (!so || D.usoSimb[n]));
+    return tabela(porCtx(lista.map(([c, n]) => [c, linha(n, c, uso(n) ? "usado por: " + uso(n) : "")])),
+                  "Ícone simbólico (Adwaita)");
+  }},
   elementary: { titulo: "elementary", render() {
     return tabela(porCtx(ELEMENTARY.filter(([, n]) => passa(n)).map(([c, n]) => [c, linha(n, c, "")])),
                   "Nome do tema elementary");
@@ -389,6 +399,7 @@ function render() {
   abas(); resumo();
   try { history.replaceState(null, "", "#" + aba); } catch (e) {}
   document.getElementById("lblParciais").hidden = !ABAS[aba].parciais;
+  document.getElementById("lblUsados").hidden = !ABAS[aba].usados;
   document.getElementById("conteudo").innerHTML = ABAS[aba].render();
 }
 
@@ -616,6 +627,7 @@ let tempo;
 document.getElementById("pasta").addEventListener("change", render);
 document.getElementById("busca").addEventListener("input", () => { clearTimeout(tempo); tempo = setTimeout(render, 200); });
 document.getElementById("parciais").addEventListener("change", render);
+document.getElementById("usados").addEventListener("change", render);
 document.getElementById("zoom").addEventListener("change", e => document.body.classList.toggle("z2", e.target.checked));
 
 document.getElementById("nomeTema").textContent = D.nomeTema;
