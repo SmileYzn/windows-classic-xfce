@@ -1,0 +1,17 @@
+# Prompt de comando do Windows XP (cmd.exe): paleta padrão do console.
+# Texto cinza (#C0C0C0) sobre preto, como na janela do cmd.exe do XP.
+# A paleta está na ordem ANSI (preto, vermelho, verde, amarelo, azul, magenta,
+# ciano, branco); o console do Windows usa outra ordem (azul antes do vermelho).
+# A seleção é invertida, como no modo de marcação do console.
+[Scheme]
+Name=Prompt de comando (Windows XP)
+ColorForeground=#C0C0C0
+ColorBackground=#000000
+ColorCursorUseDefault=FALSE
+ColorCursor=#C0C0C0
+ColorCursorForeground=#000000
+ColorBoldUseDefault=TRUE
+ColorSelectionUseDefault=FALSE
+ColorSelection=#000000
+ColorSelectionBackground=#C0C0C0
+ColorPalette=#000000;#800000;#008000;#808000;#000080;#800080;#008080;#C0C0C0;#808080;#FF0000;#00FF00;#FFFF00;#0000FF;#FF00FF;#00FFFF;#FFFFFF

@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<!-- Modelo do Icons/mapa.html. Não edite o mapa.html gerado: edite este arquivo e rode
+     python3 Icons/mapa.py -->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapa de ícones</title>
+<style>
+  :root {
+    --face: #d4d0c8; --luz: #ffffff; --sombra: #808080; --escuro: #404040;
+    --titulo1: #0a246a; --titulo2: #a6caf0; --sel: #0a246a; --texto: #000;
+    --ok: #2e7d32; --parcial: #b26a00; --falta: #b3261e; --herdado: #5a5a5a;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #3a6ea5; color: var(--texto);
+         font: 12px Tahoma, "Noto Sans", "DejaVu Sans", sans-serif; padding: 16px; }
+  .janela { max-width: 1280px; margin: 0 auto; background: var(--face);
+            border: 2px solid; border-color: var(--luz) var(--escuro) var(--escuro) var(--luz);
+            box-shadow: inset -1px -1px var(--sombra), inset 1px 1px #dfdfdf; padding: 3px; }
+  .barra { background: linear-gradient(90deg, var(--titulo1), var(--titulo2)); color: #fff;
+           font-weight: bold; padding: 4px 6px; display: flex; justify-content: space-between;
+           align-items: center; gap: 8px; flex-wrap: wrap; }
+  .barra small { font-weight: normal; opacity: .85; }
+  .resumo { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px 4px 4px; }
+  .cartao { background: #fff; border: 1px solid; border-color: var(--sombra) var(--luz) var(--luz) var(--sombra);
+            padding: 6px 10px; min-width: 150px; flex: 1 1 150px; }
+  .cartao b { display: block; font-size: 20px; }
+  .cartao span { color: #444; }
+  .abas { display: flex; flex-wrap: wrap; gap: 2px; padding: 8px 4px 0; }
+  .abas button { font: inherit; background: var(--face); padding: 4px 12px; cursor: pointer;
+                 border: 1px solid; border-bottom: none; border-color: var(--luz) var(--escuro) transparent var(--luz);
+                 border-radius: 3px 3px 0 0; position: relative; top: 1px; }
+  .abas button[aria-selected="true"] { font-weight: bold; padding-bottom: 6px; top: 0; z-index: 1; background: var(--face); }
+  .painel { border: 1px solid; border-color: var(--luz) var(--escuro) var(--escuro) var(--luz); padding: 8px; }
+  .ferramentas { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 8px; }
+  input[type=search], input[type=text], select, textarea {
+    font: inherit; padding: 3px 4px; background: #fff; border: 2px solid;
+    border-color: var(--sombra) var(--luz) var(--luz) var(--sombra); }
+  input[type=search] { min-width: 240px; flex: 1 1 240px; max-width: 420px; }
+  .btn { font: inherit; background: var(--face); padding: 4px 12px; cursor: pointer; color: #000;
+         border: 2px solid; border-color: var(--luz) var(--escuro) var(--escuro) var(--luz); }
+  .btn:active { border-color: var(--escuro) var(--luz) var(--luz) var(--escuro); }
+  .btn.peq { padding: 1px 6px; }
+  .btn:disabled { color: var(--sombra); cursor: default; }
+  .rolagem { overflow-x: auto; background: #fff; border: 2px solid;
+             border-color: var(--sombra) var(--luz) var(--luz) var(--sombra); max-height: 70vh; overflow-y: auto; }
+  table { border-collapse: collapse; width: 100%; }
+  th { position: sticky; top: 0; background: var(--face); text-align: left; font-weight: normal; padding: 3px 6px;
+       border: 1px solid; border-color: var(--luz) var(--sombra) var(--sombra) var(--luz); z-index: 1; white-space: nowrap; }
+  td { padding: 3px 6px; border-bottom: 1px solid #eee; vertical-align: middle; }
+  tr.grupo td { background: #e8e8e8; font-weight: bold; padding-top: 6px; }
+  td.tam { text-align: center; width: 1%; }
+  td.tam .vazio { color: #ccc; }
+  td.nome code { font: 12px "DejaVu Sans Mono", monospace; }
+  td.nome .apps { color: #555; font-size: 11px; }
+  .ic { image-rendering: pixelated; vertical-align: middle; }
+  body.z2 .ic { width: calc(var(--s) * 2px); height: calc(var(--s) * 2px); }
+  .st { white-space: nowrap; font-weight: bold; }
+  .st.planejado { color: var(--titulo1); }
+  .ic.plan { outline: 1px dashed var(--titulo1); outline-offset: 1px; }
+  .st.completo { color: var(--ok); } .st.parcial { color: var(--parcial); } .st.ausente { color: var(--falta); }
+  .ref { vertical-align: middle; margin-right: 4px; opacity: .9; }
+  .her { color: var(--herdado); font-size: 11px; display: block; font-weight: normal; }
+  .na-lista { color: var(--ok); font-size: 11px; }
+  .contagem { color: #333; }
+  .galeria-arq { margin: 6px 0 12px; }
+  .galeria-arq h3 { font-size: 12px; margin: 0 0 4px; background: #e8e8e8; padding: 3px 6px; }
+  .grade { display: flex; flex-wrap: wrap; gap: 2px; }
+  .item { width: 72px; text-align: center; padding: 4px 2px; cursor: pointer; border: 1px solid transparent; }
+  .item.largo { width: 96px; }
+  .item:hover { border-color: var(--sel); background: #eef3ff; }
+  .item small { display: block; color: #555; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .item .ic { display: block; margin: 0 auto 2px; }
+  .aviso { background: #ffffe1; border: 1px solid #000; padding: 6px 8px; margin-bottom: 8px; }
+  .escolhendo { position: sticky; top: 0; z-index: 2; }
+  td.pasta code { color: var(--herdado); }
+  .atual { display: inline-flex; align-items: center; gap: 6px; vertical-align: middle; margin: 0 8px; }
+  dialog { border: 2px solid; border-color: var(--luz) var(--escuro) var(--escuro) var(--luz); padding: 3px;
+           background: var(--face); width: min(560px, calc(100vw - 32px)); }
+  dialog::backdrop { background: rgba(0,0,0,.35); }
+  dialog .corpo { padding: 10px; display: grid; gap: 8px; }
+  dialog label { display: grid; gap: 2px; }
+  dialog .linha { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  dialog .linha input[type=text] { flex: 1 1 200px; }
+  dialog .acoes { display: flex; justify-content: flex-end; gap: 6px; }
+  .dica { color: #444; font-size: 11px; }
+  footer { padding: 6px 4px 2px; color: #333; font-size: 11px; }
+</style>
+</head>
+<body>
+<div class="janela">
+  <div class="barra"><span>Mapa de ícones — <span id="nomeTema"></span></span><small id="gerado"></small></div>
+  <div class="resumo" id="resumo"></div>
+  <div class="abas" role="tablist" id="abas"></div>
+  <div class="painel">
+    <div class="ferramentas">
+      <select id="pasta" title="Filtrar pela pasta (contexto)"><option value="">Todas Pastas</option></select>
+      <input type="search" id="busca" placeholder="Filtrar por nome…">
+      <label id="lblUsados"><input type="checkbox" id="usados" checked> só os usados pelos programas</label>
+      <label id="lblParciais"><input type="checkbox" id="parciais"> incluir parciais</label>
+      <label><input type="checkbox" id="zoom"> ampliar 2x</label>
+      <span class="contagem" id="contagem"></span>
+    </div>
+    <div id="conteudo"></div>
+  </div>
+  <footer>
+    <b>Completo</b>: tem 16, 32 e 48 px (os tamanhos nativos do XP). <b>Parcial</b>: existe, mas falta algum desses tamanhos
+    (o GTK redimensiona outro). <b>Ausente</b>: o tema não tem; a coluna mostra de onde ele vem
+    (Adwaita, hicolor) ou "em branco". <b>Na lista</b>: já escolhido (prévia com contorno tracejado),
+    mas ainda não gravado no tema: exporte a lista e rode <code>python3 Icons/aplicar-lista.py</code>. A lista começa com o Icons/windows-classic-icons.list do
+    projeto; o que for editado aqui fica salvo neste navegador até ser exportado.
+  </footer>
+</div>
+
+<dialog id="dlg">
+  <div class="barra"><span>Adicionar à lista</span></div>
+  <form class="corpo" id="form" method="dialog">
+    <label>Nome do ícone <input type="text" id="fNome" required pattern="[A-Za-z0-9_.+\-]+"></label>
+    <label>Contexto
+      <select id="fCtx">
+        <option>actions</option><option>animations</option><option>apps</option><option>categories</option>
+        <option>devices</option><option>emblems</option><option>mimetypes</option><option>places</option>
+        <option>status</option>
+      </select>
+    </label>
+    <label>Origem
+      <span class="linha">
+        <input type="text" id="fOrigem" placeholder="xp:Control Panel  ·  /caminho/do/arquivo.png">
+        <button type="button" class="btn" id="fEscolher">Escolher na galeria…</button>
+      </span>
+      <span class="dica" id="fDicaOrigem"></span>
+    </label>
+    <div>Tamanhos
+      <div class="linha" id="fTams"></div>
+    </div>
+    <label>Observação <input type="text" id="fObs"></label>
+    <div class="acoes">
+      <button type="button" class="btn" id="fRemover">Remover da lista</button>
+      <button type="button" class="btn" id="fCancelar">Cancelar</button>
+      <button type="submit" class="btn" id="fSalvar"><b>OK</b></button>
+    </div>
+  </form>
+</dialog>
+<input type="file" id="arqImportar" accept=".list,text/plain" hidden>
+
+<script>
+const D = /*__DADOS__*/null;
+const NUCLEO = [16, 32, 48];      // tamanhos nativos dos ícones do XP
+const px = s => s === "scalable" ? 48 : Math.min(s, 48);   // tamanho de exibição
+const CHAVE = "windows-classic-icons:lista";      // {versao: 2, edicoes: {nome: item | null}}
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+// ------------------------------------------------------------------ lista manual
+// A lista do projeto (Icons/windows-classic-icons.list, embutida pelo mapa.py) é a base da
+// página. O navegador guarda só as EDIÇÕES feitas aqui (item alterado/novo, ou null para
+// removido), comparadas com a lista do projeto. Assim, quando a lista do projeto muda (por
+// exemplo, depois de aplicar uma lista nova), o que não foi mexido neste navegador segue a
+// lista nova, em vez de uma cópia antiga voltar por cima dela. "Exportar .list" sai sempre
+// com a lista inteira (projeto + edições).
+const PROJETO = {};
+(D.listaProjeto || []).forEach(it => PROJETO[it.nome] = { ctx: it.ctx, origem: it.origem, tamanhos: it.tamanhos, obs: it.obs });
+const normal = it => JSON.stringify([it.ctx, it.origem || "", (it.tamanhos || []).map(String), it.obs || ""]);
+let edicoes = {};
+let listaAntiga = false;       // havia uma lista inteira salva pela versão anterior do mapa
+try {
+  const s = JSON.parse(localStorage.getItem(CHAVE) || "null");
+  if (s && s.versao === 2) edicoes = s.edicoes || {};
+  else if (s) {
+    // formato antigo (a lista inteira): não dá para separar o que foi editado aqui do que só
+    // era uma cópia velha da lista do projeto. Fica guardado à parte e não é usado.
+    listaAntiga = true;
+    localStorage.setItem(CHAVE + ":antiga", JSON.stringify(s));
+    localStorage.removeItem(CHAVE);
+  }
+} catch (e) { edicoes = {}; }
+let lista = {};
+function montarLista() {
+  lista = {};
+  for (const [n, it] of Object.entries(PROJETO)) lista[n] = { ...it };
+  for (const [n, it] of Object.entries(edicoes)) { if (it === null) delete lista[n]; else lista[n] = it; }
+}
+function salvarLista() {
+  edicoes = {};
+  for (const n of new Set([...Object.keys(PROJETO), ...Object.keys(lista)])) {
+    if (!(n in lista)) edicoes[n] = null;
+    else if (!PROJETO[n] || normal(lista[n]) !== normal(PROJETO[n])) edicoes[n] = lista[n];
+  }
+  try {
+    if (Object.keys(edicoes).length) localStorage.setItem(CHAVE, JSON.stringify({ versao: 2, edicoes }));
+    else localStorage.removeItem(CHAVE);
+  } catch (e) {}
+}
+montarLista();
+salvarLista();                 // descarta edições que a lista do projeto já incorporou
+
+// ------------------------------------------------------------------ situação de cada nome
+function situacao(nome) {
+  const t = D.tema[nome];
+  if (!t) return lista[nome] ? "planejado" : "ausente";
+  return NUCLEO.every(s => t.s[s]) ? "completo" : "parcial";
+}
+const ROTULO = { completo: "completo", parcial: "parcial", ausente: "ausente", planejado: "na lista" };
+function ctxDe(nome, padrao) { return (D.tema[nome] && D.tema[nome].c) || padrao || "apps"; }
+const ctxPadrao = {}; D.padrao.forEach(([c, n]) => ctxPadrao[n] = c);
+const HICOLOR = D.hicolor || [];
+HICOLOR.forEach(([c, n]) => { if (!ctxPadrao[n]) ctxPadrao[n] = c; });
+const ELEMENTARY = D.elementary || [];
+ELEMENTARY.forEach(([c, n]) => { if (!ctxPadrao[n]) ctxPadrao[n] = c; });
+// Filtro por pasta (contexto): o select é montado com todas as pastas que existem no mapa.
+const pastaSel = () => document.getElementById("pasta").value;
+(function () {
+  const ctxs = new Set(["apps"]);
+  D.padrao.forEach(([c]) => ctxs.add(c));
+  HICOLOR.forEach(([c]) => ctxs.add(c));
+  ELEMENTARY.forEach(([c]) => ctxs.add(c));
+  Object.values(D.tema).forEach(t => ctxs.add(t.c));
+  document.getElementById("pasta").insertAdjacentHTML("beforeend",
+    [...ctxs].filter(Boolean).sort().map(c => `<option>${esc(c)}</option>`).join(""));
+})();
+const REFS = D.refs || {};     // miniatura de referência (arquivo original em /usr/share/icons)
+
+// ------------------------------------------------------------------ galerias de origem
+// Cada galeria tem seções com itens {ref, rotulo, busca, tamanhos, src(tamanho)}.
+//   xp:   Icons/xp-icons/<N>x<N>/<nome>.png   -> origem "xp:<nome>"
+const caminhoXp = (nome, t) => `xp-icons/${t}x${t}/${encodeURIComponent(nome)}.png`;
+const GALERIAS = {
+  xp: {
+    titulo: "Galeria XP",
+    secoes: (D.xp || []).length ? [{ titulo: "Icons/xp-icons", itens: D.xp.map(x => ({
+      ref: `xp:${x.nome}`, rotulo: x.nome, busca: x.nome, tamanhos: x.tamanhos, src: t => caminhoXp(x.nome, t) })) }] : [],
+    vazia: `A galeria está vazia: coloque os ícones em Icons/xp-icons/&lt;N&gt;x&lt;N&gt;/ e gere o mapa de novo
+      (<code>python3 Icons/mapa.py</code>).`,
+  },
+};
+const PORREF = {};
+Object.values(GALERIAS).forEach(g => g.secoes.forEach(s => s.itens.forEach(i => PORREF[i.ref] = i)));
+const totalGaleria = g => g.secoes.reduce((a, s) => a + s.itens.length, 0);
+// tamanho mostrado na galeria e na prévia: 32 px, ou o maior até 48
+const tamPrevia = tams => tams.includes(32) ? 32 : (tams.filter(s => s <= 48).pop() || tams[0]);
+
+// ------------------------------------------------------------------ resumo
+function resumo() {
+  const pad = D.padrao.map(([, n]) => situacao(n));
+  const apps = Object.keys(D.apps).map(situacao);
+  const hic = HICOLOR.map(([, n]) => situacao(n));
+  const ele = ELEMENTARY.map(([, n]) => situacao(n));
+  const conta = (arr, s) => arr.filter(x => x === s).length;
+  const brancos = Object.entries(D.heranca).filter(([n, h]) => !h && !D.tema[n]).length;
+  const nXp = totalGaleria(GALERIAS.xp);
+  const c = [
+    [Object.keys(D.tema).length, "nomes no tema"],
+    [`${conta(pad, "completo")} / ${conta(pad, "parcial")} / ${conta(pad, "ausente")}`,
+     `padrão freedesktop (${pad.length}): completos / parciais / ausentes`],
+    [`${conta(apps, "ausente")} de ${apps.length}`, "ícones de apps instalados ausentes"],
+    [`${conta(hic, "ausente")} de ${hic.length}`, "ícones do hicolor ausentes"],
+    [`${conta(ele, "ausente")} de ${ele.length}`, "nomes do elementary ausentes"],
+    [brancos, "ausentes sem herança (ficam em branco)"],
+    [nXp || "—", nXp ? "ícones da galeria XP (xp-icons)" : "galeria XP vazia"],
+    [Object.keys(lista).length, `itens na minha lista (${Object.keys(lista).filter(n => !D.tema[n]).length} ainda não aplicados)`],
+  ];
+  document.getElementById("resumo").innerHTML =
+    c.map(([v, t]) => `<div class="cartao"><b>${esc(v)}</b><span>${esc(t)}</span></div>`).join("");
+}
+
+// ------------------------------------------------------------------ linhas de tabela
+function img(src, s) { return `<img class="ic" style="--s:${s}" src="${esc(src)}" width="${s}" height="${s}" loading="lazy" alt="">`; }
+// Prévia do que a lista vai gravar: {tamanho: imagem da galeria} dos tamanhos marcados
+// no item que existem na origem (só para origens xp:).
+function planejado(nome) {
+  const it = lista[nome], g = it && PORREF[it.origem];
+  if (!g) return {};
+  const out = {};
+  (it.tamanhos || []).forEach(s => { if (g.tamanhos.includes(s)) out[s] = g.src(s); });
+  return out;
+}
+function celulas(nome) {
+  const t = D.tema[nome];
+  const plano = planejado(nome);
+  return D.tamanhos.map(s => {
+    const p = t && t.s[s];
+    if (p) return `<td class="tam"><span title="${esc(p)}">${img(p, px(s))}</span></td>`;
+    if (plano[s]) return `<td class="tam"><span title="na lista: ${esc(lista[nome].origem)} (falta aplicar)">` +
+                         `${img(plano[s], px(s)).replace('class="ic"', 'class="ic plan"')}</span></td>`;
+    return '<td class="tam"><span class="vazio">·</span></td>';
+  }).join("");
+}
+function linha(nome, ctx, extra) {
+  const st = situacao(nome);
+  const t = D.tema[nome];
+  let her = "";
+  const ref = REFS[nome] && st !== "completo" && st !== "parcial"
+    ? `<img class="ref" src="${esc(REFS[nome])}" width="24" height="24" loading="lazy" alt="" title="referência: ${esc(decodeURIComponent(REFS[nome]).replace("file://", ""))}">` : "";
+  if (st === "planejado") {
+    her = `<span class="her">${ref}falta aplicar (aplicar-lista.py)</span>`;
+  } else if (st === "ausente") {
+    const h = D.heranca[nome];
+    her = `<span class="her">${ref}${h ? "vem do " + esc(h) : "fica em branco"}</span>`;
+  } else if (st === "parcial") {
+    her = `<span class="her">falta ${NUCLEO.filter(s => !t.s[s]).join(", ")}</span>`;
+  }
+  const alvo = t && t.a && t.a !== nome ? `<span class="apps">link para ${esc(t.a)}</span>` : "";
+  const nl = lista[nome];
+  const acao = nl
+    ? `<button class="btn peq" data-editar="${esc(nome)}">Editar</button> <span class="na-lista">✓ ${esc(nl.origem || "na lista")}</span>`
+    : `<button class="btn peq" data-editar="${esc(nome)}" data-ctx="${esc(ctx)}">Adicionar…</button>`;
+  return `<tr><td class="pasta"><code>${esc(ctx)}</code></td><td class="nome"><code>${esc(nome)}</code> ${alvo}${extra ? `<div class="apps">${extra}</div>` : ""}</td>` +
+         `${celulas(nome)}<td><span class="st ${st}">${ROTULO[st]}</span>${her}</td><td>${acao}</td></tr>`;
+}
+function cabecalho(prim) {
+  return `<tr><th>Pasta</th><th>${prim}</th>${D.tamanhos.map(s => `<th>${s}</th>`).join("")}<th>Situação</th><th>Lista</th></tr>`;
+}
+function tabela(grupos, prim) {
+  let html = "", n = 0;
+  for (const [titulo, itens] of grupos) {
+    if (!itens.length) continue;
+    if (titulo) html += `<tr class="grupo"><td colspan="${D.tamanhos.length + 4}">${esc(titulo)} (${itens.length})</td></tr>`;
+    html += itens.join(""); n += itens.length;
+  }
+  document.getElementById("contagem").textContent = `${n} ícones`;
+  return n ? `<div class="rolagem"><table>${cabecalho(prim)}${html}</table></div>` : `<div class="aviso">Nada encontrado.</div>`;
+}
+
+// ------------------------------------------------------------------ abas
+const filtro = () => document.getElementById("busca").value.trim().toLowerCase();
+const passa = n => !filtro() || n.toLowerCase().includes(filtro());
+const porCtx = pares => {
+  const g = {};
+  pares.forEach(([c, html]) => { if (!pastaSel() || pastaSel() === c) (g[c] = g[c] || []).push(html); });
+  return Object.keys(g).sort().map(c => [c, g[c]]);
+};
+const appsDe = n => D.apps[n] ? esc(D.apps[n].slice(0, 4).join(", ") + (D.apps[n].length > 4 ? "…" : "")) : "";
+
+// Contextos que ficam sem ícone por enquanto: não aparecem na aba "Faltando" (o tema continua
+// herdando do Adwaita/hicolor). Para voltar a listar um contexto, tire-o desta lista.
+const SEM_ICONE = new Set(["apps", "categories", "emblems", "emotes", "mimetypes", "mimes", "places", "status"]);
+const ABAS = {
+  faltando: { titulo: "Faltando", parciais: true, render() {
+    const inc = document.getElementById("parciais").checked;
+    const ok = n => passa(n) && (situacao(n) === "ausente" || (inc && situacao(n) === "parcial"));
+    const pad = D.padrao.filter(([c, n]) => !SEM_ICONE.has(c) && ok(n)).map(([c, n]) => [c, linha(n, c, appsDe(n))]);
+    const apps = SEM_ICONE.has("apps") || (pastaSel() && pastaSel() !== "apps") ? [] : Object.keys(D.apps).filter(n => !ctxPadrao[n] && ok(n)).sort()
+      .map(n => linha(n, "apps", appsDe(n)));
+    const g = porCtx(pad).map(([c, l]) => ["Padrão freedesktop — " + c, l]);
+    g.push(["Aplicativos instalados", apps]);
+    const hic = HICOLOR.filter(([c, n]) => !SEM_ICONE.has(c) && ok(n)).map(([c, n]) => [c, linha(n, c, "")]);
+    porCtx(hic).forEach(([c, l]) => g.push(["hicolor — " + c, l]));
+    const ele = ELEMENTARY.filter(([c, n]) => !SEM_ICONE.has(c) && ok(n)).map(([c, n]) => [c, linha(n, c, "")]);
+    porCtx(ele).forEach(([c, l]) => g.push(["elementary — " + c, l]));
+    return tabela(g, "Nome");
+  }},
+  padrao: { titulo: "Padrão freedesktop", render() {
+    return tabela(porCtx(D.padrao.filter(([, n]) => passa(n)).map(([c, n]) => [c, linha(n, c, appsDe(n))])), "Nome");
+  }},
+  apps: { titulo: "Aplicativos instalados", render() {
+    const l = Object.keys(D.apps).filter(n => passa(n) && (!pastaSel() || pastaSel() === ctxDe(n, ctxPadrao[n]))).sort().map(n => linha(n, ctxDe(n, ctxPadrao[n]), appsDe(n)));
+    return tabela([["", l]], "Ícone (aplicativos)");
+  }},
+  hicolor: { titulo: "hicolor", render() {
+    return tabela(porCtx(HICOLOR.filter(([, n]) => passa(n)).map(([c, n]) => [c, linha(n, c, "")])),
+                  "Ícone instalado no hicolor");
+  }},
+  simbolicos: { titulo: "Simbólicos", usados: true, render() {
+    // Ícones -symbolic do Adwaita (pretos): bandeja, barras de ferramentas e menus. Quem não tem
+    // imagem no tema herda o preto do Adwaita.
+    const so = document.getElementById("usados").checked;
+    const uso = n => D.usoSimb[n] ? esc(D.usoSimb[n].slice(0, 4).join(", ") + (D.usoSimb[n].length > 4 ? "…" : "")) : "";
+    const lista = (D.simbolicos || []).filter(([, n]) => passa(n) && (!so || D.usoSimb[n]));
+    return tabela(porCtx(lista.map(([c, n]) => [c, linha(n, c, uso(n) ? "usado por: " + uso(n) : "")])),
+                  "Ícone simbólico (Adwaita)");
+  }},
+  elementary: { titulo: "elementary", render() {
+    return tabela(porCtx(ELEMENTARY.filter(([, n]) => passa(n)).map(([c, n]) => [c, linha(n, c, "")])),
+                  "Nome do tema elementary");
+  }},
+  tema: { titulo: "Todos do tema", render() {
+    return tabela(porCtx(Object.keys(D.tema).filter(passa).sort().map(n => [D.tema[n].c, linha(n, D.tema[n].c, appsDe(n))])), "Nome");
+  }},
+  xp: { titulo: "Galeria XP", render: () => galeria("xp") },
+  lista: { titulo: "Minha lista", render: minhaLista },
+};
+let aba = ABAS[location.hash.slice(1)] ? location.hash.slice(1) : "faltando";
+function abas() {
+  document.getElementById("abas").innerHTML = Object.entries(ABAS).map(([k, a]) =>
+    `<button role="tab" data-aba="${k}" aria-selected="${k === aba}">${a.titulo}${k === "lista" ? ` (${Object.keys(lista).length})` : ""}</button>`).join("");
+}
+function render() {
+  abas(); resumo();
+  try { history.replaceState(null, "", "#" + aba); } catch (e) {}
+  document.getElementById("lblParciais").hidden = !ABAS[aba].parciais;
+  document.getElementById("lblUsados").hidden = !ABAS[aba].usados;
+  document.getElementById("conteudo").innerHTML = ABAS[aba].render();
+}
+
+// ------------------------------------------------------------------ galerias
+let escolhendo = null;          // estado do formulário enquanto escolhe na galeria
+let ultimaGaleria = "xp";       // galeria aberta por "Escolher na galeria…"
+// Como o ícone está hoje (aplicado no tema, ou na lista aguardando aplicar, ou só a referência),
+// para mostrar no aviso de "Clique no ícone para ...".
+function atualDe(nome) {
+  if (!nome) return "";
+  const t = D.tema[nome], plano = planejado(nome);
+  let imgs = D.tamanhos.map(s => {
+    const p = t && t.s[s];
+    if (p) return `<span title="${esc(p)}">${img(p, px(s))}</span>`;
+    if (plano[s]) return `<span title="na lista: ${esc(lista[nome].origem)} (falta aplicar)">${img(plano[s], px(s))}</span>`;
+    return "";
+  }).join("");
+  let rot = t ? "no tema" : "na lista (falta aplicar)";
+  if (!imgs && REFS[nome]) { imgs = img(REFS[nome], 24); rot = "referência"; }
+  if (!imgs) { const h = D.heranca[nome]; return `Atual: <i>${h ? "vem do " + esc(h) : "sem ícone"}</i> `; }
+  return `Atual (${rot}): <span class="atual">${imgs}</span> `;
+}
+function galeria(fonte) {
+  ultimaGaleria = fonte;
+  const G = GALERIAS[fonte];
+  if (!G.secoes.length) {
+    document.getElementById("contagem").textContent = "";
+    return `<div class="aviso">${G.vazia}</div>`;
+  }
+  let html = escolhendo ? `<div class="aviso escolhendo">Clique no ícone para <b>${esc(escolhendo.nome || "o item")}</b>
+    (as duas galerias servem). ${atualDe(escolhendo.nome)}<button class="btn peq" data-cancelar-escolha>Cancelar</button></div>` : "";
+  // a linha de tamanhos só aparece quando o ícone não tem todos os tamanhos da galeria
+  const max = Math.max(...G.secoes.flatMap(s => s.itens.map(i => i.tamanhos.length)));
+  let n = 0;
+  for (const s of G.secoes) {
+    const itens = s.itens.filter(i => passa(s.titulo) || passa(i.busca));
+    if (!itens.length) continue;
+    n += itens.length;
+    html += `<div class="galeria-arq"><h3>${esc(s.titulo)} (${itens.length})</h3><div class="grade">` +
+      itens.map(i => {
+        const t = tamPrevia(i.tamanhos);
+        return `<div class="item${fonte === "xp" ? " largo" : ""}" data-ref="${esc(i.ref)}" data-tams="${i.tamanhos.join(",")}" ` +
+               `title="${esc(i.ref)}\ntamanhos: ${i.tamanhos.join(", ")}">${img(i.src(t), Math.min(t, 48))}` +
+               `<small>${esc(i.rotulo)}</small>${i.tamanhos.length < max ? `<small>${i.tamanhos.join("·")}</small>` : ""}</div>`;
+      }).join("") + `</div></div>`;
+  }
+  document.getElementById("contagem").textContent = `${n} ícones`;
+  return html || `<div class="aviso">Nada encontrado.</div>`;
+}
+
+// ------------------------------------------------------------------ minha lista
+function minhaLista() {
+  const nomes = Object.keys(lista).filter(n => passa(n) && (!pastaSel() || pastaSel() === lista[n].ctx)).sort();
+  document.getElementById("contagem").textContent = `${nomes.length} itens`;
+  const barra = `<div class="ferramentas">
+    <button class="btn" data-novo>Novo item…</button>
+    <button class="btn" data-exportar ${Object.keys(lista).length ? "" : "disabled"}>Exportar .list</button>
+    <button class="btn" data-importar>Importar .list…</button>
+    </div>` + avisoEdicoes();
+  if (!nomes.length) return barra + `<div class="aviso">A lista está vazia. Use “Adicionar…” nas outras abas ou “Novo item…”.</div>`;
+  const linhas = nomes.map(n => {
+    const it = lista[n];
+    const prev = previa(it.origem);
+    return `<tr><td><code>${esc(it.ctx)}</code></td><td class="nome"><code>${esc(n)}</code></td><td>${prev}</td><td><code>${esc(it.origem || "—")}</code></td>
+      <td>${esc((it.tamanhos || []).join(", "))}</td><td>${esc(it.obs || "")}</td>
+      <td><span class="st ${situacao(n)}">${ROTULO[situacao(n)]}</span></td>
+      <td><button class="btn peq" data-editar="${esc(n)}">Editar</button></td></tr>`;
+  }).join("");
+  return barra + `<div class="rolagem"><table><tr><th>Pasta</th><th>Nome</th><th>Prévia</th><th>Origem</th><th>Tamanhos</th>
+    <th>Observação</th><th>No tema</th><th></th></tr>${linhas}</table></div>`;
+}
+function avisoEdicoes() {
+  const n = Object.keys(edicoes).length;
+  let html = "";
+  if (listaAntiga) html += `<div class="aviso">A lista que uma versão anterior do mapa guardava neste navegador
+    foi deixada de lado: a base agora é sempre o Icons/windows-classic-icons.list do projeto.</div>`;
+  if (n) html += `<div class="aviso"><b>${n}</b> ${n === 1 ? "alteração feita" : "alterações feitas"} neste navegador
+    em relação ao Icons/windows-classic-icons.list (${esc(Object.keys(edicoes).sort().slice(0, 6).join(", "))}${n > 6 ? "…" : ""}).
+    Exporte a lista para guardá-las no projeto.
+    <button class="btn peq" data-descartar>Descartar alterações deste navegador…</button> <span id="confirmaDescartar"></span></div>`;
+  return html;
+}
+function previa(origem) {
+  const i = PORREF[origem];
+  if (!i) return "";
+  const t = tamPrevia(i.tamanhos);
+  return img(i.src(t), Math.min(t, 48));
+}
+
+// ------------------------------------------------------------------ exportar / importar
+function exportar() {
+  const hoje = new Date().toISOString().slice(0, 10);
+  const linhas = [
+    `# ${D.nomeTema}: ícones adicionados manualmente`,
+    `# Exportado pelo Icons/mapa.html em ${hoje}`,
+    `# Formato (separado por TAB): contexto/nome  origem  tamanhos  observação`,
+    `# Origem: xp:<nome> (galeria XP) ou o caminho de um arquivo seu`,
+  ];
+  Object.keys(lista).sort().forEach(n => {
+    const it = lista[n];
+    linhas.push([`${it.ctx}/${n}`, it.origem || "", (it.tamanhos || []).join(","), it.obs || ""].join("\t"));
+  });
+  const blob = new Blob([linhas.join("\n") + "\n"], { type: "text/plain" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `${D.nomeTema}.list`;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+function importar(texto) {
+  let n = 0;
+  texto.split(/\r?\n/).forEach(l => {
+    if (!l.trim() || l.startsWith("#")) return;
+    const [cn, origem = "", tams = "", obs = ""] = l.split("\t");
+    const i = cn.lastIndexOf("/");
+    const nome = cn.slice(i + 1), ctx = i > 0 ? cn.slice(0, i) : ctxDe(cn.slice(i + 1), ctxPadrao[cn]);
+    if (!nome) return;
+    lista[nome] = { ctx, origem, tamanhos: tams.split(",").filter(Boolean).map(s => s === "scalable" ? s : Number(s)), obs };
+    n++;
+  });
+  salvarLista(); aba = "lista"; render();
+  return n;
+}
+
+// ------------------------------------------------------------------ diálogo
+const dlg = document.getElementById("dlg");
+function abrirDialogo(nome, ctx, estado) {
+  const it = estado || lista[nome] || {
+    nome, ctx: ctxDe(nome, ctx || ctxPadrao[nome]), origem: "", obs: "",
+    tamanhos: D.tamanhos.slice(),
+  };
+  document.getElementById("fNome").value = it.nome || nome || "";
+  document.getElementById("fNome").readOnly = !!nome && !estado?.novo;
+  document.getElementById("fCtx").value = it.ctx || "apps";
+  document.getElementById("fOrigem").value = it.origem || "";
+  document.getElementById("fObs").value = it.obs || "";
+  document.getElementById("fTams").innerHTML = D.tamanhos.map(s =>
+    `<label><input type="checkbox" value="${s}" ${(it.tamanhos || []).map(String).includes(String(s)) ? "checked" : ""}> ${s}</label>`).join("");
+  document.getElementById("fRemover").hidden = !lista[nome];
+  dicaOrigem();
+  dlg.dataset.original = nome || "";
+  dlg.showModal();
+}
+function estadoForm() {
+  return {
+    nome: document.getElementById("fNome").value.trim(),
+    ctx: document.getElementById("fCtx").value,
+    origem: document.getElementById("fOrigem").value.trim(),
+    obs: document.getElementById("fObs").value.trim(),
+    tamanhos: [...document.querySelectorAll("#fTams input:checked")].map(i => i.value === "scalable" ? i.value : +i.value),
+    novo: !dlg.dataset.original,
+  };
+}
+function dicaOrigem() {
+  const o = document.getElementById("fOrigem").value.trim();
+  let d = "";
+  if (/^xp:/.test(o)) {
+    const i = PORREF[o];
+    d = i ? `Tamanhos disponíveis: ${i.tamanhos.join(", ")}` : "Ícone não encontrado na galeria.";
+  }
+  document.getElementById("fDicaOrigem").textContent = d;
+}
+document.getElementById("fOrigem").addEventListener("input", dicaOrigem);
+document.getElementById("fCancelar").onclick = () => dlg.close();
+document.getElementById("fRemover").onclick = () => {
+  delete lista[dlg.dataset.original]; salvarLista(); dlg.close(); render();
+};
+document.getElementById("fEscolher").onclick = () => {
+  escolhendo = estadoForm(); escolhendo.original = dlg.dataset.original;
+  dlg.close(); aba = ultimaGaleria; document.getElementById("busca").value = ""; render(); window.scrollTo(0, 0);
+};
+document.getElementById("form").addEventListener("submit", ev => {
+  const e = estadoForm();
+  if (!e.nome || !/^[A-Za-z0-9_.+-]+$/.test(e.nome)) { ev.preventDefault(); return; }
+  const orig = dlg.dataset.original;
+  if (orig && orig !== e.nome) delete lista[orig];
+  lista[e.nome] = { ctx: e.ctx, origem: e.origem, tamanhos: e.tamanhos, obs: e.obs };
+  salvarLista(); render();
+});
+
+// ------------------------------------------------------------------ eventos
+document.addEventListener("click", ev => {
+  const t = ev.target.closest("[data-aba],[data-editar],[data-ref],[data-cancelar-escolha],[data-novo],[data-exportar],[data-importar],[data-descartar],[data-descartar-sim]");
+  if (!t) return;
+  if (t.dataset.aba) { aba = t.dataset.aba; render(); }
+  else if (t.dataset.editar !== undefined) abrirDialogo(t.dataset.editar, t.dataset.ctx);
+  else if (t.dataset.ref) {
+    if (escolhendo) {
+      const e = escolhendo; escolhendo = null;
+      e.origem = t.dataset.ref;
+      const disp = t.dataset.tams.split(",").map(Number);
+      e.tamanhos = e.tamanhos.filter(s => disp.includes(s));
+      if (!e.tamanhos.length) e.tamanhos = disp.filter(s => D.tamanhos.includes(s));
+      aba = lista[e.original] || !e.original ? "lista" : "faltando";
+      render(); abrirDialogo(e.original || null, e.ctx, e);
+      dlg.dataset.original = e.original || "";
+    } else {
+      abrirDialogo(null, "apps", { nome: "", ctx: "apps", origem: t.dataset.ref, obs: "", novo: true,
+        tamanhos: t.dataset.tams.split(",").map(Number).filter(s => D.tamanhos.includes(s)) });
+    }
+  }
+  else if (t.dataset.cancelarEscolha !== undefined) {
+    const e = escolhendo; escolhendo = null; render(); abrirDialogo(e.original || null, e.ctx, e);
+  }
+  else if (t.dataset.novo !== undefined) abrirDialogo(null, "apps", { nome: "", ctx: "apps", origem: "", obs: "", tamanhos: D.tamanhos.slice(), novo: true });
+  else if (t.dataset.exportar !== undefined) exportar();
+  else if (t.dataset.importar !== undefined) document.getElementById("arqImportar").click();
+  else if (t.dataset.descartar !== undefined) {
+    document.getElementById("confirmaDescartar").innerHTML =
+      `Voltar à lista do projeto? <button class="btn peq" data-descartar-sim>Sim, descartar</button>`;
+  }
+  else if (t.dataset.descartarSim !== undefined) { edicoes = {}; montarLista(); salvarLista(); render(); }
+});
+document.getElementById("arqImportar").addEventListener("change", async ev => {
+  const f = ev.target.files[0]; if (!f) return;
+  importar(await f.text()); ev.target.value = "";
+});
+let tempo;
+document.getElementById("pasta").addEventListener("change", render);
+document.getElementById("busca").addEventListener("input", () => { clearTimeout(tempo); tempo = setTimeout(render, 200); });
+document.getElementById("parciais").addEventListener("change", render);
+document.getElementById("usados").addEventListener("change", render);
+document.getElementById("zoom").addEventListener("change", e => document.body.classList.toggle("z2", e.target.checked));
+
+document.getElementById("nomeTema").textContent = D.nomeTema;
+document.getElementById("gerado").textContent = "gerado em " + D.gerado;
+render();
+</script>
+</body>
+</html>

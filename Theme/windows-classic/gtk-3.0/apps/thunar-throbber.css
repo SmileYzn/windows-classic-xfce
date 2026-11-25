@@ -1,0 +1,70 @@
+/* Animação da marca do Windows XP no Explorer, da shell32.dll (bitmap 240: 50 quadros de
+   22x22, fundo branco), extraída por Theme/src/extrair-xp.py.
+   O quadro 0 é a bandeira parada (status_badge_xp.png, fundo do item em thunar.css); os
+   quadros 1-49 são a bandeira tremulando enquanto uma pasta carrega. Importado por thunar.css. */
+@keyframes throbber {
+  2.041% { -gtk-icon-source: url("../assets/throbber/throbber_f1.png"); }
+  4.082% { -gtk-icon-source: url("../assets/throbber/throbber_f2.png"); }
+  6.122% { -gtk-icon-source: url("../assets/throbber/throbber_f3.png"); }
+  8.163% { -gtk-icon-source: url("../assets/throbber/throbber_f4.png"); }
+  10.2% { -gtk-icon-source: url("../assets/throbber/throbber_f5.png"); }
+  12.24% { -gtk-icon-source: url("../assets/throbber/throbber_f6.png"); }
+  14.29% { -gtk-icon-source: url("../assets/throbber/throbber_f7.png"); }
+  16.33% { -gtk-icon-source: url("../assets/throbber/throbber_f8.png"); }
+  18.37% { -gtk-icon-source: url("../assets/throbber/throbber_f9.png"); }
+  20.41% { -gtk-icon-source: url("../assets/throbber/throbber_f10.png"); }
+  22.45% { -gtk-icon-source: url("../assets/throbber/throbber_f11.png"); }
+  24.49% { -gtk-icon-source: url("../assets/throbber/throbber_f12.png"); }
+  26.53% { -gtk-icon-source: url("../assets/throbber/throbber_f13.png"); }
+  28.57% { -gtk-icon-source: url("../assets/throbber/throbber_f14.png"); }
+  30.61% { -gtk-icon-source: url("../assets/throbber/throbber_f15.png"); }
+  32.65% { -gtk-icon-source: url("../assets/throbber/throbber_f16.png"); }
+  34.69% { -gtk-icon-source: url("../assets/throbber/throbber_f17.png"); }
+  36.73% { -gtk-icon-source: url("../assets/throbber/throbber_f18.png"); }
+  38.78% { -gtk-icon-source: url("../assets/throbber/throbber_f19.png"); }
+  40.82% { -gtk-icon-source: url("../assets/throbber/throbber_f20.png"); }
+  42.86% { -gtk-icon-source: url("../assets/throbber/throbber_f21.png"); }
+  44.9% { -gtk-icon-source: url("../assets/throbber/throbber_f22.png"); }
+  46.94% { -gtk-icon-source: url("../assets/throbber/throbber_f23.png"); }
+  48.98% { -gtk-icon-source: url("../assets/throbber/throbber_f24.png"); }
+  51.02% { -gtk-icon-source: url("../assets/throbber/throbber_f25.png"); }
+  53.06% { -gtk-icon-source: url("../assets/throbber/throbber_f26.png"); }
+  55.1% { -gtk-icon-source: url("../assets/throbber/throbber_f27.png"); }
+  57.14% { -gtk-icon-source: url("../assets/throbber/throbber_f28.png"); }
+  59.18% { -gtk-icon-source: url("../assets/throbber/throbber_f29.png"); }
+  61.22% { -gtk-icon-source: url("../assets/throbber/throbber_f30.png"); }
+  63.27% { -gtk-icon-source: url("../assets/throbber/throbber_f31.png"); }
+  65.31% { -gtk-icon-source: url("../assets/throbber/throbber_f32.png"); }
+  67.35% { -gtk-icon-source: url("../assets/throbber/throbber_f33.png"); }
+  69.39% { -gtk-icon-source: url("../assets/throbber/throbber_f34.png"); }
+  71.43% { -gtk-icon-source: url("../assets/throbber/throbber_f35.png"); }
+  73.47% { -gtk-icon-source: url("../assets/throbber/throbber_f36.png"); }
+  75.51% { -gtk-icon-source: url("../assets/throbber/throbber_f37.png"); }
+  77.55% { -gtk-icon-source: url("../assets/throbber/throbber_f38.png"); }
+  79.59% { -gtk-icon-source: url("../assets/throbber/throbber_f39.png"); }
+  81.63% { -gtk-icon-source: url("../assets/throbber/throbber_f40.png"); }
+  83.67% { -gtk-icon-source: url("../assets/throbber/throbber_f41.png"); }
+  85.71% { -gtk-icon-source: url("../assets/throbber/throbber_f42.png"); }
+  87.76% { -gtk-icon-source: url("../assets/throbber/throbber_f43.png"); }
+  89.8% { -gtk-icon-source: url("../assets/throbber/throbber_f44.png"); }
+  91.84% { -gtk-icon-source: url("../assets/throbber/throbber_f45.png"); }
+  93.88% { -gtk-icon-source: url("../assets/throbber/throbber_f46.png"); }
+  95.92% { -gtk-icon-source: url("../assets/throbber/throbber_f47.png"); }
+  97.96% { -gtk-icon-source: url("../assets/throbber/throbber_f48.png"); }
+  100% { -gtk-icon-source: url("../assets/throbber/throbber_f49.png"); }
+}
+/* Os quadros começam depois de 0%, então o primeiro desenhado usa esta imagem. Sem ela,
+   aparece a ampulheta genérica e fica parada enquanto o Thunar espera uma pasta lenta (rede). */
+/* O spinner genérico tem 24 px (gtk-widgets.css); aqui ele ocupa só a bandeira, 22x22,
+   para a barra ficar com 22 px como no Explorer. */
+.thunar menubar menuitem spinner {
+  min-width: 22px;
+  min-height: 22px;
+  margin: 0px;
+  padding: 0px; }
+.thunar menubar menuitem spinner:checked {
+  -gtk-icon-source: url("../assets/throbber/throbber_f1.png");
+  opacity: 1;
+  animation: throbber 4s steps(49) infinite; }
+.thunar menubar menuitem spinner:checked:disabled {
+  opacity: 1; }

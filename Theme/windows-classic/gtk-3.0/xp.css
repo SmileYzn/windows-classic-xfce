@@ -1,0 +1,72 @@
+/*
+ * xp.css - Medidas do Windows XP clássico (menus, barra de rolagem, cores).
+ *
+ * Importado por último no gtk.css, então estas regras valem sobre as dos
+ * outros arquivos.
+ *
+ * Medidas do XP clássico (Tahoma 8 / Noto Sans 8, 96 DPI):
+ *   barra de menus  SM_CYMENU = 19 px
+ *   item de menu    SM_CYMENU - 1 = 18 px
+ *   separador       9 px, linha cinza/branca nas linhas 3 e 4
+ */
+
+/* Barra de menus: 19 px. No XP clássico (menus não planos) o item aberto
+   fica rebaixado (1 px: cinza em cima/esquerda, branco embaixo/direita),
+   com texto preto; não usa o azul de seleção. */
+menubar,
+.menubar {
+  padding: 0px;
+  min-height: 0px; }
+  /* 17 px de conteúdo (o rótulo em Noto Sans 8 tem 16) + 2 de borda = 19 px */
+  menubar > menuitem {
+    min-height: 17px;
+    padding: 0px 6px;
+    border: 1px solid transparent; }
+  menubar > menuitem:hover {
+    background-color: transparent;
+    color: @menu_text_color;
+    border-color: @border_shade @border_bright @border_bright @border_shade; }
+    /* Só o rótulo do próprio item ("> label"): o menu aberto fica pendurado neste item
+       no CSS (menuitem > window > menu > menuitem), e um "label" solto também deixaria
+       preto o texto do item selecionado dentro do menu. */
+    menubar > menuitem:hover > label {
+      color: @menu_text_color; }
+
+/* Itens dos menus: 18 px */
+menu menuitem {
+  min-height: 16px;
+  padding: 1px 2px; }
+
+/* Separador: 9 px, com a linha 3D (handle-h.png) nas linhas 3 e 4 */
+menu separator {
+  min-height: 2px;
+  padding: 0px;
+  border-top: 3px solid transparent;
+  border-bottom: 4px solid transparent;
+  background-origin: content-box;
+  background-clip: content-box; }
+
+/* Sem compositor o GTK não usa a decoração CSD nos menus e a borda 3D
+   (gtk-window.css, "window decoration") some. Aqui ela é desenhada no
+   próprio menu: relevo de 2 px + 1 px de face, como no XP. */
+window.popup:not(.csd) > menu {
+  border: 2px solid @border_dark;
+  border-image: url("assets/window_decoration.png") 2 2 2 2 / 2px 2px 2px 2px stretch;
+  padding: 1px; }
+
+/* Áreas brancas (texto, listas): Window = 255 255 255 no XP clássico
+   (o gtk.css define shade(white, 0.99) = #FDFDFD). */
+@define-color bg_bright #ffffff;
+
+/* Polegar da barra de rolagem: a borda 3D vinha de um border-image que o
+   GTK interpola (a sombra interna saía #868686). Com sombras em camadas
+   fica exata e na mesma ordem do DrawEdge do Windows (a linha escura de
+   baixo/direita cobre os cantos): externa #D4D0C8/#404040, interna
+   branca/#808080, 16 px. */
+scrollbar slider {
+  border-image: none;
+  border: none;
+  box-shadow: inset 2px 2px @border_bright, inset -2px -2px @border_shade,
+              inset 1px 1px @border_light, inset -1px -1px @border_dark;   /* no GTK3 a última fica por cima */
+  min-width: 16px;
+  min-height: 16px; }

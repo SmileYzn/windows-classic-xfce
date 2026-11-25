@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Windows Classic
+Comment=Tema clássico do Windows XP para XFCE
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=windows-classic
+CursorTheme=windows-classic
+CursorSize=32

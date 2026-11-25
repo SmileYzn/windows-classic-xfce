@@ -1,0 +1,5 @@
+Cursors/build/
+__pycache__/
+
+# PSD ficam fora do repositório (pesados); os PNG e os scripts gerar-*.py ficam
+*.psd

@@ -1,0 +1,140 @@
+/**********
+ * Thunar *
+ **********/
+
+/*Contributor notes:
+Please use two space indentions.
+Stack all related and child selectors and selector states into a logical hierarchy to a readable degree.
+Make sure that all changes made here are part of the Thunar application.
+*/
+
+/* Spinning globe shown in the menu bar logo while a location is loading. */
+@import url("thunar-throbber.css");
+
+.thunar #location-toolbar toolbutton button:not(:hover):not(:checked):not(:active),
+.thunar #location-toolbar #back button:not(:hover):not(:checked):not(:active),
+.thunar #location-toolbar #forward button:not(:hover):not(:checked):not(:active) {
+  border-color: transparent;
+  border-image: none;
+  box-shadow: none; }
+.thunar #location-toolbar toolbutton button:disabled {
+  background-color: @border_bright;
+  background-image: linear-gradient(45deg, @bg_color 25%, transparent 25%, transparent 75%, @bg_color 75%, @bg_color), linear-gradient(45deg, @bg_color 25%, transparent 25%, transparent 75%, @bg_color 75%, @border_dark);
+  background-size: 2px 2px;
+  background-position: 0 0, 1px 1px; }
+
+.thunar #location-toolbar .path-bar button {
+  min-height: 16px;
+  min-width: 16px;
+  padding: 0px;
+  padding-left: 1px;
+  padding-right: 1px; }
+  .thunar #location-toolbar .path-bar button image {
+    margin-top: -2px;
+    margin-bottom: -2px; }
+
+.thunar toolbar toolitem entry image.left {
+  padding: 1px;
+  margin-right: 4px; }
+
+/*  Marca do Windows XP na ponta direita da barra de menus, como no Explorer clássico:
+    caixa branca de 39x22 px com uma linha cinza (#808080) à esquerda e a bandeira de
+    22x22 no meio. Parada, é o fundo do item (status_badge_xp.png); carregando, o spinner
+    do Thunar mostra a bandeira tremulando (thunar-throbber.css). A barra fica com os
+    22 px da caixa, como a faixa de menus do Explorer. */
+.thunar menubar > menuitem:last-child,
+.thunar menubar > menuitem:last-child:hover {
+  min-width: 39px;
+  min-height: 22px;
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  border-left: 1px solid @border_shade;
+  box-shadow: none;
+  background-color: @bg_bright;
+  background-image: url("../assets/status_badge_xp.png");
+  background-repeat: no-repeat;
+  background-position: 9px 0px;   /* "center" daria 8,5 px e borraria a imagem */
+  background-size: 22px 22px; }
+  /* A bandeira animada fica no mesmo lugar da parada: 9 px à esquerda, 8 à direita. */
+  .thunar menubar > menuitem:last-child spinner {
+    margin-left: 9px;
+    margin-right: 8px; }
+
+.thunar notebook .standard-view {
+  padding: 0px;
+  border-top: 2px solid @border_dark;
+  border-bottom: 2px solid @border_dark;
+  border-left: 2px solid @border_dark;
+  border-right: 2px solid @border_dark;
+  border-image: url("../assets/frame_inset.png");
+  border-image-slice: 2 2 2 2;
+  box-shadow: none; }
+.thunar notebook header tabs tab {
+  padding: 0px; }
+  .thunar notebook header tabs tab box {
+    padding: 0px;
+    margin-top: -2px;
+    margin-bottom: -2px; }
+  .thunar notebook header tabs tab button {
+    background: none;
+    border: none;
+    box-shadow: none; }
+    .thunar notebook header tabs tab button image {
+      padding: 0px;
+      margin-top: -1px;
+      margin-bottom: -2px; }
+
+.thunar statusbar {
+  margin-right: -9px;
+  margin-left: -9px;
+  padding: 0px; }
+  .thunar statusbar frame box {
+    margin-bottom: -3px;
+    margin-top: -3px; }
+    .thunar statusbar frame box label {
+      margin-top: 1px;
+      margin-bottom: -1px; }
+
+/*  Seleção na visão de ícones (e compacta), como no Explorer do XP clássico. Requer o
+    "Realce de arquivos" do Thunar desligado (Ver → Mostrar realce de arquivo, ou
+    xfconf thunar /misc-highlighting-enabled = false; o instalador faz isso): com ele
+    ligado o Thunar desenha no código um retângulo arredondado sobre ícone e nome.
+
+    Com o realce desligado, o exo desenha o fundo do nome com o estado da visão (que
+    inclui a direção do texto, :dir(ltr)/:dir(rtl)), e o Thunar tinge o ícone
+    multiplicando-o pela cor de fundo de uma consulta só com :selected (visão com foco)
+    ou :active (sem foco), sem a direção. É isso que separa as duas regras abaixo.
+
+    Ícone selecionado com foco: no XP ele é misturado 50% com o azul de seleção
+    (#0A246A). O Thunar multiplica; #8491B4 é a mistura de 50% do azul com o branco,
+    então o branco do ícone fica igual ao do XP e as outras cores, próximas.
+    Sem foco, o ícone fica normal (multiplicado por branco). */
+.thunar widget.view.cell:selected {
+  background-color: #8491B4; }
+.thunar widget.view.cell:active {
+  background-color: #FFFFFF; }
+
+/*  Nome selecionado: fundo só atrás do texto, cantos retos. Janela ativa: azul de seleção
+    e texto branco; janela inativa: face 3D (#D4D0C8) e texto preto, como no XP.
+    O fundo e o texto do nome recebem estados diferentes do GTK (o texto só ganha :focus no
+    item com o cursor do teclado), mas ambos recebem :backdrop, por isso a troca é por ele. */
+.thunar widget.view.cell:selected:dir(ltr),
+.thunar widget.view.cell:selected:dir(rtl) {
+  background-color: @selected_bg_color;
+  color: @selected_fg_color; }
+.thunar widget.view.cell:selected:backdrop:dir(ltr),
+.thunar widget.view.cell:selected:backdrop:dir(rtl) {
+  background-color: @bg_color;
+  color: @fg_color; }
+
+
+/* File operation progress dialog: the pause/stop buttons fill the height of the two text
+   lines (43px with the default font). Center them as 24x24 squares. The dialog has no
+   name or style class, so match its layout: icon, text box, buttons. The second selector
+   is the scrolled layout used when several jobs run at once. */
+window > box > box > box > box > box > image + box ~ button.image-button.flat,
+viewport > box > box > box > box > image + box ~ button.image-button.flat {
+  min-width: 22px;
+  margin-top: 9px;
+  margin-bottom: 10px; }
