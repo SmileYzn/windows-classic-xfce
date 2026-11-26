@@ -1,0 +1,1388 @@
+# windows-classic-icons: ícones adicionados manualmente
+# Exportado pelo Icons/mapa.html em 2026-11-26
+# Formato (separado por TAB): contexto/nome  origem  tamanhos  observação
+# Origem: xp:<nome> (galeria XP) ou o caminho de um arquivo seu
+devices/ac-adapter	xp:Power Status	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+devices/ac-adapter-symbolic	xp:Power Status	16,22,24,32,36,48,64,96,128	
+apps/accessories-calculator	xp:Calculator	16,22,24,32,36,48,64,96,128	
+apps/accessories-calculator-symbolic	xp:Calculator	16,22,24,32,36,48,64,96,128	
+apps/accessories-character-map	xp:Charmap	16,22,24,32,36,48,64,96,128	auto
+apps/accessories-character-map-rtl	xp:Charmap	16,22,24,32,36,48,64,96,128	
+apps/accessories-character-map-symbolic	xp:Charmap	16,22,24,32,36,48,64,96,128	
+apps/accessories-dictionary	xp:Help and Support	16,22,24,32,36,48,64,96,128	auto
+apps/accessories-dictionary-symbolic	xp:Book	16,22,24,32,36,48,64,96,128	
+apps/accessories-screenshot-tool	xp:Full Screen	16,22,24,32,36,48,64,96,128	
+apps/accessories-text-editor	xp:Notepad	16,22,24,32,36,48,64,96,128	auto
+apps/accessories-text-editor-symbolic	xp:Notepad	16,22,24,32,36,48,64,96,128	
+actions/action-unavailable-symbolic	xp:Prohibited	16,22,24,32,36,48,64,96,128	
+actions/add-files-to-archive	xp:Add Files To Archive	16,22,24,32,36,48,64,96,128	
+actions/add-folder-to-archive	xp:Add Folder To Archive	16,22,24,32,36,48,64,96,128	
+actions/address-book-new	xp:Address Book New - Action	16,22,24,32,36,48,64,96,128	
+actions/address-book-new-symbolic	xp:Address Book New - Action	16,22,24,32,36,48,64,96,128	
+status/airplane-mode	xp:Airplane Mode	16,22,24,32,36,48,64,96,128	
+status/airplane-mode-disabled-symbolic	xp:Airplane Mode Disabled	16,22,24,32,36,48,64,96,128	
+status/airplane-mode-symbolic	xp:Airplane Mode	16,22,24,32,36,48,64,96,128	
+status/alarm-symbolic	xp:Alarm	16,22,24,32,36,48,64,96,128	
+apps/applets-screenshooter	xp:Digital Camera	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+apps/applets-screenshooter-symbolic	xp:IE Enlarge Image	16,22,24,32,36,48,64,96,128	
+mimetypes/application-certificate	xp:Certificate	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+mimetypes/application-certificate-symbolic	xp:Certificate	16,22,24,32,36,48,64,96,128	
+apps/application-default-icon	xp:Additional Settings	16,22,24,32,36,48,64,96,128	
+actions/application-exit	xp:Window Close	16,22,24,32,36,48,64,96,128	auto
+actions/application-exit-rtl-symbolic	xp:Window Close	16,22,24,32,36,48,64,96,128	
+actions/application-exit-symbolic	xp:Window Close	16,22,24,32,36,48,64,96,128	
+mimetypes/application-javascript	xp:Script Component	16,22,24,32,36,48,64,96,128	
+mimetypes/application-rss+xml-symbolic	xp:Internet Connection Wizard	16,22,24,32,36,48,64,96,128	
+mimetypes/application-vnd.openofficeorg.extension	xp:WMP Plugin	16,22,24,32,36,48,64,96,128	
+mimetypes/application-vnd.rn-realmedia	xp:WMV	16,22,24,32,36,48,64,96,128	
+mimetypes/application-x-addon	xp:DLL	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+mimetypes/application-x-addon-symbolic	xp:WMP Plugin	16,22,24,32,36,48,64,96,128	
+mimetypes/application-x-appliance-symbolic	xp:Software Box	16,22,24,32,36,48,64,96,128	
+mimetypes/application-x-cd-image	xp:CD	16,22,24,32,36,48,64,96,128	
+mimetypes/application-x-executable	xp:Application Window	16,22,24,32,36,48,64,96,128	auto
+mimetypes/application-x-executable-symbolic	xp:Application Window	16,22,24,32,36,48,64,96,128	
+mimetypes/application-x-firmware	xp:Chip	16,22,24,32,36,48,64,96,128	
+mimetypes/application-x-firmware-symbolic	xp:Add New Hardware	16,22,24,32,36,48,64,96,128	
+mimetypes/application-x-generic	xp:Generic Document	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+mimetypes/application-x-java	xp:Setup	16,22,24,32,36,48,64,96,128	
+mimetypes/application-x-java-archive	xp:Setup	16,22,24,32,36,48,64,96,128	
+mimetypes/application-x-javascript	xp:Script Component	16,22,24,32,36,48,64,96,128	
+mimetypes/application-x-krita	xp:GIF	16,22,24,32,36,48,64,96,128	
+mimetypes/application-x-matroska	xp:WMV	16,22,24,32,36,48,64,96,128	
+mimetypes/application-x-php	xp:Generic Text Document	16,22,24,32,36,48,64,96,128	
+mimetypes/application-x-raw-disk-image	xp:CD	16,22,24,32,36,48,64,96,128	
+mimetypes/application-x-sharedlib	xp:DLL	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+mimetypes/application-x-sharedlib-symbolic	xp:DLL	16,22,24,32,36,48,64,96,128	
+mimetypes/application-x-xpinstall	xp:WMP Plugin	16,22,24,32,36,48,64,96,128	
+mimetypes/application-xml	xp:XML	16,22,24,32,36,48,64,96,128	
+categories/applications-accessories	xp:Administrative Tools	16,22,24,32,36,48,64,96,128	auto
+categories/applications-development	xp:Tweak UI	16,22,24,32,36,48,64,96,128	auto
+categories/applications-engineering	xp:Whistler - IE History	16,22,24,32,36,48,64,96,128	
+categories/applications-engineering-symbolic	xp:Security Settings	16,22,24,32,36,48,64,96,128	
+categories/applications-games	xp:Internet Backgammon	16,22,24,32,36,48,64,96,128	auto
+categories/applications-games-symbolic	xp:Internet Backgammon	16,22,24,32,36,48,64,96,128	
+categories/applications-graphics	xp:Paint	16,22,24,32,36,48,64,96,128	auto
+categories/applications-graphics-symbolic	xp:Paint	16,22,24,32,36,48,64,96,128	
+categories/applications-internet	xp:Internet Shortcut	16,22,24,32,36,48,64,96,128	auto
+categories/applications-multimedia	xp:Whistler - Windows Media Player 7	16,22,24,32,36,48,64,96,128	auto
+categories/applications-multimedia-symbolic	xp:Whistler - Windows Media Player 7	16,22,24,32,36,48,64,96,128	
+categories/applications-office	xp:Wordpad	16,22,24,32,36,48,64,96,128	auto
+categories/applications-other	xp:Start Menu Programs	16,22,24,32,36,48,64,96,128	auto
+categories/applications-science	xp:WMP Performance	16,22,24,32,36,48,64,96,128	
+categories/applications-science-symbolic	xp:WMP Performance	16,22,24,32,36,48,64,96,128	
+categories/applications-system	xp:System Properties	16,22,24,32,36,48,64,96,128	auto
+categories/applications-system-symbolic	xp:System Properties	16,22,24,32,36,48,64,96,128	
+categories/applications-utilities	xp:Get Support	16,22,24,32,36,48,64,96,128	auto
+categories/applications-utilities-symbolic	xp:Administrative Tools	16,22,24,32,36,48,64,96,128	
+status/appointment	xp:Clock	16,22,24,32,36,48,64,96,128	
+status/appointment-missed	xp:Appointment Missed	16,22,24,32,36,48,64,96,128	
+status/appointment-missed-symbolic	xp:Appointment Missed	16,22,24,32,36,48,64,96,128	
+actions/appointment-new	xp:Appointment New - Action	16,22,24,32,36,48,64,96,128	
+actions/appointment-new-symbolic	xp:Appointment New - Action	16,22,24,32,36,48,64,96,128	
+status/appointment-soon	xp:Appointment Soon	16,22,24,32,36,48,64,96,128	
+status/appointment-soon-symbolic	xp:Appointment Soon	16,22,24,32,36,48,64,96,128	
+devices/audio-card	xp:Whistler - Volume	16,22,24,32,36,48,64,96,128	auto
+devices/audio-card-symbolic	xp:PCI card	16,22,24,32,36,48,64,96,128	
+devices/audio-headphones	xp:Audio Headphones	16,22,24,32,36,48,64,96,128	
+devices/audio-headphones-symbolic	xp:Audio Headphones	16,22,24,32,36,48,64,96,128	
+devices/audio-headset	xp:Audio Headset	16,22,24,32,36,48,64,96,128	
+devices/audio-headset-symbolic	xp:Audio Headset	16,22,24,32,36,48,64,96,128	
+devices/audio-input-microphone	xp:Audio Input Microphone	16,22,24,32,36,48,64,96,128	
+devices/audio-input-microphone-symbolic	xp:Audio Input Microphone	16,22,24,32,36,48,64,96,128	
+mimetypes/audio-mpeg	xp:Media Center File	16,22,24,32,36,48,64,96,128	
+devices/audio-speakers	xp:Volume	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+devices/audio-speakers-rtl-symbolic	xp:Volume Alt	16,22,24,32,36,48,64,96,128	
+devices/audio-speakers-symbolic	xp:Volume	16,22,24,32,36,48,64,96,128	
+devices/audio-subwoofer	xp:Volume Alt	16,22,24,32,36,48,64,96,128	
+devices/audio-subwoofer-testing	xp:Whistler - Volume	16,22,24,32,36,48,64,96,128	
+status/audio-volume-high	xp:Audio Volume High	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/audio-volume-high-rtl-symbolic	xp:Audio Volume High	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/audio-volume-high-symbolic	xp:Audio Volume High	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/audio-volume-high-symbolic-rtl	xp:Volume	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/audio-volume-low	xp:Audio Volume Low	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/audio-volume-low-rtl-symbolic	xp:Audio Volume Low	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/audio-volume-low-symbolic	xp:Audio Volume Low	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/audio-volume-low-symbolic-rtl	xp:Volume	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/audio-volume-medium	xp:Audio Volume Medium	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/audio-volume-medium-rtl-symbolic	xp:Audio Volume Medium	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/audio-volume-medium-symbolic	xp:Audio Volume Medium	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/audio-volume-medium-symbolic-rtl	xp:Volume	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/audio-volume-muted	xp:Audio Volume Muted	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/audio-volume-muted-rtl-symbolic	xp:Audio Volume Muted	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/audio-volume-muted-symbolic	xp:Audio Volume Muted	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/audio-volume-muted-symbolic-rtl	xp:Mute	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/audio-volume-off	xp:Mute	16,22,24,32,36,48,64,96,128	volume zero (xfce4-volumed-pulse)
+status/audio-volume-off-symbolic	xp:Mute	16,22,24,32,36,48,64,96,128	
+status/audio-volume-overamplified-rtl-symbolic	xp:Whistler - Volume	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/audio-volume-overamplified-symbolic	xp:Whistler - Volume	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/audio-volume-overamplified-symbolic-rtl	xp:Volume	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/audio-volume-zero	xp:Mute	16,22,24,32,36,48,64,96,128	
+status/audio-volume-zero-symbolic	xp:Mute	16,22,24,32,36,48,64,96,128	
+mimetypes/audio-x-generic	xp:Generic Audio	16,22,24,32,36,48,64,96,128	auto
+mimetypes/audio-x-generic-symbolic	xp:Generic Audio	16,22,24,32,36,48,64,96,128	
+mimetypes/audio-x-mp3-playlist	xp:WMP Auto Playlist	16,22,24,32,36,48,64,96,128	
+mimetypes/audio-x-mp3-playlist-rtl	xp:WMP Auto Playlist	16,22,24,32,36,48,64,96,128	
+mimetypes/audio-x-mpegurl	xp:Generic Audio	16,22,24,32,36,48,64,96,128	
+mimetypes/audio-x-mpegurl-rtl	xp:Generic Audio	16,22,24,32,36,48,64,96,128	
+mimetypes/audio-x-playlist	xp:Generic Audio	16,22,24,32,36,48,64,96,128	
+mimetypes/audio-x-playlist-rtl	xp:Generic Audio	16,22,24,32,36,48,64,96,128	
+mimetypes/audio-x-scpls	xp:Generic Audio	16,22,24,32,36,48,64,96,128	
+mimetypes/audio-x-scpls-rtl	xp:Generic Audio	16,22,24,32,36,48,64,96,128	
+devices/auth-face-symbolic	xp:Authorization Manager	16,22,24,32,36,48,64,96,128	
+devices/auth-fingerprint-symbolic	xp:Fingerprint	16,22,24,32,36,48,64,96,128	
+devices/auth-sim-symbolic	xp:SmartMedia Card	16,22,24,32,36,48,64,96,128	
+devices/auth-smartcard-symbolic	xp:CompactFlash card	16,22,24,32,36,48,64,96,128	
+status/avatar-default	xp:Windows Dude 2 (whistler)	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+status/avatar-default-symbolic	xp:Windows Dude 2 (whistler)	16,22,24,32,36,48,64,96,128	
+mimetypes/base-generic	xp:Generic Document	16,22,24,32,36,48,64,96,128	
+devices/battery	xp:Battery	16,22,24,32,36,48,64,96,128	
+status/battery-ac-adapter	xp:Power Options	16,22,24,32,36,48,64,96,128	
+status/battery-action	xp:Power Status	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-action-symbolic	xp:Battery Missing	16,22,24,32,36,48,64,96,128	
+status/battery-caution	xp:Battery Caution	16,22,24,32,36,48,64,96,128	
+apps/battery-caution-charging	xp:Battery Caution Charging	16,22,24,32,36,48,64,96,128	
+apps/battery-caution-charging-symbolic	xp:Battery Caution Charging	16,22,24,32,36,48,64,96,128	
+status/battery-caution-symbolic	xp:Battery Caution	16,22,24,32,36,48,64,96,128	
+apps/battery-empty	xp:Battery Empty	16,22,24,32,36,48,64,96,128	
+status/battery-empty-charging	xp:Battery Empty Charging	16,22,24,32,36,48,64,96,128	
+apps/battery-empty-charging-symbolic	xp:Battery Empty Charging	16,22,24,32,36,48,64,96,128	
+apps/battery-empty-symbolic	xp:Battery Empty	16,22,24,32,36,48,64,96,128	
+apps/battery-full	xp:Battery Full	16,22,24,32,36,48,64,96,128	
+apps/battery-full-charged	xp:Battery Full Charged	16,22,24,32,36,48,64,96,128	
+apps/battery-full-charged-symbolic	xp:Battery Full Charged	16,22,24,32,36,48,64,96,128	
+apps/battery-full-charging	xp:Battery Full Charging	16,22,24,32,36,48,64,96,128	
+apps/battery-full-charging-symbolic	xp:Battery Full Charging	16,22,24,32,36,48,64,96,128	
+apps/battery-full-symbolic	xp:Battery Full	16,22,24,32,36,48,64,96,128	
+apps/battery-good	xp:Battery Good	16,22,24,32,36,48,64,96,128	
+apps/battery-good-charging	xp:Battery Good Charging	16,22,24,32,36,48,64,96,128	
+apps/battery-good-charging-symbolic	xp:Battery Good Charging	16,22,24,32,36,48,64,96,128	
+apps/battery-good-symbolic	xp:Battery Good	16,22,24,32,36,48,64,96,128	
+status/battery-level-0	xp:Battery Level 0	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-0-charging	xp:Battery Level 0 Charging	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-0-charging-symbolic	xp:Battery Level 0 Charging	16,22,24,32,36,48,64,96,128	
+status/battery-level-0-plugged-in	xp:Battery Level 0 Plugged In	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-0-plugged-in-symbolic	xp:Battery Level 0 Plugged In	16,22,24,32,36,48,64,96,128	
+status/battery-level-0-symbolic	xp:Battery Level 0	16,22,24,32,36,48,64,96,128	
+status/battery-level-10	xp:Battery Level 10	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-10-charging	xp:Battery Level 10 Charging	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-10-charging-symbolic	xp:Battery Level 10 Charging	16,22,24,32,36,48,64,96,128	
+status/battery-level-10-plugged-in	xp:Battery Level 10 Plugged In	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-10-plugged-in-symbolic	xp:Battery Level 10 Plugged In	16,22,24,32,36,48,64,96,128	
+status/battery-level-10-symbolic	xp:Battery Level 10	16,22,24,32,36,48,64,96,128	
+status/battery-level-100	xp:Battery Level 100	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-100-charged	xp:Battery Level 100 Charged	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-100-charged-symbolic	xp:Battery Level 100 Charged	16,22,24,32,36,48,64,96,128	
+status/battery-level-100-charging	xp:Battery Level 100 Charging	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-100-charging-symbolic	xp:Battery Level 100 Charging	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-100-plugged-in	xp:Battery Level 100 Plugged In	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-100-plugged-in-symbolic	xp:Battery Level 100 Plugged In	16,22,24,32,36,48,64,96,128	
+status/battery-level-100-symbolic	xp:Battery Level 100	16,22,24,32,36,48,64,96,128	
+status/battery-level-20	xp:Battery Level 20	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-20-charging	xp:Battery Level 20 Charging	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-20-charging-symbolic	xp:Battery Level 20 Charging	16,22,24,32,36,48,64,96,128	
+status/battery-level-20-plugged-in	xp:Battery Level 20 Plugged In	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-20-plugged-in-symbolic	xp:Battery Level 20 Plugged In	16,22,24,32,36,48,64,96,128	
+status/battery-level-20-symbolic	xp:Battery Level 20	16,22,24,32,36,48,64,96,128	
+status/battery-level-30	xp:Battery Level 30	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-30-charging	xp:Battery Level 30 Charging	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-30-charging-symbolic	xp:Battery Level 30 Charging	16,22,24,32,36,48,64,96,128	
+status/battery-level-30-plugged-in	xp:Battery Level 30 Plugged In	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-30-plugged-in-symbolic	xp:Battery Level 30 Plugged In	16,22,24,32,36,48,64,96,128	
+status/battery-level-30-symbolic	xp:Battery Level 30	16,22,24,32,36,48,64,96,128	
+status/battery-level-40	xp:Battery Level 40	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-40-charging	xp:Battery Level 40 Charging	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-40-charging-symbolic	xp:Battery Level 40 Charging	16,22,24,32,36,48,64,96,128	
+status/battery-level-40-plugged-in	xp:Battery Level 40 Plugged In	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-40-plugged-in-symbolic	xp:Battery Level 40 Plugged In	16,22,24,32,36,48,64,96,128	
+status/battery-level-40-symbolic	xp:Battery Level 40	16,22,24,32,36,48,64,96,128	
+status/battery-level-50	xp:Battery Level 50	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-50-charging	xp:Battery Level 50 Charging	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-50-charging-symbolic	xp:Battery Level 50 Charging	16,22,24,32,36,48,64,96,128	
+status/battery-level-50-plugged-in	xp:Battery Level 50 Plugged In	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-50-plugged-in-symbolic	xp:Battery Level 50 Plugged In	16,22,24,32,36,48,64,96,128	
+status/battery-level-50-symbolic	xp:Battery Level 50	16,22,24,32,36,48,64,96,128	
+status/battery-level-60	xp:Battery Level 60	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-60-charging	xp:Battery Level 60 Charging	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-60-charging-symbolic	xp:Battery Level 60 Charging	16,22,24,32,36,48,64,96,128	
+status/battery-level-60-plugged-in	xp:Battery Level 60 Plugged In	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-60-plugged-in-symbolic	xp:Battery Level 60 Plugged In	16,22,24,32,36,48,64,96,128	
+status/battery-level-60-symbolic	xp:Battery Level 60	16,22,24,32,36,48,64,96,128	
+status/battery-level-70	xp:Battery Level 70	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-70-charging	xp:Battery Level 70 Charging	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-70-charging-symbolic	xp:Battery Level 70 Charging	16,22,24,32,36,48,64,96,128	
+status/battery-level-70-plugged-in	xp:Battery Level 70 Plugged In	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-70-plugged-in-symbolic	xp:Battery Level 70 Plugged In	16,22,24,32,36,48,64,96,128	
+status/battery-level-70-symbolic	xp:Battery Level 70	16,22,24,32,36,48,64,96,128	
+status/battery-level-80	xp:Battery Level 80	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-80-charging	xp:Battery Level 80 Charging	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-80-charging-symbolic	xp:Battery Level 80 Charging	16,22,24,32,36,48,64,96,128	
+status/battery-level-80-plugged-in	xp:Battery Level 80 Plugged In	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-80-plugged-in-symbolic	xp:Battery Level 80 Plugged In	16,22,24,32,36,48,64,96,128	
+status/battery-level-80-symbolic	xp:Battery Level 80	16,22,24,32,36,48,64,96,128	
+status/battery-level-90	xp:Battery Level 90	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-90-charging	xp:Battery Level 90 Charging	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-90-charging-symbolic	xp:Battery Level 90 Charging	16,22,24,32,36,48,64,96,128	
+status/battery-level-90-plugged-in	xp:Battery Level 90 Plugged In	16,22,24,32,36,48,64,96,128	testar-bateria.py
+status/battery-level-90-plugged-in-symbolic	xp:Battery Level 90 Plugged In	16,22,24,32,36,48,64,96,128	
+status/battery-level-90-symbolic	xp:Battery Level 90	16,22,24,32,36,48,64,96,128	
+status/battery-low	xp:Battery Low	16,22,24,32,36,48,64,96,128	
+apps/battery-low-charging	xp:Battery Low Charging	16,22,24,32,36,48,64,96,128	
+apps/battery-low-charging-symbolic	xp:Battery Low Charging	16,22,24,32,36,48,64,96,128	
+status/battery-low-symbolic	xp:Battery Low	16,22,24,32,36,48,64,96,128	
+apps/battery-missing	xp:Battery Missing	16,22,24,32,36,48,64,96,128	
+status/battery-missing-symbolic	xp:Battery Missing	16,22,24,32,36,48,64,96,128	
+devices/battery-symbolic	xp:Battery	16,22,24,32,36,48,64,96,128	
+apps/blueman	xp:Bluetooth Devices	16,22,24,32,36,48,64,96,128	auto
+status/blueman-active	xp:Bluetooth Devices	16,22,24,32,36,48,64,96,128	auto (barra de status)
+apps/blueman-device	xp:Bluetooth Devices	16,22,24,32,36,48,64,96,128	auto
+devices/blueman-serial	xp:Serial Connection	16,22,24,32,36,48,64,96,128	
+status/blueman-tray	xp:Bluetooth Devices	16,22,24,32,36,48,64,96,128	
+status/blueman-x	xp:Exit	16,22,24,32,36,48,64,96,128	
+devices/bluetooth	xp:Bluetooth Devices	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+status/bluetooth-acquiring-symbolic	xp:Bluetooth Devices	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/bluetooth-active	xp:Bluetooth Devices	16,22,24,32,36,48,64,96,128	
+status/bluetooth-active-symbolic	xp:Bluetooth Devices	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/bluetooth-disabled	xp:Bluetooth Devices	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/bluetooth-disabled-symbolic	xp:Bluetooth Devices	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/bluetooth-disconnected-symbolic	xp:Bluetooth Devices	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/bluetooth-hardware-disabled-symbolic	xp:Bluetooth Devices	16,22,24,32,36,48,64,96,128	auto (barra de status)
+devices/bluetooth-symbolic	xp:Bluetooth Devices	16,22,24,32,36,48,64,96,128	
+apps/bookmark-new	xp:Bookmark New - Action	16,22,24,32,36,48,64,96,128	
+actions/bookmark-new-symbolic	xp:Bookmark New - Action	16,22,24,32,36,48,64,96,128	
+actions/call-end	xp:Call Stop	16,22,24,32,36,48,64,96,128	
+status/call-incoming-symbolic	xp:Call Incoming	16,22,24,32,36,48,64,96,128	
+status/call-missed-symbolic	xp:Call Missed	16,22,24,32,36,48,64,96,128	
+status/call-outgoing-symbolic	xp:Call Outgoing	16,22,24,32,36,48,64,96,128	
+actions/call-start	xp:Call Start	16,22,24,32,36,48,64,96,128	
+actions/call-start-symbolic	xp:Call Start	16,22,24,32,36,48,64,96,128	
+actions/call-stop	xp:Call Stop	16,22,24,32,36,48,64,96,128	
+actions/call-stop-symbolic	xp:Call Stop	16,22,24,32,36,48,64,96,128	
+devices/camera-photo	xp:Digital Camera	16,22,24,32,36,48,64,96,128	auto
+devices/camera-photo-symbolic	xp:Digital Camera	16,22,24,32,36,48,64,96,128	
+actions/camera-switch-symbolic	xp:Camcorder	16,22,24,32,36,48,64,96,128	
+devices/camera-video	xp:Camcorder	16,22,24,32,36,48,64,96,128	auto
+devices/camera-video-symbolic	xp:Camcorder	16,22,24,32,36,48,64,96,128	
+devices/camera-web	xp:Scanner and Camera Wizard	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+devices/camera-web-symbolic	xp:Webcam	16,22,24,32,36,48,64,96,128	
+apps/changes-allow	xp:Unlock	16,22,24,32,36,48,64,96,128	
+status/changes-allow-symbolic	xp:Unlock	16,22,24,32,36,48,64,96,128	
+status/changes-prevent	xp:Padlock	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+status/channel-insecure-symbolic	xp:Lock	16,22,24,32,36,48,64,96,128	
+status/channel-secure	xp:Lock	16,22,24,32,36,48,64,96,128	
+actions/chat-message-new-symbolic	xp:OE Create Mail	16,22,24,32,36,48,64,96,128	
+actions/checkbox-checked-symbolic	xp:Checkbox Checked	16,22,24,32,36,48,64,96,128	
+actions/checkbox-mixed-symbolic	xp:Checkbox Mixed	16,22,24,32,36,48,64,96,128	
+actions/checkbox-symbolic	xp:Checkbox	16,22,24,32,36,48,64,96,128	
+actions/color-select-symbolic	xp:Stylus	16,22,24,32,36,48,64,96,128	
+devices/colorimeter-colorhug-symbolic	xp:InkBall	16,22,24,32,36,48,64,96,128	
+devices/computer	xp:My Computer	16,22,24,32,36,48,64,96,128	auto
+devices/computer-apple-ipad	xp:Tablet and Pen settings	16,22,24,32,36,48,64,96,128	
+devices/computer-apple-ipad-symbolic	xp:Monitor	16,22,24,32,36,48,64,96,128	
+devices/computer-convertible	xp:IR File Transfer	16,22,24,32,36,48,64,96,128	
+apps/computer-fail	xp:Computer Fail	16,22,24,32,36,48,64,96,128	
+status/computer-fail-symbolic	xp:Computer Fail	16,22,24,32,36,48,64,96,128	
+devices/computer-laptop	xp:Laptop	16,22,24,32,36,48,64,96,128	
+devices/computer-symbolic	xp:My Computer	16,22,24,32,36,48,64,96,128	
+categories/config-language	xp:Change Language	16,22,24,32,36,48,64,96,128	
+actions/contact-new	xp:Contact New - Action	16,22,24,32,36,48,64,96,128	
+actions/contact-new-symbolic	xp:Contact New - Action	16,22,24,32,36,48,64,96,128	
+status/dialog-error	xp:Critical	16,22,24,32,36,48,64,96,128	
+status/dialog-error-symbolic	xp:Critical	16,22,24,32,36,48,64,96,128	
+actions/dialog-extensions	xp:WMP Plugin	16,22,24,32,36,48,64,96,128	
+status/dialog-information	xp:Information	16,22,24,32,36,48,64,96,128	
+status/dialog-information-symbolic	xp:Information	16,22,24,32,36,48,64,96,128	
+actions/dialog-memory	xp:RAM	16,22,24,32,36,48,64,96,128	
+actions/dialog-messages	xp:OE Send	16,22,24,32,36,48,64,96,128	
+actions/dialog-paint-server	xp:Paint	16,22,24,32,36,48,64,96,128	
+status/dialog-password	xp:Activation	16,22,24,32,36,48,64,96,128	
+status/dialog-password-symbolic	xp:Gold key	16,22,24,32,36,48,64,96,128	
+status/dialog-question	xp:Question	16,22,24,32,36,48,64,96,128	
+status/dialog-question-symbolic	xp:Question	16,22,24,32,36,48,64,96,128	
+status/dialog-warning	xp:Alert	16,22,24,32,36,48,64,96,128	auto
+status/dialog-warning-symbolic	xp:Alert	16,22,24,32,36,48,64,96,128	
+status/display-brightness	xp:Display Brightness	16,22,24,32,36,48,64,96,128	
+status/display-brightness-symbolic	xp:Display Brightness	16,22,24,32,36,48,64,96,128	
+devices/display-projector-symbolic	xp:Slideshow	16,22,24,32,36,48,64,96,128	
+places/distributor-logo	xp:XP Logo	16,22,24,32,36,48,64,96,128	
+actions/document-edit	xp:Pen	16,22,24,32,36,48,64,96,128	
+actions/document-edit-symbolic	xp:Pen	16,22,24,32,36,48,64,96,128	
+actions/document-new	xp:Document New - Action	16,22,24,32,36,48,64,96,128	
+actions/document-new-symbolic	xp:Document New - Action	16,22,24,32,36,48,64,96,128	
+actions/document-open	xp:Open	16,22,24,32,36,48,64,96,128	auto
+actions/document-open-recent	xp:Recent Documents	16,22,24,32,36,48,64,96,128	auto
+actions/document-open-recent-symbolic	xp:Recent Documents	16,22,24,32,36,48,64,96,128	
+actions/document-open-symbolic	xp:Open	16,22,24,32,36,48,64,96,128	
+actions/document-page-setup	xp:Fax Cover Page	16,22,24,32,36,48,64,96,128	
+actions/document-page-setup-symbolic	xp:Fax Cover Page	16,22,24,32,36,48,64,96,128	
+actions/document-print	xp:Printer	16,22,24,32,36,48,64,96,128	auto
+actions/document-print-preview	xp:Document Search	16,22,24,32,36,48,64,96,128	auto
+actions/document-print-preview-symbolic	xp:Document Search	16,22,24,32,36,48,64,96,128	
+actions/document-print-symbolic	xp:Printer	16,22,24,32,36,48,64,96,128	
+actions/document-properties	xp:explorer properties	16,22,24,32,36,48,64,96,128	auto
+actions/document-properties-symbolic	xp:explorer properties	16,22,24,32,36,48,64,96,128	
+actions/document-revert	xp:Backups	16,22,24,32,36,48,64,96,128	
+apps/document-revert-rtl	xp:Backups	16,22,24,32,36,48,64,96,128	
+actions/document-revert-rtl-symbolic	xp:Backups	16,22,24,32,36,48,64,96,128	
+actions/document-revert-symbolic	xp:Backups	16,22,24,32,36,48,64,96,128	
+actions/document-save	xp:Save	16,22,24,32,36,48,64,96,128	auto
+actions/document-save-as	xp:Save	16,22,24,32,36,48,64,96,128	auto
+actions/document-save-as-symbolic	xp:Document Save As - Action	16,22,24,32,36,48,64,96,128	
+actions/document-save-symbolic	xp:Save	16,22,24,32,36,48,64,96,128	
+actions/document-send	xp:Move this folder	16,22,24,32,36,48,64,96,128	auto
+actions/document-send-symbolic	xp:Move this folder	16,22,24,32,36,48,64,96,128	
+devices/drive-harddisk	xp:Local Disk	16,22,24,32,36,48,64,96,128	auto
+devices/drive-harddisk-ieee1394-symbolic	xp:Local Disk	16,22,24,32,36,48,64,96,128	
+devices/drive-harddisk-solidstate	xp:Memory Stick	16,22,24,32,36,48,64,96,128	
+devices/drive-harddisk-solidstate-symbolic	xp:PCMCIA Card	16,22,24,32,36,48,64,96,128	
+devices/drive-harddisk-symbolic	xp:Local Disk	16,22,24,32,36,48,64,96,128	
+devices/drive-harddisk-system-symbolic	xp:Local Disk	16,22,24,32,36,48,64,96,128	
+devices/drive-harddisk-usb	xp:Removable Media	16,22,24,32,36,48,64,96,128	
+devices/drive-harddisk-usb-symbolic	xp:Removable Media	16,22,24,32,36,48,64,96,128	
+apps/drive-multidisk	xp:Local Disk	16,22,24,32,36,48,64,96,128	
+devices/drive-multidisk-symbolic	xp:Local Disk	16,22,24,32,36,48,64,96,128	
+devices/drive-optical	xp:Optical Drive	16,22,24,32,36,48,64,96,128	auto
+devices/drive-optical-symbolic	xp:Optical Drive	16,22,24,32,36,48,64,96,128	
+devices/drive-removable-media	xp:Removable Media	16,22,24,32,36,48,64,96,128	auto
+devices/drive-removable-media-symbolic	xp:Removable Media	16,22,24,32,36,48,64,96,128	
+devices/drive-removable-media-usb	xp:Removable Media	16,22,24,32,36,48,64,96,128	
+apps/ebook-reader	xp:Ebook Reader	16,22,24,32,36,48,64,96,128	
+actions/edit	xp:Stylus	16,22,24,32,36,48,64,96,128	
+actions/edit-clear	xp:Edit Clear	16,22,24,32,36,48,64,96,128	
+apps/edit-clear-all	xp:Edit Clear All	16,22,24,32,36,48,64,96,128	
+actions/edit-clear-all-symbolic	xp:Edit Clear All	16,22,24,32,36,48,64,96,128	
+apps/edit-clear-rtl	xp:Edit Clear Rtl	16,22,24,32,36,48,64,96,128	
+actions/edit-clear-rtl-symbolic	xp:Edit Clear Rtl	16,22,24,32,36,48,64,96,128	
+actions/edit-clear-symbolic	xp:Edit Clear	16,22,24,32,36,48,64,96,128	
+actions/edit-clear-symbolic-rtl	xp:Edit Clear Rtl	16,22,24,32,36,48,64,96,128	
+actions/edit-copy	xp:Copy	16,22,24,32,36,48,64,96,128	auto
+actions/edit-copy-symbolic	xp:Copy	16,22,24,32,36,48,64,96,128	
+actions/edit-cut	xp:Cut	16,22,24,32,36,48,64,96,128	auto
+actions/edit-cut-symbolic	xp:Cut	16,22,24,32,36,48,64,96,128	
+actions/edit-delete	xp:Explorer Delete	16,22,24,32,36,48,64,96,128	auto
+actions/edit-delete-symbolic	xp:Delete	16,22,24,32,36,48,64,96,128	
+actions/edit-find	xp:Search	16,22,24,32,36,48,64,96,128	auto
+actions/edit-find-replace	xp:Binoculars	16,22,24,32,36,48,64,96,128	auto
+actions/edit-find-replace-symbolic	xp:Binoculars	16,22,24,32,36,48,64,96,128	
+actions/edit-find-symbolic	xp:Search	16,22,24,32,36,48,64,96,128	
+actions/edit-paste	xp:Paste	16,22,24,32,36,48,64,96,128	auto
+actions/edit-paste-symbolic	xp:Paste	16,22,24,32,36,48,64,96,128	
+actions/edit-redo	xp:Redo	16,22,24,32,36,48,64,96,128	auto
+apps/edit-redo-rtl	xp:Undo	16,22,24,32,36,48,64,96,128	
+actions/edit-redo-symbolic	xp:Redo	16,22,24,32,36,48,64,96,128	
+actions/edit-select-all	xp:Rename	16,22,24,32,36,48,64,96,128	
+actions/edit-select-all-symbolic	xp:Rename	16,22,24,32,36,48,64,96,128	
+actions/edit-select-symbolic	xp:Rename	16,22,24,32,36,48,64,96,128	
+actions/edit-undo	xp:Undo	16,22,24,32,36,48,64,96,128	auto
+apps/edit-undo-rtl	xp:Redo	16,22,24,32,36,48,64,96,128	
+actions/edit-undo-symbolic	xp:Undo	16,22,24,32,36,48,64,96,128	
+emblems/emblem-default	xp:Emblem Default	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+emblems/emblem-desktop	xp:Desktop	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+emblems/emblem-disabled	xp:Emblem Disabled	16,22,24,32,36,48,64,96,128	
+emblems/emblem-documents	xp:My Documents	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+emblems/emblem-downloads	xp:Emblem Downloads	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+emblems/emblem-enabled	xp:Emblem Enabled	16,22,24,32,36,48,64,96,128	
+emblems/emblem-error	xp:Emblem Error	16,22,24,32,36,48,64,96,128	
+emblems/emblem-favorite	xp:Emblem Favorite	16,22,24,32,36,48,64,96,128	auto
+apps/emblem-generic	xp:Globe	16,22,24,32,36,48,64,96,128	
+emblems/emblem-git-modified	xp:Emblem Git Modified Symbolic	16,22,24,32,36,48,64,96,128	
+emblems/emblem-git-new	xp:Emblem Git New Symbolic	16,22,24,32,36,48,64,96,128	
+emblems/emblem-important	xp:Whistler - Help and Support	16,22,24,32,36,48,64,96,128	auto
+emblems/emblem-important-symbolic	xp:Information	16,22,24,32,36,48,64,96,128	
+emblems/emblem-mail	xp:Email	16,22,24,32,36,48,64,96,128	auto
+emblems/emblem-mixed	xp:Emblem Mixed	16,22,24,32,36,48,64,96,128	
+apps/emblem-new	xp:Add	16,22,24,32,36,48,64,96,128	
+emblems/emblem-package	xp:Packager	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+emblems/emblem-photos	xp:Windows Picture and Fax Viewer	16,22,24,32,36,48,64,96,128	auto
+emblems/emblem-readonly	xp:Padlock	16,22,24,32,36,48,64,96,128	auto
+emblems/emblem-shared	xp:Emblem Shared	16,22,24,32,36,48,64,96,128	auto
+emblems/emblem-symbolic-link	xp:Shortcut overlay	16,22,24,32,36,48,64,96,128	auto
+emblems/emblem-synchronized	xp:Offline Web Pages	16,22,24,32,36,48,64,96,128	auto
+emblems/emblem-synchronizing	xp:Emblem Synchronized	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+emblems/emblem-system	xp:Services	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+emblems/emblem-system-symbolic	xp:Whistler - Help and Support	16,22,24,32,36,48,64,96,128	
+emblems/emblem-unreadable	xp:Prohibited	16,22,24,32,36,48,64,96,128	auto
+emblems/emblem-urgent	xp:Information	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+emblems/emblem-warning	xp:Emblem Warning	16,22,24,32,36,48,64,96,128	
+emblems/emblem-web	xp:Internet Shortcut	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+categories/emoji-activities-symbolic	xp:Game Controller	16,22,24,32,36,48,64,96,128	
+categories/emoji-body-symbolic	xp:Charmap	16,22,24,32,36,48,64,96,128	
+categories/emoji-flags-symbolic	xp:Setup Language	16,22,24,32,36,48,64,96,128	
+categories/emoji-food-symbolic	xp:Search for people	16,22,24,32,36,48,64,96,128	
+categories/emoji-nature-symbolic	xp:Jpeg	16,22,24,32,36,48,64,96,128	
+categories/emoji-objects-symbolic	xp:Security Alert	16,22,24,32,36,48,64,96,128	
+categories/emoji-people-symbolic	xp:Windows Dude 1 (whistler)	16,22,24,32,36,48,64,96,128	
+categories/emoji-recent-symbolic	xp:Recent Documents	16,22,24,32,36,48,64,96,128	
+categories/emoji-symbols-symbolic	xp:Services	16,22,24,32,36,48,64,96,128	
+categories/emoji-travel-symbolic	xp:Whistler - Run	16,22,24,32,36,48,64,96,128	
+apps/emote-love	xp:Emote Love	16,22,24,32,36,48,64,96,128	
+status/emote-love-symbolic	xp:Emote Love	16,22,24,32,36,48,64,96,128	
+apps/engrampa	xp:Packager	16,22,24,32,36,48,64,96,128	auto
+actions/error-correct-symbolic	xp:WMP Error	16,22,24,32,36,48,64,96,128	
+mimetypes/extension	xp:WMP Plugin	16,22,24,32,36,48,64,96,128	
+actions/extract-archive	xp:Extract Archive	16,22,24,32,36,48,64,96,128	
+actions/find-location	xp:Whistler - IE Search	16,22,24,32,36,48,64,96,128	
+actions/find-location-symbolic	xp:Whistler - IE Search	16,22,24,32,36,48,64,96,128	
+devices/fingerprint	xp:Fingerprint	16,22,24,32,36,48,64,96,128	
+actions/focus-legacy-systray-symbolic	xp:Focus Legacy Systray	16,22,24,32,36,48,64,96,128	
+actions/focus-top-bar-symbolic	xp:Focus Top Bar	16,22,24,32,36,48,64,96,128	
+actions/focus-windows-symbolic	xp:Focus Windows	16,22,24,32,36,48,64,96,128	
+places/folder	xp:Folder Closed	16,22,24,32,36,48,64,96,128	
+places/folder-bookmarks	xp:Whistler - IE Favorites	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+actions/folder-copy	xp:Copy To	16,22,24,32,36,48,64,96,128	
+places/folder-documents	xp:My Documents	16,22,24,32,36,48,64,96,128	auto
+places/folder-documents-drag-accept	xp:My Documents	16,22,24,32,36,48,64,96,128	
+places/folder-documents-open	xp:My Documents	16,22,24,32,36,48,64,96,128	
+places/folder-documents-symbolic	xp:My Documents	16,22,24,32,36,48,64,96,128	
+places/folder-download	xp:Move to folder	16,22,24,32,36,48,64,96,128	
+places/folder-download-drag-accept	xp:Open	16,22,24,32,36,48,64,96,128	
+places/folder-download-open	xp:Open	16,22,24,32,36,48,64,96,128	
+places/folder-download-symbolic	xp:Move to folder	16,22,24,32,36,48,64,96,128	
+status/folder-drag-accept	xp:Folder Options	16,22,24,32,36,48,64,96,128	
+places/folder-drag-accept-symbolic	xp:Move to folder	16,22,24,32,36,48,64,96,128	
+actions/folder-move	xp:Move To	16,22,24,32,36,48,64,96,128	
+places/folder-music	xp:My Music	16,22,24,32,36,48,64,96,128	auto
+places/folder-music-drag-accept	xp:My Music	16,22,24,32,36,48,64,96,128	
+places/folder-music-open	xp:My Music	16,22,24,32,36,48,64,96,128	
+places/folder-music-symbolic	xp:My Music	16,22,24,32,36,48,64,96,128	
+actions/folder-new	xp:New Folder	16,22,24,32,36,48,64,96,128	
+actions/folder-new-symbolic	xp:New Folder	16,22,24,32,36,48,64,96,128	
+status/folder-open	xp:Folder Opened	16,22,24,32,36,48,64,96,128	
+status/folder-open-symbolic	xp:Folder Opened	16,22,24,32,36,48,64,96,128	
+places/folder-pictures	xp:My Pictures	16,22,24,32,36,48,64,96,128	auto
+places/folder-pictures-drag-accept	xp:My Pictures	16,22,24,32,36,48,64,96,128	
+places/folder-pictures-open	xp:My Pictures	16,22,24,32,36,48,64,96,128	
+places/folder-pictures-symbolic	xp:My Pictures	16,22,24,32,36,48,64,96,128	
+places/folder-projects-symbolic	xp:Fonts	16,22,24,32,36,48,64,96,128	
+places/folder-publicshare	xp:Shared Folder	16,22,24,32,36,48,64,96,128	
+places/folder-publicshare-drag-accept	xp:Shared Folder	16,22,24,32,36,48,64,96,128	
+places/folder-publicshare-open	xp:Shared Folder	16,22,24,32,36,48,64,96,128	
+places/folder-publicshare-symbolic	xp:Shared Folder	16,22,24,32,36,48,64,96,128	
+places/folder-recent	xp:Scheduled Tasks	16,22,24,32,36,48,64,96,128	
+places/folder-remote	xp:Network Folder	16,22,24,32,36,48,64,96,128	
+places/folder-remote-drag-accept	xp:Offline Web Pages	16,22,24,32,36,48,64,96,128	
+places/folder-remote-open	xp:Offline Web Pages	16,22,24,32,36,48,64,96,128	
+places/folder-remote-symbolic	xp:Shared Folder	16,22,24,32,36,48,64,96,128	
+places/folder-saved-search	xp:Explorer	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+places/folder-saved-search-symbolic	xp:Search	16,22,24,32,36,48,64,96,128	
+places/folder-symbolic	xp:Folder Closed	16,22,24,32,36,48,64,96,128	
+places/folder-tag	xp:XPSP3RES Unknown 1	16,22,24,32,36,48,64,96,128	
+places/folder-templates	xp:Fax Archive	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+places/folder-templates-drag-accept	xp:XPSP3RES Unknown 1	16,22,24,32,36,48,64,96,128	
+places/folder-templates-open	xp:XPSP3RES Unknown 1	16,22,24,32,36,48,64,96,128	
+places/folder-templates-symbolic	xp:Generic Text Document	16,22,24,32,36,48,64,96,128	
+places/folder-videos	xp:My Videos	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+places/folder-videos-drag-accept	xp:My Videos	16,22,24,32,36,48,64,96,128	
+places/folder-videos-open	xp:My Videos	16,22,24,32,36,48,64,96,128	
+places/folder-videos-symbolic	xp:My Videos	16,22,24,32,36,48,64,96,128	
+status/folder-visiting	xp:Folder Options	16,22,24,32,36,48,64,96,128	
+status/folder-visiting-symbolic	xp:Folder View	16,22,24,32,36,48,64,96,128	
+actions/font-select-symbolic	xp:Font Select	16,22,24,32,36,48,64,96,128	
+mimetypes/font-x-generic	xp:TrueType	16,22,24,32,36,48,64,96,128	auto
+mimetypes/font-x-generic-symbolic	xp:TrueType	16,22,24,32,36,48,64,96,128	
+actions/format-indent-less	xp:Format Indent Less	16,22,24,32,36,48,64,96,128	
+apps/format-indent-less-rtl	xp:Format Indent Less Rtl	16,22,24,32,36,48,64,96,128	
+actions/format-indent-less-rtl-symbolic	xp:Format Indent Less Rtl	16,22,24,32,36,48,64,96,128	
+actions/format-indent-less-symbolic	xp:Format Indent Less	16,22,24,32,36,48,64,96,128	
+actions/format-indent-more	xp:Format Indent More	16,22,24,32,36,48,64,96,128	
+apps/format-indent-more-rtl	xp:Format Indent More Rtl	16,22,24,32,36,48,64,96,128	
+actions/format-indent-more-rtl-symbolic	xp:Format Indent More Rtl	16,22,24,32,36,48,64,96,128	
+actions/format-indent-more-symbolic	xp:Format Indent More	16,22,24,32,36,48,64,96,128	
+actions/format-justify-center	xp:Format Justify Center	16,22,24,32,36,48,64,96,128	
+actions/format-justify-center-symbolic	xp:Format Justify Center	16,22,24,32,36,48,64,96,128	
+actions/format-justify-fill	xp:Format Justify Fill	16,22,24,32,36,48,64,96,128	
+actions/format-justify-fill-symbolic	xp:Format Justify Fill	16,22,24,32,36,48,64,96,128	
+actions/format-justify-left	xp:Format Justify Left	16,22,24,32,36,48,64,96,128	
+actions/format-justify-left-symbolic	xp:Format Justify Left	16,22,24,32,36,48,64,96,128	
+actions/format-justify-right	xp:Format Justify Right	16,22,24,32,36,48,64,96,128	
+actions/format-justify-right-symbolic	xp:Format Justify Right	16,22,24,32,36,48,64,96,128	
+actions/format-text-bold	xp:Format Text Bold	16,22,24,32,36,48,64,96,128	
+actions/format-text-bold-symbolic	xp:Format Text Bold	16,22,24,32,36,48,64,96,128	
+actions/format-text-direction-ltr	xp:Format Text Direction	16,22,24,32,36,48,64,96,128	
+actions/format-text-direction-ltr-symbolic	xp:Format Text Direction	16,22,24,32,36,48,64,96,128	
+actions/format-text-direction-rtl	xp:Format Text Direction Rtl	16,22,24,32,36,48,64,96,128	
+actions/format-text-direction-rtl-symbolic	xp:Format Text Direction Rtl	16,22,24,32,36,48,64,96,128	
+actions/format-text-direction-symbolic	xp:Format Text Direction	16,22,24,32,36,48,64,96,128	
+actions/format-text-highlight	xp:New Text	16,22,24,32,36,48,64,96,128	
+actions/format-text-italic	xp:Format Text Italic	16,22,24,32,36,48,64,96,128	
+actions/format-text-italic-symbolic	xp:Format Text Italic	16,22,24,32,36,48,64,96,128	
+actions/format-text-none	xp:Format Text None	16,22,24,32,36,48,64,96,128	
+actions/format-text-plaintext-symbolic	xp:Format Text Plaintext	16,22,24,32,36,48,64,96,128	
+actions/format-text-rich-symbolic	xp:Format Text Rich	16,22,24,32,36,48,64,96,128	
+actions/format-text-strikethrough	xp:Format Text Strikethrough	16,22,24,32,36,48,64,96,128	
+actions/format-text-strikethrough-symbolic	xp:Format Text Strikethrough	16,22,24,32,36,48,64,96,128	
+actions/format-text-underline	xp:Format Text Underline	16,22,24,32,36,48,64,96,128	
+actions/format-text-underline-symbolic	xp:Format Text Underline	16,22,24,32,36,48,64,96,128	
+apps/galculator	xp:Calculator	16,22,24,32,36,48,64,96,128	
+devices/gnome-dev-printer-new	xp:New Printer	16,22,24,32,36,48,64,96,128	
+actions/gnome-lockscreen	xp:Padlock Alt	16,22,24,32,36,48,64,96,128	
+categories/gnome-power-manager	xp:Power Status	16,22,24,32,36,48,64,96,128	
+apps/gnome-power-manager-symbolic	xp:Power Options	16,22,24,32,36,48,64,96,128	
+actions/go-bottom	xp:Whistler - Bottom	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+actions/go-bottom-symbolic	xp:Whistler - Bottom	16,22,24,32,36,48,64,96,128	
+actions/go-down	xp:Bottom	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+actions/go-down-symbolic	xp:Bottom	16,22,24,32,36,48,64,96,128	
+actions/go-first	xp:Whistler - Back	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+apps/go-first-rtl	xp:Whistler - Forward	16,22,24,32,36,48,64,96,128	
+actions/go-first-symbolic	xp:Whistler - Back	16,22,24,32,36,48,64,96,128	
+actions/go-home	xp:IE Home	16,22,24,32,36,48,64,96,128	auto
+actions/go-home-symbolic	xp:IE Home	16,22,24,32,36,48,64,96,128	
+actions/go-jump	xp:Go	16,22,24,32,36,48,64,96,128	auto
+actions/go-jump-rtl	xp:Curved Arrow	16,22,24,32,36,48,64,96,128	
+actions/go-jump-rtl-symbolic	xp:Whistler - Undo	16,22,24,32,36,48,64,96,128	
+actions/go-jump-symbolic	xp:Whistler - Redo	16,22,24,32,36,48,64,96,128	
+actions/go-last	xp:Whistler - Forward	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+apps/go-last-rtl	xp:Whistler - Back	16,22,24,32,36,48,64,96,128	
+actions/go-last-symbolic	xp:Whistler - Forward	16,22,24,32,36,48,64,96,128	
+actions/go-next	xp:Forward	16,22,24,32,36,48,64,96,128	auto
+apps/go-next-rtl	xp:Back	16,22,24,32,36,48,64,96,128	
+actions/go-next-symbolic	xp:Forward	16,22,24,32,36,48,64,96,128	
+actions/go-next-symbolic-rtl	xp:Back	16,22,24,32,36,48,64,96,128	
+actions/go-previous	xp:Back	16,22,24,32,36,48,64,96,128	auto
+apps/go-previous-rtl	xp:Forward	16,22,24,32,36,48,64,96,128	
+actions/go-previous-symbolic	xp:Back	16,22,24,32,36,48,64,96,128	
+actions/go-previous-symbolic-rtl	xp:Forward	16,22,24,32,36,48,64,96,128	
+actions/go-top	xp:Whistler - Top	16,22,24,32,36,48,64,96,128	
+actions/go-top-symbolic	xp:Whistler - Top	16,22,24,32,36,48,64,96,128	
+actions/go-up	xp:Top	16,22,24,32,36,48,64,96,128	auto
+actions/go-up-symbolic	xp:Top	16,22,24,32,36,48,64,96,128	
+apps/goa-panel-symbolic	xp:Email	16,22,24,32,36,48,64,96,128	
+apps/gparted	xp:Disk Management	16,22,24,32,36,48,64,96,128	
+actions/gtk-apply	xp:Curved Arrow	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-cancel	xp:Whistler - IE Stop	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-caps-lock-warning	xp:Alert	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-color-picker	xp:Paint	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-connect	xp:Windows Media Connect	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-convert	xp:WME Convert a File	16,22,24,32,36,48,64,96,128	gtk embutido
+status/gtk-dialog-authentication	xp:Authorization Manager	16,22,24,32,36,48,64,96,128	
+actions/gtk-disconnect	xp:Disable Network Connection	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-dnd	xp:Copy	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-dnd-multiple	xp:Copy To	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-edit	xp:IE Edit	16,22,24,32,36,48,64,96,128	
+actions/gtk-index	xp:Help and Support - Index	16,22,24,32,36,48,64,96,128	gtk embutido
+places/gtk-network	xp:Network Drive	16,22,24,32,36,48,64,96,128	
+actions/gtk-no	xp:Stop	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-ok	xp:Checklist	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-orientation-landscape	xp:Printer	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-orientation-portrait	xp:Printer	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-orientation-reverse-landscape	xp:Printer	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-orientation-reverse-portrait	xp:Printer	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-page-setup	xp:Printer	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-preferences	xp:Additional Settings	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-select-color	xp:Color Profile	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-select-font	xp:OpenType	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-undelete	xp:Restore	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-undelete-rtl	xp:Restore	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/gtk-yes	xp:Checklist	16,22,24,32,36,48,64,96,128	gtk embutido
+actions/help-about	xp:Whistler - Help and Support	16,22,24,32,36,48,64,96,128	auto
+actions/help-about-symbolic	xp:Whistler - Help and Support	16,22,24,32,36,48,64,96,128	
+apps/help-browser	xp:Help and Support	16,22,24,32,36,48,64,96,128	auto
+apps/help-browser-symbolic	xp:Help and Support	16,22,24,32,36,48,64,96,128	
+actions/help-contents	xp:Help and Support	16,22,24,32,36,48,64,96,128	auto
+apps/help-contents-symbolic	xp:Book	16,22,24,32,36,48,64,96,128	
+actions/help-faq	xp:Whistler - Help and Support	16,22,24,32,36,48,64,96,128	auto
+apps/help-faq-symbolic	xp:Alternate help symbol	16,22,24,32,36,48,64,96,128	
+apps/htop	xp:Task Manager	16,22,24,32,36,48,64,96,128	auto
+apps/ibus-setup	xp:System Information	16,22,24,32,36,48,64,96,128	
+mimetypes/image	xp:Windows Picture and Fax Viewer	16,22,24,32,36,48,64,96,128	
+status/image-loading	xp:Image Missing	16,22,24,32,36,48,64,96,128	
+status/image-loading-symbolic	xp:Image Missing	16,22,24,32,36,48,64,96,128	
+status/image-missing	xp:Image Missing	16,22,24,32,36,48,64,96,128	
+status/image-missing-symbolic	xp:Image Missing	16,22,24,32,36,48,64,96,128	
+mimetypes/image-x-generic	xp:JPG	16,22,24,32,36,48,64,96,128	auto
+mimetypes/image-x-generic-symbolic	xp:JPG	16,22,24,32,36,48,64,96,128	
+status/info	xp:Whistler - Help and Support	16,22,24,32,36,48,64,96,128	
+status/info-outline	xp:Whistler - Help and Support	16,22,24,32,36,48,64,96,128	
+mimetypes/inode-directory	xp:Folder Closed	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+mimetypes/inode-directory-symbolic	xp:Folder Opened	16,22,24,32,36,48,64,96,128	
+mimetypes/inode-symlink	xp:Folder Options	16,22,24,32,36,48,64,96,128	
+apps/input-dialpad	xp:Input Dialpad	16,22,24,32,36,48,64,96,128	
+devices/input-dialpad-symbolic	xp:Input Dialpad	16,22,24,32,36,48,64,96,128	
+devices/input-gaming	xp:Game Controller	16,22,24,32,36,48,64,96,128	auto
+devices/input-gaming-symbolic	xp:Game Controller	16,22,24,32,36,48,64,96,128	
+devices/input-keyboard	xp:On-Screen Keyboard	16,22,24,32,36,48,64,96,128	auto
+devices/input-keyboard-symbolic	xp:Keyboard	16,22,24,32,36,48,64,96,128	
+devices/input-mouse	xp:Mouse	16,22,24,32,36,48,64,96,128	auto
+devices/input-mouse-symbolic	xp:Mouse	16,22,24,32,36,48,64,96,128	
+devices/input-tablet	xp:Tablet and Pen settings	16,22,24,32,36,48,64,96,128	
+devices/input-tablet-symbolic	xp:Tablet and Pen settings	16,22,24,32,36,48,64,96,128	
+apps/input-touchpad	xp:Tablet and Pen settings	16,22,24,32,36,48,64,96,128	
+devices/input-touchpad-symbolic	xp:Input Panel	16,22,24,32,36,48,64,96,128	
+actions/insert-image	xp:New Image	16,22,24,32,36,48,64,96,128	
+actions/insert-image-symbolic	xp:New Image	16,22,24,32,36,48,64,96,128	
+actions/insert-link	xp:New Link	16,22,24,32,36,48,64,96,128	
+actions/insert-link-symbolic	xp:New Link	16,22,24,32,36,48,64,96,128	
+actions/insert-object	xp:New Object	16,22,24,32,36,48,64,96,128	
+actions/insert-object-symbolic	xp:New Object	16,22,24,32,36,48,64,96,128	
+actions/insert-text	xp:New Text	16,22,24,32,36,48,64,96,128	
+actions/insert-text-symbolic	xp:New Text	16,22,24,32,36,48,64,96,128	
+apps/internet-chat	xp:MSN Messenger	16,22,24,32,36,48,64,96,128	
+places/internet-radio	xp:Wireless Network Connection (cópia 1)	16,22,24,32,36,48,64,96,128	
+actions/jockey-proprietary	xp:Lock	16,22,24,32,36,48,64,96,128	
+status/keyboard	xp:Keyboard	16,22,24,32,36,48,64,96,128	
+status/keyboard-brightness	xp:Keyboard Brightness	16,22,24,32,36,48,64,96,128	
+status/keyboard-brightness-symbolic	xp:Keyboard Brightness	16,22,24,32,36,48,64,96,128	
+devices/keyboard-symbolic	xp:Keyboard	16,22,24,32,36,48,64,96,128	auto (barra de status)
+mimetypes/libpeas-plugin	xp:WMP Plugin	16,22,24,32,36,48,64,96,128	
+places/library-audiobook	xp:Help and Support - Index	16,22,24,32,36,48,64,96,128	
+places/library-places	xp:Regional Settings	16,22,24,32,36,48,64,96,128	
+places/library-podcast	xp:Antenna Signal	16,22,24,32,36,48,64,96,128	
+apps/lightdm-gtk-greeter-settings	xp:Additional Settings	16,22,24,32,36,48,64,96,128	
+actions/list-add	xp:Add	16,22,24,32,36,48,64,96,128	
+actions/list-add-symbolic	xp:Add	16,22,24,32,36,48,64,96,128	
+actions/list-drag-handle-symbolic	xp:List Drag Handle	16,22,24,32,36,48,64,96,128	
+actions/list-remove	xp:Restricted	16,22,24,32,36,48,64,96,128	
+actions/list-remove-all-symbolic	xp:WMS Playlist	16,22,24,32,36,48,64,96,128	
+actions/list-remove-symbolic	xp:Restricted	16,22,24,32,36,48,64,96,128	
+status/location-services-active-symbolic	xp:Location Services Active	16,22,24,32,36,48,64,96,128	
+status/location-services-disabled-symbolic	xp:Location Services Disabled	16,22,24,32,36,48,64,96,128	
+status/locked	xp:Padlock	16,22,24,32,36,48,64,96,128	
+status/mail-attachment	xp:OE Attatch	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+status/mail-attachment-symbolic	xp:OE Attatch	16,22,24,32,36,48,64,96,128	
+actions/mail-forward	xp:OE Send	16,22,24,32,36,48,64,96,128	
+actions/mail-forward-rtl	xp:OE Forward	16,22,24,32,36,48,64,96,128	
+actions/mail-forward-symbolic	xp:OE Send	16,22,24,32,36,48,64,96,128	
+status/mail-forwarded	xp:OE Forward	16,22,24,32,36,48,64,96,128	
+status/mail-forwarded-rtl	xp:OE Forward	16,22,24,32,36,48,64,96,128	
+places/mail-inbox	xp:OE Sent Items	16,22,24,32,36,48,64,96,128	
+places/mail-mailbox	xp:OE Inbox	16,22,24,32,36,48,64,96,128	
+actions/mail-mark-important	xp:OE News Post	16,22,24,32,36,48,64,96,128	
+actions/mail-mark-important-symbolic	xp:OE News Post	16,22,24,32,36,48,64,96,128	
+actions/mail-mark-junk	xp:Discard Fax	16,22,24,32,36,48,64,96,128	
+actions/mail-mark-junk-symbolic	xp:Discard Fax	16,22,24,32,36,48,64,96,128	
+actions/mail-mark-notjunk	xp:Fax Received Succesfully	16,22,24,32,36,48,64,96,128	
+actions/mail-mark-notjunk-symbolic	xp:Fax Received Succesfully	16,22,24,32,36,48,64,96,128	
+actions/mail-mark-read	xp:OE Mark as read	16,22,24,32,36,48,64,96,128	
+actions/mail-mark-unread	xp:OE Mark as read	16,22,24,32,36,48,64,96,128	
+actions/mail-message-new	xp:OE Create Mail	16,22,24,32,36,48,64,96,128	auto
+actions/mail-message-new-symbolic	xp:OE Create Mail	16,22,24,32,36,48,64,96,128	
+places/mail-outbox	xp:OE Outbox	16,22,24,32,36,48,64,96,128	
+status/mail-read	xp:OE Mark as read	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+status/mail-read-symbolic	xp:OE Mark as read	16,22,24,32,36,48,64,96,128	
+status/mail-replied	xp:Fax Sent Succesfully	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+status/mail-replied-rtl	xp:OE Reply	16,22,24,32,36,48,64,96,128	
+status/mail-replied-rtl-symbolic	xp:Fax Received Succesfully	16,22,24,32,36,48,64,96,128	
+status/mail-replied-symbolic	xp:Fax Received Succesfully	16,22,24,32,36,48,64,96,128	
+actions/mail-reply-all	xp:OE Reply All	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+actions/mail-reply-all-rtl	xp:OE Reply All	16,22,24,32,36,48,64,96,128	
+actions/mail-reply-all-rtl-symbolic	xp:OE Reply All	16,22,24,32,36,48,64,96,128	
+actions/mail-reply-all-symbolic	xp:OE Reply All	16,22,24,32,36,48,64,96,128	
+actions/mail-reply-sender	xp:OE Reply	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+actions/mail-reply-sender-rtl	xp:OE Reply	16,22,24,32,36,48,64,96,128	
+actions/mail-reply-sender-symbolic	xp:OE Reply	16,22,24,32,36,48,64,96,128	
+actions/mail-send	xp:OE Send	16,22,24,32,36,48,64,96,128	auto
+actions/mail-send-receive	xp:OE Send and Receive	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+actions/mail-send-receive-symbolic	xp:OE Send and Receive	16,22,24,32,36,48,64,96,128	
+actions/mail-send-symbolic	xp:OE Send	16,22,24,32,36,48,64,96,128	
+places/mail-sent	xp:OE Send	16,22,24,32,36,48,64,96,128	
+status/mail-signed	xp:OE Encrypt	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+status/mail-signed-verified	xp:OE Sign	16,22,24,32,36,48,64,96,128	
+status/mail-unread	xp:OE Mark as unread	16,22,24,32,36,48,64,96,128	
+status/mail-unread-symbolic	xp:OE Mark as unread	16,22,24,32,36,48,64,96,128	
+apps/mark-location	xp:Location Services Active	16,22,24,32,36,48,64,96,128	
+actions/mark-location-symbolic	xp:Location Services Active	16,22,24,32,36,48,64,96,128	
+devices/media-cdr	xp:CD-R	16,22,24,32,36,48,64,96,128	
+devices/media-cdrw	xp:CD-RW	16,22,24,32,36,48,64,96,128	
+devices/media-dvd	xp:DVD	16,22,24,32,36,48,64,96,128	
+devices/media-dvdrw	xp:DVD-RW	16,22,24,32,36,48,64,96,128	
+actions/media-eject	xp:Media Eject - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-eject-symbolic	xp:Media Eject - Alt	16,22,24,32,36,48,64,96,128	
+devices/media-flash	xp:SD Card	16,22,24,32,36,48,64,96,128	auto
+devices/media-flash-cf	xp:SmartMedia Card	16,22,24,32,36,48,64,96,128	
+devices/media-flash-ms	xp:Memory Stick	16,22,24,32,36,48,64,96,128	
+devices/media-flash-symbolic	xp:Whistler - SD Card	16,22,24,32,36,48,64,96,128	
+devices/media-floppy	xp:Floppy Disk	16,22,24,32,36,48,64,96,128	auto
+devices/media-floppy-symbolic	xp:Legacy floppy	16,22,24,32,36,48,64,96,128	
+devices/media-memory-sd	xp:SD Card	16,22,24,32,36,48,64,96,128	
+devices/media-memory-sm	xp:Whistler - SD Card	16,22,24,32,36,48,64,96,128	
+devices/media-optical	xp:CD	16,22,24,32,36,48,64,96,128	auto
+devices/media-optical-bd-symbolic	xp:CD-ROM	16,22,24,32,36,48,64,96,128	
+devices/media-optical-cd-audio-symbolic	xp:Audio CD	16,22,24,32,36,48,64,96,128	
+devices/media-optical-cd-symbolic	xp:CD-R	16,22,24,32,36,48,64,96,128	
+devices/media-optical-dvd-symbolic	xp:DVD	16,22,24,32,36,48,64,96,128	
+devices/media-optical-symbolic	xp:CD	16,22,24,32,36,48,64,96,128	
+actions/media-playback-pause	xp:Media Playback Pause - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-playback-pause-symbolic	xp:Media Playback Pause - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-playback-start	xp:Media Playback Start - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-playback-start-rtl	xp:Media Playback Start Rtl - Action	16,22,24,32,36,48,64,96,128	
+actions/media-playback-start-symbolic	xp:Media Playback Start - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-playback-start-symbolic-rtl	xp:Media Playback Start Rtl - Action	16,22,24,32,36,48,64,96,128	
+actions/media-playback-stop	xp:Media Playback Stop - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-playback-stop-symbolic	xp:Media Playback Stop - Alt	16,22,24,32,36,48,64,96,128	
+status/media-playlist-consecutive-symbolic	xp:Media Playlist Consecutive - Alt	16,22,24,32,36,48,64,96,128	
+status/media-playlist-repeat	xp:Media Playlist Repeat - Alt	16,22,24,32,36,48,64,96,128	
+status/media-playlist-repeat-song-symbolic	xp:Media Playlist Repeat Song - Alt	16,22,24,32,36,48,64,96,128	
+status/media-playlist-repeat-symbolic	xp:Media Playlist Repeat - Alt	16,22,24,32,36,48,64,96,128	
+status/media-playlist-shuffle	xp:Media Playlist Shuffle - Alt	16,22,24,32,36,48,64,96,128	
+status/media-playlist-shuffle-symbolic	xp:Media Playlist Shuffle - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-record	xp:Media Record - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-record-symbolic	xp:Media Record - Alt	16,22,24,32,36,48,64,96,128	
+devices/media-removable	xp:Removable Media	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+devices/media-removable-symbolic	xp:Wireless Network Setup	16,22,24,32,36,48,64,96,128	
+actions/media-seek-backward	xp:Media Seek Backward - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-seek-backward-rtl	xp:Media Seek Forward - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-seek-backward-symbolic	xp:Media Seek Backward - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-seek-backward-symbolic-rtl	xp:Media Seek Forward - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-seek-forward	xp:Media Seek Forward - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-seek-forward-rtl	xp:Media Seek Backward - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-seek-forward-symbolic	xp:Media Seek Forward - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-seek-forward-symbolic-rtl	xp:Media Seek Backward - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-skip-backward	xp:Media Skip Backward - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-skip-backward-rtl	xp:Media Skip Forward - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-skip-backward-symbolic	xp:Media Skip Backward - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-skip-backward-symbolic-rtl	xp:Go Last - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-skip-forward	xp:Media Skip Forward - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-skip-forward-rtl	xp:Media Skip Backward - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-skip-forward-symbolic	xp:Media Skip Forward - Alt	16,22,24,32,36,48,64,96,128	
+actions/media-skip-forward-symbolic-rtl	xp:Go First - Alt	16,22,24,32,36,48,64,96,128	
+devices/media-tape	xp:Tape Drive	16,22,24,32,36,48,64,96,128	
+devices/media-tape-symbolic	xp:Cassette	16,22,24,32,36,48,64,96,128	
+mimetypes/media-video	xp:WMV	16,22,24,32,36,48,64,96,128	
+actions/media-view-subtitles-symbolic	xp:Speech	16,22,24,32,36,48,64,96,128	
+devices/media-zip-symbolic	xp:ZIP Drive	16,22,24,32,36,48,64,96,128	
+apps/menulibre	xp:Tweak UI	16,22,24,32,36,48,64,96,128	
+status/microphone-sensitivity-high	xp:Microphone Sensitivity High	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/microphone-sensitivity-high-symbolic	xp:Microphone Sensitivity High	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/microphone-sensitivity-low	xp:Microphone Sensitivity Low	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/microphone-sensitivity-low-symbolic	xp:Microphone Sensitivity Low	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/microphone-sensitivity-medium	xp:Microphone Sensitivity Medium	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/microphone-sensitivity-medium-symbolic	xp:Microphone Sensitivity Medium	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/microphone-sensitivity-muted	xp:Microphone Sensitivity Muted	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/microphone-sensitivity-muted-symbolic	xp:Microphone Sensitivity Muted	16,22,24,32,36,48,64,96,128	auto (barra de status)
+mimetypes/model	xp:Journal Template	16,22,24,32,36,48,64,96,128	
+devices/modem	xp:Phone and Modem Options	16,22,24,32,36,48,64,96,128	auto
+devices/modem-symbolic	xp:Modem	16,22,24,32,36,48,64,96,128	
+status/mouse	xp:Mouse	16,22,24,32,36,48,64,96,128	
+apps/mugshot	xp:Windows Dude 2 (whistler)	16,22,24,32,36,48,64,96,128	
+apps/multimedia-photo-viewer	xp:Jpeg	16,22,24,32,36,48,64,96,128	
+devices/multimedia-player	xp:MP3 player	16,22,24,32,36,48,64,96,128	auto
+devices/multimedia-player-apple-ipod-touch-symbolic	xp:MP3 player	16,22,24,32,36,48,64,96,128	
+devices/multimedia-player-symbolic	xp:MP3 player	16,22,24,32,36,48,64,96,128	
+apps/multimedia-volume-control	xp:Volume Level	16,22,24,32,36,48,64,96,128	auto
+apps/multimedia-volume-control-symbolic	xp:Volume	16,22,24,32,36,48,64,96,128	
+devices/network-cellular	xp:Mobile Device	16,22,24,32,36,48,64,96,128	
+status/network-cellular-2g-symbolic	xp:Network Cellular 2G Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-3g-symbolic	xp:Network Cellular 3G Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-4g-symbolic	xp:Network Cellular 4G Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-5g-symbolic	xp:Network Cellular 5G Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-acquiring-rtl-symbolic	xp:Network Cellular Acquiring Rtl Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-acquiring-symbolic	xp:Network Cellular Acquiring Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-acquiring-symbolic-rtl	xp:Antenna Signal	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-connected	xp:Network Cellular Connected Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-connected-symbolic	xp:Network Cellular Connected Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-disabled-rtl-symbolic	xp:Network Cellular Disabled Rtl Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-disabled-symbolic	xp:Network Cellular Disabled Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-disabled-symbolic-rtl	xp:Antenna	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-edge-symbolic	xp:Network Cellular Edge Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-gprs-symbolic	xp:Network Cellular Gprs Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-hardware-disabled-rtl-symbolic	xp:Network Cellular Hardware Disabled Rtl Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-hardware-disabled-symbolic	xp:Network Cellular Hardware Disabled Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-hardware-disabled-symbolic-rtl	xp:Antenna	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-hspa-symbolic	xp:Network Cellular Hspa Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-no-route-rtl-symbolic	xp:Network Wireless No Route Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-no-route-symbolic	xp:Network Wireless No Route Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-no-route-symbolic-rtl	xp:Antenna	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-offline-rtl-symbolic	xp:Network Cellular Offline Rtl Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-offline-symbolic	xp:Network Cellular Offline Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-offline-symbolic-rtl	xp:Antenna	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-signal-excellent-rtl-symbolic	xp:Network Cellular Signal Excellent Symbolic Rtl	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-signal-excellent-symbolic	xp:Network Cellular Signal Excellent Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-signal-excellent-symbolic-rtl	xp:Antenna Signal	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-signal-good-rtl-symbolic	xp:Network Cellular Signal Good Rtl Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-signal-good-symbolic	xp:Network Cellular Signal Good Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-signal-good-symbolic-rtl	xp:Antenna Signal	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-signal-none-rtl-symbolic	xp:Network Cellular Signal None Rtl Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-signal-none-symbolic	xp:Network Cellular Signal None Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-signal-none-symbolic-rtl	xp:Antenna Signal	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-signal-ok-rtl-symbolic	xp:Network Cellular Signal Ok Rtl Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-signal-ok-symbolic	xp:Network Cellular Signal Ok Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-signal-ok-symbolic-rtl	xp:Antenna Signal	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-signal-weak-rtl-symbolic	xp:Network Cellular Signal Weak Rtl Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-signal-weak-symbolic	xp:Network Cellular Signal Weak Symbolic	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-cellular-signal-weak-symbolic-rtl	xp:Antenna Signal	16,22,24,32,36,48,64,96,128	auto (barra de status)
+devices/network-cellular-symbolic	xp:Network Cellular Symbolic	16,22,24,32,36,48,64,96,128	
+status/network-error	xp:Network Connection Question Alt	16,22,24,32,36,48,64,96,128	
+status/network-error-symbolic	xp:Network Connection Delete Alt	16,22,24,32,36,48,64,96,128	auto (barra de status)
+devices/network-firewall	xp:Security Center	16,22,24,32,36,48,64,96,128	
+status/network-idle	xp:Network Connection Both Off Alt	16,22,24,32,36,48,64,96,128	
+status/network-idle-symbolic	xp:Network Connection Both Off Alt	16,22,24,32,36,48,64,96,128	nm-applet (bandeja)
+status/network-no-route-symbolic	xp:Network Connection Question Alt	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-offline	xp:Network Connection Delete Alt	16,22,24,32,36,48,64,96,128	
+status/network-offline-symbolic	xp:Network Connection Delete Alt	16,22,24,32,36,48,64,96,128	nm-applet (bandeja)
+status/network-receive	xp:Network Connection Right On Alt	16,22,24,32,36,48,64,96,128	
+status/network-receive-symbolic	xp:Network Connection Right On Alt	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-receive-symbolic-rtl	xp:Network Connection Right On	16,22,24,32,36,48,64,96,128	auto (barra de status)
+places/network-server	xp:Internet Information Services 6	16,22,24,32,36,48,64,96,128	
+places/network-server-symbolic	xp:Internet Information Services 6	16,22,24,32,36,48,64,96,128	
+status/network-transmit	xp:Network Connection Left On Alt	16,22,24,32,36,48,64,96,128	
+status/network-transmit-receive	xp:Network Connection Both On Alt	16,22,24,32,36,48,64,96,128	
+status/network-transmit-receive-symbolic	xp:Network Connection Both On Alt	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-transmit-symbolic	xp:Network Connection Left On Alt	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-transmit-symbolic-rtl	xp:Network Connection Left On	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-vpn	xp:VPN Connection	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-vpn-acquiring-symbolic	xp:VPN Connection	16,22,24,32,36,48,64,96,128	nm-applet (bandeja)
+status/network-vpn-disabled-symbolic	xp:Disable Network Connection	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-vpn-disconnected-symbolic	xp:Network Connection Both Off	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-vpn-no-route-symbolic	xp:Network Connection Question	16,22,24,32,36,48,64,96,128	auto (barra de status)
+status/network-vpn-symbolic	xp:VPN Connection	16,22,24,32,36,48,64,96,128	nm-applet (bandeja)
+devices/network-wired	xp:Network Connection - Alt	16,22,24,32,36,48,64,96,128	auto
+status/network-wired-acquiring-symbolic	xp:Network Connection Question Alt	16,22,24,32,36,48,64,96,128	nm-applet (bandeja)
+apps/network-wired-disconnected	xp:Network Connection Delete Alt	16,22,24,32,36,48,64,96,128	
+status/network-wired-disconnected-symbolic	xp:Network Connection Delete Alt	16,22,24,32,36,48,64,96,128	
+status/network-wired-no-route-symbolic	xp:Network Connection Question Alt	16,22,24,32,36,48,64,96,128	
+devices/network-wired-symbolic	xp:Network Connection Both On Alt	16,22,24,32,36,48,64,96,128	
+devices/network-wireless	xp:Network Wireless Signal Excellent Symbolic	16,22,24,32,36,48,64,96,128	auto
+status/network-wireless-acquiring-symbolic	xp:Network Wireless Acquiring Symbolic	16,22,24,32,36,48,64,96,128	
+status/network-wireless-connected-symbolic	xp:Network Wireless Connected Symbolic	16,22,24,32,36,48,64,96,128	
+status/network-wireless-disabled-symbolic	xp:Network Wireless Disabled Symbolic	16,22,24,32,36,48,64,96,128	
+apps/network-wireless-encrypted	xp:Network Wireless Encrypted Symbolic	16,22,24,32,36,48,64,96,128	
+status/network-wireless-encrypted-symbolic	xp:Network Wireless Encrypted Symbolic	16,22,24,32,36,48,64,96,128	
+status/network-wireless-hardware-disabled-symbolic	xp:Network Wireless Hardware Disabled Symbolic	16,22,24,32,36,48,64,96,128	
+devices/network-wireless-hotspot	xp:Wireless Network Connection	16,22,24,32,36,48,64,96,128	
+status/network-wireless-hotspot-symbolic	xp:Network Wireless Hotspot Symbolic	16,22,24,32,36,48,64,96,128	
+status/network-wireless-no-route-symbolic	xp:Network Wireless No Route Symbolic	16,22,24,32,36,48,64,96,128	
+status/network-wireless-offline-symbolic	xp:Network Wireless Offline Symbolic	16,22,24,32,36,48,64,96,128	
+status/network-wireless-signal-excellent	xp:Network Wireless Signal Excellent Symbolic	16,22,24,32,36,48,64,96,128	
+status/network-wireless-signal-excellent-symbolic	xp:Network Wireless Signal Excellent Symbolic	16,22,24,32,36,48,64,96,128	
+status/network-wireless-signal-good	xp:Network Wireless Signal Good Symbolic	16,22,24,32,36,48,64,96,128	
+status/network-wireless-signal-good-symbolic	xp:Network Wireless Signal Good Symbolic	16,22,24,32,36,48,64,96,128	
+status/network-wireless-signal-none-symbolic	xp:Network Wireless Signal None Symbolic	16,22,24,32,36,48,64,96,128	
+status/network-wireless-signal-ok	xp:Network Wireless Signal Ok Symbolic	16,22,24,32,36,48,64,96,128	
+status/network-wireless-signal-ok-symbolic	xp:Network Wireless Signal Ok Symbolic	16,22,24,32,36,48,64,96,128	
+status/network-wireless-signal-weak	xp:Network Wireless Signal Weak Symbolic	16,22,24,32,36,48,64,96,128	
+status/network-wireless-signal-weak-symbolic	xp:Network Wireless Signal Weak Symbolic	16,22,24,32,36,48,64,96,128	
+devices/network-wireless-symbolic	xp:Network Wireless Signal Excellent Symbolic	16,22,24,32,36,48,64,96,128	
+places/network-workgroup	xp:My Network Places	16,22,24,32,36,48,64,96,128	auto
+places/network-workgroup-symbolic	xp:Workgroup	16,22,24,32,36,48,64,96,128	
+apps/nm-adhoc	xp:Wireless Network Connection (cópia 1)	16,22,24,32,36,48,64,96,128	
+apps/nm-device-wired	xp:Network Connection Both On Alt	16,22,24,32,36,48,64,96,128	
+apps/nm-device-wired-secure	xp:Network Connection Secure On Alt	16,22,24,32,36,48,64,96,128	
+apps/nm-device-wireless	xp:PCI card	16,22,24,32,36,48,64,96,128	
+apps/nm-device-wwan	xp:Wireless Network Connection	16,22,24,32,36,48,64,96,128	
+apps/nm-insecure-warn	xp:Nm Insecure Warn	16,22,24,32,36,48,64,96,128	
+apps/nm-mb-roam	xp:Nm Mb Roam	16,22,24,32,36,48,64,96,128	
+apps/nm-no-connection	xp:Nm No Connection	16,22,24,32,36,48,64,96,128	
+apps/nm-secure-lock	xp:Nm Secure Lock	16,22,24,32,36,48,64,96,128	
+apps/nm-signal-00	xp:Nm Signal 00	16,22,24,32,36,48,64,96,128	
+apps/nm-signal-00-secure	xp:Nm Signal 00 Secure	16,22,24,32,36,48,64,96,128	
+apps/nm-signal-100	xp:Nm Signal 100	16,22,24,32,36,48,64,96,128	
+apps/nm-signal-100-secure	xp:Nm Signal 100 Secure	16,22,24,32,36,48,64,96,128	
+apps/nm-signal-25	xp:Nm Signal 25	16,22,24,32,36,48,64,96,128	
+apps/nm-signal-25-secure	xp:Nm Signal 25 Secure	16,22,24,32,36,48,64,96,128	
+apps/nm-signal-50	xp:Nm Signal 50	16,22,24,32,36,48,64,96,128	
+apps/nm-signal-50-secure	xp:Nm Signal 50 Secure	16,22,24,32,36,48,64,96,128	
+apps/nm-signal-75	xp:Nm Signal 75	16,22,24,32,36,48,64,96,128	
+apps/nm-signal-75-secure	xp:Nm Signal 75 Secure	16,22,24,32,36,48,64,96,128	
+apps/nm-stage01-connecting01	xp:Nm Stage01 Connecting01	16,22,24,32,36,48,64,96,128	
+apps/nm-stage01-connecting02	xp:Nm Stage01 Connecting02	16,22,24,32,36,48,64,96,128	
+apps/nm-stage01-connecting03	xp:Nm Stage01 Connecting03	16,22,24,32,36,48,64,96,128	
+apps/nm-stage01-connecting04	xp:Nm Stage01 Connecting04	16,22,24,32,36,48,64,96,128	
+apps/nm-stage01-connecting05	xp:Nm Stage01 Connecting05	16,22,24,32,36,48,64,96,128	
+apps/nm-stage01-connecting06	xp:Nm Stage01 Connecting06	16,22,24,32,36,48,64,96,128	
+apps/nm-stage01-connecting07	xp:Nm Stage01 Connecting07	16,22,24,32,36,48,64,96,128	
+apps/nm-stage01-connecting08	xp:Nm Stage01 Connecting08	16,22,24,32,36,48,64,96,128	
+apps/nm-stage01-connecting09	xp:Nm Stage01 Connecting09	16,22,24,32,36,48,64,96,128	
+apps/nm-stage01-connecting10	xp:Nm Stage01 Connecting10	16,22,24,32,36,48,64,96,128	
+apps/nm-stage01-connecting11	xp:Nm Stage01 Connecting11	16,22,24,32,36,48,64,96,128	
+apps/nm-stage02-connecting01	xp:Nm Stage02 Connecting01	16,22,24,32,36,48,64,96,128	
+apps/nm-stage02-connecting02	xp:Nm Stage02 Connecting02	16,22,24,32,36,48,64,96,128	
+apps/nm-stage02-connecting03	xp:Nm Stage02 Connecting03	16,22,24,32,36,48,64,96,128	
+apps/nm-stage02-connecting04	xp:Nm Stage02 Connecting04	16,22,24,32,36,48,64,96,128	
+apps/nm-stage02-connecting05	xp:Nm Stage02 Connecting05	16,22,24,32,36,48,64,96,128	
+apps/nm-stage02-connecting06	xp:Nm Stage02 Connecting06	16,22,24,32,36,48,64,96,128	
+apps/nm-stage02-connecting07	xp:Nm Stage02 Connecting07	16,22,24,32,36,48,64,96,128	
+apps/nm-stage02-connecting08	xp:Nm Stage02 Connecting08	16,22,24,32,36,48,64,96,128	
+apps/nm-stage02-connecting09	xp:Nm Stage02 Connecting09	16,22,24,32,36,48,64,96,128	
+apps/nm-stage02-connecting10	xp:Nm Stage02 Connecting10	16,22,24,32,36,48,64,96,128	
+apps/nm-stage02-connecting11	xp:Nm Stage02 Connecting11	16,22,24,32,36,48,64,96,128	
+apps/nm-stage03-connecting01	xp:Nm Stage03 Connecting01	16,22,24,32,36,48,64,96,128	
+apps/nm-stage03-connecting02	xp:Nm Stage03 Connecting02	16,22,24,32,36,48,64,96,128	
+apps/nm-stage03-connecting03	xp:Nm Stage03 Connecting03	16,22,24,32,36,48,64,96,128	
+apps/nm-stage03-connecting04	xp:Nm Stage03 Connecting04	16,22,24,32,36,48,64,96,128	
+apps/nm-stage03-connecting05	xp:Nm Stage03 Connecting05	16,22,24,32,36,48,64,96,128	
+apps/nm-stage03-connecting06	xp:Nm Stage03 Connecting06	16,22,24,32,36,48,64,96,128	
+apps/nm-stage03-connecting07	xp:Nm Stage03 Connecting07	16,22,24,32,36,48,64,96,128	
+apps/nm-stage03-connecting08	xp:Nm Stage03 Connecting09	16,22,24,32,36,48,64,96,128	
+apps/nm-stage03-connecting09	xp:Nm Stage03 Connecting09	16,22,24,32,36,48,64,96,128	
+apps/nm-stage03-connecting10	xp:Nm Stage03 Connecting10	16,22,24,32,36,48,64,96,128	
+apps/nm-stage03-connecting11	xp:Nm Stage03 Connecting11	16,22,24,32,36,48,64,96,128	
+apps/nm-tech-3g	xp:Nm Tech 3G	16,22,24,32,36,48,64,96,128	
+apps/nm-tech-cdma-1x	xp:Nm Tech Cdma 1X	16,22,24,32,36,48,64,96,128	
+apps/nm-tech-edge	xp:Nm Tech Edge	16,22,24,32,36,48,64,96,128	
+apps/nm-tech-evdo	xp:Nm Tech Evdo	16,22,24,32,36,48,64,96,128	
+apps/nm-tech-gprs	xp:Nm Tech Gprs	16,22,24,32,36,48,64,96,128	
+apps/nm-tech-hspa	xp:Nm Tech Hspa	16,22,24,32,36,48,64,96,128	
+apps/nm-tech-lte	xp:Nm Tech Lte	16,22,24,32,36,48,64,96,128	
+apps/nm-tech-umts	xp:Nm Tech Umts	16,22,24,32,36,48,64,96,128	
+apps/nm-vpn-active-lock	xp:Nm Vpn Active Lock	16,22,24,32,36,48,64,96,128	
+apps/nm-vpn-connecting01	xp:Nm Vpn Connecting01	16,22,24,32,36,48,64,96,128	
+apps/nm-vpn-connecting02	xp:Nm Vpn Connecting02	16,22,24,32,36,48,64,96,128	
+apps/nm-vpn-connecting03	xp:Nm Vpn Connecting03	16,22,24,32,36,48,64,96,128	
+apps/nm-vpn-connecting04	xp:Nm Vpn Connecting04	16,22,24,32,36,48,64,96,128	
+apps/nm-vpn-connecting05	xp:Nm Vpn Connecting05	16,22,24,32,36,48,64,96,128	
+apps/nm-vpn-connecting06	xp:Nm Vpn Connecting06	16,22,24,32,36,48,64,96,128	
+apps/nm-vpn-connecting07	xp:Nm Vpn Connecting07	16,22,24,32,36,48,64,96,128	
+apps/nm-vpn-connecting08	xp:Nm Vpn Connecting08	16,22,24,32,36,48,64,96,128	
+apps/nm-vpn-connecting09	xp:Nm Vpn Connecting09	16,22,24,32,36,48,64,96,128	
+apps/nm-vpn-connecting10	xp:Nm Vpn Connecting10	16,22,24,32,36,48,64,96,128	
+apps/nm-vpn-connecting11	xp:Nm Vpn Connecting11	16,22,24,32,36,48,64,96,128	
+apps/nm-vpn-connecting12	xp:Nm Vpn Connecting12	16,22,24,32,36,48,64,96,128	
+apps/nm-vpn-connecting13	xp:Nm Vpn Connecting13	16,22,24,32,36,48,64,96,128	
+apps/nm-vpn-connecting14	xp:Nm Vpn Connecting14	16,22,24,32,36,48,64,96,128	
+apps/nm-vpn-standalone-lock	xp:Lock	16,22,24,32,36,48,64,96,128	
+apps/nm-wwan-tower	xp:Antenna	16,22,24,32,36,48,64,96,128	
+actions/node-insert	xp:New Network Connection	16,22,24,32,36,48,64,96,128	
+apps/non-starred	xp:Non Starred	16,22,24,32,36,48,64,96,128	
+status/non-starred-grey	xp:Non Starred	16,22,24,32,36,48,64,96,128	
+status/non-starred-symbolic	xp:Non Starred	16,22,24,32,36,48,64,96,128	
+status/notification-audio-volume-high	xp:Audio Volume High	16,22,24,32,36,48,64,96,128	notificação de volume (xfce4-volumed)
+status/notification-audio-volume-low	xp:Audio Volume Low	16,22,24,32,36,48,64,96,128	notificação de volume (xfce4-volumed)
+status/notification-audio-volume-medium	xp:Audio Volume Medium	16,22,24,32,36,48,64,96,128	notificação de volume (xfce4-volumed)
+status/notification-audio-volume-muted	xp:Audio Volume Muted	16,22,24,32,36,48,64,96,128	notificação de volume (xfce4-volumed)
+status/notification-audio-volume-off	xp:Audio Volume Muted	16,22,24,32,36,48,64,96,128	notificação de volume (xfce4-volumed)
+status/notification-battery-low	xp:Battery Low	16,22,24,32,36,48,64,96,128	
+status/notification-device-eject	xp:Media Eject - Alt	16,22,24,32,36,48,64,96,128	
+status/notification-display-brightness	xp:Display Brightness	16,22,24,32,36,48,64,96,128	
+status/notification-keyboard-brightness	xp:Keyboard Brightness	16,22,24,32,36,48,64,96,128	
+status/notification-microphone-sensitivity-high	xp:Audio Input Microphone	16,22,24,32,36,48,64,96,128	notificação de microfone
+status/notification-microphone-sensitivity-low	xp:Audio Input Microphone	16,22,24,32,36,48,64,96,128	notificação de microfone
+status/notification-microphone-sensitivity-medium	xp:Audio Input Microphone	16,22,24,32,36,48,64,96,128	notificação de microfone
+status/notification-microphone-sensitivity-muted	xp:Mute	16,22,24,32,36,48,64,96,128	notificação de microfone
+status/notification-power	xp:Battery Low	16,22,24,32,36,48,64,96,128	
+status/notifications-disabled-symbolic	xp:Pop up blocked	16,22,24,32,36,48,64,96,128	auto (barra de status)
+actions/object-flip-horizontal	xp:Object Flip Horizontal	16,22,24,32,36,48,64,96,128	
+actions/object-flip-horizontal-symbolic	xp:Object Flip Horizontal	16,22,24,32,36,48,64,96,128	
+actions/object-flip-vertical	xp:Object Flip Vertical	16,22,24,32,36,48,64,96,128	
+actions/object-flip-vertical-symbolic	xp:Object Flip Vertical	16,22,24,32,36,48,64,96,128	
+status/object-hidden	xp:User Not Tracked	16,22,24,32,36,48,64,96,128	
+actions/object-locked	xp:Lock	16,22,24,32,36,48,64,96,128	
+actions/object-rotate-left	xp:Object Rotate Left	16,22,24,32,36,48,64,96,128	
+actions/object-rotate-left-symbolic	xp:Object Rotate Left	16,22,24,32,36,48,64,96,128	
+actions/object-rotate-right	xp:Object Rotate Right	16,22,24,32,36,48,64,96,128	
+actions/object-rotate-right-symbolic	xp:Object Rotate Right	16,22,24,32,36,48,64,96,128	
+actions/object-select-symbolic	xp:Process Completed	16,22,24,32,36,48,64,96,128	
+actions/object-unlocked	xp:Unlock	16,22,24,32,36,48,64,96,128	
+status/object-visible	xp:View Reveal	16,22,24,32,36,48,64,96,128	
+status/off	xp:Critical	16,22,24,32,36,48,64,96,128	
+status/off-outline	xp:Critical	16,22,24,32,36,48,64,96,128	
+mimetypes/office-contact	xp:Windows Dude	16,22,24,32,36,48,64,96,128	
+status/on	xp:Emblem Default	16,22,24,32,36,48,64,96,128	
+status/on-outline	xp:Emblem Default	16,22,24,32,36,48,64,96,128	
+apps/onboard	xp:Input Panel	16,22,24,32,36,48,64,96,128	
+actions/open-menu	xp:Default Programs (SP1 Version)	16,22,24,32,36,48,64,96,128	
+actions/open-menu-symbolic	xp:Default Programs (SP1 Version)	16,22,24,32,36,48,64,96,128	
+apps/org.freedesktop.Passim	xp:Network Drive	16,22,24,32,36,48,64,96,128	
+apps/org.freedesktop.fwupd	xp:Add New Hardware	16,22,24,32,36,48,64,96,128	
+apps/org.gnome.font-viewer	xp:Fonts	16,22,24,32,36,48,64,96,128	
+apps/org.gnome.gthumb	xp:Windows Picture and Fax Viewer	16,22,24,32,36,48,64,96,128	
+apps/org.gnome.seahorse.Application	xp:Local Security Policy	16,22,24,32,36,48,64,96,128	auto
+apps/org.pulseaudio.pavucontrol	xp:Audio Devices	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.Dictionary	xp:Book	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.PanelProfiles	xp:OE Preview Pane	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.ScreenSaver	xp:Display Properties	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.about	xp:System Information	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.appfinder	xp:Run	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.catfish	xp:Search	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.filemanager	xp:Explorer	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.garcon	xp:Fax Cover Page	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.genmon	xp:Task Manager	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.mailreader	xp:Outlook Express	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.mousepad	xp:Notepad	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.notes	xp:StickyNotes	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.notification	xp:Information	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.orage	xp:Date and Time	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.panel	xp:Taskbar and Start Menu	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.panel.actions	xp:Power	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.applicationsmenu	xp:Windows XP	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.clock	xp:Date and Time	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.cpugraph	xp:Chip	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.directorymenu	xp:Folder Closed	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.launcher	xp:Start Menu Programs Alt	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.netload	xp:RTC Share	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.showdesktop	xp:Desktop	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.systemload	xp:Task Manager	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.systray	xp:Information	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.tasklist	xp:Checklist	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.whiskermenu	xp:Windows XP	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.windowmenu	xp:Start Menu Programs	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.panel.xkb	xp:Keyboard	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.parole	xp:Windows Media Player 9	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.powermanager	xp:Power Options	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.ristretto	xp:Windows Picture and Fax Viewer	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.screenshooter	xp:Digital Camera	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.session	xp:Add or Remove Windows Components	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.settings.accessibility	xp:Accessibility	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.settings.appearance	xp:Display Properties	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.settings.color	xp:Appearance	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.settings.default-applications	xp:Default Programs	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.settings.display	xp:Black Monitor	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.settings.editor	xp:Registry Editor	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.settings.keyboard	xp:Keyboard	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.settings.manager	xp:Control Panel	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.settings.mouse	xp:Mouse	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.taskmanager	xp:Task Manager	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.terminal	xp:Command Prompt	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.terminal-settings	xp:ODBC Data Sources	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.terminalemulator	xp:Command Prompt	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.thunar	xp:Explorer	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.tumbler	xp:Jpeg	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.volman	xp:Local Disk	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.webbrowser	xp:Internet Explorer 6	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.workspaces	xp:Workgroup	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.xfdesktop	xp:Desktop	16,22,24,32,36,48,64,96,128	
+apps/org.xfce.xfwm4	xp:Folders open in new window	16,22,24,32,36,48,64,96,128	auto
+apps/org.xfce.xfwm4-tweaks	xp:Tweak UI	16,22,24,32,36,48,64,96,128	auto
+status/orientation-landscape-inverse-symbolic	xp:Orientation Landscape Inverse	16,22,24,32,36,48,64,96,128	
+status/orientation-landscape-symbolic	xp:Orientation Landscape	16,22,24,32,36,48,64,96,128	
+status/orientation-portrait-left-symbolic	xp:Orientation Portrait Left	16,22,24,32,36,48,64,96,128	
+status/orientation-portrait-right-symbolic	xp:Orientation Portrait Right	16,22,24,32,36,48,64,96,128	
+mimetypes/package	xp:Packager	16,22,24,32,36,48,64,96,128	
+mimetypes/package-x-generic	xp:Box	16,22,24,32,36,48,64,96,128	auto
+mimetypes/package-x-generic-symbolic	xp:Packager	16,22,24,32,36,48,64,96,128	
+actions/pan-down-symbolic	xp:Go Down - Alt	16,22,24,32,36,48,64,96,128	
+actions/pan-end-symbolic	xp:Go Last - Alt	16,22,24,32,36,48,64,96,128	
+actions/pan-start-symbolic	xp:Go First - Alt	16,22,24,32,36,48,64,96,128	
+actions/pan-up-symbolic	xp:Go Up - Alt	16,22,24,32,36,48,64,96,128	
+actions/pane-hide-symbolic-rtl	xp:Orientation Portrait Left	16,22,24,32,36,48,64,96,128	
+actions/pane-show-symbolic-rtl	xp:Orientation Portrait Right	16,22,24,32,36,48,64,96,128	
+apps/parole-extension	xp:WMP Plugin	16,22,24,32,36,48,64,96,128	
+devices/pda	xp:Mobile Device	16,22,24,32,36,48,64,96,128	auto
+devices/pda-symbolic	xp:Tablet and Pen settings	16,22,24,32,36,48,64,96,128	
+devices/phone	xp:Phone	16,22,24,32,36,48,64,96,128	auto
+devices/phone-apple-iphone-symbolic	xp:Mobile Device	16,22,24,32,36,48,64,96,128	
+devices/phone-old-symbolic	xp:Phone	16,22,24,32,36,48,64,96,128	
+devices/phone-symbolic	xp:Mobile Device	16,22,24,32,36,48,64,96,128	
+places/playlist	xp:WMP Playlist	16,22,24,32,36,48,64,96,128	
+places/playlist-automatic	xp:WMP Auto Playlist	16,22,24,32,36,48,64,96,128	
+places/playlist-queue	xp:Checklist	16,22,24,32,36,48,64,96,128	
+places/playlist-similar	xp:WMP Import Playlist	16,22,24,32,36,48,64,96,128	
+status/power-profile-balanced-symbolic	xp:Power Profile Balanced	16,22,24,32,36,48,64,96,128	
+status/power-profile-performance-symbolic	xp:Power Profile Performance	16,22,24,32,36,48,64,96,128	
+status/power-profile-power-saver-symbolic	xp:Power Profile Power Saver	16,22,24,32,36,48,64,96,128	
+categories/preferences-bluetooth	xp:Bluetooth Devices	16,22,24,32,36,48,64,96,128	
+apps/preferences-color-symbolic	xp:Color Profile	16,22,24,32,36,48,64,96,128	
+categories/preferences-desktop	xp:Additional Settings	16,22,24,32,36,48,64,96,128	auto
+apps/preferences-desktop-accessibility	xp:Accessibility	16,22,24,32,36,48,64,96,128	auto
+apps/preferences-desktop-accessibility-symbolic	xp:Accessibility	16,22,24,32,36,48,64,96,128	
+apps/preferences-desktop-appearance-symbolic	xp:Appearance	16,22,24,32,36,48,64,96,128	
+categories/preferences-desktop-applications	xp:Default Programs	16,22,24,32,36,48,64,96,128	
+apps/preferences-desktop-apps-symbolic	xp:Start Menu Programs	16,22,24,32,36,48,64,96,128	
+apps/preferences-desktop-display	xp:Display Adaptor	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+apps/preferences-desktop-display-symbolic	xp:Display Properties	16,22,24,32,36,48,64,96,128	
+apps/preferences-desktop-font	xp:IE Size	16,22,24,32,36,48,64,96,128	auto
+apps/preferences-desktop-font-symbolic	xp:Fonts	16,22,24,32,36,48,64,96,128	
+apps/preferences-desktop-keyboard	xp:Keyboard	16,22,24,32,36,48,64,96,128	auto
+categories/preferences-desktop-keyboard-rtl	xp:Keyboard	16,22,24,32,36,48,64,96,128	
+apps/preferences-desktop-keyboard-shortcuts	xp:On-Screen Keyboard	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+apps/preferences-desktop-keyboard-shortcuts-symbolic	xp:Input Panel	16,22,24,32,36,48,64,96,128	
+apps/preferences-desktop-keyboard-symbolic	xp:Keyboard	16,22,24,32,36,48,64,96,128	
+categories/preferences-desktop-keyboard-symbolic-rtl	xp:Input Panel	16,22,24,32,36,48,64,96,128	
+apps/preferences-desktop-locale	xp:Change Language	16,22,24,32,36,48,64,96,128	auto
+apps/preferences-desktop-locale-symbolic	xp:Setup Language	16,22,24,32,36,48,64,96,128	
+apps/preferences-desktop-multimedia	xp:Volume	16,22,24,32,36,48,64,96,128	auto
+apps/preferences-desktop-multitasking-symbolic	xp:Task Manager	16,22,24,32,36,48,64,96,128	
+categories/preferences-desktop-online-accounts	xp:Internet Shortcut	16,22,24,32,36,48,64,96,128	
+categories/preferences-desktop-peripherals	xp:Printers and Hardware	16,22,24,32,36,48,64,96,128	auto
+categories/preferences-desktop-personal	xp:User Accounts	16,22,24,32,36,48,64,96,128	auto
+apps/preferences-desktop-remote-desktop	xp:Remote Desktop	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+apps/preferences-desktop-remote-desktop-symbolic	xp:Remote Desktop	16,22,24,32,36,48,64,96,128	
+apps/preferences-desktop-screensaver	xp:Display Properties	16,22,24,32,36,48,64,96,128	auto
+apps/preferences-desktop-screensaver-symbolic	xp:SmartScreen	16,22,24,32,36,48,64,96,128	
+categories/preferences-desktop-sound	xp:Volume	16,22,24,32,36,48,64,96,128	
+apps/preferences-desktop-theme	xp:Appearance	16,22,24,32,36,48,64,96,128	auto
+apps/preferences-desktop-wallpaper	xp:Monitor	16,22,24,32,36,48,64,96,128	auto
+apps/preferences-desktop-wallpaper-symbolic	xp:Monitor	16,22,24,32,36,48,64,96,128	
+categories/preferences-desktop-workspaces	xp:Desktop	16,22,24,32,36,48,64,96,128	
+categories/preferences-other	xp:Control Panel	16,22,24,32,36,48,64,96,128	auto
+categories/preferences-other-symbolic	xp:Control Panel	16,22,24,32,36,48,64,96,128	
+categories/preferences-system	xp:Additional Settings	16,22,24,32,36,48,64,96,128	auto
+apps/preferences-system-details-symbolic	xp:System Information	16,22,24,32,36,48,64,96,128	
+apps/preferences-system-devices-symbolic	xp:Windows Media Connect	16,22,24,32,36,48,64,96,128	
+categories/preferences-system-network	xp:Network and Internet	16,22,24,32,36,48,64,96,128	auto
+apps/preferences-system-network-proxy-symbolic	xp:Proxy Server	16,22,24,32,36,48,64,96,128	
+apps/preferences-system-network-symbolic	xp:Network Connection	16,22,24,32,36,48,64,96,128	
+apps/preferences-system-notifications	xp:Whistler - Help and Support	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+apps/preferences-system-notifications-symbolic	xp:Information	16,22,24,32,36,48,64,96,128	
+apps/preferences-system-parental-controls-symbolic	xp:Parental Controls	16,22,24,32,36,48,64,96,128	
+categories/preferences-system-power	xp:Power Options	16,22,24,32,36,48,64,96,128	
+apps/preferences-system-privacy	xp:Security Center	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+categories/preferences-system-privacy-housekeeping	xp:Disk Cleanup	16,22,24,32,36,48,64,96,128	
+categories/preferences-system-privacy-location	xp:XPS Viewer	16,22,24,32,36,48,64,96,128	
+apps/preferences-system-privacy-symbolic	xp:Security Center	16,22,24,32,36,48,64,96,128	
+apps/preferences-system-search	xp:Search	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+apps/preferences-system-search-symbolic	xp:Search	16,22,24,32,36,48,64,96,128	
+apps/preferences-system-sharing	xp:Add Network Place	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+apps/preferences-system-sharing-symbolic	xp:RTC Share	16,22,24,32,36,48,64,96,128	
+categories/preferences-system-symbolic	xp:Hammer and Wrench	16,22,24,32,36,48,64,96,128	
+categories/preferences-system-time	xp:Date and Time	16,22,24,32,36,48,64,96,128	
+apps/preferences-system-time-symbolic	xp:Clock	16,22,24,32,36,48,64,96,128	
+apps/preferences-system-windows	xp:Application Window	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+devices/printer	xp:Printer	16,22,24,32,36,48,64,96,128	auto
+status/printer-error	xp:Printer Missing	16,22,24,32,36,48,64,96,128	auto
+status/printer-error-symbolic	xp:Printer Missing	16,22,24,32,36,48,64,96,128	
+devices/printer-network	xp:Network printer	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+devices/printer-network-symbolic	xp:Network printer	16,22,24,32,36,48,64,96,128	
+status/printer-printing	xp:Web services printer	16,22,24,32,36,48,64,96,128	auto
+status/printer-printing-symbolic	xp:Printer	16,22,24,32,36,48,64,96,128	
+devices/printer-symbolic	xp:Printer	16,22,24,32,36,48,64,96,128	
+status/printer-warning-symbolic	xp:Printer Missing	16,22,24,32,36,48,64,96,128	
+status/process-completed	xp:Process Completed	16,22,24,32,36,48,64,96,128	
+status/process-error	xp:Process Error	16,22,24,32,36,48,64,96,128	
+status/process-paused	xp:Process Paused	16,22,24,32,36,48,64,96,128	
+actions/process-stop	xp:Process Stop	16,22,24,32,36,48,64,96,128	
+actions/process-stop-symbolic	xp:Process Stop	16,22,24,32,36,48,64,96,128	
+actions/radio-checked-symbolic	xp:Radio Checked	16,22,24,32,36,48,64,96,128	
+actions/radio-mixed-symbolic	xp:Radio Mixed	16,22,24,32,36,48,64,96,128	
+actions/radio-symbolic	xp:Radio	16,22,24,32,36,48,64,96,128	
+status/rotation-allowed-symbolic	xp:Rotation Allowed	16,22,24,32,36,48,64,96,128	
+status/rotation-locked-symbolic	xp:Rotation Locked	16,22,24,32,36,48,64,96,128	
+devices/scanner	xp:Scanner	16,22,24,32,36,48,64,96,128	auto
+devices/scanner-symbolic	xp:Scanner	16,22,24,32,36,48,64,96,128	
+status/screen-shared-symbolic	xp:Screen Shared	16,22,24,32,36,48,64,96,128	
+status/security-high	xp:Security - Ok	16,22,24,32,36,48,64,96,128	auto
+status/security-high-symbolic	xp:Security - Ok	16,22,24,32,36,48,64,96,128	
+status/security-low	xp:Security Error	16,22,24,32,36,48,64,96,128	auto
+status/security-low-symbolic	xp:Security Error	16,22,24,32,36,48,64,96,128	
+status/security-medium	xp:Security Options	16,22,24,32,36,48,64,96,128	auto
+status/security-medium-rtl-symbolic	xp:Security Alert	16,22,24,32,36,48,64,96,128	
+status/security-medium-symbolic	xp:Security Question	16,22,24,32,36,48,64,96,128	
+actions/selection-end-symbolic	xp:Selection End	16,22,24,32,36,48,64,96,128	
+actions/selection-mode-symbolic	xp:Whistler - Rename	16,22,24,32,36,48,64,96,128	
+actions/selection-start-symbolic	xp:Selection Start	16,22,24,32,36,48,64,96,128	
+apps/semi-starred	xp:Semi Starred	16,22,24,32,36,48,64,96,128	
+apps/semi-starred-rtl	xp:Semi Starred	16,22,24,32,36,48,64,96,128	
+status/semi-starred-rtl-symbolic	xp:Semi Starred	16,22,24,32,36,48,64,96,128	
+status/semi-starred-symbolic	xp:Semi Starred	16,22,24,32,36,48,64,96,128	
+actions/send-to	xp:XPS Viewer	16,22,24,32,36,48,64,96,128	
+actions/send-to-symbolic	xp:XPS Viewer	16,22,24,32,36,48,64,96,128	
+actions/sidebar-show-right-symbolic	xp:Folder View - Common Tasks	16,22,24,32,36,48,64,96,128	
+actions/sidebar-show-symbolic	xp:Folder View - Common Tasks	16,22,24,32,36,48,64,96,128	
+status/software-update-available	xp:Windows Update	16,22,24,32,36,48,64,96,128	auto
+status/software-update-available-symbolic	xp:Windows Update	16,22,24,32,36,48,64,96,128	
+status/software-update-urgent	xp:Security Alert	16,22,24,32,36,48,64,96,128	auto
+status/software-update-urgent-symbolic	xp:Windows Update	16,22,24,32,36,48,64,96,128	
+actions/star-new-symbolic	xp:Bookmark New - Action	16,22,24,32,36,48,64,96,128	
+status/starred	xp:Favorites	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+status/starred-symbolic	xp:Favorites	16,22,24,32,36,48,64,96,128	
+places/start-here	xp:Windows XP	16,22,24,32,36,48,64,96,128	bandeira do botão Iniciar do XP
+places/start-here-symbolic	xp:Windows XP	16,22,24,32,36,48,64,96,128	
+actions/stock_folder-copy	xp:Copying Conflict	16,22,24,32,36,48,64,96,128	
+actions/stock_folder-move	xp:Move this folder	16,22,24,32,36,48,64,96,128	
+apps/stock_xfburn	xp:Stock Xfburn	16,22,24,32,36,48,64,96,128	auto
+actions/stock_xfburn-audio-cd	xp:Stock Xfburn Audio Cd	16,22,24,32,36,48,64,96,128	
+actions/stock_xfburn-audio-copy	xp:Stock Xfburn Audio Copy	16,22,24,32,36,48,64,96,128	
+actions/stock_xfburn-blank-cdrw	xp:Stock Xfburn Blank Cdrw	16,22,24,32,36,48,64,96,128	
+actions/stock_xfburn-burn-cd	xp:Stock Xfburn Burn Cd	16,22,24,32,36,48,64,96,128	
+actions/stock_xfburn-data-copy	xp:Stock Xfburn Data Copy	16,22,24,32,36,48,64,96,128	
+actions/stock_xfburn-format-dvdrw	xp:Stock Xfburn Format Dvdrw	16,22,24,32,36,48,64,96,128	
+actions/stock_xfburn-import-session	xp:Stock Xfburn Import Session	16,22,24,32,36,48,64,96,128	
+actions/stock_xfburn-new-data-composition	xp:Stock Xfburn New Data Composition	16,22,24,32,36,48,64,96,128	
+status/sync-error	xp:WMP Error	16,22,24,32,36,48,64,96,128	
+status/sync-synchronizing	xp:Recycle Symbol	16,22,24,32,36,48,64,96,128	
+apps/system-file-manager	xp:Explorer	16,22,24,32,36,48,64,96,128	
+apps/system-file-manager-symbolic	xp:Explorer	16,22,24,32,36,48,64,96,128	
+categories/system-help	xp:Help and Support	16,22,24,32,36,48,64,96,128	auto
+categories/system-help-symbolic	xp:Help and Support	16,22,24,32,36,48,64,96,128	
+actions/system-lock-screen	xp:Login Question	16,22,24,32,36,48,64,96,128	auto
+status/system-lock-screen-symbolic	xp:Login Question	16,22,24,32,36,48,64,96,128	
+actions/system-log-out	xp:Logout	16,22,24,32,36,48,64,96,128	auto
+actions/system-log-out-rtl-symbolic	xp:Logout	16,22,24,32,36,48,64,96,128	
+actions/system-log-out-symbolic	xp:Logout	16,22,24,32,36,48,64,96,128	
+actions/system-reboot	xp:Restart	16,22,24,32,36,48,64,96,128	auto
+actions/system-reboot-symbolic	xp:Restart	16,22,24,32,36,48,64,96,128	
+actions/system-restart	xp:Restart	16,22,24,32,36,48,64,96,128	
+actions/system-run	xp:Run	16,22,24,32,36,48,64,96,128	auto
+actions/system-run-symbolic	xp:Run	16,22,24,32,36,48,64,96,128	
+actions/system-search	xp:Search	16,22,24,32,36,48,64,96,128	auto
+actions/system-search-symbolic	xp:Search	16,22,24,32,36,48,64,96,128	
+actions/system-shutdown	xp:Power	16,22,24,32,36,48,64,96,128	auto
+actions/system-shutdown-symbolic	xp:Exit	16,22,24,32,36,48,64,96,128	
+apps/system-software-install	xp:Programs	16,22,24,32,36,48,64,96,128	auto
+apps/system-software-install-symbolic	xp:Setup	16,22,24,32,36,48,64,96,128	
+apps/system-software-update	xp:Windows Update	16,22,24,32,36,48,64,96,128	auto
+actions/system-suspend	xp:Standby	16,22,24,32,36,48,64,96,128	
+actions/system-switch-user-rtl-symbolic	xp:Switch User	16,22,24,32,36,48,64,96,128	
+actions/system-switch-user-symbolic	xp:Switch User	16,22,24,32,36,48,64,96,128	
+apps/system-users	xp:Whistler - User Accounts	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+apps/system-users-symbolic	xp:Windows Dude	16,22,24,32,36,48,64,96,128	
+apps/tab-new	xp:Tab New	16,22,24,32,36,48,64,96,128	
+actions/tab-new-symbolic	xp:Tab New	16,22,24,32,36,48,64,96,128	
+status/tablet	xp:Tablet and Pen settings	16,22,24,32,36,48,64,96,128	
+devices/tablet-symbolic	xp:Get Going with Tablet PC	16,22,24,32,36,48,64,96,128	
+places/tag	xp:Tip of the day	16,22,24,32,36,48,64,96,128	
+apps/tap-create	xp:Tap Create	16,22,24,32,36,48,64,96,128	
+apps/tap-extract	xp:Tap Extract	16,22,24,32,36,48,64,96,128	
+apps/tap-extract-to	xp:Tap Extract To	16,22,24,32,36,48,64,96,128	
+status/task-due	xp:Task Due	16,22,24,32,36,48,64,96,128	
+status/task-due-symbolic	xp:Task Due	16,22,24,32,36,48,64,96,128	
+status/task-past-due	xp:Task Past Due	16,22,24,32,36,48,64,96,128	
+status/task-past-due-symbolic	xp:Task Past Due	16,22,24,32,36,48,64,96,128	
+mimetypes/text	xp:Generic Text Document	16,22,24,32,36,48,64,96,128	
+mimetypes/text-calendar	xp:Calendar	16,22,24,32,36,48,64,96,128	
+mimetypes/text-css	xp:CSS	16,22,24,32,36,48,64,96,128	
+apps/text-editor-symbolic	xp:Notepad	16,22,24,32,36,48,64,96,128	
+mimetypes/text-html	xp:Document Internet Explorer	16,22,24,32,36,48,64,96,128	auto
+mimetypes/text-htmlh	xp:HTML	16,22,24,32,36,48,64,96,128	
+mimetypes/text-plain	xp:Generic Text Document	16,22,24,32,36,48,64,96,128	
+mimetypes/text-x-generic	xp:Generic Text Document	16,22,24,32,36,48,64,96,128	auto
+mimetypes/text-x-generic-rtl	xp:Generic Text Document	16,22,24,32,36,48,64,96,128	
+mimetypes/text-x-generic-symbolic	xp:Generic Document	16,22,24,32,36,48,64,96,128	
+mimetypes/text-x-generic-template	xp:Generic Document	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+mimetypes/text-x-java	xp:Java Script	16,22,24,32,36,48,64,96,128	
+mimetypes/text-x-java-source	xp:Java Script	16,22,24,32,36,48,64,96,128	
+mimetypes/text-x-preview	xp:Document Search	16,22,24,32,36,48,64,96,128	
+mimetypes/text-x-script	xp:BAT	16,22,24,32,36,48,64,96,128	auto
+mimetypes/text-x-source	xp:Generic Text Document	16,22,24,32,36,48,64,96,128	
+mimetypes/text-xml	xp:XML	16,22,24,32,36,48,64,96,128	
+devices/thunderbolt	xp:Thunderbolt	16,22,24,32,36,48,64,96,128	
+devices/thunderbolt-symbolic	xp:Thunderbolt	16,22,24,32,36,48,64,96,128	
+actions/tools-check-spelling	xp:Tools Check Spelling	16,22,24,32,36,48,64,96,128	
+actions/tools-check-spelling-symbolic	xp:Tools Check Spelling	16,22,24,32,36,48,64,96,128	
+apps/trophy-bronze	xp:Trophy Bronze	16,22,24,32,36,48,64,96,128	
+apps/trophy-gold	xp:Trophy Gold	16,22,24,32,36,48,64,96,128	
+apps/trophy-silver	xp:Trophy Silver	16,22,24,32,36,48,64,96,128	
+devices/tv-symbolic	xp:Media Center Extender Manager	16,22,24,32,36,48,64,96,128	
+apps/uninterruptible-power-supply	xp:Battery Backup	16,22,24,32,36,48,64,96,128	
+devices/uninterruptible-power-supply-symbolic	xp:Battery Backup	16,22,24,32,36,48,64,96,128	
+devices/usb-receiver	xp:Wireless Network Setup	16,22,24,32,36,48,64,96,128	
+status/user-available	xp:User Available	16,22,24,32,36,48,64,96,128	
+status/user-available-symbolic	xp:User Available	16,22,24,32,36,48,64,96,128	
+status/user-away	xp:User Away	16,22,24,32,36,48,64,96,128	
+status/user-away-symbolic	xp:User Away	16,22,24,32,36,48,64,96,128	
+places/user-bookmarks	xp:Favorites	16,22,24,32,36,48,64,96,128	auto
+places/user-bookmarks-symbolic	xp:Favorites	16,22,24,32,36,48,64,96,128	
+status/user-busy	xp:User Busy	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+status/user-busy-symbolic	xp:User Busy	16,22,24,32,36,48,64,96,128	
+places/user-desktop	xp:Desktop	16,22,24,32,36,48,64,96,128	auto
+places/user-desktop-open	xp:Folder Opened	16,22,24,32,36,48,64,96,128	
+places/user-desktop-symbolic	xp:Desktop	16,22,24,32,36,48,64,96,128	
+places/user-home	xp:My Documents	16,22,24,32,36,48,64,96,128	auto
+places/user-home-drag-accept	xp:Move to folder	16,22,24,32,36,48,64,96,128	
+places/user-home-open	xp:Fax Archive	16,22,24,32,36,48,64,96,128	
+places/user-home-symbolic	xp:IE Home	16,22,24,32,36,48,64,96,128	
+status/user-idle	xp:User Idle	16,22,24,32,36,48,64,96,128	
+status/user-idle-symbolic	xp:User Idle	16,22,24,32,36,48,64,96,128	
+apps/user-info	xp:User Info	16,22,24,32,36,48,64,96,128	
+apps/user-info-symbolic	xp:User Info	16,22,24,32,36,48,64,96,128	
+apps/user-invisible	xp:User Invisible	16,22,24,32,36,48,64,96,128	
+status/user-invisible-symbolic	xp:User Invisible	16,22,24,32,36,48,64,96,128	
+status/user-not-tracked-symbolic	xp:User Not Tracked	16,22,24,32,36,48,64,96,128	
+status/user-offline	xp:User Offline	16,22,24,32,36,48,64,96,128	
+status/user-offline-symbolic	xp:User Offline	16,22,24,32,36,48,64,96,128	
+status/user-status-pending-symbolic	xp:User Status Pending	16,22,24,32,36,48,64,96,128	
+places/user-trash	xp:Recycle Bin (empty)	16,22,24,32,36,48,64,96,128	
+status/user-trash-full	xp:Recycle Bin (full)	16,22,24,32,36,48,64,96,128	
+status/user-trash-full-symbolic	xp:Recycle Bin (full)	16,22,24,32,36,48,64,96,128	
+places/user-trash-symbolic	xp:Recycle Bin (empty)	16,22,24,32,36,48,64,96,128	
+apps/utilities-system-monitor	xp:Task Manager	16,22,24,32,36,48,64,96,128	auto
+apps/utilities-terminal	xp:Command Prompt	16,22,24,32,36,48,64,96,128	
+apps/utilities-terminal-symbolic	xp:Command Prompt	16,22,24,32,36,48,64,96,128	
+actions/value-decrease-symbolic	xp:Restricted	16,22,24,32,36,48,64,96,128	
+actions/value-increase-symbolic	xp:Add	16,22,24,32,36,48,64,96,128	
+mimetypes/vcalendar	xp:Calendar	16,22,24,32,36,48,64,96,128	
+devices/video-display	xp:Display Adaptor	16,22,24,32,36,48,64,96,128	auto
+devices/video-display-symbolic	xp:Black Monitor	16,22,24,32,36,48,64,96,128	
+devices/video-display-tv	xp:Media Center Extender Manager	16,22,24,32,36,48,64,96,128	
+devices/video-joined-displays-symbolic	xp:Direct Connection	16,22,24,32,36,48,64,96,128	
+devices/video-single-display-symbolic	xp:Display Adaptor	16,22,24,32,36,48,64,96,128	
+mimetypes/video-x-generic	xp:Generic Video	16,22,24,32,36,48,64,96,128	auto
+mimetypes/video-x-generic-symbolic	xp:Camcorder	16,22,24,32,36,48,64,96,128	
+actions/view-app-grid-symbolic	xp:Icon View	16,22,24,32,36,48,64,96,128	
+actions/view-conceal-symbolic	xp:User Not Tracked	16,22,24,32,36,48,64,96,128	
+actions/view-continuous-symbolic	xp:View Continuous	16,22,24,32,36,48,64,96,128	
+actions/view-dual-symbolic	xp:OE Preview Pane	16,22,24,32,36,48,64,96,128	
+actions/view-fullscreen	xp:Full Screen	16,22,24,32,36,48,64,96,128	auto
+actions/view-fullscreen-symbolic	xp:Full Screen	16,22,24,32,36,48,64,96,128	
+actions/view-grid-symbolic	xp:Icon View	16,22,24,32,36,48,64,96,128	
+actions/view-list-bullet-rtl-symbolic	xp:OE Folder List	16,22,24,32,36,48,64,96,128	
+actions/view-list-bullet-symbolic	xp:OE Folder List	16,22,24,32,36,48,64,96,128	
+actions/view-list-ordered-rtl-symbolic	xp:Whistler - IE Personal Bar	16,22,24,32,36,48,64,96,128	
+actions/view-list-ordered-symbolic	xp:Whistler - IE Personal Bar	16,22,24,32,36,48,64,96,128	
+actions/view-list-rtl-symbolic	xp:Detail View	16,22,24,32,36,48,64,96,128	
+actions/view-list-symbolic	xp:Detail View	16,22,24,32,36,48,64,96,128	
+actions/view-mirror-symbolic	xp:View Mirror	16,22,24,32,36,48,64,96,128	
+actions/view-more-horizontal-symbolic	xp:View More Horizontal	16,22,24,32,36,48,64,96,128	
+actions/view-more-symbolic	xp:View More	16,22,24,32,36,48,64,96,128	
+actions/view-paged-rtl-symbolic	xp:Copy	16,22,24,32,36,48,64,96,128	
+actions/view-paged-symbolic	xp:Copy	16,22,24,32,36,48,64,96,128	
+actions/view-pin-symbolic	xp:Push Pin	16,22,24,32,36,48,64,96,128	
+status/view-private	xp:Alternate help symbol	16,22,24,32,36,48,64,96,128	
+actions/view-reader	xp:Journal Note	16,22,24,32,36,48,64,96,128	
+actions/view-refresh	xp:IE Refresh	16,22,24,32,36,48,64,96,128	
+actions/view-refresh-symbolic	xp:IE Refresh	16,22,24,32,36,48,64,96,128	
+actions/view-restore	xp:Restore Screen	16,22,24,32,36,48,64,96,128	
+actions/view-restore-symbolic	xp:Restore Screen	16,22,24,32,36,48,64,96,128	
+actions/view-reveal-symbolic	xp:View Reveal	16,22,24,32,36,48,64,96,128	
+actions/view-sort-ascending	xp:Sort Alphabetically	16,22,24,32,36,48,64,96,128	
+actions/view-sort-ascending-rtl-symbolic	xp:Sort Alphabetically Desc	16,22,24,32,36,48,64,96,128	
+actions/view-sort-ascending-symbolic	xp:Sort Alphabetically Desc	16,22,24,32,36,48,64,96,128	
+actions/view-sort-descending	xp:Sort Alphabetically Desc	16,22,24,32,36,48,64,96,128	
+actions/view-sort-descending-rtl-symbolic	xp:Sort Alphabetically	16,22,24,32,36,48,64,96,128	
+actions/view-sort-descending-symbolic	xp:Sort Alphabetically	16,22,24,32,36,48,64,96,128	
+status/view-wrapped-rtl-symbolic	xp:View Wrapped	16,22,24,32,36,48,64,96,128	
+status/view-wrapped-symbolic	xp:View Wrapped Rtl	16,22,24,32,36,48,64,96,128	
+apps/vlc	xp:Windows Media Player 9	16,22,24,32,36,48,64,96,128	auto
+apps/web-browser	xp:Internet Explorer 6	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+apps/web-browser-symbolic	xp:Internet Explorer 6	16,22,24,32,36,48,64,96,128	
+actions/window-new	xp:Window New	16,22,24,32,36,48,64,96,128	
+actions/window-new-symbolic	xp:Window New	16,22,24,32,36,48,64,96,128	
+mimetypes/x-office-address-book	xp:Book	16,22,24,32,36,48,64,96,128	auto
+mimetypes/x-office-address-book-symbolic	xp:Address Book	16,22,24,32,36,48,64,96,128	
+mimetypes/x-office-addressbook	xp:Address Book	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+mimetypes/x-office-calendar	xp:Calendar	16,22,24,32,36,48,64,96,128	auto
+mimetypes/x-office-calendar-symbolic	xp:Calendar	16,22,24,32,36,48,64,96,128	
+mimetypes/x-office-document	xp:Word	16,22,24,32,36,48,64,96,128	
+mimetypes/x-office-document-symbolic	xp:Word	16,22,24,32,36,48,64,96,128	
+mimetypes/x-office-document-template	xp:Generic Text Document	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+mimetypes/x-office-drawing	xp:Bitmap	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+mimetypes/x-office-drawing-symbolic	xp:Windows Picture and Fax Viewer	16,22,24,32,36,48,64,96,128	
+mimetypes/x-office-drawing-template	xp:GIF	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+mimetypes/x-office-presentation	xp:PowerPoint	16,22,24,32,36,48,64,96,128	auto
+mimetypes/x-office-presentation-symbolic	xp:PowerPoint	16,22,24,32,36,48,64,96,128	
+mimetypes/x-office-presentation-template	xp:Slideshow	16,22,24,32,36,48,64,96,128	auto (AdwaitaLegacy)
+mimetypes/x-office-spreadsheet	xp:Excel	16,22,24,32,36,48,64,96,128	
+mimetypes/x-office-spreadsheet-symbolic	xp:Excel	16,22,24,32,36,48,64,96,128	
+mimetypes/x-office-spreadsheet-template	xp:WRI	16,22,24,32,36,48,64,96,128	
+mimetypes/x-package-repository	xp:Indexing Service	16,22,24,32,36,48,64,96,128	
+apps/xarchiver	xp:Box	16,22,24,32,36,48,64,96,128	
+devices/xfce-display-profile	xp:Color Profile	16,22,24,32,36,48,64,96,128	
+apps/xfce-mount	xp:Local Disk	16,22,24,32,36,48,64,96,128	
+apps/xfce-newmail	xp:Xfce Newmail	16,22,24,32,36,48,64,96,128	
+apps/xfce-nomail	xp:Xfce Nomail	16,22,24,32,36,48,64,96,128	
+apps/xfce-sensors	xp:RAM	16,22,24,32,36,48,64,96,128	auto
+apps/xfce4-battery-critical	xp:Battery Caution	16,22,24,32,36,48,64,96,128	
+apps/xfce4-battery-critical-charging	xp:Battery Caution Charging	16,22,24,32,36,48,64,96,128	
+apps/xfce4-battery-full	xp:Battery Full	16,22,24,32,36,48,64,96,128	
+apps/xfce4-battery-full-charging	xp:Battery Full Charging	16,22,24,32,36,48,64,96,128	
+apps/xfce4-battery-low	xp:Battery Low	16,22,24,32,36,48,64,96,128	
+apps/xfce4-battery-low-charging	xp:Battery Low Charging	16,22,24,32,36,48,64,96,128	
+apps/xfce4-battery-missing	xp:Battery Missing	16,22,24,32,36,48,64,96,128	
+apps/xfce4-battery-ok	xp:Battery Good	16,22,24,32,36,48,64,96,128	
+apps/xfce4-battery-ok-charging	xp:Battery Good Charging	16,22,24,32,36,48,64,96,128	
+apps/xfce4-battery-plugin	xp:Battery	16,22,24,32,36,48,64,96,128	
+apps/xfce4-clipman-plugin	xp:Paste	16,22,24,32,36,48,64,96,128	auto
+apps/xfce4-cpufreq-plugin	xp:Chip	16,22,24,32,36,48,64,96,128	
+apps/xfce4-fsguard-plugin	xp:Xfce4 Fsguard Plugin	16,22,24,32,36,48,64,96,128	
+apps/xfce4-fsguard-plugin-urgent	xp:Xfce4 Fsguard Plugin Urgent	16,22,24,32,36,48,64,96,128	
+apps/xfce4-fsguard-plugin-warning	xp:Xfce4 Fsguard Plugin Warning	16,22,24,32,36,48,64,96,128	
+apps/xfce4-notifyd	xp:Information	16,22,24,32,36,48,64,96,128	auto (barra de status)
+apps/xfce4-pulseaudio-plugin	xp:Volume	16,22,24,32,36,48,64,96,128	
+apps/xfce4-time-out-plugin	xp:Clock	16,22,24,32,36,48,64,96,128	
+apps/xfce4-timer-plugin	xp:WMP Timed Lyrics	16,22,24,32,36,48,64,96,128	
+actions/xfsm-hibernate	xp:Standby	16,22,24,32,36,48,64,96,128	
+actions/xfsm-lock	xp:Switch User	16,22,24,32,36,48,64,96,128	
+apps/xfsm-logout	xp:Logout	16,22,24,32,36,48,64,96,128	auto
+actions/xfsm-reboot	xp:Restart	16,22,24,32,36,48,64,96,128	
+actions/xfsm-shutdown	xp:Power	16,22,24,32,36,48,64,96,128	
+actions/xfsm-suspend	xp:Standby	16,22,24,32,36,48,64,96,128	
+actions/xfsm-switch-user	xp:Switch User	16,22,24,32,36,48,64,96,128	
+apps/xfwm4-default	xp:Application Window	16,22,24,32,36,48,64,96,128	
+apps/xterm-color_48x48	xp:Command Prompt	16,22,24,32,36,48,64,96,128	
+actions/zoom	xp:Zoom	16,22,24,32,36,48,64,96,128	
+actions/zoom-fit-best	xp:Zoom Fit Best	16,22,24,32,36,48,64,96,128	
+actions/zoom-fit-best-symbolic	xp:Zoom Fit Best	16,22,24,32,36,48,64,96,128	
+actions/zoom-in	xp:Zoom In	16,22,24,32,36,48,64,96,128	
+actions/zoom-in-symbolic	xp:Zoom In	16,22,24,32,36,48,64,96,128	
+actions/zoom-original	xp:Zoom Original	16,22,24,32,36,48,64,96,128	
+actions/zoom-original-symbolic	xp:Zoom Original	16,22,24,32,36,48,64,96,128	
+actions/zoom-out	xp:Zoom Out	16,22,24,32,36,48,64,96,128	
+actions/zoom-out-symbolic	xp:Zoom Out	16,22,24,32,36,48,64,96,128	

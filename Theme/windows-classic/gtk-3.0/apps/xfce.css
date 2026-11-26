@@ -31,7 +31,8 @@ XfdesktopIconView.view {
     text-shadow: none;
     color: shade(@selected_bg_color, 3.0); }
   XfdesktopIconView.view .label {
-    text-shadow: none;
+    /* Sombra do texto dos ícones da área de trabalho, como no XP: 1px para baixo e para a direita. */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
     color: @font_bright; }
   XfdesktopIconView.view .rubberband {
     border: 1px dotted @xfd_rubberband_outline;
