@@ -186,6 +186,19 @@ python3 Theme/src/extrair-xp.py /caminho/para/I386
 
 (o instalador já faz isso na primeira instalação).
 
+### Botões da barra de título (GTK3)
+
+Em aplicativos com a barra de título do próprio GTK (CSD, como o `gtk3-widget-factory`), o
+símbolo dos botões (fechar, maximizar, minimizar e restaurar) não depende do tema de ícones:
+o GTK3 pede `window-*-symbolic` ao tema de ícones e o CSS não consegue trocar essa imagem, então
+os símbolos vêm desenhados nos PNG de fundo do botão
+(`gtk-3.0/buttons/window_button_<nome>[_pressed].png`) e a imagem do ícone fica invisível
+(`gtk-windowbuttons.css`). Para gerar de novo:
+
+```bash
+python3 Theme/src/gerar-glifos-janela.py
+```
+
 ### Só XFCE
 
 O tema é feito só para o XFCE (xfwm4 + GTK3), sem ajustes para outros ambientes

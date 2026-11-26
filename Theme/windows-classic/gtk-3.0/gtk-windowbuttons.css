@@ -91,3 +91,39 @@ button.appmenu {
   margin-left: 3px;
   margin-right: 1px;
   margin-bottom: 0px; }
+
+/* Símbolos dos botões: o GTK3 pede window-*-symbolic ao tema de ícones e o CSS não consegue trocar
+   essa imagem. Por isso o símbolo vem desenhado no fundo do botão (PNG do próprio tema, gerados por
+   Theme/src/gerar-glifos-janela.py) e a imagem do ícone fica invisível. */
+.titlebutton.close image,
+.titlebutton.minimize image,
+.titlebutton.maximize image {
+  opacity: 0; }
+
+.titlebutton.close,
+.titlebutton.close:backdrop {
+  background-image: url("buttons/window_button_fechar.png"); }
+  .titlebutton.close:checked,
+  .titlebutton.close:active {
+    background-image: url("buttons/window_button_fechar_pressed.png"); }
+
+.titlebutton.minimize,
+.titlebutton.minimize:backdrop {
+  background-image: url("buttons/window_button_minimizar.png"); }
+  .titlebutton.minimize:checked,
+  .titlebutton.minimize:active {
+    background-image: url("buttons/window_button_minimizar_pressed.png"); }
+
+.titlebutton.maximize,
+.titlebutton.maximize:backdrop {
+  background-image: url("buttons/window_button_maximizar.png"); }
+  .titlebutton.maximize:checked,
+  .titlebutton.maximize:active {
+    background-image: url("buttons/window_button_maximizar_pressed.png"); }
+
+.maximized .titlebutton.maximize,
+.maximized .titlebutton.maximize:backdrop {
+  background-image: url("buttons/window_button_restaurar.png"); }
+  .maximized .titlebutton.maximize:checked,
+  .maximized .titlebutton.maximize:active {
+    background-image: url("buttons/window_button_restaurar_pressed.png"); }
