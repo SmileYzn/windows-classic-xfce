@@ -25,8 +25,9 @@ button {
   border-bottom-color: @border_dark;
   background-color: @button_bg_color;
   box-shadow: inset -1px -1px @border_shade, inset 1px 1px @border_light; }
+  /* Windows Clássico: o ícone não clareia ao passar o mouse (o efeito "highlight" do GTK deixava tudo esbranquiçado). */
   button:hover {
-    -gtk-icon-effect: highlight; }
+    -gtk-icon-effect: none; }
   button:active,
   button:checked,
   button:disabled:active,

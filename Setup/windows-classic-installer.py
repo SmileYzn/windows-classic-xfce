@@ -63,6 +63,13 @@ COMPONENTS = {
                      ("Theme/windows-classic-xhdpi", "~/.local/share/themes/windows-classic-xhdpi")],
         },
     },
+    "icons": {
+        "label": "Ícones do Windows XP",
+        "files": {
+            "system": [("Icons/windows-classic-icons", "/usr/share/icons/windows-classic-icons")],
+            "user": [("Icons/windows-classic-icons", "~/.local/share/icons/windows-classic-icons")],
+        },
+    },
     "terminal": {
         "label": "Cores do terminal: Prompt de comando e MS-DOS",
         "files": {
@@ -124,6 +131,11 @@ def install_files(comp, mode, log):
         else:
             shutil.copy2(src, dest)
         log(f"  {src_rel} → {dest}")
+        if comp == "icons" and shutil.which("gtk-update-icon-cache"):
+            # Sem o cache atualizado, os aplicativos abertos podem continuar com os ícones antigos.
+            r = run(["gtk-update-icon-cache", "-f", "-t", str(dest)])
+            log("  cache de ícones atualizado" if r.returncode == 0
+                else "  atenção: gtk-update-icon-cache falhou; rode-o manualmente")
 
 
 def remove_files(comp, mode, log):
@@ -218,6 +230,8 @@ def settings_for(comp):
                 ("xfce4-notifyd", "/initial-opacity", "double", "1.0"),
                 # Sem o "Realce de arquivos", a seleção de ícones fica como no Explorer do XP
                 ("thunar", "/misc-highlighting-enabled", "bool", "false")]
+    if comp == "icons":
+        return [("xsettings", "/Net/IconThemeName", "string", "windows-classic-icons")]
     if comp == "cursors":
         size = "64" if window_scale() == 2 else "32"
         return [("xsettings", "/Gtk/CursorThemeName", "string", "windows-classic-cursors"),
@@ -395,6 +409,8 @@ DESCRIPTIONS = {
     "cursors": "Ponteiros do mouse originais do Windows XP, em 32, 64 e 96 px.",
     "theme": "Janelas, botões, menus e barras de rolagem do Windows XP clássico para GTK 3, "
              "bordas das janelas do xfwm4 (normal e HiDPI) e balões de notificação.",
+    "icons": "Tema de ícones no estilo do Windows XP (Icons/windows-classic-icons), em vários tamanhos "
+             "(16 a 128 px). \"Aplicar\" troca o tema de ícones do XFCE; ao remover, volta o padrão.",
     "terminal": "Esquemas de cores do xfce4-terminal: Prompt de comando do Windows XP e "
                 "MS-DOS. \"Aplicar\" troca as cores do terminal pelas do Prompt de comando; "
                 "ao remover, voltam as cores padrão do Xfce Terminal.",

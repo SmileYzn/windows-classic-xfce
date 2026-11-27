@@ -7,7 +7,7 @@
 # Pastas NxN: PNG com exatamente N x N pixels (Type=Fixed).
 
 [Icon Theme]
-Name=Windows Classic
+Name=windows-classic-icons
 Comment=Windows XP icons for the Windows Classic theme
 Comment[pt_BR]=Ícones do Windows XP para o tema Windows Classic
 Inherits=Adwaita,hicolor

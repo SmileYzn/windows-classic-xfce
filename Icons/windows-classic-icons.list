@@ -468,10 +468,10 @@ categories/emoji-nature-symbolic	xp:Jpeg	16,22,24,32,36,48,64,96,128
 categories/emoji-objects-symbolic	xp:Tip of the day	16,22,24,32,36,48,64,96,128	
 categories/emoji-people-symbolic	xp:Windows Dude 1 (whistler)	16,22,24,32,36,48,64,96,128	
 categories/emoji-recent-symbolic	xp:Recent Documents	16,22,24,32,36,48,64,96,128	
-categories/emoji-symbols-symbolic	xp:Emoji Symbols	16,22,24,32,36,48,64,96,128	
 categories/emoji-symbols	xp:Emoji Symbols	16,22,24,32,36,48,64,96,128	emoji
-categories/emoji-travel-symbolic	xp:Emoji Travel	16,22,24,32,36,48,64,96,128	
+categories/emoji-symbols-symbolic	xp:Emoji Symbols	16,22,24,32,36,48,64,96,128	
 categories/emoji-travel	xp:Emoji Travel	16,22,24,32,36,48,64,96,128	emoji
+categories/emoji-travel-symbolic	xp:Emoji Travel	16,22,24,32,36,48,64,96,128	
 apps/emote-love	xp:Emote Love	16,22,24,32,36,48,64,96,128	
 status/emote-love-symbolic	xp:Emote Love	16,22,24,32,36,48,64,96,128	
 apps/engrampa	xp:Packager	16,22,24,32,36,48,64,96,128	auto
@@ -511,8 +511,8 @@ places/folder-pictures	xp:My Pictures	16,22,24,32,36,48,64,96,128	auto
 places/folder-pictures-drag-accept	xp:My Pictures	16,22,24,32,36,48,64,96,128	
 places/folder-pictures-open	xp:My Pictures	16,22,24,32,36,48,64,96,128	
 places/folder-pictures-symbolic	xp:My Pictures	16,22,24,32,36,48,64,96,128	
-places/folder-projects-symbolic	xp:My Projects	16,22,24,32,36,48,64,96,128	
 places/folder-projects	xp:My Projects	16,22,24,32,36,48,64,96,128	folder-project (Adwaita/Papirus)
+places/folder-projects-symbolic	xp:My Projects	16,22,24,32,36,48,64,96,128	
 places/folder-publicshare	xp:Shared Folder	16,22,24,32,36,48,64,96,128	
 places/folder-publicshare-drag-accept	xp:Shared Folder	16,22,24,32,36,48,64,96,128	
 places/folder-publicshare-open	xp:Shared Folder	16,22,24,32,36,48,64,96,128	
@@ -574,6 +574,7 @@ actions/format-text-strikethrough-symbolic	xp:Format Text Strikethrough	16,22,24
 actions/format-text-underline	xp:Format Text Underline	16,22,24,32,36,48,64,96,128	
 actions/format-text-underline-symbolic	xp:Format Text Underline	16,22,24,32,36,48,64,96,128	
 apps/galculator	xp:Calculator	16,22,24,32,36,48,64,96,128	
+apps/gnome-aisleriot	xp:Solitaire	16,22,24,32,36,48,64,96,128	
 devices/gnome-dev-printer-new	xp:New Printer	16,22,24,32,36,48,64,96,128	
 actions/gnome-lockscreen	xp:Padlock Alt	16,22,24,32,36,48,64,96,128	
 categories/gnome-power-manager	xp:Power Status	16,22,24,32,36,48,64,96,128	
@@ -1416,8 +1417,8 @@ devices/video-single-display-symbolic	xp:Display Adaptor	16,22,24,32,36,48,64,96
 mimetypes/video-x-generic	xp:Generic Video	16,22,24,32,36,48,64,96,128	auto
 mimetypes/video-x-generic-symbolic	xp:Camcorder	16,22,24,32,36,48,64,96,128	
 actions/view-app-grid-symbolic	xp:Icon View	16,22,24,32,36,48,64,96,128	
-actions/view-conceal-symbolic	xp:User Not Tracked	16,22,24,32,36,48,64,96,128	
 actions/view-compact	xp:View Compact	16,22,24,32,36,48,64,96,128	view-compact
+actions/view-conceal-symbolic	xp:User Not Tracked	16,22,24,32,36,48,64,96,128	
 actions/view-continuous-symbolic	xp:View Continuous	16,22,24,32,36,48,64,96,128	
 actions/view-dual-symbolic	xp:OE Preview Pane	16,22,24,32,36,48,64,96,128	
 actions/view-fullscreen	xp:Full Screen	16,22,24,32,36,48,64,96,128	auto
@@ -1484,7 +1485,7 @@ mimetypes/x-office-spreadsheet-symbolic	xp:Excel	16,22,24,32,36,48,64,96,128
 mimetypes/x-office-spreadsheet-template	xp:WRI	16,22,24,32,36,48,64,96,128	
 mimetypes/x-package-repository	xp:Indexing Service	16,22,24,32,36,48,64,96,128	
 apps/xarchiver	xp:Box	16,22,24,32,36,48,64,96,128	
-devices/xfce-display-profile	xp:Color Profile	16,22,24,32,36,48,64,96,128	
+devices/xfce-display-profile	xp:Windows Dude	16,22,24,32,36,48,64,96,128	
 apps/xfce-mount	xp:Local Disk	16,22,24,32,36,48,64,96,128	
 apps/xfce-newmail	xp:Xfce Newmail	16,22,24,32,36,48,64,96,128	
 apps/xfce-nomail	xp:Xfce Nomail	16,22,24,32,36,48,64,96,128	

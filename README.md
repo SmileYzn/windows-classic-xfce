@@ -59,6 +59,7 @@ Windows.
 |---|---|---|
 | Cursores do Windows XP | copia `Cursors/windows-classic-cursors` | tema de cursores, 32 px (64 px na escala 2x) |
 | Tema GTK 3, bordas e notificações | copia `windows-classic` e `windows-classic-xhdpi` | tema GTK, xfwm4 (normal ou HiDPI), notificações opacas, "Realce de arquivos" do Thunar desligado |
+| Ícones do Windows XP | copia `Icons/windows-classic-icons` e atualiza o cache de ícones (`gtk-update-icon-cache`) | tema de ícones `windows-classic-icons` |
 | Cores do terminal | copia os esquemas de `Terminal/` | (desmarcado por padrão) cores do Prompt de comando no Xfce Terminal |
 | Fontes recomendadas | — | Noto Sans 8 e Noto Sans Bold 8 nos títulos |
 | Painel Windows XP (desmarcado por padrão) | — | carrega `Panel/windows-classic.tar.bz2` no lugar do painel atual |
